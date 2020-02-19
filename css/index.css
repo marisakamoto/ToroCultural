@@ -3,7 +3,7 @@
 }
 
 header{
-    background-color: orange;
+    background-color: #FFA500;
 }
 
 .logo{  
@@ -13,13 +13,13 @@ header{
 
 nav{
     float: right;
-    background-color: orange;
 }
 
 
 .nav-link{
     color: black;   
     font-size: 1.4em; 
-    font-family: 'Lato', sans-serif;;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
 }
 
