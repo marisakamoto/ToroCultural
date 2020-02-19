@@ -1,0 +1,25 @@
+*{
+    box-sizing: border-box;
+}
+
+header{
+    background-color: orange;
+}
+
+.logo{  
+    width: 7em;
+}
+
+
+nav{
+    float: right;
+    background-color: orange;
+}
+
+
+.nav-link{
+    color: black;   
+    font-size: 1.4em; 
+    font-family: 'Lato', sans-serif;;
+}
+
