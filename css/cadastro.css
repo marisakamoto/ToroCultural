@@ -130,6 +130,13 @@
     width: 80%;
     margin: 0 auto;
 }
+
+.form2-proj input, .form2-proj textarea{
+    border: rgb(165, 157, 157) 1px solid;
+    border-radius: 10px;
+    height: 28px;
+}
+
 .add-experiencia{
     text-align: center;
     margin-top: 0;
