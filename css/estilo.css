@@ -107,80 +107,6 @@ h2{
     padding: 20px 0 1px 0 ;
 }
 
-/*primeiro formulário*/
-.form-user, .exp-extras{
-    width: 65%;
-    margin: 0 auto;
-    border: rgb(165, 157, 157) 1.9px solid;
-    border-radius: 20px;
-    margin-top: 30px;
-    font-family: 'Dancing Script';
-    font-size: 1.5em;
-    color: rgb(248, 117, 56);
-}
-
-.form-user input, .form-user textarea{
-    border: rgb(165, 157, 157) 1px solid;
-    border-radius: 10px;
-}
-
-.form-user textarea{
-    margin-top: 20px;
-}
-
-.user-canto{
-    float: left;
-    margin-left: 1.8em;
-    margin-top: 1.7em;
-}
-
-.alterar-foto{
-    font-family: 'Dancing Script';
-    font-size: 1em;
-    font-weight: bold;
-    padding: 4px;
-    color: rgba(250, 169, 102, 0.911);
-    margin-left: 1em;
-    /*border: none;
-    background-color: white;*/
-}
-
-.user-direita{
-    float: right;
-    margin-right: 1em;
-    margin-top: 1.7em;
-    width: 65%;
-}
-
-.caixinhas{
-    width: 70%;
-    height: 25px;
-    margin-bottom: 5px; 
-}
-
-#descricao-user{
-    width: 70%;
-}
-
-.user-final{
-    clear: both;
-    width: 85%;
-    text-align: center;
-    margin: 0 auto;
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
-
-#pcp-habilidades, #interesses{
-    width: 60%;
-}
-
-.exp-extras{
-    background-color: rgb(235, 151, 165);
-    clear: both;
-    overflow: hidden;
-    border-radius: 20px 20px 0 0;
-}
 
 h3{
     color: rgb(248, 117, 56);
@@ -188,52 +114,7 @@ h3{
     text-align: center;
 }
 
-.foto-exp{
-    float: left;
-    width: 20%;
-    text-align: center;
-}
 
-
-.add-exp {
-    font-family: 'Dancing Script';
-    font-size: 1em;
-    color: rgb(248, 117, 56);
-    border: none;
-    background-color: rgb(235, 151, 165);
-}
-
-.form2{
-    float: right;
-    width: 80%;
-    margin-bottom: 0;
-}
-
-.form2 label{
-    float:left;
-}
-
-.form2 input, .form2 textarea{
-    float: right;
-    border: rgb(165, 157, 157) 1px solid;
-    border-radius: 10px;
-    height: 28px;
-}
-
-.add-experiencia{
-    text-align: center;
-    margin-top: 0;
-    height: 35px;
-    padding-bottom: 110px;
-}
-
-.btn-exp{
-    width: 65%;
-    height: 60px;
-    margin-bottom: 30px;
-    border-radius: 0 0 20px 20px;
-    font-size: 15px;
-}
 
 footer{
     display: inline-block;
