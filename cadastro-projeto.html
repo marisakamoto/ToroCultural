@@ -29,7 +29,28 @@
         </nav>
       </div>
     </header>
-
+    <main>
+        <h2>Cadastro Projeto</h2>
+        <form class="form-project">
+            <div class="user-canto">
+                <canvas id="UgCanvas" width="150px" height="150px" style="border:2.1px solid rgb(165, 157, 157); border-radius: 10px;">
+                </canvas></br>
+                <button class="alterar-foto" type="button">Alterar foto</button></br>
+              </div>
+              <div class="user-direita">
+                <label for="titulo-proj">Título</label>
+                <input class="caixinhas" type="text" name="tirulo-proj" id="titulo-proj" Required></br>
+                <label for="disponivel">Disponível</label>
+                <input class="caixinhas" <!--style="margin-left:43px;" type="date" name="disponivel" id="disponivel" Required></br>
+              </div>
+              <div class="user-final">
+                <label for="pcp-habilidades">Principais Habilidades</label>
+                <textarea name="pcp-habilidades" id="pcp-habilidades" cols="60%" rows="5"></textarea></br>
+                <label for="interesses">Interesses</label>
+                <textarea style="margin-left: 105px;" name="interesses" id="interesses" cols="60%" rows="5"></textarea></br>
+              </div>
+        </form>
+    </main>
     <footer>
       <a class="redes-link" href="#"><img class="redes" src="img/logo-do-facebook.png" alt="facebook"></a>
       <a class="redes-link" href="#"><img class="redes" src="img/twitter.png" alt="twitter"></a>
