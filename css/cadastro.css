@@ -70,7 +70,7 @@
 
 
 #descricao-user{
-    width: 70%;
+    width: 60%;
 }
 
 .user-final{
@@ -80,6 +80,14 @@
     margin: 0 auto;
     padding-top: 20px;
     padding-bottom: 20px;
+}
+
+.user-final label{
+    float: left;
+}
+
+.user-final input{
+    float: right;
 }
 
 #pcp-habilidades, #interesses, #descricao-proj, #categorias-pro{
@@ -125,6 +133,7 @@
     border-radius: 10px;
     height: 28px;
 }
+
 
 .form2-proj{
     width: 80%;
