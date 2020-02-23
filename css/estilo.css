@@ -114,7 +114,15 @@ h3{
     text-align: center;
 }
 
+h4{
+    color: rgb(248, 117, 56);
+    font-size: 1.1em;   
+}
 
+.titulo-2{
+    width: 80%;
+    margin: 0 auto;
+}
 
 footer{
     display: inline-block;

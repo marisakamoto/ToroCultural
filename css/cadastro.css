@@ -19,7 +19,7 @@
     color: rgb(248, 117, 56);
 }
 
-.form-user input, .form-user textarea, .form-project input{
+.form-user input, .form-user textarea, .form-project input, .form-project textarea{
     border: rgb(165, 157, 157) 1px solid;
     border-radius: 10px;
 }
@@ -58,6 +58,17 @@
     margin-bottom: 5px; 
 }
 
+.caixinhas-prof, #proj-habilidades, #faixa-preco{
+    width: 40%;
+    height: 25px;
+    margin-bottom: 5px; 
+}
+
+#proj-habilidades{
+    margin-top: 10px;
+}
+
+
 #descricao-user{
     width: 70%;
 }
@@ -71,7 +82,7 @@
     padding-bottom: 20px;
 }
 
-#pcp-habilidades, #interesses{
+#pcp-habilidades, #interesses, #descricao-proj, #categorias-pro{
     width: 60%;
 }
 
@@ -80,6 +91,7 @@
     clear: both;
     overflow: hidden;
     border-radius: 20px 20px 0 0;
+    padding: 15px;
 }
 
 .foto-exp{
@@ -114,11 +126,15 @@
     height: 28px;
 }
 
+.form2-proj{
+    width: 80%;
+    margin: 0 auto;
+}
 .add-experiencia{
     text-align: center;
     margin-top: 0;
     height: 35px;
-    padding-bottom: 110px;
+    padding-bottom: 65px;
 }
 
 .btn-exp{
@@ -127,4 +143,20 @@
     margin-bottom: 30px;
     border-radius: 0 0 20px 20px;
     font-size: 15px;
+    background-color: white;
+}
+
+.btn-finalizar{
+    background-color: rgb(248, 117, 56);
+    color: white;
+    font-size: 23px;
+    padding: 8px;
+    border: none;
+}
+
+.botao-final{
+    width: 65%;
+    margin: 0 auto;
+    text-align: right;
+    padding: 20px;
 }

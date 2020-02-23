@@ -44,12 +44,35 @@
                 <input class="caixinhas" <!--style="margin-left:43px;" type="date" name="disponivel" id="disponivel" Required></br>
               </div>
               <div class="user-final">
-                <label for="pcp-habilidades">Principais Habilidades</label>
-                <textarea name="pcp-habilidades" id="pcp-habilidades" cols="60%" rows="5"></textarea></br>
-                <label for="interesses">Interesses</label>
-                <textarea style="margin-left: 105px;" name="interesses" id="interesses" cols="60%" rows="5"></textarea></br>
+                <label for="localizacao">Localização</label>
+                <input class="caixinhas" type="text" name="localizacao" id="localizacao" Required></br>
+                <label for="descricao-proj">Principais Habilidades</label>
+                <textarea name="descricao-proj" id="descricao-proj" cols="60%" rows="5"></textarea></br>
+                <label for="categorias-proj">Categorias de projeto</label>
+                <textarea style="margin-left: 105px;" name="categorias-proj" id="categorias-pro" cols="60%" rows="5"></textarea></br>
               </div>
         </form>
+        <form class="exp-extras">
+            <div class="titulo-2"><h4>Profissional 1</h4></div>
+            <div class="form2-proj">
+              <label for="titulo-user">Título ou nome de usuário</label>
+              <input class=".caixinhas-prof" type="text" name="titulo" id="titulo" Required></br>
+              <label for="duracao">Duração: de</label>
+              <input style="width: 30%; margin-left:70px;" class=".caixinhas-prof" type="date" name="duracao" id="duracao1" Required>
+              <label class="duracao-final" for="duracao-ate">até:</label>
+              <input style="width: 30%;" class=".caixinhas-prof" type="date" name="duracao-ate" id="duracao-ate" Required></br>
+              <label for="proj-habilidades">Habilidades</label>
+              <textarea name="proj-habilidades"style="margin-left: 5px" id="proj-habilidades" cols="60%" rows="1"></textarea></br>
+              <label for="faixa-preco">Faixa de preço</label>
+              <input class="faixa-preco" style="width: 60%; margin-left:10px;" type="number" name="faixa-preco" id="faixa-preco"></br>
+            </div>
+        </form>
+            <div class="add-experiencia">
+            <button class="btn-exp" type="Submit"><img style="width: 1em; margin-right: 5px;" src="img/mais.png" alt="add-experiencia"> 
+                Adicionar profissional
+            </button>
+            </div>
+            <div class="botao-final"><button class="btn-finalizar" type="Submit">Finalizar</button></div>
     </main>
     <footer>
       <a class="redes-link" href="#"><img class="redes" src="img/logo-do-facebook.png" alt="facebook"></a>
