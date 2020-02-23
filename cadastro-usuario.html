@@ -1,86 +1,86 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro do usuário</title>
-    <link rel="stylesheet" href="css/estilo.css">
-    <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Kaushan+Script|Lobster&display=swap" 
-        rel="stylesheet">
-</head>
-<body>
-  <header>
-    <div class="caixa">
-      <h1><img class="logo-img" src="img/toro cultural.png" alt="logo-toro"></h1>
-      <div id="pesquisa-nav">
-        <form>
-            <input type="text" id="busca" placeholder="Buscar..."/>
-            <button><img src="img/search.png" alt="buscar"></button>
-        </form>
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Cadastro do usuário</title>
+      <link rel="stylesheet" href="css/estilo.css">
+      <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Kaushan+Script|Lobster&display=swap" 
+          rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <div class="caixa">
+        <h1><img class="logo-img" src="img/toro cultural.png" alt="logo-toro"></h1>
+        <div id="pesquisa-nav">
+          <form>
+              <input type="text" id="busca" placeholder="Buscar..."/>
+              <button><img src="img/search.png" alt="buscar"></button>
+          </form>
+        </div>
+        <nav>
+          <ul>
+            <li class="nav"><a href="#">Meu Perfil</a></li>
+            <li class="nav"><a href="#">Projetos</a></li>
+            <li class="nav"><a href="#">Feed</a></li>
+            <li class="nav"><a href="#"><img class="config" src="img/icons8-ios-preenchido-50.png" alt="config"></a></li>
+          </ul>
+        </nav>
       </div>
-      <nav>
-        <ul>
-          <li class="nav"><a href="#">Meu Perfil</a></li>
-          <li class="nav"><a href="#">Projetos</a></li>
-          <li class="nav"><a href="#">Feed</a></li>
-          <li class="nav"><a href="#"><img class="config" src="img/icons8-ios-preenchido-50.png" alt="config"></a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-  <main>
-    <h2>Cadastro Usuário</h2>
-    <form class="form-user">
-      <div class="user-canto">
-        <canvas id="UgCanvas" width="150px" height="150px" style="border:2.5px solid rgb(165, 157, 157); border-radius: 50%;">
-        </canvas></br>
-        <button class="alterar-foto" type="button">Alterar foto</button></br>
+    </header>
+    <main>
+      <h2>Cadastro Usuário</h2>
+      <form class="form-user">
+        <div class="user-canto">
+          <canvas id="UgCanvas" width="150px" height="150px" style="border:2.5px solid rgb(165, 157, 157); border-radius: 50%;">
+          </canvas></br>
+          <button class="alterar-foto" type="button">Alterar foto</button></br>
+        </div>
+        <div class="user-direita">
+          <label for="nome">Nome de usuário</label>
+          <input class="caixinhas" type="text" name="nome-usuario" id="nome-usuario" Required></br>
+          <label for="aniversario">Aniversário</label>
+          <input class="caixinhas" style="margin-left:43px;" type="date" name="aniversario" id="aniversario" Required></br>
+          <label for="profissao">Profissão</label>
+          <input class="caixinhas" style="margin-left:63px;" type="text" name="profissao" id="profissao" Required></br>
+          <label for="descricao-user">Descrição</label>
+          <textarea name="descricao-user" style="margin-left:64px;" id="descricao-user"cols="49%" rows="5"></textarea></br>
+        </div>
+        <div class="user-final">
+          <label for="pcp-habilidades">Principais Habilidades</label>
+          <textarea name="pcp-habilidades" id="pcp-habilidades" cols="60%" rows="5"></textarea></br>
+          <label for="interesses">Interesses</label>
+          <textarea style="margin-left: 105px;" name="interesses" id="interesses" cols="60%" rows="5"></textarea></br>
+        </div>
+      </form>
+      <form class="exp-extras">
+        <h3>Experiências extras</h3>
+        <div class="foto-exp">
+          <canvas id="UgCanvas" width="100px" height="100px" style="background-color: white; border:2.5px solid rgb(165, 157, 157);">
+          </canvas></br>
+          <button  class="add-exp" type="button">Adicionar foto</button></br>
+        </div>
+        <div class="form2">
+          <label for="titulo">Título</label>
+          <input class="caixinhas" style="width: 60%; margin-left:10px;" type="text" name="titulo" id="titulo" Required></br>
+          <label for="duracao">Duração: de</label>
+          <input style="width: 30%; margin-left:70px;" class="caixinhas" type="date" name="duracao" id="duracao1" Required>
+          <label class="duracao-final" for="duracao-ate">até:</label>
+          <input style="width: 30%;" class="caixinhas" type="date" name="duracao-ate" id="duracao-ate" Required></br>
+          <label for="pcp-habilidades">Principais Habilidades</label>
+          <textarea name="pcp-habilidades"style="margin-left: 5px" id="pcp-habilidades" cols="60%" rows="1"></textarea></br>
+        </div>
+      </form>
+      <div class="add-experiencia">
+        <button class="btn-exp" type="Submit"><img style="width: 1em; margin-right: 5px;" src="img/mais.png" alt="add-experiencia"> 
+            Adicionar experiência
+        </button>
       </div>
-      <div class="user-direita">
-        <label for="nome">Nome de usuário</label>
-        <input class="caixinhas" type="text" name="nome-usuario" id="nome-usuario" Required></br>
-        <label for="aniversario">Aniversário</label>
-        <input class="caixinhas" style="margin-left:43px;" type="date" name="aniversario" id="aniversario" Required></br>
-        <label for="profissao">Profissão</label>
-        <input class="caixinhas" style="margin-left:63px;" type="text" name="profissao" id="profissao" Required></br>
-        <label for="descricao-user">Descrição</label>
-        <textarea name="descricao-user" style="margin-left:64px;" id="descricao-user"cols="49%" rows="5"></textarea></br>
-      </div>
-      <div class="user-final">
-        <label for="pcp-habilidades">Principais Habilidades</label>
-        <textarea name="pcp-habilidades" id="pcp-habilidades" cols="60%" rows="5"></textarea></br>
-        <label for="interesses">Interesses</label>
-        <textarea style="margin-left: 105px;" name="interesses" id="interesses" cols="60%" rows="5"></textarea></br>
-      </div>
-    </form>
-    <form class="exp-extras">
-      <h3>Experiências extras</h3>
-      <div class="foto-exp">
-        <canvas id="UgCanvas" width="100px" height="100px" style="background-color: white; border:2.5px solid rgb(165, 157, 157);">
-        </canvas></br>
-        <button  class="add-exp" type="button">Adicionar foto</button></br>
-      </div>
-      <div class="form2">
-        <label for="titulo">Título</label>
-        <input class="caixinhas" style="width: 60%; margin-left:10px;" type="text" name="titulo" id="titulo" Required></br>
-        <label for="duracao">Duração: de</label>
-        <input style="width: 30%; margin-left:70px;" class="caixinhas" type="date" name="duracao" id="duracao1" Required>
-        <label class="duracao-final" for="duracao-ate">até:</label>
-        <input style="width: 30%;" class="caixinhas" type="date" name="duracao-ate" id="duracao-ate" Required></br>
-        <label for="pcp-habilidades">Principais Habilidades</label>
-        <textarea name="pcp-habilidades"style="margin-left: 5px" id="pcp-habilidades" cols="60%" rows="1"></textarea></br>
-      </div>
-    </form>
-    <div class="add-experiencia">
-      <button class="btn-exp" type="Submit"><img style="width: 1em; margin-right: 5px;" src="img/mais.png" alt="add-experiencia"> 
-          Adicionar experiência
-      </button>
-    </div>
-  </main>
-  <footer>
-    <a class="redes-link" href="#"><img class="redes" src="img/logo-do-facebook.png" alt="facebook"></a>
-    <a class="redes-link" href="#"><img class="redes" src="img/twitter.png" alt="twitter"></a>
-    <a class="redes-link" href="#"><img class="redes" src="img/instagram.png" alt="instagram"></a>
-  </footer>
-</body>
+    </main>
+    <footer>
+      <a class="redes-link" href="#"><img class="redes" src="img/logo-do-facebook.png" alt="facebook"></a>
+      <a class="redes-link" href="#"><img class="redes" src="img/twitter.png" alt="twitter"></a>
+      <a class="redes-link" href="#"><img class="redes" src="img/instagram.png" alt="instagram"></a>
+    </footer>
+  </body>
 </html>

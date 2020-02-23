@@ -1,0 +1,240 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+/*CABEÇALHO*/
+
+header{
+    background-color: rgb(248, 117, 56);
+}
+
+.caixa{ /*CENTRALIZAR COMPONETES DO CABEÇALHO*/
+    width: 92%;
+    position: relative;
+    margin: 0 auto;
+
+}
+
+.logo-img {
+    width: 1.9em;
+    padding-top: 3px;
+}
+
+h1{
+    display: inline-block;
+}
+
+#pesquisa-nav img{
+    width: 1em;
+}
+
+#pesquisa-nav{
+    position: absolute;
+    top: 30%;
+    display: inline-block;
+    background-color:white;
+    border-radius:10px 0 0 10px;
+    width:290px;
+    height:32px;
+    margin-left: 115px;
+}
+   
+#pesquisa-nav input{
+    background-color:transparent;
+    padding-left:10px; 
+    font-size:15px;
+    border: none;
+    height:32px;
+    width:290px;
+}
+/*descobrir
+  #busca:active{
+    border-color: transparent;
+  }*/
+   
+#pesquisa-nav button{
+    display: inline-block;
+    position: absolute;
+    border:none;
+    height:32px;
+    border-radius:0 8px 8px 0;
+    width:60px;
+    background:rgba(250, 169, 102, 0.911);
+}
+   
+/*menu de navegação*/
+nav{
+    position: absolute;
+    top: 30%;
+    right: 1.9em;
+}
+
+.nav{
+    display: inline-block;
+    margin-left: 2.1em;
+    font-size: 1.1em;
+}
+
+.nav a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.config{
+    width: 1.2em;
+}
+
+
+
+
+
+
+
+/*CONTEUDO DA PÁGINA*/
+
+
+h2{
+    color:rgb(248, 117, 56);
+    /*font-family: 'Kaushan Script';*/
+    /*font-family: 'Lobster';*/
+    font-family: 'Dancing Script';
+    text-align: center;
+    font-size: 2.5em;
+    padding: 20px 0 1px 0 ;
+}
+
+.form-user, .exp-extras{
+    width: 65%;
+    margin: 0 auto;
+    border: rgb(165, 157, 157) 2px solid;
+    border-radius: 20px;
+    margin-top: 30px;
+    margin-bottom: 0;
+    font-family: 'Dancing Script';
+    font-size: 1.5em;
+    color: rgb(240, 100, 36);
+}
+
+.form-user input, .form-user textarea{
+    border: rgb(165, 157, 157) 1px solid;
+    border-radius: 10px;
+}
+
+.form-user textarea{
+    margin-top: 20px;
+}
+
+.user-canto{
+    float: left;
+    margin-left: 100px;
+    margin-top: 30px;
+}
+
+.alterar-foto{
+    font-family: 'Dancing Script';
+    font-size: 1em;
+    color: rgba(250, 169, 102, 0.911);
+    margin-left: 27px;
+    /*border: none;
+    background-color: white;*/
+}
+
+.user-direita{
+    float: right;
+    margin-right: 15px;
+    margin-top: 30px;
+    width: 60%;
+}
+
+.caixinhas{
+    width: 70%;
+    height: 25px;
+    margin-bottom: 5px;
+}
+
+.user-final{
+    clear: both;
+    width: 80%;
+    text-align: left;
+    margin: 0 auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+
+.exp-extras{
+    background-color: rgb(228, 126, 143);
+    clear: both;
+    overflow: hidden;
+    border-radius: 20px 20px 0 0;
+}
+
+h3{
+    color: rgba(250, 169, 102, 0.911);
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.foto-exp{
+    float: left;
+    width: 20%;
+    text-align: center;
+}
+
+
+.add-exp {
+    font-family: 'Dancing Script';
+    font-size: 1em;
+    color: rgba(250, 169, 102, 0.911);
+    border: none;
+    background-color: rgb(228, 126, 143);
+}
+
+.form2{
+    float: right;
+    width: 80%;
+    margin-bottom: 0;
+}
+
+.form2 label{
+    float:left;
+}
+
+.form2 input, .form2 textarea{
+    float: right;
+    border: rgb(165, 157, 157) 1px solid;
+    border-radius: 10px;
+    height: 28px;
+}
+
+.add-experiencia{
+    text-align: center;
+    margin-top: 0;
+    height: 35px;
+    padding-bottom: 110px;
+}
+
+.btn-exp{
+    width: 65%;
+    height: 60px;
+    margin-bottom: 30px;
+    border-radius: 0 0 20px 20px;
+    font-size: 15px;
+}
+
+footer{
+    display: inline-block;
+    background-color: rgba(250, 169, 102, 0.911);
+    width: 100%;
+    text-align: center;
+}
+
+.redes{
+    width: 2em;
+    margin: 10px;   
+}
+
