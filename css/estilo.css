@@ -107,16 +107,16 @@ h2{
     padding: 20px 0 1px 0 ;
 }
 
+/*primeiro formulário*/
 .form-user, .exp-extras{
     width: 65%;
     margin: 0 auto;
-    border: rgb(165, 157, 157) 2px solid;
+    border: rgb(165, 157, 157) 1.9px solid;
     border-radius: 20px;
     margin-top: 30px;
-    margin-bottom: 0;
     font-family: 'Dancing Script';
     font-size: 1.5em;
-    color: rgb(240, 100, 36);
+    color: rgb(248, 117, 56);
 }
 
 .form-user input, .form-user textarea{
@@ -130,51 +130,60 @@ h2{
 
 .user-canto{
     float: left;
-    margin-left: 100px;
-    margin-top: 30px;
+    margin-left: 3em;
+    margin-top: 1.7em;
 }
 
 .alterar-foto{
     font-family: 'Dancing Script';
     font-size: 1em;
+    font-weight: bold;
+    padding: 4px;
     color: rgba(250, 169, 102, 0.911);
-    margin-left: 27px;
+    margin-left: 1em;
     /*border: none;
     background-color: white;*/
 }
 
 .user-direita{
     float: right;
-    margin-right: 15px;
-    margin-top: 30px;
-    width: 60%;
+    margin-right: 1em;
+    margin-top: 1.7em;
+    width: 65%;
 }
 
 .caixinhas{
     width: 70%;
     height: 25px;
-    margin-bottom: 5px;
+    margin-bottom: 5px; 
+}
+
+#descricao-user{
+    width: 70%;
 }
 
 .user-final{
     clear: both;
-    width: 80%;
-    text-align: left;
+    width: 85%;
+    text-align: center;
     margin: 0 auto;
     padding-top: 20px;
     padding-bottom: 20px;
 }
 
+#pcp-habilidades, #interesses{
+    width: 60%;
+}
 
 .exp-extras{
-    background-color: rgb(228, 126, 143);
+    background-color: rgb(235, 151, 165);
     clear: both;
     overflow: hidden;
     border-radius: 20px 20px 0 0;
 }
 
 h3{
-    color: rgba(250, 169, 102, 0.911);
+    color: rgb(248, 117, 56);
     font-size: 1.5em;
     text-align: center;
 }
@@ -189,9 +198,9 @@ h3{
 .add-exp {
     font-family: 'Dancing Script';
     font-size: 1em;
-    color: rgba(250, 169, 102, 0.911);
+    color: rgb(248, 117, 56);
     border: none;
-    background-color: rgb(228, 126, 143);
+    background-color: rgb(235, 151, 165);
 }
 
 .form2{
