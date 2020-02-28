@@ -14,7 +14,7 @@
     border: rgb(165, 157, 157) 1.9px solid;
     border-radius: 20px;
     margin-top: 30px;
-    font-family: 'Dancing Script';
+    font-family: 'Lato';
     font-size: 1.5em;
     color: rgb(248, 117, 56);
 }
@@ -35,12 +35,12 @@
 }
 
 .alterar-foto{
-    font-family: 'Dancing Script';
+    font-family: 'Lato';
     font-size: 1em;
     font-weight: bold;
     padding: 4px;
     color: rgba(250, 169, 102, 0.911);
-    margin-left: 1em;
+    margin-left: 10px;
     /*border: none;
     background-color: white;*/
 }
@@ -110,7 +110,7 @@
 
 
 .add-exp {
-    font-family: 'Dancing Script';
+    font-family: 'Lato';
     font-size: 1em;
     color: rgb(248, 117, 56);
     border: none;
