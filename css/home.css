@@ -65,7 +65,10 @@ h3{
     /*text-align: center;*/
     width: 70%;;
     margin: 0 auto;
+    overflow: hidden;
 }
+
+
 
 .caixa-contato button{
     background-color: rgb(248, 117, 56);
@@ -73,5 +76,4 @@ h3{
     font-size: 23px;
     padding: 8px;
     border: none;
-
 }
