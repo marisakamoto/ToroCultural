@@ -1,4 +1,4 @@
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -7,15 +7,15 @@
 
 /*CABEÇALHO*/
 
-header{
+header {
     background-color: rgb(255, 224, 212);
 }
 
-.caixa{ /*CENTRALIZAR COMPONETES DO CABEÇALHO*/
+.caixa {
+    /*CENTRALIZAR COMPONETES DO CABEÇALHO*/
     width: 92%;
     position: relative;
     margin: 0 auto;
-
 }
 
 .logo-img {
@@ -23,118 +23,112 @@ header{
     padding-top: 9px;
 }
 
-h1{
+h1 {
     display: inline-block;
 }
 
-#pesquisa-nav img{
+#pesquisa-nav img {
     width: 1em;
 }
 
-#pesquisa-nav{
+#pesquisa-nav {
     position: absolute;
     top: 30%;
     display: inline-block;
-    background-color:white;
-    border-radius:10px 0 0 10px;
-    width:290px;
-    height:32px;
+    background-color: white;
+    border-radius: 10px 0 0 10px;
+    width: 290px;
+    height: 32px;
     margin-left: 115px;
 }
-   
-#pesquisa-nav input{
-    background-color:transparent;
-    padding-left:10px; 
-    font-size:15px;
+
+#pesquisa-nav input {
+    background-color: transparent;
+    padding-left: 10px;
+    font-size: 15px;
     border: none;
-    height:32px;
-    width:290px;
+    height: 32px;
+    width: 290px;
 }
+
+
 /*descobrir
   #busca:active{
     border-color: transparent;
   }*/
-   
-#pesquisa-nav button{
+
+#pesquisa-nav button {
     display: inline-block;
     position: absolute;
-    border:none;
-    height:32px;
-    border-radius:0 8px 8px 0;
-    width:60px;
-    background:rgba(250, 169, 102, 0.911);
+    border: none;
+    height: 32px;
+    border-radius: 0 8px 8px 0;
+    width: 60px;
+    background: rgba(250, 169, 102, 0.911);
 }
-   
+
+
 /*menu de navegação*/
-nav{
+
+nav {
     position: absolute;
     top: 30%;
     right: 1.9em;
 }
 
-.nav{
+.nav {
     display: inline-block;
     margin-left: 2.1em;
     font-size: 1.5em;
 }
 
-.nav a{
+.nav a {
     text-decoration: none;
     color: darkslategrey;
     font-weight: bold;
 }
 
-.config{
+.config {
     width: 1.2em;
 }
 
 
-
-
-
-
-
 /*CONTEUDO DA PÁGINA*/
 
-
-h2{
-    color:rgb(248, 117, 56);
+h2 {
+    color: rgb(248, 117, 56);
     /*font-family: 'Kaushan Script';*/
     /*font-family: 'Lobster';*/
     font-family: 'Lato';
     text-align: center;
     font-size: 2.5em;
-    padding: 20px 0 1px 0 ;
+    padding: 20px 0 1px 0;
 }
 
-
-h3{
+h3 {
     color: rgb(248, 117, 56);
     font-size: 1.5em;
     text-align: center;
 }
 
-h4{
+h4 {
     color: rgb(248, 117, 56);
-    font-size: 1.1em;   
+    font-size: 1.1em;
 }
 
-.titulo-2{
+.titulo-2 {
     width: 80%;
     margin: 0 auto;
 }
 
-footer{
+footer {
     display: inline-block;
     background-color: rgb(255, 224, 212);
     width: 100%;
     text-align: center;
 }
 
-.redes{
+.redes {
     width: 2em;
-    margin: 10px;   
+    margin: 10px;
 }
-
-
-
