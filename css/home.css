@@ -51,8 +51,12 @@ h3{
     padding-bottom: 30px;
 }
 
+.form-contato form{
+    overflow: hidden;
+}
+
 .form-contato input, .form-contato textarea{
-    float: right;
+    /*float: right;*/
     border: rgb(165, 157, 157) 1px solid;
     border-radius: 10px;
     width: 70%;
