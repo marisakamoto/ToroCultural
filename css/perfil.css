@@ -1,6 +1,18 @@
-.row div{
-    border: 2px solid red ;
+.row div {
+    border: 2px solid red;
 }
+
+ul {
+    list-style-type: none;
+}
+
+#main-info ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
 .checked {
     color: orange;
-  }
+}
