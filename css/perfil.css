@@ -1,0 +1,6 @@
+.row div{
+    border: 2px solid red ;
+}
+.checked {
+    color: orange;
+  }
