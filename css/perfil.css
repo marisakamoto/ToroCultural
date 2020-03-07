@@ -1,18 +1,29 @@
-.row div {
-    border: 2px solid red;
-}
-
-ul {
-    list-style-type: none;
-}
-
-#main-info ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: stretch;
-}
-
-.checked {
-    color: orange;
-}
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+    
+    #button-search {
+        display: inline-block;
+        border: none;
+        height: 37px;
+        border-radius: 0 8px 8px 0;
+        width: 50px;
+        background: rgba(250, 169, 102, 0.911);
+    }
+    
+    ul {
+        list-style-type: none;
+    }
+    
+    #main-info ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: stretch;
+    }
+    
+    .checked {
+        color: orange;
+    }

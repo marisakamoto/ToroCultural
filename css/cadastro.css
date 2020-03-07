@@ -1,4 +1,4 @@
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -7,8 +7,18 @@
 
 /*CONTEUDO DA PÁGINA*/
 
+#title-form {
+    font-family: 'remachine_script_personal_uRg';
+    color: rgb(248, 117, 56);
+    font-size: 4em;
+}
+
+
 /*primeiro formulário*/
-.form-user, .exp-extras, .form-project{
+
+.form-user,
+.exp-extras,
+.form-project {
     width: 65%;
     margin: 0 auto;
     border: rgb(165, 157, 157) 1.9px solid;
@@ -19,22 +29,25 @@
     color: rgb(248, 117, 56);
 }
 
-.form-user input, .form-user textarea, .form-project input, .form-project textarea{
+.form-user input,
+.form-user textarea,
+.form-project input,
+.form-project textarea {
     border: rgb(165, 157, 157) 1px solid;
     border-radius: 10px;
 }
 
-.form-user textarea{
+.form-user textarea {
     margin-top: 20px;
 }
 
-.user-canto{
+.user-canto {
     float: left;
     margin-left: 1.8em;
     margin-top: 1.7em;
 }
 
-.alterar-foto{
+.alterar-foto {
     font-family: 'Lato';
     font-size: 1em;
     font-weight: bold;
@@ -45,35 +58,36 @@
     background-color: white;*/
 }
 
-.user-direita{
+.user-direita {
     float: right;
     margin-right: 1em;
     margin-top: 1.7em;
     width: 65%;
 }
 
-.caixinhas{
+.caixinhas {
     width: 70%;
     height: 25px;
-    margin-bottom: 5px; 
+    margin-bottom: 5px;
 }
 
-.caixinhas-prof, #proj-habilidades, #faixa-preco{
+.caixinhas-prof,
+#proj-habilidades,
+#faixa-preco {
     width: 40%;
     height: 25px;
-    margin-bottom: 5px; 
+    margin-bottom: 5px;
 }
 
-#proj-habilidades{
+#proj-habilidades {
     margin-top: 10px;
 }
 
-
-#descricao-user{
+#descricao-user {
     width: 60%;
 }
 
-.user-final{
+.user-final {
     clear: both;
     width: 85%;
     text-align: center;
@@ -82,19 +96,22 @@
     padding-bottom: 20px;
 }
 
-.user-final label{
+.user-final label {
     float: left;
 }
 
-.user-final input{
+.user-final input {
     float: right;
 }
 
-#pcp-habilidades, #interesses, #descricao-proj, #categorias-pro{
+#pcp-habilidades,
+#interesses,
+#descricao-proj,
+#categorias-pro {
     width: 60%;
 }
 
-.exp-extras{
+.exp-extras {
     background-color: rgb(235, 151, 165);
     clear: both;
     overflow: hidden;
@@ -102,12 +119,11 @@
     padding: 15px;
 }
 
-.foto-exp{
+.foto-exp {
     float: left;
     width: 20%;
     text-align: center;
 }
-
 
 .add-exp {
     font-family: 'Lato';
@@ -117,43 +133,44 @@
     background-color: rgb(235, 151, 165);
 }
 
-.form2{
+.form2 {
     float: right;
     width: 80%;
     margin-bottom: 0;
 }
 
-.form2 label{
-    float:left;
+.form2 label {
+    float: left;
 }
 
-.form2 input, .form2 textarea{
+.form2 input,
+.form2 textarea {
     float: right;
     border: rgb(165, 157, 157) 1px solid;
     border-radius: 10px;
     height: 28px;
 }
 
-
-.form2-proj{
+.form2-proj {
     width: 80%;
     margin: 0 auto;
 }
 
-.form2-proj input, .form2-proj textarea{
+.form2-proj input,
+.form2-proj textarea {
     border: rgb(165, 157, 157) 1px solid;
     border-radius: 10px;
     height: 28px;
 }
 
-.add-experiencia{
+.add-experiencia {
     text-align: center;
     margin-top: 0;
     height: 35px;
     padding-bottom: 65px;
 }
 
-.btn-exp{
+.btn-exp {
     width: 65%;
     height: 60px;
     margin-bottom: 30px;
@@ -162,7 +179,7 @@
     background-color: white;
 }
 
-.btn-finalizar{
+.btn-finalizar {
     background-color: rgb(248, 117, 56);
     color: white;
     font-size: 23px;
@@ -170,7 +187,7 @@
     border: none;
 }
 
-.botao-final{
+.botao-final {
     width: 65%;
     margin: 0 auto;
     text-align: right;

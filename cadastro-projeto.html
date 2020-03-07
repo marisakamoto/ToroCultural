@@ -1,16 +1,21 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Cadastro do Projeto</title>
-      <link rel="stylesheet" href="css/estilo.css">
-      <link rel="stylesheet" href="css/cadastro.css">
-      <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Kaushan+Script|Lobster&display=swap" 
-          rel="stylesheet">
-  </head>
-  <body>
-    <header>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro do Projeto</title>
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/cadastro.css">
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Kaushan+Script|Lobster&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/specimen_files/stylesheet.css" type="text/css" charset="utf-8" />
+</head>
+
+<body>
+    <!-- <header>
       <div class="caixa">
         <h1><img class="logo-img" src="img/toro cultural.png" alt="logo-toro"></h1>
         <div id="pesquisa-nav">
@@ -28,56 +33,95 @@
           </ul>
         </nav>
       </div>
-    </header>
+    </header> -->
+    <div class="container-fluid" id="navegacao">
+        <nav class="navbar  navbar-expand-lg  navbar-light">
+            <a class="navbar-brand" href="#">
+                <img src="img/toro cultural.png" width="100" height="100" class="d-inline-block align-top" alt="Toró Cultural">
+            </a>
+
+            <form class="form-inline " id="barra-busca">
+                <input class="form-control " type="search" placeholder="Buscar" aria-label="Buscar">
+                <input id="button-search" class="btn  my-2 my-sm-0" type="image" src="img/search.png" alt="buscar" width="50" height="35">
+
+            </form>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+
+                <ul class="nav justify-content-end ">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Meu Perfil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Projetos</a></li>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Feed</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Configurações</a>
+                    </li>
+                </ul>
+
+            </div>
+
+        </nav>
+    </div>
     <main>
-        <h2>Cadastro Projeto</h2>
+        <h2 id="title-form">Cadastro Projeto</h2>
         <form class="form-project">
             <div class="user-canto">
                 <canvas id="UgCanvas" width="150px" height="150px" style="border:2.1px solid rgb(165, 157, 157); border-radius: 10px;">
                 </canvas></br>
                 <button class="alterar-foto" type="button">Alterar foto</button></br>
-              </div>
-              <div class="user-direita">
+            </div>
+            <div class="user-direita">
                 <label for="titulo-proj">Título</label>
                 <input class="caixinhas" type="text" name="tirulo-proj" id="titulo-proj" Required></br>
                 <label for="disponivel">Disponível</label>
                 <input class="caixinhas" <!--style="margin-left:43px;" type="date" name="disponivel" id="disponivel" Required></br>
-              </div>
-              <div class="user-final">
+            </div>
+            <div class="user-final">
                 <label for="localizacao">Localização</label>
                 <input class="caixinhas" type="text" name="localizacao" id="localizacao" Required></br>
                 <label for="descricao-proj">Descrição</label>
                 <textarea name="descricao-proj" id="descricao-proj" cols="60%" rows="5"></textarea></br>
                 <label for="categorias-proj">Categorias de projeto</label>
                 <textarea style="margin-left: 105px;" name="categorias-proj" id="categorias-pro" cols="60%" rows="5"></textarea></br>
-              </div>
-        </form>
-        <form class="exp-extras">
-            <div class="titulo-2"><h4>Profissional 1</h4></div>
-            <div class="form2-proj">
-              <label for="titulo-user">Título ou nome de usuário</label>
-              <input class=".caixinhas-prof" type="text" name="titulo" id="titulo" Required></br>
-              <label for="duracao">Duração: de</label>
-              <input style="width: 30%; margin-left:70px;" class=".caixinhas-prof" type="date" name="duracao" id="duracao1" Required>
-              <label class="duracao-final" for="duracao-ate">até:</label>
-              <input style="width: 30%;" class=".caixinhas-prof" type="date" name="duracao-ate" id="duracao-ate" Required></br>
-              <label for="proj-habilidades">Habilidades</label>
-              <textarea name="proj-habilidades"style="margin-left: 5px" id="proj-habilidades" cols="60%" rows="1"></textarea></br>
-              <label for="faixa-preco">Faixa de preço</label>
-              <input class="faixa-preco" style="width: 60%; margin-left:10px;" type="number" name="faixa-preco" id="faixa-preco"></br>
             </div>
         </form>
-            <div class="add-experiencia">
+        <form class="exp-extras">
+            <div class="titulo-2">
+                <h4>Profissional 1</h4>
+            </div>
+            <div class="form2-proj">
+                <label for="titulo-user">Título ou nome de usuário</label>
+                <input class=".caixinhas-prof" type="text" name="titulo" id="titulo" Required></br>
+                <label for="duracao">Duração: de</label>
+                <input style="width: 30%; margin-left:70px;" class=".caixinhas-prof" type="date" name="duracao" id="duracao1" Required>
+                <label class="duracao-final" for="duracao-ate">até:</label>
+                <input style="width: 30%;" class=".caixinhas-prof" type="date" name="duracao-ate" id="duracao-ate" Required></br>
+                <label for="proj-habilidades">Habilidades</label>
+                <textarea name="proj-habilidades" style="margin-left: 5px" id="proj-habilidades" cols="60%" rows="1"></textarea></br>
+                <label for="faixa-preco">Faixa de preço</label>
+                <input class="faixa-preco" style="width: 60%; margin-left:10px;" type="number" name="faixa-preco" id="faixa-preco"></br>
+            </div>
+        </form>
+        <div class="add-experiencia">
             <button class="btn-exp" type="Submit"><img style="width: 1em; margin-right: 5px;" src="img/mais.png" alt="add-experiencia"> 
                 Adicionar profissional
             </button>
-            </div>
-            <div class="botao-final"><button class="btn-finalizar" type="Submit">Finalizar</button></div>
+        </div>
+        <div class="botao-final"><button class="btn-finalizar" type="Submit">Finalizar</button></div>
     </main>
     <footer>
-      <a class="redes-link" href="#"><img class="redes" src="img/logo-do-facebook.png" alt="facebook"></a>
-      <a class="redes-link" href="#"><img class="redes" src="img/twitter.png" alt="twitter"></a>
-      <a class="redes-link" href="#"><img class="redes" src="img/instagram.png" alt="instagram"></a>
+        <a class="redes-link" href="#"><img class="redes" src="img/logo-do-facebook.png" alt="facebook"></a>
+        <a class="redes-link" href="#"><img class="redes" src="img/twitter.png" alt="twitter"></a>
+        <a class="redes-link" href="#"><img class="redes" src="img/instagram.png" alt="instagram"></a>
     </footer>
-  </body>
+</body>
+
 </html>

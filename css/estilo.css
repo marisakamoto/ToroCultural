@@ -18,6 +18,15 @@ header {
     margin: 0 auto;
 }
 
+#button-search {
+    display: inline-block;
+    border: none;
+    height: 37px;
+    border-radius: 0 8px 8px 0;
+    width: 50px;
+    background: rgba(250, 169, 102, 0.911);
+}
+
 .logo-img {
     width: 3em;
     padding-top: 9px;
@@ -42,7 +51,7 @@ h1 {
     margin-left: 115px;
 }
 
-#pesquisa-nav input {
+#pesquisa-nav {
     background-color: transparent;
     padding-left: 10px;
     font-size: 15px;
@@ -56,6 +65,11 @@ h1 {
   #busca:active{
     border-color: transparent;
   }*/
+
+#barra-busca #input {
+    display: flex;
+    flex-direction: row;
+}
 
 #pesquisa-nav button {
     display: inline-block;
@@ -71,20 +85,36 @@ h1 {
 /*menu de navegação*/
 
 nav {
-    position: absolute;
-    top: 30%;
-    right: 1.9em;
+    /* position: absolute; */
+    /* top: 30%; */
+    /* right: 1.9em; */
+    background-color: rgb(255, 224, 212)
 }
 
 .nav {
-    display: inline-block;
-    margin-left: 2.1em;
+    /* display: inline-block; */
+    /* margin-left: 2.1em; */
     font-size: 1.5em;
+    background-color: rgb(255, 224, 212);
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.navbar-brand {
+    margin-left: 30px;
+    margin-right: 50px;
+}
+
+#barra-busca input {
+    display: flex;
+    justify-content: space-evenly;
 }
 
 .nav a {
     text-decoration: none;
     color: darkslategrey;
+    font-size: 1.0em;
+    font-family: 'Lato';
     font-weight: bold;
 }
 
