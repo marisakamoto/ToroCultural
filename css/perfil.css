@@ -1,29 +1,58 @@
-    * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-    }
-    
-    #button-search {
-        display: inline-block;
-        border: none;
-        height: 37px;
-        border-radius: 0 8px 8px 0;
-        width: 50px;
-        background: rgba(250, 169, 102, 0.911);
-    }
-    
-    ul {
-        list-style-type: none;
-    }
-    
-    #main-info ul {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: stretch;
-    }
-    
-    .checked {
-        color: orange;
-    }
+.row div {
+    /* border: 2px solid coral; */
+}
+
+ul {
+    list-style-type: none;
+}
+
+#habilidades .btn {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#main-info {
+    margin-top: 2em;
+}
+
+#main-info .col-sm-4 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#main-info ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-family: 'Lato';
+}
+
+.checked {
+    color: orange;
+}
+
+#menu-lado {
+    background-color: rgb(226, 226, 226);
+    /* padding-top: 10px; */
+    border-top-left-radius: 15%;
+    color: rgb(70, 70, 70);
+    font-family: 'Lato';
+    font-size: medium;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#menu-lado .my-4 {
+    display: flex;
+    justify-content: center;
+}
+
+#menu-lado h6 {
+    color: orange;
+    font-size: large;
+    display: flex;
+    justify-content: center;
+}
