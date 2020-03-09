@@ -22,7 +22,9 @@ body{
     margin-top: 0em;
 }
 
-
+.sobre-home{
+    padding: 0;
+}
 
 #bola {
     border-radius: 50%;
