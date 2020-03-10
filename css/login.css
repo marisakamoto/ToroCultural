@@ -19,7 +19,7 @@ h2 {
 
 /* style the container */
 
-.container {
+.caixa-login {
     position: relative;
     border-radius: 5px;
     background-color: #f2f2f2;
@@ -31,7 +31,7 @@ h2 {
 /* style inputs and link buttons */
 
 input,
-.btn {
+.botao {
     width: 100%;
     padding: 12px;
     border: none;
@@ -46,7 +46,7 @@ input,
 }
 
 input:hover,
-.btn:hover {
+.botao:hover {
     opacity: 1;
 }
 
@@ -91,7 +91,7 @@ input[type=submit]:hover {
 
 /* Two-column layout */
 
-.col {
+.coluna {
     float: left;
     width: 50%;
     margin: auto;
@@ -102,7 +102,7 @@ input[type=submit]:hover {
 
 /* Clear floats after the columns */
 
-.row:after {
+.linha:after {
     content: "";
     display: table;
     clear: both;
@@ -111,7 +111,7 @@ input[type=submit]:hover {
 
 /* vertical line */
 
-.vl {
+.vil {
     position: absolute;
     left: 50%;
     transform: translate(-50%);
@@ -122,7 +122,7 @@ input[type=submit]:hover {
 
 /* text inside the vertical line */
 
-.vl-innertext {
+.vil-innertext {
     position: absolute;
     top: 50%;
     transform: translate(-50%, -50%);
@@ -142,7 +142,7 @@ input[type=submit]:hover {
 
 /* bottom container */
 
-.bottom-container {
+.botao-container {
     text-align: center;
     background-color: #666;
     border-radius: 0px 0px 4px 4px;
@@ -253,12 +253,12 @@ footer {
 /* Responsive layout - when the screen is less than 650px wide, make the two columns stack on top of each other instead of next to each other */
 
 @media screen and (max-width: 650px) {
-    .col {
+    .coluna {
         width: 100%;
         margin-top: 0;
     }
     /* hide the vertical line */
-    .vl {
+    .vil {
         display: none;
     }
     /* show the hidden text on small screens */
