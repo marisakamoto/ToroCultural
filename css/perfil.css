@@ -60,7 +60,20 @@ ul {
 
 #menu-lado h6 {
     color: orange;
-    font-size: large;
+    font-size: 1.5em;
     display: flex;
     justify-content: center;
+}
+
+#menu-lado h5{
+    color: rgb(104, 98, 98);
+    font-size: 1em;
+    display: flex;
+    justify-content: center;
+}
+
+.nossa-equipe h4{
+    font-size: 1em;
+    text-align: center;
+    font-weight: bold;
 }
