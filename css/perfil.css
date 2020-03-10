@@ -1,6 +1,6 @@
-.row div {
-    /* border: 2px solid coral; */
-}
+/*.row div {
+    border: 2px solid coral; 
+}*/
 
 ul {
     list-style-type: none;
@@ -27,6 +27,14 @@ ul {
     flex-direction: row;
     justify-content: center;
     font-family: 'Lato';
+}
+
+.foto-perfil{
+    text-align: center;
+}
+
+#foto p{
+    text-align: center;
 }
 
 .checked {
