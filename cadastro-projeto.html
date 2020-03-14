@@ -72,7 +72,7 @@
 
             </nav>
         </div>
-    </header>    
+    </header>
     <main>
         <h2 id="title-form">Cadastro Projeto</h2>
         <form class="form-project">
@@ -95,6 +95,7 @@
                 <label for="categorias-proj">Categorias de projeto</label>
                 <textarea style="margin-left: 105px;" name="categorias-proj" id="categorias-pro" cols="60%" rows="5"></textarea></br>
             </div>
+
         </form>
         <form class="exp-extras">
             <div class="titulo-2">
@@ -111,6 +112,42 @@
                 <textarea name="proj-habilidades" style="margin-left: 5px" id="proj-habilidades" cols="60%" rows="1"></textarea></br>
                 <label for="faixa-preco">Faixa de preço</label>
                 <input class="faixa-preco" style="width: 60%; margin-left:10px;" type="number" name="faixa-preco" id="faixa-preco"></br>
+                <div class="container">
+                    <div class='col-md-5'>
+                        <div class="form-group">
+                            <div class='input-group date' id='datetimepicker6'>
+                                <input type='text' class="form-control" />
+                                <span class="input-group-addon">
+                                    <span class="glyphicon glyphicon-calendar"></span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='col-md-5'>
+                        <div class="form-group">
+                            <div class='input-group date' id='datetimepicker7'>
+                                <input type='text' class="form-control" />
+                                <span class="input-group-addon">
+                                    <span class="glyphicon glyphicon-calendar"></span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <script type="text/javascript">
+                    $(function() {
+                        $('#datetimepicker6').datetimepicker();
+                        $('#datetimepicker7').datetimepicker({
+                            useCurrent: false //Important! See issue #1075
+                        });
+                        $("#datetimepicker6").on("dp.change", function(e) {
+                            $('#datetimepicker7').data("DateTimePicker").minDate(e.date);
+                        });
+                        $("#datetimepicker7").on("dp.change", function(e) {
+                            $('#datetimepicker6').data("DateTimePicker").maxDate(e.date);
+                        });
+                    });
+                </script>
             </div>
         </form>
         <div class="add-experiencia">

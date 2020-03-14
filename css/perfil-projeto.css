@@ -1,0 +1,109 @@
+w3schools.com THE WORLD'S LARGEST WEB DEVELOPER SITE
+ How TO - CSS Calendar Learn how to create a Calendar with CSS. How To Create a Calendar Layout ❮❯ AUGUST 2017 Mo Tu We Th Fr Sa Su 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 Step 1) Add HTML: Example <div class="month"><ul><li class="prev">&#10094;
+</li><li class="next">&#10095;
+</li><li>August<br><span style="font-size:18px">2017</span></li></ul></div><ul class="weekdays"><li>Mo</li><li>Tu</li><li>We</li><li>Th</li><li>Fr</li><li>Sa</li><li>Su</li></ul><ul class="days"><li>1</li><li>2</li><li>3</li><li>4</li><li>5</li><li>6</li><li>7</li><li>8</li><li>9</li><li><span class="active">10</span></li><li>11</li>...etc </ul>Step 2) Add CSS: Example ul {
+    list-style-type: none;
+}
+
+body {
+    font-family: Lato, sans-serif;
+}
+
+#info-local-data {
+    display: flex;
+    flex-direction: row;
+}
+
+
+/* Month header */
+
+.month {
+    padding: 70px 25px;
+    width: 100%;
+    background: #1abc9c;
+    text-align: center;
+}
+
+
+/* Month list */
+
+.month ul {
+    margin: 0;
+    padding: 0;
+}
+
+.month ul li {
+    color: white;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+
+/* Previous button inside month header */
+
+.month .prev {
+    float: left;
+    padding-top: 10px;
+}
+
+
+/* Next button */
+
+.month .next {
+    float: right;
+    padding-top: 10px;
+}
+
+
+/* Weekdays (Mon-Sun) */
+
+.weekdays {
+    margin: 0;
+    padding: 10px 0;
+    background-color: #ddd;
+}
+
+.weekdays li {
+    display: inline-block;
+    width: 13.6%;
+    color: #666;
+    text-align: center;
+}
+
+
+/* Days (1-31) */
+
+.days {
+    padding: 10px 0;
+    background: #eee;
+    margin: 0;
+}
+
+.days li {
+    list-style-type: none;
+    display: inline-block;
+    width: 13.6%;
+    text-align: center;
+    margin-bottom: 5px;
+    font-size: 12px;
+    color: #777;
+}
+
+
+/* Highlight the "current" day */
+
+.days li .active {
+    padding: 5px;
+    background: #1abc9c;
+    color: white !important
+}
+
+COLOR PICKER colorpicker HOW TO Tabs Dropdowns Accordions Side Navigation Top Navigation Modal Boxes Progress Bars Parallax Login Form HTML Includes Google Maps Range Sliders Tooltips Slideshow Filter List Sort List SHARE CERTIFICATES HTML CSS JavaScript SQL Python PHP jQuery Bootstrap XML Top Tutorials HTML Tutorial CSS Tutorial JavaScript Tutorial How To Tutorial SQL Tutorial Python Tutorial W3.CSS Tutorial Bootstrap Tutorial PHP Tutorial jQuery Tutorial Java Tutorial C++Tutorial Top References HTML Reference CSS Reference JavaScript Reference SQL Reference Python Reference W3.CSS Reference Bootstrap Reference PHP Reference HTML Colors jQuery Reference Java Reference Angular Reference Top Examples HTML Examples CSS Examples JavaScript Examples How To Examples SQL Examples Python Examples W3.CSS Examples Bootstrap Examples PHP Examples jQuery Examples Java Examples XML Examples Web Certificates HTML Certificate CSS Certificate JavaScript Certificate SQL Certificate Python Certificate jQuery Certificate PHP Certificate Bootstrap Certificate XML Certificate W3Schools is optimized for learning,
+testing,
+and training. Examples might be simplified to improve reading and basic understanding. Tutorials,
+references,
+and examples are constantly reviewed to avoid errors,
+but we cannot warrant full correctness of all content. While using this site,
+you agree to have read and accepted our terms of use,
+cookie and privacy policy. Copyright 1999-2020 by Refsnes Data. All Rights Reserved. Powered by W3.CSS. W3Schools.com
