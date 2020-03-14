@@ -29,11 +29,11 @@ ul {
     font-family: 'Lato';
 }
 
-.foto-perfil{
+.foto-perfil {
     text-align: center;
 }
 
-#foto p{
+#foto p {
     text-align: center;
 }
 
@@ -44,7 +44,7 @@ ul {
 #menu-lado {
     background-color: rgb(226, 226, 226);
     /* padding-top: 10px; */
-    border-top-left-radius: 15%;
+    border-top-left-radius: 100px;
     color: rgb(70, 70, 70);
     font-family: 'Lato';
     font-size: medium;
@@ -65,14 +65,14 @@ ul {
     justify-content: center;
 }
 
-#menu-lado h5{
+#menu-lado h5 {
     color: rgb(104, 98, 98);
     font-size: 1em;
     display: flex;
     justify-content: center;
 }
 
-.nossa-equipe h4{
+.nossa-equipe h4 {
     font-size: 1em;
     text-align: center;
     font-weight: bold;
