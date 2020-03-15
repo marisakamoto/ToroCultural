@@ -14,19 +14,30 @@ ul {
 
 #main-info {
     margin-top: 2em;
+    margin-left: 2em;
 }
 
-#main-info .col-sm-4 {
+#main-info h3 {
+    font-family: 'Lato';
+}
+
+
+/* #mapa-cal {
+    max-height: 500px;
+} */
+
+
+/* #main-info .col-sm-4 {
     display: flex;
     justify-content: center;
     flex-direction: column;
-}
+} */
 
 #main-info ul {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    font-family: 'Lato';
+    font-family: Lato;
 }
 
 .foto-perfil {
@@ -44,13 +55,20 @@ ul {
 #menu-lado {
     background-color: rgb(226, 226, 226);
     /* padding-top: 10px; */
-    border-top-left-radius: 100px;
-    color: rgb(70, 70, 70);
-    font-family: 'Lato';
+    color: rgb(50, 50, 50);
+    font-family: Lato;
     font-size: medium;
     display: flex;
     justify-content: center;
     flex-direction: column;
+}
+
+.menu-dir {
+    border-top-left-radius: 100px;
+}
+
+.menu-esq {
+    border-top-right-radius: 100px;
 }
 
 #menu-lado .my-4 {
@@ -59,9 +77,10 @@ ul {
 }
 
 #menu-lado h6 {
-    color: orange;
-    font-size: 1.5em;
+    color: rgb(92, 71, 66);
+    font-size: 1.2em;
     display: flex;
+    font-family: 'Lato';
     justify-content: center;
 }
 
@@ -76,4 +95,148 @@ ul {
     font-size: 1em;
     text-align: center;
     font-weight: bold;
+}
+
+.avatar {
+    border-radius: 50%;
+    /* border: 1px solid slateblue; */
+}
+
+@media (min-width:1200px) {
+    #info-local-data {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        /* padding: 1em; */
+        /* margin: 1em; */
+    }
+}
+
+
+/* #info-local-data {
+    margin-left: 2em;
+} */
+
+#mapa-cal {
+    background-color: rgb(140, 196, 193);
+    border-radius: 35px;
+    margin: 10px;
+    max-height: 500px;
+}
+
+
+/* 
+.map-responsive {
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
+} */
+
+#mapa-cal iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+.calendar {
+    align-self: center;
+    justify-content: center;
+}
+
+
+/* Month header */
+
+.month {
+    /* padding: 70px 25px; */
+    background: #ec8c3d;
+    text-align: center;
+    font-family: Lato, Arial, Helvetica, sans-serif;
+    /* padding: 0;
+    margin: 0; */
+    width: 300px;
+    border-radius: 50px;
+    /* width: 100px; */
+    /* padding: 10px 0; */
+    /* margin-top: 1em; */
+}
+
+
+/* Month list */
+
+.month ul {
+    margin: 0.8em;
+    /* padding: 1.5em; */
+}
+
+.month ul li {
+    color: white;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+
+/* Previous button inside month header */
+
+.month .prev {
+    float: left;
+    padding-top: 10px;
+}
+
+
+/* Next button */
+
+.month .next {
+    float: right;
+    padding-top: 10px;
+}
+
+
+/* Weekdays (Mon-Sun) */
+
+.weekdays {
+    margin: 0;
+    padding: px 0;
+    background-color: #ddd;
+    width: 300px;
+}
+
+.weekdays li {
+    display: inline-block;
+    width: 12.2%;
+    color: #666;
+    text-align: center;
+}
+
+
+/* Days (1-31) */
+
+.days {
+    padding: 0;
+    background: #eee;
+    margin: 1;
+    font-size: 1em;
+    width: 300px;
+}
+
+.days li {
+    list-style-type: none;
+    display: inline-block;
+    width: 12.2%;
+    text-align: center;
+    margin-bottom: 5px;
+    font-size: 1em;
+    color: #777;
+}
+
+
+/* Highlight the "current" day */
+
+.days li .active {
+    padding: 5px;
+    background: #ec8c3d;
+    border-radius: 50%;
+    color: white !important
 }
