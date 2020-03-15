@@ -240,3 +240,10 @@ ul {
     border-radius: 50%;
     color: white !important
 }
+
+h1 {
+    font-family: Lato;
+    margin-left: .4em;
+    font-size: 2em;
+    color: #444;
+}
