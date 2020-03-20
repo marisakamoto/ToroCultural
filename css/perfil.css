@@ -247,3 +247,27 @@ h1 {
     font-size: 2em;
     color: #444;
 }
+
+.image-cropper {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.image-cropper-sm {
+    width: 60px;
+    height: 60px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.image-cropper img,
+.image-cropper-sm img {
+    display: inline;
+    margin: 0 auto;
+    height: 100%;
+    width: auto;
+}
