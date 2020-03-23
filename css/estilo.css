@@ -7,18 +7,9 @@
 header {
     background-color: rgb(255, 224, 212);
     font-family: Lato;
-    font-size: 0.9em;
+    font-size: 1em;
 }
 
-.caixa {
-    /*CENTRALIZAR COMPONETES DO CABEÇALHO*/
-    /* width: 92%; */
-    position: relative;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    border: 3px solid green;
-}
 
 #button-search {
     display: inline-block;
@@ -27,11 +18,6 @@ header {
     border-radius: 0 8px 8px 0;
     width: 50px;
     background: rgba(250, 169, 102, 0.911);
-}
-
-.logo-img {
-    width: 3em;
-    padding-top: 9px;
 }
 
 .titulo-secao {
@@ -72,11 +58,6 @@ h3 {
     width: 290px;
 }
 
-
-/*descobrir
-  #busca:active{
-    border-color: transparent;
-  }*/
 
 #barra-busca #input {
     display: flex;
