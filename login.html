@@ -1,102 +1,99 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link rel="icon" href="img/toro cultural.png">
-    <link rel="stylesheet" href="css/specimen_files/stylesheet.css" type="text/css" charset="utf-8" />
-    <link rel="stylesheet" href="css/estilo.css">
-    <link rel="stylesheet" href="css/login.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    
+<html lang="pt-br">
 
-</head>
-<body>
-  <header>
-    <div class="container-fluid" id="navegacao">
-      <nav class="navbar  navbar-expand-lg  navbar-light">
-          <a class="navbar-brand" href="#">
-              <img src="img/toro cultural.png" width="100" height="100" class="d-inline-block align-top" alt="Toró Cultural">
-          </a>
-          <form class="form-inline " id="barra-busca">
-              <input class="form-control " type="search" placeholder="Buscar" aria-label="Buscar">
-              <input id="button-search" class="btn  my-2 my-sm-0" type="image" src="img/search.png" alt="buscar" width="50" height="35">
-          </form>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-              <ul class="nav justify-content-end ">
-                  <li class="nav-item active">
-                      <a class="nav-link" href="home.html">Home</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="home.html">cSobre o Toró</a></li>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="home.html">Contato</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Configurações</a>
-                  </li>
-              </ul>
-          </div>
-      </nav>
-  </header>
-  <main>
-    <div class="caixa-login">
-        <form action="/action_page.php">
-          <div class="linha">
-            <h2 style="text-align:center">login</h2>
-            <div class="vil">
-              <span class="vil-innertext">ou</span>
-            </div>
-      
-            <div class="coluna">
-              <a href="#" class="fb botao">
-                <i class="fa fa-facebook fa-fw"></i> Login com Facebook
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Login</title>
+      <link rel="icon" href="img/toro cultural.png">
+      <link rel="stylesheet" href="css/specimen_files/stylesheet.css" type="text/css" charset="utf-8" />
+      <link rel="stylesheet" href="css/estilo.css">
+      <link rel="stylesheet" href="css/login.css">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  </head>
+
+  <body>
+    <header> 
+      <div class="container-fluid" id="navegacao">
+          <nav class="navbar  navbar-expand-lg  navbar-light pt-0 pb-0 menu-geral">
+              <a class="navbar-brand" href="home.html"> 
+                  <img src="img/toro cultural.png" width="85" height="85" alt="Toró Cultural">
               </a>
-              <a href="#" class="twitter botao">
-                <i class="fa fa-twitter fa-fw"></i> Login com Twitter
-              </a>
-              <a href="#" class="google botao">
-                <i class="fa fa-google fa-fw"></i> Login com Google+
-              </a>
-            </div>
-      
-            <div class="coluna">
-              <div class="hide-md-lg">
-                <p>Ou login manualmente:</p>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse justify-content-end menu" id="navbarNav">
+                  <ul class="nav justify-content-end ">
+                      <li class="nav-item">
+                        <a class="nav-link" href="home.html">Home</a></li>
+                      </li>
+                      <li class="nav-item active" style="font-size: 1.03em">
+                          <a class="nav-link" href="login.html">Login</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="home.html#sobre-nos">Sobre o Toró</a></li>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="home.html#entre-em-contato">Contato</a>
+                      </li>
+                  </ul>
               </div>
-      
-              <input type="text" name="username" placeholder="Username" required>
-              <input type="password" name="password" placeholder="Password" required>
-              <input type="submit" value="Login">
+          </nav>
+      </div>
+    </header>
+    <main>
+      <div class="caixa-login">
+          <form action="/action_page.php">
+            <div class="linha">
+              <h2 class ="titulo-register" style="text-align:center">Login</h2>
+              <div class="vil">
+                <span class="vil-innertext">ou</span>
+              </div>
+        
+              <div class="coluna">
+                <a href="#" class="fb botao">
+                  <i class="fa fa-facebook fa-fw"></i> Login com Facebook
+                </a>
+                <a href="#" class="twitter botao">
+                  <i class="fa fa-twitter fa-fw"></i> Login com Twitter
+                </a>
+                <a href="#" class="google botao">
+                  <i class="fa fa-google fa-fw"></i> Login com Google+
+                </a>
+              </div>
+        
+              <div class="coluna">
+                <div class="hide-md-lg">
+                  <p>Ou login manualmente:</p>
+                </div>
+        
+                <input type="text" name="username" placeholder="Username" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <input type="submit" value="Login">
+              </div>
+        
             </div>
-      
+          </form>
+        </div>
+    
+      <div class="botao-container">
+        <div class="linha">
+          <div class="coluna">
+            <a href="register.html" style="color:white" class="botao">Registre-se</a>
           </div>
-        </form>
-      </div>
-  
-    <div class="botao-container">
-      <div class="linha">
-        <div class="coluna">
-          <a href="#" style="color:white" class="botao">Registre-se</a>
-        </div>
-        <div class="coluna">
-          <a href="#" style="color:white" class="botao">Esqueceu a senha?</a>
+          <div class="coluna">
+            <a href="#" style="color:white" class="botao">Esqueceu a senha?</a>
+          </div>
         </div>
       </div>
-    </div>
-  </main>
-  <footer>
-    <a class="redes-link" href="#"><img class="redes" src="img/logo-do-facebook.png" alt="facebook"></a>
-    <a class="redes-link" href="#"><img class="redes" src="img/twitter.png" alt="twitter"></a>
-    <a class="redes-link" href="#"><img class="redes" src="img/instagram.png" alt="instagram"></a>
-  </footer>
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    </main>
+    <footer>
+      <a class="redes-link" href="#"><img class="redes" src="img/logo-do-facebook.png" alt="facebook"></a>
+      <a class="redes-link" href="#"><img class="redes" src="img/twitter.png" alt="twitter"></a>
+      <a class="redes-link" href="#"><img class="redes" src="img/instagram.png" alt="instagram"></a>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-</body>
+  </body>
 </html>
