@@ -169,7 +169,7 @@ footer {
         padding: 0;
     }
     .menu{
-        margin-left: 66%;
+        margin-left: 62%;
     }
 
     .menu-geral{
@@ -178,5 +178,9 @@ footer {
 
     .botao-nav :checked ~ .menu {
         margin-left: 0;
+    }
+
+    #barra-busca{
+        width: 65%;
     }
 }
