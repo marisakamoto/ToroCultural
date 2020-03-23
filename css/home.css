@@ -4,11 +4,6 @@
     padding: 0;
 }
 
-body{
-    margin: 0;
-}
-
-
 .info {
     display: flex;
     align-items: center;
@@ -19,7 +14,7 @@ body{
     text-align: justify;
     margin-left: 2em;
     margin-right: 2em;
-    margin-top: 0em;
+    /*margin-top: 0em;*/    
 }
 
 .sobre-home{
@@ -28,7 +23,6 @@ body{
 
 #bola {
     border-radius: 50%;
-    width: 10em;
 }
 
 h1 {
@@ -47,17 +41,14 @@ h3 {
 /*FORMULÁRIO DE CONTATO*/
 
 .form-contato {
-    width: 65%;
+    width: 90%;
     margin: 0 auto;
     /* border: rgb(165, 157, 157) 1.9px solid;
     border-radius: 20px;*/
-    margin-top: 30px;
     font-family: 'Lato';
     font-size: 1.5em;
     color: rgb(248, 117, 56);
     /*text-align: center;*/
-    overflow: hidden;
-    padding-bottom: 30px;
 }
 
 .form-contato form {
@@ -69,14 +60,13 @@ h3 {
     /*float: right;*/
     border: rgb(165, 157, 157) 1px solid;
     border-radius: 10px;
-    width: 70%;
+    width: 90%;
     margin-bottom: 7px;
 }
 
 .caixa-contato {
     /*text-align: center;*/
-    width: 70%;
-    ;
+    width: 90%;
     margin: 0 auto;
     overflow: hidden;
 }
@@ -88,4 +78,31 @@ h3 {
     font-size: 23px;
     padding: 8px;
     border: none;
+}
+
+.form-contato input{
+    margin-left: 0;
+}
+
+@media(max-width: 800px){
+    header ul li{
+        width: 100%;
+        float: none;
+    }
+    
+    .nav-link{
+        padding: 0;
+    }
+    .menu{
+        margin-left: 66%;
+    }
+
+    .menu-geral{
+        padding-right:0;
+    }
+
+    .botao-nav :checked ~ .menu {
+        margin-left: 0;
+
+    }
 }
