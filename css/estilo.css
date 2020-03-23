@@ -157,3 +157,26 @@ footer {
     width: 2em;
     margin: 10px;
 }
+
+
+@media(max-width: 800px){
+    header ul li{
+        width: 100%;
+        float: none;
+    }
+    
+    .nav-link{
+        padding: 0;
+    }
+    .menu{
+        margin-left: 66%;
+    }
+
+    .menu-geral{
+        padding-right:0;
+    }
+
+    .botao-nav :checked ~ .menu {
+        margin-left: 0;
+    }
+}
