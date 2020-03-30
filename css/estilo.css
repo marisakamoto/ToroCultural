@@ -172,6 +172,10 @@ footer {
         margin-left: 62%;
     }
 
+    a.nav-link{
+        border-bottom: rgb(240, 143, 105) solid 2px;
+    }
+
     .menu-geral{
         padding-right:0;
     }
