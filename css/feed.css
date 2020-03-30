@@ -8,3 +8,9 @@
     background-color: rgb(226, 226, 226);
     border-top-right-radius: 100px;
 }
+
+#titulo-feed{
+    font-family: Lato;
+    color: rgba(250, 169, 102, 0.911);
+    font-size: 2rem;
+}

@@ -44,74 +44,93 @@
     <!--Corpo do FEED-->
     <main>
         <div id="feed-completo" class="container-fluid px-0">
+            <div class="row">
 
-            <!--Coluna pesquisa-->
-            <div class="col-md-3 col-pesquisa px-0">
-                <div class="row pt-5" id="foto">
-                    <div class="foto-perfil mx-auto">
-                        <canvas id="UgCanvas" width="150px" height="150px" style="border:2.5px solid rgb(165, 157, 157); border-radius: 50%;"></canvas>
-                        </canvas>
+                <!--Coluna pesquisa-->
+                <div class="col-md-3 col-pesquisa px-0">
+                    <div class="row pt-5" id="foto">
+                        <div class="foto-perfil mx-auto">
+                            <canvas id="UgCanvas" width="150px" height="150px" style="border:2.5px solid rgb(165, 157, 157); border-radius: 50%;"></canvas>
+                            </canvas>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <p class="mx-auto">Fulano de tal</p>
+                    </div>
+                    <hr class="my-2">
+                    <div class="row form-pesquisa px-0 mx-auto">
+                        <form class="mx-auto">
+                            <div class="form-group mt-3">
+                            
+                            <input type="email" class="form-control" id="" placeholder="Pesquisar">
+                            </div>
+                    
+                            <div class="form-check form-check-inline mx-0">
+                                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="Torozeiro">
+                                <label class="form-check-label" for="inlineCheckbox1">Torozeiro</label>
+                            </div>
+                            <div class="form-check form-check-inline mr-0">
+                                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="Projeto">
+                                <label class="form-check-label" for="inlineCheckbox2">Projeto</label>
+                            </div>
+                            <div class="form-check form-check-inline mr-0">
+                                <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="Publicação">
+                                <label class="form-check-label" for="inlineCheckbox3">Publicação</label>
+                            </div>
+                    
+                            <div class="form-group mt-3">
+                            <label for="exampleFormControlSelect1">Qual estado?</label>
+                            <select class="form-control" id="exampleFormControlSelect1">
+                                <option>Escolha um Estado</option>
+                                <option>Bahia</option>
+                                <option>Minas Gerais</option>
+                                <option>São Paulo</option>
+                                <option>Rio de Janeiro</option>
+                                <option>Rio Grande do Sul</option>
+                            </select>
+                            </div>
+                    
+                            <div class="form-group">
+                                <label for="exampleFormControlSelect1">Qual cidade?</label>
+                                <select class="form-control" id="exampleFormControlSelect1">
+                                <option>Escolha um Estado</option>
+                                <option>Bahia</option>
+                                <option>Minas Gerais</option>
+                                <option>São Paulo</option>
+                                <option>Rio de Janeiro</option>
+                                <option>Rio Grande do Sul</option>
+                                </select>
+                            </div>
+                    
+                            <button type="submit" class="btn mb-2 p-1 botao-padrao ">Pesquisar</button>
+                        </form>
                     </div>
                 </div>
-                <div class="row">
-                    <p class="mx-auto">Fulano de tal</p>
-                </div>
-                <hr class="my-4">
-                <div class="row form-pesquisa px-0 mx-auto">
-                    <form class="mx-auto">
-                        <div class="form-group mt-3">
-                          
-                          <input type="email" class="form-control" id="" placeholder="Pesquisar">
-                        </div>
-                
-                        <div class="form-check form-check-inline mx-0">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="Torozeiro">
-                            <label class="form-check-label" for="inlineCheckbox1">Torozeiro</label>
-                          </div>
-                          <div class="form-check form-check-inline mr-0">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="Projeto">
-                            <label class="form-check-label" for="inlineCheckbox2">Projeto</label>
-                          </div>
-                          <div class="form-check form-check-inline mr-0">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="Publicação">
-                            <label class="form-check-label" for="inlineCheckbox3">Publicação</label>
-                          </div>
-                
-                        <div class="form-group mt-3">
-                          <label for="exampleFormControlSelect1">Qual estado?</label>
-                          <select class="form-control" id="exampleFormControlSelect1">
-                            <option>Escolha um Estado</option>
-                            <option>Bahia</option>
-                            <option>Minas Gerais</option>
-                            <option>São Paulo</option>
-                            <option>Rio de Janeiro</option>
-                            <option>Rio Grande do Sul</option>
-                          </select>
-                        </div>
-                
-                        <div class="form-group">
-                            <label for="exampleFormControlSelect1">Qual cidade?</label>
-                            <select class="form-control" id="exampleFormControlSelect1">
-                              <option>Escolha um Estado</option>
-                              <option>Bahia</option>
-                              <option>Minas Gerais</option>
-                              <option>São Paulo</option>
-                              <option>Rio de Janeiro</option>
-                              <option>Rio Grande do Sul</option>
-                            </select>
-                          </div>
-                
-                        <button type="submit" class="btn btn-primary mb-2">Enviar</button>
-                      </form>
-                </div>
-            </div>
-            <!--FIM Coluna pesquisa-->
+                <!--FIM Coluna pesquisa-->
 
-            <!--Coluna FEED-->
-            <div class="col-md-9  bg-secondary">
-                
+                <!--Coluna FEED-->
+                <div class="col-md-9  col-feed px-0 mx-0 bg-secondary">
+                    <div class="row px-5 pb-2 bg-white ml-0">
+                        <h2 id="titulo-feed">Feed de notícias</h2>
+                    </div>
+
+
+                    <nav>
+                        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                          <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#feed-user" role="tab" aria-controls="nav-home" aria-selected="true">Home</a>
+                          <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#feed-site" role="tab" aria-controls="nav-profile" aria-selected="false">Perfil</a>
+                        </div>
+                      </nav>
+                      <div class="tab-content" id="nav-tabContent">
+                        <div class="tab-pane fade show active" id="feed-user" role="tabpanel" aria-labelledby="nav-home-tab">Olá</div>
+                        <div class="tab-pane fade" id="feed-site" role="tabpanel" aria-labelledby="nav-profile-tab">...</div>
+                        
+                      </div>
+                    
+
+                </div>
+                <!--FIM Coluna FEED-->
             </div>
-            <!--FIM Coluna FEED-->
         </div>
 
 

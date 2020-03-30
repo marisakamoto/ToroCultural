@@ -188,3 +188,11 @@ footer {
         width: 65%;
     }
 }
+
+.botao-padrao {
+    background-color: rgb(248, 117, 56);
+    color: white;
+    font-family: 'Lato';
+    font-size: 20px;
+    border: none;
+}
