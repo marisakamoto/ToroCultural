@@ -55,23 +55,77 @@
     </header>
 
 
-    <div class="card ml-1 my-5  " style="width: 50%;">
-      <div class="row">
-        <div class="col-md-3 my-auto px-0">
-          <div class="foto-perfil mx-auto">
-            <canvas id="UgCanvas" width="85px" height="85px" style="border:2.5px solid rgb(165, 157, 157); border-radius: 50%;"></canvas>
-            </canvas>
-          </div>
-        </div>
-        <div class="col-md-9 px-1">
-          <div class="card-body px-1" style="width: 50%;">
-            <h5 class="card-title">Título do card</h5>
-            <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
-            <a href="#" class="btn btn-primary">Visitar</a>
-          </div>
-        </div>
-      </div>
-    </div>
+    <main>
+        <div id="feed-completo" class="container-fluid px-0">
+            <div class="row principal mr-0">
+
+                <!--Coluna pesquisa-->
+                <div class="col-md-3 col-pesquisa px-0">
+                    <div class="row pt-5" id="foto">
+                        <div class="foto-perfil mx-auto">
+                            <canvas id="UgCanvas" width="150px" height="150px" style="border:2.5px solid rgb(165, 157, 157); border-radius: 50%;"></canvas>
+                            </canvas>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <p class="mx-auto">Fulano de tal</p>
+                    </div>
+                    <hr class="my-2">
+
+                    <button class="navbar-toggler botao-nav" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                        </button>
+
+                        
+                    <div class="row form-pesquisa px-0 mx-auto">
+                        <form class="mx-auto pl-1">
+                            <div class="form-group mt-3">
+                            
+                            <input type="email" class="form-control" id="" placeholder="Pesquisar">
+                            </div>
+                    
+                            <div class="form-check form-check-inline mx-0">
+                                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="Torozeiro">
+                                <label class="form-check-label" for="inlineCheckbox1">Torozeiro</label>
+                            </div>
+                            <div class="form-check form-check-inline mr-0">
+                                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="Projeto">
+                                <label class="form-check-label" for="inlineCheckbox2">Projeto</label>
+                            </div>
+                            <div class="form-check form-check-inline mr-0">
+                                <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="Publicação">
+                                <label class="form-check-label" for="inlineCheckbox3">Publicação</label>
+                            </div>
+                    
+                            <div class="form-group mt-3">
+                            <label for="exampleFormControlSelect1">Qual estado?</label>
+                            <select class="form-control" id="exampleFormControlSelect1">
+                                <option>Escolha um Estado</option>
+                                <option>Bahia</option>
+                                <option>Minas Gerais</option>
+                                <option>São Paulo</option>
+                                <option>Rio de Janeiro</option>
+                                <option>Rio Grande do Sul</option>
+                            </select>
+                            </div>
+                    
+                            <div class="form-group">
+                                <label for="exampleFormControlSelect1">Qual cidade?</label>
+                                <select class="form-control" id="exampleFormControlSelect1">
+                                <option>Escolha um Estado</option>
+                                <option>Bahia</option>
+                                <option>Minas Gerais</option>
+                                <option>São Paulo</option>
+                                <option>Rio de Janeiro</option>
+                                <option>Rio Grande do Sul</option>
+                                </select>
+                            </div>
+                    
+                            <button type="submit" class="btn mb-2 p-1 botao-padrao ">Pesquisar</button>
+                        </form>
+                    </div>
+                </div>
+                <!--FIM Coluna pesquisa-->
 
 
 
