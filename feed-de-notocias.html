@@ -44,7 +44,7 @@
     <!--Corpo do FEED-->
     <main>
         <div id="feed-completo" class="container-fluid px-0">
-            <div class="row">
+            <div class="row principal mr-0">
 
                 <!--Coluna pesquisa-->
                 <div class="col-md-3 col-pesquisa px-0">
@@ -109,21 +109,83 @@
                 <!--FIM Coluna pesquisa-->
 
                 <!--Coluna FEED-->
-                <div class="col-md-9  col-feed px-0 mx-0 bg-secondary">
+                <div class="col-md-9  col-feed px-0 mx-0">
                     <div class="row px-5 pb-2 bg-white ml-0">
                         <h2 id="titulo-feed">Feed de notícias</h2>
                     </div>
 
 
                     <nav>
-                        <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                          <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#feed-user" role="tab" aria-controls="nav-home" aria-selected="true">Home</a>
-                          <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#feed-site" role="tab" aria-controls="nav-profile" aria-selected="false">Perfil</a>
+                        <div class="nav nav-tabs btn-principais-feed" id="nav-tab" role="tablist">
+                          <a class="btn-feed nav-item nav-link active text-center" id="nav-home-tab" data-toggle="tab" href="#feed-user" role="tab" aria-controls="nav-home" aria-selected="true">Meu Feed</a>
+                          <a class="btn-feed nav-item nav-link text-center" id="nav-profile-tab" data-toggle="tab" href="#feed-site" role="tab" aria-controls="nav-profile" aria-selected="false">Pesquisa</a>
                         </div>
                       </nav>
                       <div class="tab-content" id="nav-tabContent">
-                        <div class="tab-pane fade show active" id="feed-user" role="tabpanel" aria-labelledby="nav-home-tab">Olá</div>
-                        <div class="tab-pane fade" id="feed-site" role="tabpanel" aria-labelledby="nav-profile-tab">...</div>
+                        <div class="conteudo-feed tab-pane fade show px-2 py-2 active" id="feed-user" role="tabpanel" aria-labelledby="nav-home-tab">
+                            <div class="row justify-content-end">
+                                <div class="form-group pr-5">
+                                    <label for="exampleFormControlSelect1">Organizar por:</label>
+                                    <select class="form-control" id="exampleFormControlSelect1">
+                                    <option>favoritos</option>
+                                    <option>mais recentes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="conteudo-meu-feed row">
+                                <div class="card ml-1 mx-auto mb-4" style="width: 90%;">
+                                    <div class="row py-3">
+                                      <div class="col-md-2 my-auto text-center">
+                                        <div class="foto-perfil">
+                                          <canvas id="UgCanvas" width="85px" height="85px" style="border:2.5px solid rgb(165, 157, 157); border-radius: 50%;"></canvas>
+                                          </canvas>
+                                        </div>
+                                      </div>
+                                      <div class="col-md-10 px-1">
+                                        <div class="card-body px-1">
+                                          <h5 class="card-title">Nome de usuário</h5>
+                                          <p class="card-text">Foi adicionado como baterista do projeto <a href="#">musica_para_crianças</a>.</p>
+                                        </div>
+                                      </div>
+                                    </div>
+                                </div>
+                                <div class="card ml-1 mx-auto mb-4" style="width: 90%;">
+                                    <div class="row py-3">
+                                        <div class="col-md-2 my-auto text-center">
+                                        <div class="foto-perfil">
+                                            <canvas id="UgCanvas" width="85px" height="85px" style="border:2.5px solid rgb(165, 157, 157); border-radius: 50%;"></canvas>
+                                            </canvas>
+                                        </div>
+                                        </div>
+                                        <div class="col-md-10 px-1">
+                                        <div class="card-body px-1">
+                                            <h5 class="card-title">Nome de usuário</h5>
+                                            <p class="card-text">Foi adicionado como baterista do projeto <a href="#">musica_para_crianças</a>.</p>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card ml-1 mx-auto mb-4" style="width: 90%;">
+                                    <div class="row py-3">
+                                        <div class="col-md-2 my-auto text-center">
+                                        <div class="foto-perfil">
+                                            <canvas id="UgCanvas" width="85px" height="85px" style="border:2.5px solid rgb(165, 157, 157); border-radius: 50%;"></canvas>
+                                            </canvas>
+                                        </div>
+                                        </div>
+                                        <div class="col-md-10 px-1">
+                                        <div class="card-body px-1">
+                                            <h5 class="card-title">Nome de usuário</h5>
+                                            <p class="card-text">Foi adicionado como baterista do projeto <a href="#">musica_para_crianças</a>.</p>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class="conteudo-feed tab-pane fade px-2 pt-2" id="feed-site" role="tabpanel" aria-labelledby="nav-profile-tab">...</div>
                         
                       </div>
                     

@@ -2,7 +2,13 @@
     width: 100%;
 }
 
+.main{
+    width: 100%;
+}
 
+*{
+    font-family: 'lato';
+}
 
 .col-pesquisa{
     background-color: rgb(226, 226, 226);
@@ -12,5 +18,29 @@
 #titulo-feed{
     font-family: Lato;
     color: rgba(250, 169, 102, 0.911);
-    font-size: 2rem;
+    font-size: 2rem;    
+}
+
+.btn-feed{
+    width: 50%;
+    border-radius:10px 10px 0 0!important;
+    
+}
+
+.btn-feed:active{
+    background-color: rgb(154, 155, 163);
+}
+
+.btn-feed:hover{
+    background-color: rgb(154, 155, 163);
+}
+
+
+
+.btn-principais-feed{
+    background-color: white;
+}
+
+.conteudo-feed{
+    border: solid red 10px;
 }
