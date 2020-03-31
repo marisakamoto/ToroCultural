@@ -56,9 +56,11 @@ ul {
     font-family: Lato;
     font-size: medium;
     display: flex;
-    justify-content: center;
+
     flex-direction: column;
 }
+
+
 
 .menu-dir {
     border-top-left-radius: 100px;
@@ -267,3 +269,10 @@ h1 {
     margin: 0 auto;
     height: 100%;
 }
+
+.avatar-projeto{
+    border-radius: 50%;
+    width: 25%;
+    object-fit: cover;
+}
+
