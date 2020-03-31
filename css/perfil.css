@@ -12,14 +12,11 @@ ul {
     align-items: center;
 }
 
-#main-info {
-    margin-top: 2em;
-    margin-left: 2em;
-}
 
 #main-info h3 {
     font-family: 'Lato';
 }
+
 
 
 /* #mapa-cal {
