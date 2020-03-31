@@ -81,11 +81,34 @@
             <div class="botao-container">
                 <div class="linha">
                     <div class="coluna">
-                        <a href="#" style="color:white" class="botao">Login</a>
+                        <a href="login.html" style="color:white" class="botao">Login</a>
                     </div>
                     <div class="coluna">
-                        <a href="esqueceu-senha.html" style="color:white" class="botao">Esqueceu a senha?</a>
-                    </div>
+
+                        <button type="button" class="btn botao btn-esqueceu-senha" href="esqueceu-senha.html" 
+                        data-toggle="modal" data-target=".bd-example-modal-sm">Esqueceu a senha?</button>
+            
+                        <div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                          <div class="modal-dialog modal-sm">
+                            <div class="modal-content">
+                             
+                              <div class="caixa-esqueceu-senha">
+                                <form action="/action_page.php">
+                                  <div class="linha">
+                                    <h2 class ="titulo-register" style="text-align:center">Esqueceu a Senha?</h2>
+                                    <div class="coluna-esqueceu-senha" style="width: 100%;">
+                                      <input type="email" name="email" placeholder="Email para recuperação" required>
+                                      <input type="submit" value="Recuperar senha">
+                                    </div>
+                                  </div>
+                                </form>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+            
+            
+                      </div>
                 </div>
             </div>
         </main>
