@@ -22,6 +22,18 @@ body {
     margin: 5em 3em 0em 3em;
 }
 
+.caixa-nova-senha{
+    width: 75%;
+    position: relative;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 10px 0 30px 0;
+    margin: 5em 3em 0em 3em; 
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 200px;
+}
+
 
 .caixa-esqueceu-senha{
     position: relative;
@@ -153,7 +165,7 @@ input[type=submit]:hover {
 
 .btn-esqueceu-senha{
     color:white; 
-    background-color: #666;
+        background-color: #666;
 }
 
 
