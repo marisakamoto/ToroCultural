@@ -10,6 +10,9 @@
     font-family: 'lato';
 }
 
+body{
+    width: 100%;
+}
 .col-pesquisa{
     background-color: rgb(226, 226, 226);
     border-top-right-radius: 100px;
@@ -41,6 +44,8 @@
     background-color: white;
 }
 
-.conteudo-feed{
-    border: solid red 10px;
+
+
+.conteudo-feed .text-secundario-feed{
+    font-size: 20px;
 }

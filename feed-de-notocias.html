@@ -21,8 +21,9 @@
               </a>
               
               <button class="navbar-toggler botao-nav" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon"></span>
               </button>
+
               <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                   <ul class="nav justify-content-end ">
                       <li class="nav-item active">
@@ -41,24 +42,32 @@
     </header>
 
 
+
+
+
     <!--Corpo do FEED-->
     <main>
         <div id="feed-completo" class="container-fluid px-0">
             <div class="row principal mr-0">
 
                 <!--Coluna pesquisa-->
-                <div class="col-md-3 col-pesquisa px-0">
+                <div class="col-md-3 col-pesquisa">
                     <div class="row pt-5" id="foto">
                         <div class="foto-perfil mx-auto">
                             <canvas id="UgCanvas" width="150px" height="150px" style="border:2.5px solid rgb(165, 157, 157); border-radius: 50%;"></canvas>
-                            </canvas>
                         </div>
                     </div>
                     <div class="row">
                         <p class="mx-auto">Fulano de tal</p>
                     </div>
                     <hr class="my-2">
-                    <div class="row form-pesquisa px-0 mx-auto">
+                    <div class="btn-pesquisa-avancada text-center">
+                        <button class="botao-padrao btn pt-2" type="button" data-toggle="collapse" data-target="#nossa-pesquisa" aria-controls="nossa-pesquisa" aria-expanded="false" aria-label="Toggle navigation">
+                            <h5 class="" >Pesquisa avançada</h5>
+                        </button>
+                    </div>
+
+                    <div id="nossa-pesquisa" class="row form-pesquisa px-0 mx-auto collapse justify-content-center">
                         <form class="mx-auto pl-1">
                             <div class="form-group mt-3">
                             
@@ -93,7 +102,7 @@
                             <div class="form-group">
                                 <label for="exampleFormControlSelect1">Qual cidade?</label>
                                 <select class="form-control" id="exampleFormControlSelect1">
-                                <option>Escolha um Estado</option>
+                                <option>Escolha uma Cidade</option>
                                 <option>Bahia</option>
                                 <option>Minas Gerais</option>
                                 <option>São Paulo</option>
@@ -109,9 +118,9 @@
                 <!--FIM Coluna pesquisa-->
 
                 <!--Coluna FEED-->
-                <div class="col-md-9  col-feed px-0 mx-0">
-                    <div class="row px-5 pb-2 bg-white ml-0">
-                        <h2 id="titulo-feed">Feed de notícias</h2>
+                <div class="col-md-9 col-feed px-0 mx-0">
+                    <div class="row px-0 pb-2 bg-white mr-0 ml-0 pl-4" style="width: 100%;">
+                        <h2 id="titulo-feed" >Feed de notícias</h2>
                     </div>
 
 
@@ -124,7 +133,7 @@
                       <div class="tab-content" id="nav-tabContent">
                         <div class="conteudo-feed tab-pane fade show px-2 py-2 active" id="feed-user" role="tabpanel" aria-labelledby="nav-home-tab">
                             <div class="row justify-content-end">
-                                <div class="form-group pr-5">
+                                <div class="text-secundario-feed pr-5 pb-2">
                                     <label for="exampleFormControlSelect1">Organizar por:</label>
                                     <select class="form-control" id="exampleFormControlSelect1">
                                     <option>favoritos</option>
@@ -132,8 +141,8 @@
                                     </select>
                                 </div>
                             </div>
-                            <div class="conteudo-meu-feed row">
-                                <div class="card ml-1 mx-auto mb-4" style="width: 90%;">
+                            <div class="conteudo-meu-feed row pl-1">
+                                <div class="card mx-auto mb-4" style="width: 90%;">
                                     <div class="row py-3">
                                       <div class="col-md-2 my-auto text-center">
                                         <div class="foto-perfil">
@@ -185,7 +194,106 @@
 
 
                         </div>
-                        <div class="conteudo-feed tab-pane fade px-2 pt-2" id="feed-site" role="tabpanel" aria-labelledby="nav-profile-tab">...</div>
+                        <div class="conteudo-feed tab-pane fade px-2 pt-2" id="feed-site" role="tabpanel" aria-labelledby="nav-profile-tab">
+                            <div class="row">
+                                <p class="text-secundario-feed pl-5">Resultados encontrados para: <a href="#">Artur Oliveira </a></p>
+                            </div>
+                            <div class="conteudo-meu-feed row pl-1 d-flex justify-content-around">
+                                <div class="card ml-1 mb-4" style="width: 40%;">
+                                    <div class="row py-3">
+                                        <div class="col-md-5 my-auto text-center">
+                                            <div class="foto-perfil">
+                                                <canvas id="UgCanvas" width="85px" height="85px" style="border:2.5px solid rgb(165, 157, 157); border-radius: 50%;"></canvas>
+                                                </canvas>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-7 px-1 my-auto">
+                                            <div class="card-body">
+                                                <h5 class="card-title text-center my-auto"><a href="#"> Nome de usuário</a></h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card ml-1 mb-4" style="width: 40%;">
+                                    <div class="row py-3">
+                                        <div class="col-md-5 my-auto text-center">
+                                            <div class="foto-perfil">
+                                                <canvas id="UgCanvas" width="85px" height="85px" style="border:2.5px solid rgb(165, 157, 157); border-radius: 50%;"></canvas>
+                                                </canvas>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-7 px-1 my-auto">
+                                            <div class="card-body">
+                                                <h5 class="card-title text-center"><a href="#"> Nome de usuário</a></h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card ml-1 mb-4" style="width: 40%;">
+                                    <div class="row py-3">
+                                        <div class="col-md-5 my-auto text-center">
+                                            <div class="foto-perfil">
+                                                <canvas id="UgCanvas" width="85px" height="85px" style="border:2.5px solid rgb(165, 157, 157); border-radius: 50%;"></canvas>
+                                                </canvas>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-7 px-1 my-auto">
+                                            <div class="card-body">
+                                                <h5 class="card-title text-center my-auto"><a href="#"> Nome de usuário</a></h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card ml-1 mb-4" style="width: 40%;">
+                                    <div class="row py-3">
+                                        <div class="col-md-5 my-auto text-center">
+                                            <div class="foto-perfil">
+                                                <canvas id="UgCanvas" width="85px" height="85px" style="border:2.5px solid rgb(165, 157, 157); border-radius: 50%;"></canvas>
+                                                </canvas>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-7 px-1 my-auto">
+                                            <div class="card-body">
+                                                <h5 class="card-title text-center"><a href="#"> Nome de usuário</a></h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card ml-1 mb-4" style="width: 40%;">
+                                    <div class="row py-3">
+                                        <div class="col-md-5 my-auto text-center">
+                                            <div class="foto-perfil">
+                                                <canvas id="UgCanvas" width="85px" height="85px" style="border:2.5px solid rgb(165, 157, 157); border-radius: 50%;"></canvas>
+                                                </canvas>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-7 px-1 my-auto">
+                                            <div class="card-body">
+                                                <h5 class="card-title text-center my-auto"><a href="#"> Nome de usuário</a></h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card ml-1 mb-4" style="width: 40%;">
+                                    <div class="row py-3">
+                                        <div class="col-md-5 my-auto text-center">
+                                            <div class="foto-perfil">
+                                                <canvas id="UgCanvas" width="85px" height="85px" style="border:2.5px solid rgb(165, 157, 157); border-radius: 50%;"></canvas>
+                                                </canvas>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-7 px-1 my-auto">
+                                            <div class="card-body">
+                                                <h5 class="card-title text-center"><a href="#"> Nome de usuário</a></h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                        </div>
                         
                       </div>
                     
