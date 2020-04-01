@@ -49,3 +49,29 @@ body{
 .conteudo-feed .text-secundario-feed{
     font-size: 20px;
 }
+
+.img-projeto{
+    width: 100%;
+    object-fit: cover;
+}
+
+a{
+    color: rgb(248, 117, 56);
+}
+
+.descricao-proj{
+    font-size: 1.1em;
+}
+
+.titulo-projeto{
+    font-size: 1.3em;
+}
+
+/*
+.caixa-foto-perfil{
+    border-right: solid 20px black;
+}
+
+@media screen and (min-width: 650px){
+    border-right: solid 0 ;
+}*/
