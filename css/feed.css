@@ -71,7 +71,7 @@ a{
 .img-projeto-feed{
     object-fit: cover;
   
-    width: 140px;
+    width: 80%;
 }
 
 
@@ -83,3 +83,12 @@ a{
 @media screen and (min-width: 650px){
     border-right: solid 0 ;
 }*/
+
+
+/*#modelo-atualizao-projeto, #modelo-proj-addProfissional, #modelo-prof-addAoProjeto, #modelo-criar-projeto{
+    background: linear-gradient(40deg, #ffd86f, #fc6262);
+}*/
+
+.caixa-foto-perfil{
+  
+}
