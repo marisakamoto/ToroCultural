@@ -59,7 +59,7 @@
             <div class="row principal mr-0">
 
                 <!--Coluna pesquisa-->
-                <div class="col-md-3 col-pesquisa">
+                <div class="col-md-3 colPesquisaAvancada">
                     <div class="row pt-5" id="foto">
                         <div class="foto-perfil mx-auto">
                             <canvas id="UgCanvas" width="150px" height="150px" style="border:2.5px solid rgb(165, 157, 157); border-radius: 50%;"></canvas>
@@ -119,7 +119,7 @@
                                 </select>
                             </div>
                     
-                            <button type="submit" class="btn mb-2 p-1 botao-padrao ">Pesquisar</button>
+                            <button type="submit" class="btn mb-2 p-2 botao-padrao ">Pesquisar</button>
                         </form>
                     </div>
                 </div>
@@ -139,8 +139,16 @@
                         </div>
                       </nav>
                       <div class="tab-content" id="nav-tabContent">
+                          <!--área do feed do usuário-->
                         <div class="conteudo-feed tab-pane fade show px-2 py-2 active" id="feed-user" role="tabpanel" aria-labelledby="nav-home-tab">
                             <div class="row justify-content-end">
+                                <div class="my-auto">
+                                    <form class="form-inline ">
+                                        <input class="form-control mr-sm-1" type="search" placeholder="Pesquisar no seu feed" aria-label="Pesquisar"
+                                        style="width: 65%;">
+                                        <button class="btn btn-outline-success my-1 my-sm-0 py-1 px-2" type="submit"><img class="search" src="img/search.png" alt=""></button>
+                                    </form>
+                                </div>
                                 <div class="text-secundario-feed pr-5 pb-2">
                                     <label for="exampleFormControlSelect1">Organizar por:</label>
                                     <select class="form-control" id="exampleFormControlSelect1">
@@ -152,7 +160,7 @@
 
 
 
-                            <div class="container border pt-5">
+                            <div class="areaDePostagens container border pt-5">
                                 
 
 
@@ -253,7 +261,7 @@
                             </div>
 
 
-                
+                            <!--área da pesquisa no feed-->
                         <div class="conteudo-feed tab-pane fade px-2 pt-2" id="feed-site" role="tabpanel" aria-labelledby="nav-profile-tab">
                             <div class="row">
                                 <p class="text-secundario-feed pl-5">Resultados encontrados para: <a href="#">Artur Oliveira </a></p>

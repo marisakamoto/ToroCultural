@@ -114,6 +114,11 @@ h3 {
     border: none;
 }
 
+.botao-padrao:hover{
+    font-size: 1.3em!important;
+    border: solid orange 1px;
+}
+
 
 /*FOOTER*/
 
