@@ -16,12 +16,12 @@
 
 /*primeiro formulário*/
 
-.form-user,
+
 .exp-extras,
 .form-project {
     width: 65%;
     margin: 0 auto;
-    border: rgb(165, 157, 157) 1.9px solid;
+    border: rgb(165, 157, 157) 1.5px solid;
     border-radius: 20px;
     margin-top: 30px;
     font-family: 'Lato';
@@ -38,9 +38,6 @@
     border-radius: 10px;
 }
 
-.form-user textarea {
-    margin-top: 20px;
-}
 
 .user-canto {
     float: left;
@@ -62,12 +59,7 @@
     background-color: white;*/
 }
 
-.user-direita {
-    float: right;
-    margin-right: 1em;
-    margin-top: 1.7em;
-    width: 65%;
-}
+
 
 .caixinhas {
     width: 70%;
@@ -87,9 +79,7 @@
     margin-top: 10px;
 }
 
-#descricao-user {
-    width: 60%;
-}
+
 
 .user-final {
     clear: both;
@@ -122,6 +112,7 @@
     height: 40px;
     /* text-align: right; */
 }
+
 
 .user-final label {
     float: left;
@@ -264,4 +255,22 @@
         flex: 0;
         max-width: 0;
     }
+}
+
+
+
+
+/*FORMULÁRIO - USUÁRIO*/
+
+.cadastro-user{
+    border: rgb(165, 157, 157) 1.4px solid;
+    border-radius: 20px;
+    font-family: 'lato';
+    font-size: 1.3em;
+    color: rgb(248, 117, 56);
+    width: 70%!important;
+}
+
+.formHabilidadesInteresses{
+    width: 100%;
 }
