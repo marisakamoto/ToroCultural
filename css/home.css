@@ -1,23 +1,17 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
 
-.info {
-    display: flex;
-    align-items: center;
-    text-align: center;
+
+
+/*Sobre o Toró*/
+
+
+.content-sobre-toro{
+    padding: 0;
 }
 
 .info p {
     text-align: justify;
     margin-left: 2em;
     margin-right: 2em;  
-}
-
-.sobre-home{
-    padding: 0;
 }
 
 #bola {
@@ -27,7 +21,6 @@
 h1 {
     font-family: 'remachine_script_personal_uRg';
     color: rgb(248, 117, 56);
-    font-size: 3em;
 }
 
 h3 {
@@ -36,36 +29,34 @@ h3 {
     font-size: 2.5em;
 }
 
+/* FIM Sobre o Toró*/
+
+
+
 
 /*FORMULÁRIO DE CONTATO*/
 
 .form-contato {
-    width: 90%;
-    margin: 0 auto;
+    width: 80%;
     font-family: 'Lato';
-    font-size: 1.5em;
+    font-size: 1.3em;
     color: rgb(248, 117, 56);
 }
+
+
+
+.caixa-contato {
+    width: 90%;
+}
+
 
 .form-contato input,
 .form-contato textarea {
     border: rgb(165, 157, 157) 1px solid;
     border-radius: 10px;
     width: 90%;
-    margin-bottom: 7px;
 }
+/*FIM FORMULÁRIO DE CONTATO*/
 
-.caixa-contato {
-    width: 90%;
-    margin: 0 auto;
-}
-
-.caixa-contato button {
-    background-color: rgb(248, 117, 56);
-    color: white;
-    font-family: 'Lato';
-    font-size: 23px;
-    border: none;
-}
 
 

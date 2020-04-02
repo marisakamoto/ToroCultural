@@ -8,7 +8,8 @@
     <link rel="icon" href="img/toro cultural.png">
 
     <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Kaushan+Script|Lobster&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" 
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/specimen_files/stylesheet.css" type="text/css" charset="utf-8" />
     <!-- Font Awesome -->
@@ -29,20 +30,23 @@
 
 <body>
     <header>
-        <div class="container-fluid mx-1">
-            <nav class="navbar  navbar-expand-lg  navbar-light">
+        <div class="container-fluid">
+            <nav class="navbar  navbar-expand-lg  navbar-light pt-0 pb-0">
                 <a class="navbar-brand" href="#">
-                    <img src="img/toro cultural.png" width="90" height="90" class="d-inline-block align-top" alt="Toró Cultural">
+                    <img src="img/toro cultural.png" width="85" height="85" class="d-inline-block align-top" alt="Toró Cultural">
                 </a>
-                <form class="form-inline" id="barra-busca">
-                    <input class="form-control " type="search" placeholder="Buscar" aria-label="Buscar">
-                    <input class="btn  my-2 my-sm-0 " id="button-search" type="image" src="img/search.png" alt="buscar" width="35" height="35">
-                </form>
+                
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-1" type="search" placeholder="Pesquisar" aria-label="Pesquisar"
+                        style="width: 65%;">
+                        <button class="btn btn-outline-success my-1 my-sm-0 py-1 px-2" type="submit"><img class="search" src="img/search.png" alt=""></button>
+                    </form>
 
                     <ul class="nav justify-content-end ">
 
@@ -62,6 +66,7 @@
                     </ul>
 
                 </div>
+
 
             </nav>
         </div>
@@ -268,7 +273,7 @@
                 </div>
             </div>
 
-            <div class="col-lg-2 menu-esq pt-4 " id="menu-lado">
+            <div class="col-lg-2 menu-esq pt-5 " id="menu-lado">
                 <h6>Sobre o autor</h6>
                 <h5>Nome de usuário</h5>
                 <div class="d-flex justify-content-center row text-center ">
@@ -291,47 +296,95 @@
                 <div id="user-statistics ">
                     <h6>Estatísticas</h6>
                     <ul>
-                        <li><strong>150</strong> Visualizações</li>
-                        <li>Recomendam o trabalho <strong>94%</strong> </li>
-                        <li><strong>70%</strong>Taxa de resposta</li>
+                        <li class="py-3"><strong>150</strong> Visualizações</li>
+                        <li class="py-3">Recomendam o trabalho <strong>94%</strong> </li>
+                        <li class="py-3"><strong>70%</strong>Taxa de resposta</li>
 
                     </ul>
                     <p>Publicado há 1 mês</p>
                 </div>
                 <hr class="my-4 ">
-                <div id="user-network ">
-                    <h6>Nossa equipe</h6>
-                    <div class="row text-center nossa-equipe d-flex justify-content-between ">
-                        <div class="col px-1 ">
-                            <img class="avatar " src="img/mulher1.jpg " alt="perfil-user " width="70 " height="70 ">
+                <div id="user-network">
+                    <h6 class="pb-3">Nossa equipe</h6>
 
+                        <div class="row  px-1 pt-2 ">
+                            <div class="row">
+                                <img class="avatar-projeto mx-auto" src="img/mulher1.jpg " width="50px" height="50px" alt="perfil-user ">
+                            </div>
+                            <div class="rowtext-center" style="width: 100%;">
+                                <p class="text-center mx-auto mb-0"><a href="#">Nome de usuário</a></p>
+                            </div>
+                            <div class="row mx-auto text-center">
+                                <p class="text-center mx-auto">Atriz</p>
+                            </div>
                         </div>
-                        <div class="col border px-1 ">
-                            <img class="avatar " src="img/perfil.jpg " alt="perfil-user " width="70 " height="70 ">
 
+                        <div class="row  px-1 pt-2">
+                            <div class="row">
+                                <img class="avatar-projeto mx-auto" src="img/perfil.jpg " alt="perfil-user ">
+                            </div>
+                            <div class="rowtext-center" style="width: 100%;">
+                                <p class="text-center mx-auto mb-0"><a href="#">Nome de usuário</a></p>
+                            </div>
+                            <div class="row mx-auto">
+                                <p class="text-center" >Profissional</p>
+                            </div>
                         </div>
-                        <div class="col border px-1 ">
-                            <img class="avatar " src="img/perfil.jpg " alt="perfil-user " width="70 " height="70 ">
 
+                        <div class="row  px-1 pt-2">
+                            <div class="row">
+                                <img class="avatar-projeto mx-auto" src="img/perfil.jpg " alt="perfil-user ">
+                            </div>
+                            <div class="rowtext-center" style="width: 100%;">
+                                <p class="text-center mx-auto mb-0"><a href="#">Nome de usuário</a></p>
+                            </div>
+                            <div class="row mx-auto">
+                                <p class="text-center" >Profissional</p>
+                            </div>
                         </div>
-                        <div class="col border px-1 ">
-                            <img class="avatar " src="img/perfil.jpg " alt="perfil-user " width="70 " height="70 ">
 
+                        <div class="row  px-1 pt-2">
+                            <div class="row">
+                                <img class="avatar-projeto mx-auto" src="img/perfil.jpg " alt="perfil-user ">
+                            </div>
+                            <div class="rowtext-center" style="width: 100%;">
+                                <p class="text-center mx-auto mb-0"><a href="#">Nome de usuário</a></p>
+                            </div>
+                            <div class="row mx-auto">
+                                <p class="text-center" >Profissional</p>
+                            </div>
                         </div>
-                        <div class="col border px-1 ">
-                            <img class="avatar " src="img/perfil.jpg " alt="perfil-user " width="70 " height="70 ">
 
+                        <div class="row  px-1 pt-2">
+                            <div class="row">
+                                <img class="avatar-projeto mx-auto" src="img/perfil.jpg " alt="perfil-user ">
+                            </div>
+                            <div class="rowtext-center" style="width: 100%;">
+                                <p class="text-center mx-auto mb-0"><a href="#">Nome de usuário</a></p>
+                            </div>
+                            <div class="row mx-auto">
+                                <p class="text-center" >Profissional</p>
+                            </div>
                         </div>
-                        <div class="col border px-1 ">
-                            <img class="avatar " src="img/perfil.jpg " alt="perfil-user " width="70 " height="70 ">
 
+                        <div class="row  px-1 pt-2">
+                            <div class="row">
+                                <img class="avatar-projeto mx-auto" src="img/perfil.jpg " alt="perfil-user ">
+                            </div>
+                            <div class="rowtext-center" style="width: 100%;">
+                                <p class="text-center mx-auto mb-0"><a href="#">Nome de usuário</a></p>
+                            </div>
+                            <div class="row mx-auto">
+                                <p class="text-center" >Profissional</p>
+                            </div>
                         </div>
+
                     </div>
                 </div>
             </div>
         </div>
 
-        </div>
+        
     </main>
     <footer>
         <a class="redes-link " href="# "><img class="redes " src="img/logo-do-facebook.png " alt="facebook "></a>

@@ -7,7 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Toró Cultural</title>
     <link rel="icon" href="img/toro cultural.png">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" 
+                        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="css/estilo.css">
     <link rel="stylesheet" href="css/specimen_files/stylesheet.css" type="text/css" charset="utf-8" />
     <link rel="stylesheet" href="css/home.css">
@@ -24,7 +25,7 @@
                 <button class="navbar-toggler botao-nav" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse justify-content-end menu" id="navbarNav">
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                     <ul class="nav justify-content-end ">
                         <li class="nav-item active">
                             <a class="nav-link" href="login.html">Login</a>
@@ -40,22 +41,21 @@
             </nav>
         </div>
     </header>
-<main>
-        <div class="container-fluid sobre-home">
+    <main>
+        <section class="container-fluid content-sobre-toro">
             <div class="jumbotron">
                 <div class="container-fluid">
                     <h1 class="display-4" id="sobre-nos">Sobre toró cultural</h1>
                     <p class="lead">A sua rede social para encontrar produtores independentes e oportunidades para participar de projetos culturais. </p>
-                   
                 </div>
                 <hr class="my-4">
-                <div class="container-fluid">
-                    <div class="row info">
-                        <div class="col-md-6">
-                            <img src="img/cultura.jpg" style="width:100% "class="img-fluid" alt="banner" id="bola">
+                
+                    <div class="row text-center info py-3">
+                        <div class="col-md-6 my-auto">
+                            <img src="img/cultura.jpg"  class="img-fluid" alt="banner" id="bola">
                         </div>
-                        <div class="col-md-6">
-                            <div class="texto">
+                        <div class="col-md-6 my-auto">
+                            <div class="texto-sobre-toro">
                                 <h3>o que é?</h3>
                                 <p>Toró Cultural é uma rede social que promove o encontro de produtores independentes para publicarem seus talentos e tirarem seus projetos do papel.</p>
                                 <h3>para quem? </h3>
@@ -63,11 +63,11 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                
         
-                <div class="container-fluid">
-                    <div class=" row info">
-                        <div class=" col-md-6 texto">
+             
+                    <div class=" row text-center info py-3">
+                        <div class=" col-md-6 texto-sobre-toro">
                             <h3>quando? </h3>
                             <p>A ser utilizado a qualquer momento tanto para divulgar o seu perfil artistico quanto para recrutar novos talentos para o seu projeto. Além de atualizar seus seguidores sobre o seu projeto!</p>
                             <h3>aonde?</h3>
@@ -75,17 +75,17 @@
                             <h3>quanto custa?</h3>
                             <p>Preço e orçamento a serem definidos pelos próprios usuários.</p>
                         </div>
-                        <div class="col-md-6">
-                            <img src="img/maos.png" style="width:100%" class="img-fluid" alt="banner" id="bola">
+                        <div class="col-md-6 my-auto">
+                            <img src="img/maos.png"  class="img-fluid" alt="banner" id="bola">
                         </div>
                     </div>
-                </div>
-                <div class="container-fluid">
-                    <div class="row info">
-                        <div class=" col-md-6">
-                            <img src="img/Lampada.jpg" style="width:100%" class="img-fluid" alt="banner" id="bola" />
+               
+               
+                    <div class="row text-center info py-3">
+                        <div class=" col-md-6 texto-sobre-toro">
+                            <img src="img/Lampada.jpg"  class="img-fluid" alt="banner" id="bola" />
                         </div>
-                        <div class="texto col-md-6">
+                        <div class="texto col-md-6 my-auto">
                             <h3>por quê?</h3>
                             <p>Devido a dificuldade de produtores culturais encontrarem talentos que não sejam apenas indicações pessoais e assim encontrarem as melhores pessoas para os seus projetos. Desse jeito, Toró veio fortalecer a comunidade da cultura.</p>
 
@@ -93,30 +93,31 @@
                             <p>Artistas autônomos e produtores independentes se inscrevem no site para então interagirem e trabalharem em projetos em conjunto a partir do cadastro de suas habilidades.</p>
                         </div>  
                     </div>
-                </div>
+              
             </div>
-        </div>
-        <section class="form-contato" id="entre-em-contato">
-            <div class="caixa-contato">
-                <h1 class="display-4">Entre em contato</h1>
-                <form class="pb-5">
-                    <div class="form-group">
+        </section>
+        <section class="container form-contato mx-auto pb-4" id="formEntreEmContato">
+            <div class="caixa-contato mx-auto">
+                <h1 class="display-4 pl-3">Entre em contato</h1>
+                <form>
+                    <div class="form-group pl-3">
                         <label for="nome">Nome</label></br>
                         <input  type="text" id="nome" name="nome" required></br>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group pl-3">
                         <label for="email">Email</label></br>
                         <input  type="email" id="email" name="email"></br>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group pl-3">
                         <label for="mensagem">Mensagem</label></br>
                         <textarea name="mensagem" id="mensagem" cols="30" rows="4"></textarea></br>
                     </div>
-                    <button class="btn">Enviar</button>
+                    <button class="btn botao-padrao ml-3">Enviar</button>
                 </form>
             </div>
         </section>
     </main>
+
 
 
     <!-- Footer -->

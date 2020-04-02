@@ -1,0 +1,94 @@
+*{
+    font-family: 'lato';
+}
+
+
+
+#titulo-feed{
+    font-family: 'remachine_script_personal_uRg';
+    color: rgb(248, 117, 56);
+    font-size: 2.8rem;    
+}
+
+a{
+    color: rgb(248, 117, 56);
+}
+
+
+/*Coluna pesquisa*/
+.colPesquisaAvancada{
+    background-color: rgb(226, 226, 226);
+    border-top-right-radius: 100px;
+}
+
+/*Botões do feed*/
+.btn-feed{
+    width: 50%;
+    border-radius:10px 10px 0 0!important;
+}
+
+
+.btn-feed:hover{
+    background-color: rgb(248, 117, 56);
+}
+
+.btn-principais-feed{
+    background-color: white;
+}
+
+/*Corpo do feed*/
+
+.conteudo-feed .text-secundario-feed{
+    font-size: 20px;
+}
+
+.img-projeto{
+    width: 100%;
+    object-fit: cover;
+}
+
+
+.descricao-proj{
+    font-size: 1.1em;
+}
+
+.titulo-publi-feed{
+    font-size: 1.3em;
+}
+
+.avatar-projeto{
+    border-radius: 50%;
+    width: 60%;
+    object-fit: cover;
+}
+
+.add-profissional{
+    border-radius: 50%;
+    width: 30%;
+
+}
+
+.img-projeto-feed{
+    object-fit: cover;
+  
+    width: 80%;
+}
+
+
+/*
+.caixa-foto-perfil{
+    border-right: solid 20px black;
+}
+
+@media screen and (min-width: 650px){
+    border-right: solid 0 ;
+}*/
+
+
+/*#modelo-atualizao-projeto, #modelo-proj-addProfissional, #modelo-prof-addAoProjeto, #modelo-criar-projeto{
+    background: linear-gradient(40deg, #ffd86f, #fc6262);
+}*/
+
+.caixa-foto-perfil{
+  
+}

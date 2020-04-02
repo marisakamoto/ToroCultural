@@ -10,16 +10,23 @@ header {
     font-size: 1em;
 }
 
-
-#button-search {
-    display: inline-block;
-    border: none;
-    height: 37px;
-    border-radius: 0 8px 8px 0;
-    width: 50px;
-    background: rgba(250, 169, 102, 0.911);
+.search{
+    width: 20px;
 }
 
+.nav {
+    font-size: 1.2em;
+}
+
+
+.nav a {
+    color: darkslategrey;
+    font-weight: bold;
+}
+
+
+
+/*pagina projeto*/
 .titulo-secao {
     font-family: 'remachine_script_personal_uRg';
     color: rgb(248, 117, 56);
@@ -27,137 +34,41 @@ header {
     display: inline-block;
 }
 
-h3 {
-    font-family: 'remachine_script_personal_uRg';
-    color: rgb(248, 117, 56);
-    font-size: 5em;
-    display: inline-block;
-}
-
-#pesquisa-nav img {
-    width: 1em;
-}
-
-#pesquisa-nav {
-    /* position: absolute; */
-    top: 30%;
-    display: inline-block;
-    background-color: white;
-    border-radius: 10px 0 0 10px;
-    width: 280px;
-    height: 32px;
-    /* margin-left: 100px; */
-}
-
-#pesquisa-nav {
-    background-color: transparent;
-    padding-left: 10px;
-    font-size: 10px;
-    border: none;
-    height: 32px;
-    width: 290px;
-}
 
 
-#barra-busca #input {
-    display: flex;
-    flex-direction: row;
-}
-
-#pesquisa-nav button {
-    display: inline-block;
-    /* position: absolute; */
-    border: none;
-    /* height: 32px; */
-    border-radius: 0 8px 8px 0;
-    /* width: 60px; */
-    background: rgba(250, 169, 102, 0.911);
-}
 
 
-/*menu de navegação*/
-
-nav {
-    /* position: absolute; */
-    /* top: 30%; */
-    /* right: 1.9em; */
-    background-color: rgb(255, 224, 212)
-}
-
-.nav {
-    /* display: inline-block; */
-    /* margin-left: 2.1em; */
-    font-size: 1.5em;
-    background-color: rgb(255, 224, 212);
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    /* border: 1px solid red; */
-}
-
-.navbar-brand {
-    margin-left: 30px;
-    margin-right: 50px;
-}
-
-#barra-busca input {
-    display: flex;
-    justify-content: space-evenly;
-}
-
-.nav a {
-    text-decoration: none;
-    color: darkslategrey;
-    font-size: 0.8em;
-    font-family: 'Lato';
-    font-weight: bold;
-}
-
-.config {
-    width: 1.2em;
-}
 
 
-/*CONTEUDO DA PÁGINA*/
 
+
+/*OLHAR SE FOI ALTERADO NA PÁGINA DE CADASTRO!!!!!!!!!!*/
 h2 {
     color: rgb(248, 117, 56);
-    /*font-family: 'Kaushan Script';*/
-    /*font-family: 'Lobster';*/
     font-family: 'Lato';
     text-align: center;
     font-size: 2.5em;
     padding: 20px 0 1px 0;
 }
 
-h3 {
-    color: rgb(248, 117, 56);
-    font-size: 1.5em;
-    text-align: center;
-}
-
-h4 {
-    color: rgb(248, 117, 56);
-    font-size: 1.1em;
-}
-
 .titulo-2 {
     width: 80%;
     margin: 0 auto;
 }
+/*OLHAR SE FOI ALTERADO NA PÁGINA DE CADASTRO!!!!!!!!!!*/
 
-footer {
-    display: inline-block;
-    background-color: rgb(255, 224, 212);
-    width: 100%;
-    text-align: center;
+
+
+
+
+
+/*CONTEUDO DA PÁGINA*/
+
+h3 {
+    font-family: 'remachine_script_personal_uRg';
+    color: rgb(248, 117, 56);
+    font-size: 3em;
 }
-
-.redes {
-    width: 2em;
-    margin: 10px;
-}
-
 
 .formulario {
     position: relative;
@@ -191,8 +102,9 @@ footer {
     .nav-link{
         padding: 0;
     }
-    .menu{
-        margin-left: 62%;
+    
+    a.nav-link{
+        border-bottom: rgb(240, 143, 105) solid 2px;
     }
 
     .menu-geral{
@@ -206,4 +118,40 @@ footer {
     #barra-busca{
         width: 65%;
     }
+
+    li.nav-item{
+        font-size: 1.2em;
+    }
+}
+
+
+
+/*Botão para pesquisas e formulários*/
+.botao-padrao {
+    background-color: rgb(248, 117, 56);
+    color: white;
+    font-family: 'Lato';
+    font-size: 20px;
+    border: none;
+}
+
+.botao-padrao:hover{
+    background-color: rgb(235, 106, 47);
+    font-size: 1.3em!important;
+
+}
+
+
+/*FOOTER*/
+
+footer {
+    display: inline-block;
+    background-color: rgb(255, 224, 212);
+    width: 100%;
+    text-align: center;
+}
+
+.redes {
+    width: 2em;
+    margin: 10px;
 }
