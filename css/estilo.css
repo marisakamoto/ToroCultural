@@ -169,6 +169,10 @@ footer {
     #barra-busca{
         width: 65%;
     }
+
+    li.nav-item{
+        font-size: 1.3em;
+    }
 }
 
 .botao-padrao {
