@@ -159,6 +159,29 @@ footer {
 }
 
 
+.formulario {
+    position: relative;
+    width: 729px;
+    height: 765px;
+    padding-left: 15px;
+    margin-left: 15px;
+    border-left-width: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    padding-top: 40px;
+}
+
+.formulario-cadastro {
+    position: relative;
+    width: 729px;
+    padding-left: 15px;
+    margin-left: 15px;
+    border-left-width: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    padding-top: 40px;
+}
+
 @media(max-width: 800px){
     header ul li{
         width: 100%;

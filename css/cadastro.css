@@ -46,6 +46,9 @@
     float: left;
     margin-left: 1.8em;
     margin-top: 1.7em;
+    margin-right: 43px;
+    width: 190px;
+    text-align: center;
 }
 
 .alterar-foto {
@@ -54,7 +57,7 @@
     font-weight: bold;
     padding: 4px;
     color: rgba(250, 169, 102, 0.911);
-    margin-left: 10px;
+    margin-left: 0px;
     /*border: none;
     background-color: white;*/
 }
@@ -91,18 +94,45 @@
 .user-final {
     clear: both;
     width: 85%;
-    text-align: center;
+    text-align: center !important;
     margin: 0 auto;
-    padding-top: 20px;
     padding-bottom: 20px;
+    margin-top: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    margin-top: 0px;
+    height: 40px;
+    display: block !important;
+
+}
+
+.user-final-2 {
+    clear: both;
+    width: 85%;
+    margin: 0 auto;
+    padding-bottom: 20px;
+    margin-top: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    margin-top: 0px;
+    height: 40px;
+    /* text-align: right; */
 }
 
 .user-final label {
     float: left;
 }
 
-.user-final input {
+.user-final input, textarea {
     float: right;
+}
+
+.user-texto {
+    width: 70%;
 }
 
 #pcp-habilidades,
@@ -113,7 +143,7 @@
 }
 
 .exp-extras {
-    background-color: rgb(235, 151, 165);
+    background-color: rgb(255, 224, 212);
     clear: both;
     overflow: hidden;
     border-radius: 20px 20px 0 0;
@@ -220,4 +250,17 @@
     margin: 0 auto;
     text-align: right;
     padding: 20px;
+}
+
+@media screen and (max-width: 1200px) {
+    .user-canto {
+        margin-left: 0px;
+    }
+}
+
+@media screen and (max-width: 2000px) {
+    .col-xl-2 {
+        flex: 0;
+        max-width: 0;
+    }
 }
