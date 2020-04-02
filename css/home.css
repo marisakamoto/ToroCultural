@@ -43,17 +43,19 @@ h3 {
     color: rgb(248, 117, 56);
 }
 
+
+
+.caixa-contato {
+    width: 90%;
+}
+
+
 .form-contato input,
 .form-contato textarea {
     border: rgb(165, 157, 157) 1px solid;
     border-radius: 10px;
     width: 90%;
 }
-
-.caixa-contato {
-    width: 90%;
-}
-
 /*FIM FORMULÁRIO DE CONTATO*/
 
 

@@ -13,8 +13,9 @@ ul {
 }
 
 
-#main-info h3 {
+.nomeUser {
     font-family: 'Lato';
+    font-size: 2em;
 }
 
 
