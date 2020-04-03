@@ -133,6 +133,7 @@ h3 {
     font-family: 'Lato';
     font-size: 20px;
     border: none;
+    border-radius: 10px;
 }
 
 .botao-padrao:hover{
