@@ -6,7 +6,10 @@
     <meta name="viewport" content="width=100%	, initial-scale=1.0">
     <title>Perfil do Usuario</title>
     <link rel="icon" href="img/toro cultural.png">
-  
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Material Design Bootstrap -->
+    <link rel="stylesheet" href="css/mdb.min.css">
     <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Kaushan+Script|Lobster&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -18,40 +21,37 @@
 <body>
     <header>
         <div class="container-fluid">
-            <nav class="navbar  navbar-expand-lg  navbar-light pt-0 pb-0">
-                <a class="navbar-brand" href="#">
-                    <img src="img/toro cultural.png" width="85" height="85" class="d-inline-block align-top" alt="Toró Cultural">
+            <nav class="navbar  navbar-expand-lg  navbar-light pt-0 pb-0 menu-geral">
+                <a class="navbar-brand" href="./home.html">
+                    <img src="img/toro cultural.png" width="85" height="85" alt="Toró Cultural">
                 </a>
-
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                <button class="navbar-toggler botao-nav" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
                 </button>
 
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
 
-                    <form class="form-inline my-2 my-lg-0">
-                        <input class="form-control mr-sm-1" type="search" placeholder="Pesquisar" aria-label="Pesquisar"
-                        style="width: 65%;">
-                        <button class="btn btn-outline-success my-1 my-sm-0" type="submit"><img class="search" src="img/search.png" alt=""></button>
+                    <form class="form-inline my-2 my-lg-0" action="./feed-de-noticias.html">
+                        <input class="form-control mr-sm-1" type="search" placeholder="Pesquisar" aria-label="Pesquisar" style="width: 65%;">
+                        <button class="btn btn-orange my-1 my-sm-0 py-1 px-2" type="submit">
+                            <img class="search" src="img/search.png" alt="">
+                        </button>
                     </form>
-
                     <ul class="nav justify-content-end ">
+                        <li class="nav-item">
+                            <a class="nav-link" href="./login.html">Entrar</a></li>
+                        </li>
                         <li class="nav-item active">
-                            <a class="nav-link" href="#">Meu Perfil</a>
+                            <a class="nav-link" href="./perfil-usuario.html">Meu perfil</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Projetos</a></li>
+                            <a class="nav-link" href="./feed-de-noticias.html">Feed</a></li>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Feed</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Configurações</a>
+                            <a class="nav-link" href="cadastro-projeto.html">Enviar projeto</a>
                         </li>
                     </ul>
-
                 </div>
-
             </nav>
         </div>
     </header>
@@ -63,8 +63,9 @@
                         <div class="col-md-4 mx-auto" id="foto">
                             <div class="row foto-perfil">
                                 <div class="mx-auto">
-                                <canvas class="text-center" id="UgCanvas" width="150px" height="150px" style="border:2.5px solid rgb(165, 157, 157); border-radius: 50%;"></canvas>
-                                </canvas></div>
+                                    <canvas class="text-center" id="UgCanvas" width="150px" height="150px" style="border:2.5px solid rgb(165, 157, 157); border-radius: 50%;"></canvas>
+                                    </canvas>
+                                </div>
                             </div>
                             <div class="row pt-2">
                                 <p class="row mx-auto">São Paulo, SP<br> Online há 1 dia</p>
@@ -77,7 +78,7 @@
                                     </a>
                                 </ul>
                             </div>
-                            
+
                         </div>
                         <div class="col-md-8">
                             <h3 class="nomeUser">Nome do Usuário</h3>
@@ -261,7 +262,7 @@
                     </div>
                 </div>
 
-                
+
                 <div class="col-md-3 menu-dir pt-5 px-4" id="menu-lado">
                     <div id="star-rank" class="text-center">
                         <h6>Avaliação Geral</h6>

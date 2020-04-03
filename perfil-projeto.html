@@ -8,8 +8,7 @@
     <link rel="icon" href="img/toro cultural.png">
 
     <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Kaushan+Script|Lobster&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" 
-        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/specimen_files/stylesheet.css" type="text/css" charset="utf-8" />
     <!-- Font Awesome -->
@@ -31,43 +30,37 @@
 <body>
     <header>
         <div class="container-fluid">
-            <nav class="navbar  navbar-expand-lg  navbar-light pt-0 pb-0">
-                <a class="navbar-brand" href="#">
-                    <img src="img/toro cultural.png" width="85" height="85" class="d-inline-block align-top" alt="Toró Cultural">
+            <nav class="navbar  navbar-expand-lg  navbar-light pt-0 pb-0 menu-geral">
+                <a class="navbar-brand" href="./home.html">
+                    <img src="img/toro cultural.png" width="85" height="85" alt="Toró Cultural">
                 </a>
-                
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                <button class="navbar-toggler botao-nav" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
                 </button>
 
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
 
-                    <form class="form-inline my-2 my-lg-0">
-                        <input class="form-control mr-sm-1" type="search" placeholder="Pesquisar" aria-label="Pesquisar"
-                        style="width: 65%;">
-                        <button class="btn btn-outline-success my-1 my-sm-0 py-1 px-2" type="submit"><img class="search" src="img/search.png" alt=""></button>
+                    <form class="form-inline my-2 my-lg-0" action="./feed-de-noticias.html">
+                        <input class="form-control mr-sm-1" type="search" placeholder="Pesquisar" aria-label="Pesquisar" style="width: 65%;">
+                        <button class="btn btn-orange my-1 my-sm-0 py-1 px-2" type="submit">
+                            <img class="search" src="img/search.png" alt="">
+                        </button>
                     </form>
-
                     <ul class="nav justify-content-end ">
-
+                        <li class="nav-item">
+                            <a class="nav-link" href="./login.html">Entrar</a></li>
+                        </li>
                         <li class="nav-item active">
-                            <a class="nav-link" href="#">Meu Perfil</a>
+                            <a class="nav-link" href="./perfil-usuario.html">Meu perfil</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Projetos</a></li>
+                            <a class="nav-link" href="./feed-de-noticias.html">Feed</a></li>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Feed</a>
+                            <a class="nav-link" href="cadastro-projeto.html">Enviar projeto</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Configurações</a>
-                        </li>
-
                     </ul>
-
                 </div>
-
-
             </nav>
         </div>
     </header>
@@ -307,84 +300,84 @@
                 <div id="user-network">
                     <h6 class="pb-3">Nossa equipe</h6>
 
-                        <div class="row  px-1 pt-2 ">
-                            <div class="row">
-                                <img class="avatar-projeto mx-auto" src="img/mulher1.jpg " width="50px" height="50px" alt="perfil-user ">
-                            </div>
-                            <div class="rowtext-center" style="width: 100%;">
-                                <p class="text-center mx-auto mb-0"><a href="#">Nome de usuário</a></p>
-                            </div>
-                            <div class="row mx-auto text-center">
-                                <p class="text-center mx-auto">Atriz</p>
-                            </div>
+                    <div class="row  px-1 pt-2 ">
+                        <div class="row">
+                            <img class="avatar-projeto mx-auto" src="img/mulher1.jpg " width="50px" height="50px" alt="perfil-user ">
                         </div>
-
-                        <div class="row  px-1 pt-2">
-                            <div class="row">
-                                <img class="avatar-projeto mx-auto" src="img/perfil.jpg " alt="perfil-user ">
-                            </div>
-                            <div class="rowtext-center" style="width: 100%;">
-                                <p class="text-center mx-auto mb-0"><a href="#">Nome de usuário</a></p>
-                            </div>
-                            <div class="row mx-auto">
-                                <p class="text-center" >Profissional</p>
-                            </div>
+                        <div class="rowtext-center" style="width: 100%;">
+                            <p class="text-center mx-auto mb-0"><a href="#">Nome de usuário</a></p>
                         </div>
-
-                        <div class="row  px-1 pt-2">
-                            <div class="row">
-                                <img class="avatar-projeto mx-auto" src="img/perfil.jpg " alt="perfil-user ">
-                            </div>
-                            <div class="rowtext-center" style="width: 100%;">
-                                <p class="text-center mx-auto mb-0"><a href="#">Nome de usuário</a></p>
-                            </div>
-                            <div class="row mx-auto">
-                                <p class="text-center" >Profissional</p>
-                            </div>
+                        <div class="row mx-auto text-center">
+                            <p class="text-center mx-auto">Atriz</p>
                         </div>
-
-                        <div class="row  px-1 pt-2">
-                            <div class="row">
-                                <img class="avatar-projeto mx-auto" src="img/perfil.jpg " alt="perfil-user ">
-                            </div>
-                            <div class="rowtext-center" style="width: 100%;">
-                                <p class="text-center mx-auto mb-0"><a href="#">Nome de usuário</a></p>
-                            </div>
-                            <div class="row mx-auto">
-                                <p class="text-center" >Profissional</p>
-                            </div>
-                        </div>
-
-                        <div class="row  px-1 pt-2">
-                            <div class="row">
-                                <img class="avatar-projeto mx-auto" src="img/perfil.jpg " alt="perfil-user ">
-                            </div>
-                            <div class="rowtext-center" style="width: 100%;">
-                                <p class="text-center mx-auto mb-0"><a href="#">Nome de usuário</a></p>
-                            </div>
-                            <div class="row mx-auto">
-                                <p class="text-center" >Profissional</p>
-                            </div>
-                        </div>
-
-                        <div class="row  px-1 pt-2">
-                            <div class="row">
-                                <img class="avatar-projeto mx-auto" src="img/perfil.jpg " alt="perfil-user ">
-                            </div>
-                            <div class="rowtext-center" style="width: 100%;">
-                                <p class="text-center mx-auto mb-0"><a href="#">Nome de usuário</a></p>
-                            </div>
-                            <div class="row mx-auto">
-                                <p class="text-center" >Profissional</p>
-                            </div>
-                        </div>
-
                     </div>
+
+                    <div class="row  px-1 pt-2">
+                        <div class="row">
+                            <img class="avatar-projeto mx-auto" src="img/perfil.jpg " alt="perfil-user ">
+                        </div>
+                        <div class="rowtext-center" style="width: 100%;">
+                            <p class="text-center mx-auto mb-0"><a href="#">Nome de usuário</a></p>
+                        </div>
+                        <div class="row mx-auto">
+                            <p class="text-center">Profissional</p>
+                        </div>
+                    </div>
+
+                    <div class="row  px-1 pt-2">
+                        <div class="row">
+                            <img class="avatar-projeto mx-auto" src="img/perfil.jpg " alt="perfil-user ">
+                        </div>
+                        <div class="rowtext-center" style="width: 100%;">
+                            <p class="text-center mx-auto mb-0"><a href="#">Nome de usuário</a></p>
+                        </div>
+                        <div class="row mx-auto">
+                            <p class="text-center">Profissional</p>
+                        </div>
+                    </div>
+
+                    <div class="row  px-1 pt-2">
+                        <div class="row">
+                            <img class="avatar-projeto mx-auto" src="img/perfil.jpg " alt="perfil-user ">
+                        </div>
+                        <div class="rowtext-center" style="width: 100%;">
+                            <p class="text-center mx-auto mb-0"><a href="#">Nome de usuário</a></p>
+                        </div>
+                        <div class="row mx-auto">
+                            <p class="text-center">Profissional</p>
+                        </div>
+                    </div>
+
+                    <div class="row  px-1 pt-2">
+                        <div class="row">
+                            <img class="avatar-projeto mx-auto" src="img/perfil.jpg " alt="perfil-user ">
+                        </div>
+                        <div class="rowtext-center" style="width: 100%;">
+                            <p class="text-center mx-auto mb-0"><a href="#">Nome de usuário</a></p>
+                        </div>
+                        <div class="row mx-auto">
+                            <p class="text-center">Profissional</p>
+                        </div>
+                    </div>
+
+                    <div class="row  px-1 pt-2">
+                        <div class="row">
+                            <img class="avatar-projeto mx-auto" src="img/perfil.jpg " alt="perfil-user ">
+                        </div>
+                        <div class="rowtext-center" style="width: 100%;">
+                            <p class="text-center mx-auto mb-0"><a href="#">Nome de usuário</a></p>
+                        </div>
+                        <div class="row mx-auto">
+                            <p class="text-center">Profissional</p>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
+        </div>
 
-        
+
     </main>
     <footer>
         <a class="redes-link " href="# "><img class="redes " src="img/logo-do-facebook.png " alt="facebook "></a>

@@ -1,53 +1,56 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Feed de Notícias</title>
-      <link rel="icon" href="img/toro cultural.png">
-          <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Kaushan+Script|Lobster&display=swap" rel="stylesheet">
-       
-          <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-          <link rel="stylesheet" href="css/specimen_files/stylesheet.css" type="text/css" charset="utf-8" />
-          <link rel="stylesheet" href="css/estilo.css">
-          <link rel="stylesheet" href="css/feed.css">
-  </head>
-  <body>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feed de Notícias</title>
+    <link rel="icon" href="img/toro cultural.png">
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Kaushan+Script|Lobster&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/specimen_files/stylesheet.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/feed.css">
+</head>
+
+<body>
     <header>
-      <div class="container-fluid">
-          <nav class="navbar  navbar-expand-lg  navbar-light pt-0 pb-0 menu-geral">
-              <a class="navbar-brand" href="home.html"> 
-                  <img src="img/toro cultural.png" width="85" height="85" alt="Toró Cultural">
-              </a>
-              
-              <button class="navbar-toggler botao-nav" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <div class="container-fluid">
+            <nav class="navbar  navbar-expand-lg  navbar-light pt-0 pb-0 menu-geral">
+                <a class="navbar-brand" href="./home.html">
+                    <img src="img/toro cultural.png" width="85" height="85" alt="Toró Cultural">
+                </a>
+                <button class="navbar-toggler botao-nav" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
-              </button>
+                </button>
 
-              <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
 
-                <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-1" type="search" placeholder="Pesquisar" aria-label="Pesquisar"
-                    style="width: 65%;">
-                    <button class="btn btn-outline-success my-1 my-sm-0 py-1 px-2" type="submit"><img class="search" src="img/search.png" alt=""></button>
-                </form>
-
-
-                  <ul class="nav justify-content-end ">
-                      <li class="nav-item active">
-                          <a class="nav-link" href="perfil.html">Meu Perfil</a>
-                      </li>
-                      <li class="nav-item">
-                          <a class="nav-link" href="peed.html">Feed</a></li>
-                      </li>
-                      <li class="nav-item">
-                          <a class="nav-link" href="configurações.html">Configurações</a>
-                      </li>
-                  </ul>
-              </div>
-          </nav>
-      </div>
+                    <form class="form-inline my-2 my-lg-0" action="./feed-de-noticias.html">
+                        <input class="form-control mr-sm-1" type="search" placeholder="Pesquisar" aria-label="Pesquisar" style="width: 65%;">
+                        <button class="btn btn-orange my-1 my-sm-0 py-1 px-2" type="submit">
+                            <img class="search" src="img/search.png" alt="">
+                        </button>
+                    </form>
+                    <ul class="nav justify-content-end ">
+                        <li class="nav-item">
+                            <a class="nav-link" href="./login.html">Entrar</a></li>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="./perfil-usuario.html">Meu perfil</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./feed-de-noticias.html">Feed</a></li>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="cadastro-projeto.html">Enviar projeto</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
     </header>
 
 
@@ -79,10 +82,10 @@
                     <div id="nossa-pesquisa" class="row form-pesquisa px-0 mx-auto collapse.show justify-content-center">
                         <form class="mx-auto pl-1">
                             <div class="form-group mt-3">
-                            
-                            <input type="email" class="form-control" id="" placeholder="Pesquisar">
+
+                                <input type="email" class="form-control" id="" placeholder="Pesquisar">
                             </div>
-                    
+
                             <div class="form-check form-check-inline mx-0">
                                 <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="Torozeiro">
                                 <label class="form-check-label" for="inlineCheckbox1">Torozeiro</label>
@@ -95,10 +98,10 @@
                                 <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="Publicação">
                                 <label class="form-check-label" for="inlineCheckbox3">Publicação</label>
                             </div>
-                    
+
                             <div class="form-group mt-3">
-                            <label for="exampleFormControlSelect1">Qual estado?</label>
-                            <select class="form-control" id="exampleFormControlSelect1">
+                                <label for="exampleFormControlSelect1">Qual estado?</label>
+                                <select class="form-control" id="exampleFormControlSelect1">
                                 <option>Escolha um Estado</option>
                                 <option>Bahia</option>
                                 <option>Minas Gerais</option>
@@ -107,7 +110,7 @@
                                 <option>Rio Grande do Sul</option>
                             </select>
                             </div>
-                    
+
                             <div class="form-group">
                                 <label for="exampleFormControlSelect1">Qual cidade?</label>
                                 <select class="form-control" id="exampleFormControlSelect1">
@@ -119,7 +122,7 @@
                                 <option>Rio Grande do Sul</option>
                                 </select>
                             </div>
-                    
+
                             <button type="submit" class="btn mb-2 p-2 botao-padrao ">Pesquisar</button>
                         </form>
                     </div>
@@ -129,24 +132,23 @@
                 <!--Coluna FEED-->
                 <div class="col-md-9 col-feed px-0 mx-0">
                     <div class="row px-0 pb-2 bg-white mr-0 ml-0 pl-4" style="width: 100%;">
-                        <h2 id="titulo-feed" >Feed de notícias</h2>
+                        <h2 id="titulo-feed">Feed de notícias</h2>
                     </div>
 
 
                     <nav>
                         <div class="nav nav-tabs btn-principais-feed" id="nav-tab" role="tablist">
-                          <a class="btn-feed nav-item nav-link active text-center" id="nav-home-tab" data-toggle="tab" href="#feed-user" role="tab" aria-controls="nav-home" aria-selected="true">Meu Feed</a>
-                          <a class="btn-feed nav-item nav-link text-center" id="nav-profile-tab" data-toggle="tab" href="#feed-site" role="tab" aria-controls="nav-profile" aria-selected="false">Pesquisa</a>
+                            <a class="btn-feed nav-item nav-link active text-center" id="nav-home-tab" data-toggle="tab" href="#feed-user" role="tab" aria-controls="nav-home" aria-selected="true">Meu Feed</a>
+                            <a class="btn-feed nav-item nav-link text-center" id="nav-profile-tab" data-toggle="tab" href="#feed-site" role="tab" aria-controls="nav-profile" aria-selected="false">Pesquisa</a>
                         </div>
-                      </nav>
-                      <div class="tab-content" id="nav-tabContent">
-                          <!--área do feed do usuário-->
+                    </nav>
+                    <div class="tab-content" id="nav-tabContent">
+                        <!--área do feed do usuário-->
                         <div class="conteudo-feed tab-pane fade show px-2 py-2 active" id="feed-user" role="tabpanel" aria-labelledby="nav-home-tab">
                             <div class="row justify-content-end">
                                 <div class="my-auto">
                                     <form class="form-inline ">
-                                        <input class="form-control mr-sm-1" type="search" placeholder="Pesquisar no seu feed" aria-label="Pesquisar"
-                                        style="width: 65%;">
+                                        <input class="form-control mr-sm-1" type="search" placeholder="Pesquisar no seu feed" aria-label="Pesquisar" style="width: 65%;">
                                         <button class="btn btn-outline-success my-1 my-sm-0 py-1 px-2" type="submit"><img class="search" src="img/search.png" alt=""></button>
                                     </form>
                                 </div>
@@ -162,108 +164,105 @@
 
 
                             <div class="areaDePostagens container border pt-5">
-                                
 
 
-                                    <div id="modelo-atualizao-projeto" class="card mx-auto mb-4" style="width: 88%;">
-                                        <div class="row py-2 ml-1" style="width: 100%;">
-                                            <div class="caixa-foto-perfil col-md-3 my-auto text-center">
-                                                <div class="foto-perfil  px-auto">
-                                                    <img class="mx-auto img-projeto-feed" src="img/cinemateca.jpg "alt="perfil-proj">
-                                                </div>
+
+                                <div id="modelo-atualizao-projeto" class="card mx-auto mb-4" style="width: 88%;">
+                                    <div class="row py-2 ml-1" style="width: 100%;">
+                                        <div class="caixa-foto-perfil col-md-3 my-auto text-center">
+                                            <div class="foto-perfil  px-auto">
+                                                <img class="mx-auto img-projeto-feed" src="img/cinemateca.jpg " alt="perfil-proj">
+                                            </div>
                                             <h5 class="card-title"><a href="#">Nome do Projeto</a></h5>
                                             <p class="m-0 hora-data text-secondary">01/04/2020</p>
                                             <p class="m-0 hora-data text-secondary">12:10</p>
-                                            </div>
-                                            <div class="col-md-9">
-                                                <div class="card-body pt-2">
-                                                    <p class="card-text mb-0">Atualizou perfil:</p>
-                                                    
-                                                    <p class="mb-1 p-2 descricao-proj border">Começamos a trabalhar no Jardim do local.</p>
-                                                    <a href="#"><img class="img-projeto" src="img/jardim.jpg" alt=""></a>
-                                                </div>
+                                        </div>
+                                        <div class="col-md-9">
+                                            <div class="card-body pt-2">
+                                                <p class="card-text mb-0">Atualizou perfil:</p>
+
+                                                <p class="mb-1 p-2 descricao-proj border">Começamos a trabalhar no Jardim do local.</p>
+                                                <a href="#"><img class="img-projeto" src="img/jardim.jpg" alt=""></a>
                                             </div>
                                         </div>
                                     </div>
+                                </div>
 
-                                    <div id="modelo-proj-addProfissional" class="card mx-auto mb-4" style="width: 88%;">
-                                        <div class="row py-2 ml-1">
-                                            <div class="caixa-foto-perfil col-md-3 my-auto text-center">
+                                <div id="modelo-proj-addProfissional" class="card mx-auto mb-4" style="width: 88%;">
+                                    <div class="row py-2 ml-1">
+                                        <div class="caixa-foto-perfil col-md-3 my-auto text-center">
                                             <div class="foto-perfil">
-                                                <img class="mx-auto img-projeto-feed" src="img/cinemateca.jpg "alt="perfil-proj">
+                                                <img class="mx-auto img-projeto-feed" src="img/cinemateca.jpg " alt="perfil-proj">
                                             </div>
                                             <h5 class="card-title"><a href="#">Inauguração da Cinemateca</a></h5>
                                             <p class="m-0 hora-data text-secondary">01/04/2020</p>
                                             <p class="m-0 hora-data text-secondary">11:48</p>
-                                            </div>
-                                            <div class="col-md-9 px-1">
-                                                <div class="card-body pt-2">
-                                                    <p class="card-text mb-0">Adicionou como <a href="#">Atriz</a> ao projeto:</p>
-                                                    <div class="foto-perfil text-center pt-3">
-                                                        <img class="add-profissional mx-auto " src="img/mulher1.jpg "  alt="perfil-user ">
-                                                    </div>
-                                                    <p class="titulo-publi-feed mb-1 text-center"><a href="#">Nome do Usuário</a></p>
-                                                    <p class="mb-1 p-2 descricao-proj border text-center mx-5"><cite> ipsum dolor sit amet consectetur adipisicing elit. 
-                                                        Esse porro officiis debitis ducimus necessitatibus 
-                                                        culpa laudantium earum unde reprehenderit! Tenetur quas minima inventore incidunt totam.</cite>   </p>
+                                        </div>
+                                        <div class="col-md-9 px-1">
+                                            <div class="card-body pt-2">
+                                                <p class="card-text mb-0">Adicionou como <a href="#">Atriz</a> ao projeto:</p>
+                                                <div class="foto-perfil text-center pt-3">
+                                                    <img class="add-profissional mx-auto " src="img/mulher1.jpg " alt="perfil-user ">
                                                 </div>
+                                                <p class="titulo-publi-feed mb-1 text-center"><a href="#">Nome do Usuário</a></p>
+                                                <p class="mb-1 p-2 descricao-proj border text-center mx-5"><cite> ipsum dolor sit amet consectetur adipisicing elit. 
+                                                        Esse porro officiis debitis ducimus necessitatibus 
+                                                        culpa laudantium earum unde reprehenderit! Tenetur quas minima inventore incidunt totam.</cite> </p>
                                             </div>
                                         </div>
                                     </div>
+                                </div>
 
-                                    <div id="modelo-prof-addAoProjeto" class="card mx-auto mb-4" style="width: 88%;">
-                                        <div class="row py-2 ml-1">
-                                            <div class="caixa-foto-perfil col-md-3 my-auto text-center">
+                                <div id="modelo-prof-addAoProjeto" class="card mx-auto mb-4" style="width: 88%;">
+                                    <div class="row py-2 ml-1">
+                                        <div class="caixa-foto-perfil col-md-3 my-auto text-center">
                                             <div class="foto-perfil">
                                                 <img class="avatar-projeto mx-auto" src="img/mulher1.jpg " width="80px" height="110px" alt="perfil-user ">
                                             </div>
                                             <h5 class="card-title"><a href="#">Nome de usuário</a></h5>
                                             <p class="m-0 hora-data text-secondary">01/04/2020</p>
                                             <p class="m-0 hora-data text-secondary">11:48</p>
-                                            </div>
-                                            <div class="col-md-9 px-1">
-                                                <div class="card-body pt-2">
-                                                    <p class="card-text mb-0">Foi adicionada como <a href="#">Atriz</a> ao projeto:</p>
-                                                    <p class="titulo-publi-feed mb-1"><a href="#">Inauguração da Cinemateca</a></p>
-                                                    <p class="mb-1 p-2 descricao-proj border">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                                                        Esse porro officiis debitis ducimus necessitatibus 
-                                                        culpa laudantium earum unde reprehenderit! Tenetur quas minima inventore incidunt totam.  </p>
-                                                    <img class="img-projeto" src="img/cinemateca.jpg" alt="">
-                                                </div>
+                                        </div>
+                                        <div class="col-md-9 px-1">
+                                            <div class="card-body pt-2">
+                                                <p class="card-text mb-0">Foi adicionada como <a href="#">Atriz</a> ao projeto:</p>
+                                                <p class="titulo-publi-feed mb-1"><a href="#">Inauguração da Cinemateca</a></p>
+                                                <p class="mb-1 p-2 descricao-proj border">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse porro officiis debitis ducimus necessitatibus culpa laudantium earum unde reprehenderit! Tenetur quas minima inventore incidunt totam. </p>
+                                                <img class="img-projeto" src="img/cinemateca.jpg" alt="">
                                             </div>
                                         </div>
                                     </div>
+                                </div>
 
 
-                                    <div id="modelo-criar-projeto" class="card mx-auto mb-4" style="width: 88%;">
-                                        <div class="row py-2 ml-1">
-                                            <div class="caixa-foto-perfil col-md-3 my-auto text-center">
+                                <div id="modelo-criar-projeto" class="card mx-auto mb-4" style="width: 88%;">
+                                    <div class="row py-2 ml-1">
+                                        <div class="caixa-foto-perfil col-md-3 my-auto text-center">
                                             <div class="foto-perfil">
                                                 <img class="avatar-projeto mx-auto" src="img/mulher1.jpg " width="80px" height="110px" alt="perfil-user ">
                                             </div>
                                             <h5 class="card-title"><a href="#">Nome de usuário</a></h5>
                                             <p class="m-0 hora-data text-secondary">01/04/2020</p>
                                             <p class="m-0 hora-data text-secondary">11:34</p>
-                                            </div>
-                                            <div class="col-md-9 px-1">
-                                                <div class="card-body pt-2">
-                                                    <p class="card-text mb-0">Adicionou novo projeto ao perfil:</p>
-                                                    <p class="titulo-publi-feed mb-1"><a href="#">Musica para crianças</a></p>
-                                                    <p class="mb-1 p-2 descricao-proj border">O objetivo é unir a pureza e a criatividade das crianças para encontrar
-                                                        novas maneiras de produzir som e alegria. </p>
-                                                    <img class="img-projeto" src="img/aula-de-musica.jpg" alt="">
-                                                </div>
+                                        </div>
+                                        <div class="col-md-9 px-1">
+                                            <div class="card-body pt-2">
+                                                <p class="card-text mb-0">Adicionou novo projeto ao perfil:</p>
+                                                <p class="titulo-publi-feed mb-1"><a href="#">Musica para crianças</a></p>
+                                                <p class="mb-1 p-2 descricao-proj border">O objetivo é unir a pureza e a criatividade das crianças para encontrar novas maneiras de produzir som e alegria. </p>
+                                                <img class="img-projeto" src="img/aula-de-musica.jpg" alt="">
                                             </div>
                                         </div>
                                     </div>
-
-
                                 </div>
+
+
                             </div>
+                        </div>
 
 
-                            
-                            <!--área da pesquisa no feed-->
+
+                        <!--área da pesquisa no feed-->
                         <div class="conteudo-feed tab-pane fade px-2 pt-2" id="feed-site" role="tabpanel" aria-labelledby="nav-profile-tab">
                             <div class="row justify-content-end">
                                 <div class="text-secundario-feed pr-5 pb-2">
@@ -375,9 +374,9 @@
 
 
                         </div>
-                        
-                      </div>
-                    
+
+                    </div>
+
 
                 </div>
                 <!--FIM Coluna FEED-->
@@ -390,14 +389,15 @@
 
 
     <footer>
-      <a class="redes-link" href="#"><img class="redes" src="img/logo-do-facebook.png" alt="facebook"></a>
-      <a class="redes-link" href="#"><img class="redes" src="img/twitter.png" alt="twitter"></a>
-      <a class="redes-link" href="#"><img class="redes" src="img/instagram.png" alt="instagram"></a>
+        <a class="redes-link" href="#"><img class="redes" src="img/logo-do-facebook.png" alt="facebook"></a>
+        <a class="redes-link" href="#"><img class="redes" src="img/twitter.png" alt="twitter"></a>
+        <a class="redes-link" href="#"><img class="redes" src="img/instagram.png" alt="instagram"></a>
     </footer>
 
     <script src="jquery.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-  </body>
+</body>
+
 </html>
