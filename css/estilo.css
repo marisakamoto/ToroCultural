@@ -93,7 +93,7 @@ h3 {
     padding-top: 40px;
 }
 
-@media(max-width: 800px){
+@media(max-width: 1000px){
     header ul li{
         width: 100%;
         float: none;
