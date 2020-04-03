@@ -274,3 +274,15 @@
 .formHabilidadesInteresses{
     width: 100%;
 }
+
+
+.cadastro-exp-extra{
+    width: 70%!important;
+    border: rgb(165, 157, 157) 1.4px solid;
+    font-family: 'Lato';
+    font-size: 1.2em;
+    color: rgb(248, 117, 56);
+    background-color: rgb(255, 224, 212);
+    border-radius: 20px 20px 0 0;
+}
+
