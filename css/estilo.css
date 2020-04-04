@@ -131,14 +131,15 @@ h3 {
     background-color: rgb(248, 117, 56);
     color: white;
     font-family: 'Lato';
-    font-size: 20px;
+    font-size: 17px;
     border: none;
     border-radius: 10px;
+    cursor: pointer;
 }
 
 .botao-padrao:hover{
-    background-color: rgb(235, 106, 47);
-    font-size: 1.3em!important;
+    background-color: rgb(255, 94, 20);
+    font-size: 1.1em!important;
 
 }
 
@@ -155,4 +156,9 @@ footer {
 .redes {
     width: 2em;
     margin: 10px;
+}
+
+
+.icon-config{
+    width: 34px;
 }

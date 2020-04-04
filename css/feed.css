@@ -89,6 +89,32 @@ a{
     background: linear-gradient(40deg, #ffd86f, #fc6262);
 }*/
 
-.caixa-foto-perfil{
+
+#modeloCriarProjeto, #modeloProfAddAoProjeto, #modeloProjAddProfissional, #modeloAtualizaoProjeto{
+    width: 88%;
+}
+
+
+.icon-curtir{
+    width: 30px;
+}
+
+.botao-curtir{
+    background-color: white;
+    font-size: 17px;
   
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.botao-curtir:hover{
+    background-color: rgb(255, 94, 20);
+}
+
+.botao-curtir-ativo{
+    background-color: rgb(255, 94, 20);
+    font-size: 17px;
+  
+    border-radius: 10px;
+    cursor: pointer;
 }

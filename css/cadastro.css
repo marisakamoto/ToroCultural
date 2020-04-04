@@ -103,3 +103,17 @@
     text-align: right;
     padding: 20px;
 }
+
+.modal-titulo{
+    background-color: rgb(214, 135, 149) ;
+}
+
+.modal-para-perfil{
+    text-decoration: none;
+    color: white;
+}
+
+.modal-para-perfil:hover{
+    text-decoration: none;
+    color: white;
+}
