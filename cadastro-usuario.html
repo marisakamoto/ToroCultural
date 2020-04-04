@@ -145,7 +145,33 @@
                 Adicionar experiência
             </button>
         </div>
-        <div class="botao-final-user"><button class="botao-padrao p-2" type="Submit">Finalizar</button></div>
+        <div class="botao-final-user">
+            <button class="botao-padrao p-2 btn" type="Submit" data-toggle="modal" data-target="#modalExemplo">Finalizar</button>
+        </div>
+        
+        <!-- Modal -->
+        <div class="modal fade" id="modalExemplo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header modal-titulo">
+                <h5 class="modal-title"  id="exampleModalLabel" >Suas alterações foram salvas com sucesso</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div class="modal-body">
+                    Agora entre em seu perfil para ver como ficaram!
+                </div>
+                <div class="modal-footer">
+                
+                <button type="button" class="botao-padrao p-2 btn"><a class="modal-para-perfil"href="perfil-usuario.html"> Ir para o Meu Perfil</a></button>
+                </div>
+            </div>
+            </div>
+        </div>
+
+
+
 
 
     </main>
