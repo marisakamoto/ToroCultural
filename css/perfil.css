@@ -277,3 +277,6 @@ h1 {
     object-fit: cover;
 }
 
+.card-vagas{
+    max-width: 18rem;
+}

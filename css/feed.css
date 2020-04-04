@@ -118,3 +118,60 @@ a{
     border-radius: 10px;
     cursor: pointer;
 }
+
+
+.btn-trans {
+    background-color: transparent;
+    border-color: transparent;
+    color: #929292;
+}
+
+.btn-icon {
+    padding-left: 9px;
+    padding-right: 9px;
+}
+
+.btn-sm, .btn-group-sm>.btn, .btn-icon.btn-sm {
+    background-color: rgb(248, 117, 56)!important;
+    padding: 5px 10px !important;
+}
+
+.btn-compartilhar{
+    color: white;
+}
+
+.pesquisa-feed-projeto{
+    width: 80%;
+}
+
+.feed-publicacoes{
+    width: 80%;
+}
+
+.img-publi{
+    width: 100%;
+}
+
+.img-publi-publi{
+    width: 60%;
+}
+
+.btn-curtir{
+    color: white;
+}
+
+.btn-curtir-active{
+    color: green;
+}
+
+.btn-curtir:hover, .btn-curtir-active:hover{
+    color: black;
+}
+
+.imagem-perfil-feed{
+    width: 80px;
+}
+
+#userAddaoProjeto .imagem-perfil-feed, #userAddNovoProjeto .imagem-perfil-feed{
+    border-radius: 50%;
+}
