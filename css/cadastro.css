@@ -31,8 +31,16 @@
     font-size: 1em;
     font-weight: bold;
     padding: 4px;
-    color: rgba(250, 169, 102, 0.911);
+    color: white;
     margin-left: 0px;
+    background-color: rgb(248, 117, 56);
+    border: none;
+}
+
+.alterar-foto:hover{
+    background-color: rgb(255, 94, 20);
+    font-size: 0.802em!important;
+    color: white;
 
 }
 
@@ -105,7 +113,7 @@
 }
 
 .modal-titulo{
-    background-color: rgb(214, 135, 149) ;
+    background-color: rgb(255, 224, 212) ;
 }
 
 .modal-para-perfil{
@@ -116,4 +124,15 @@
 .modal-para-perfil:hover{
     text-decoration: none;
     color: white;
+}
+
+.descricaoProfissional{
+    width: 100%;
+}
+
+
+
+.btn-cadastro:hover{
+    font-size: 1.02em!important;
+
 }
