@@ -6,6 +6,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Registre-se</title>
         <link rel="icon" href="img/toro cultural.png">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Material Design Bootstrap -->
+    <link rel="stylesheet" href="css/mdb.min.css">
+    <!-- Your custom styles (optional) -->
         <link rel="stylesheet" href="css/specimen_files/stylesheet.css" type="text/css" charset="utf-8" />
         <link rel="stylesheet" href="css/estilo.css">
         <link rel="stylesheet" href="css/login.css">
@@ -78,11 +82,11 @@
             <div class="botao-container">
                 <div class="linha">
                     <div class="coluna">
-                        <a href="login.html" style="color:white" class="botao">Login</a>
+                        <a href="login.html" class="botao">Login</a>
                     </div>
                     <div class="coluna">
 
-                        <button type="button" class="btn botao btn-esqueceu-senha" href="esqueceu-senha.html" 
+                        <button type="button" class="botao btn-esqueceu-senha" href="esqueceu-senha.html" 
                         data-toggle="modal" data-target=".bd-example-modal-sm">Esqueceu a senha?</button>
             
                         <div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
@@ -94,7 +98,7 @@
                                 <form action="/action_page.php">
                                   <div class="linha">
                                     <h2 class ="titulo-register" style="text-align:center">Esqueceu a Senha?</h2>
-                                    <div class="coluna-esqueceu-senha" style="width: 100%;">
+                                    <div class="coluna-esqueceu-senha">
                                       <input type="email" name="email" placeholder="Email para recuperação" required>
                                       <input type="submit" value="Recuperar senha">
                                     </div>
