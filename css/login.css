@@ -96,9 +96,17 @@ input[type=submit]:hover {
     width: 50%;
     padding: 0 35px;
     margin-top: 6px;
+    
 }
 
+.coluna a{
+    color:white;
+}
 
+.coluna a:hover, .coluna button:hover{
+    color: rgb(248, 117, 56);
+    text-decoration: none;
+}
 
 
 /* Clear floats after the columns */
@@ -165,6 +173,8 @@ input[type=submit]:hover {
     padding: 30px 30px 30px 30px;   
 }
 
+
+
 /*Nova Senha*/
 .caixa-nova-senha{
     width: 75%;
@@ -177,6 +187,9 @@ input[type=submit]:hover {
     margin-bottom: 200px;
 }
 
+.coluna-esqueceu-senha{
+    width: 100%;
+}
 
 
 
