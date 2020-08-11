@@ -29,10 +29,10 @@
 
 @section('conteudoPrincipal')
     <main>
-        
+
         <h2 id="title-form">Cadastro do Projeto</h2>
 
-        
+
         <section class="container cadastro-projeto p-4 mb-5">
             <div class="row">
                 <div class="col-md-4 text-center pt-3">
@@ -74,9 +74,9 @@
         <section class="container cadastro-profissionais p-3">
             <div class="row px-4">
                 <h4 class="pl-3 pt-3">Profissional 1</h4>
-            </div>                
+            </div>
             <div class="row px-4 ">
-                
+
                     <div class="col-md-6">
                         <form action="">
                         <div class="form-group my-0">
@@ -103,7 +103,7 @@
                                 <label for="projHabilidades">Habilidades</label>
                                 <textarea class="form-control py-0" name="projHabilidades"  id="projHabilidades"  rows="2"></textarea>
                             </div>
-                    
+
                             <div class="form-group my-0">
                                 <div class="form-group my-0">
                                     <label for="tituloUser">Remuneração até:</label>
@@ -112,7 +112,7 @@
                             </div>
                         </form>
                     </div>
-                        
+
             </div>
             <div class="row px-5" >
                 <form action="" class="descricaoProfissional">
@@ -124,12 +124,12 @@
             </div>
         </section>
         <div class="add-experiencia">
-            <button class="btn-exp-user" type="Submit"><img style="width: 1em; margin-right: 5px;" src="img/mais.png" alt="add-experiencia"> 
+            <button class="btn-exp-user" type="Submit"><img style="width: 1em; margin-right: 5px;" src="img/mais.png" alt="add-experiencia">
                     Adicionar profissional
                 </button>
         </div>
         <div class="botao-final-user"><button class="btn botao-padrao btn-cadastro ml-3" type="Submit" data-toggle="modal" data-target="#modalExemplo">Finalizar</button></div>
-        
+
         <!-- Modal -->
         <div class="modal fade" id="modalExemplo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
@@ -144,7 +144,7 @@
                     Agora entre em seu perfil para ver como ficaram!
                 </div>
                 <div class="modal-footer">
-                
+
                 <button type="button" class="btn botao-padrao btn-cadastro ml-3"><a class="modal-para-perfil"href="perfil-projeto.html"> Ir para o Meu Perfil</a></button>
                 </div>
             </div>
@@ -154,6 +154,3 @@
 
     </main>
 @endsection
-
-    
- 

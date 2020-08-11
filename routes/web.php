@@ -40,3 +40,7 @@ Route::get('/cadastroProjeto', function(){
 Route::get('/novaSenha', function(){
     return view('nova-senha');
 });
+
+Route::get('/feed', function(){
+    return view('feed-de-noticias');
+});

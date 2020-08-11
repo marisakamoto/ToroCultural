@@ -1,12 +1,12 @@
 @extends('layouts.templateBase')
 
-    
-    
-    
+
+
+
     @section('css')
         <link rel="stylesheet" href="css/login.css">
     @endsection
-    
+
     @section('nav-links')
         <li class="nav-item">
             <a class="nav-link" href="/login">Entrar</a></li>
@@ -21,7 +21,7 @@
 
     @section('conteudoPrincipal')
 
-    
+
         <div class="caixa-login">
             <form action="/action_page.php">
                 <div class="linha">
@@ -85,7 +85,5 @@
                 </div>
             </div>
         </div>
-    
-    @endsection   
 
-    
+    @endsection
