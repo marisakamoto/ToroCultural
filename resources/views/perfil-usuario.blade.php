@@ -1,44 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('layouts.templateBase')
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=100%	, initial-scale=1.0">
+    @section('title')
     <title>Perfil do Usuario</title>
-    <link rel="icon" href="img/toro cultural.png">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <!-- Material Design Bootstrap -->
-    <link rel="stylesheet" href="css/mdb.min.css">
-    <!-- Your custom styles (optional) -->
-    <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Kaushan+Script|Lobster&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/specimen_files/stylesheet.css" type="text/css" charset="utf-8" />
-    <link rel="stylesheet" href="css/estilo.css">
-    <link rel="stylesheet" href="css/perfil.css">
-</head>
+    @endsection('title')
 
-<body>
-    <header>
-        <div class="container-fluid">
-            <nav class="navbar  navbar-expand-lg  navbar-light pt-0 pb-0 menu-geral">
-                <a class="navbar-brand" href="./home.html">
-                    <img src="img/toro cultural.png" width="85" height="85" alt="Toró Cultural">
-                </a>
-                <button class="navbar-toggler botao-nav" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-
-                    <form class="form-inline my-2 my-lg-0" action="./feed-de-noticias.html">
-                        <input class="form-control mr-sm-1" type="search" placeholder="Pesquisar" aria-label="Pesquisar" style="width: 65%;">
-                        <button class="btn btn-orange my-1 my-sm-0 py-1 px-2" type="submit">
-                            <img class="search" src="img/search.png" alt="">
-                        </button>
-                    </form>
-                    <ul class="nav justify-content-end ">
-                        
+    @section('css')
+        <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Kaushan+Script|Lobster&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/perfil.css">
+    @endsection
+@section('search')
+<form class="form-inline my-2 my-lg-0" action="./feed-de-noticias.html">
+    <input class="form-control mr-sm-1" type="search" placeholder="Pesquisar" aria-label="Pesquisar" style="width: 65%;">
+    <button class="btn btn-orange my-1 my-sm-0 py-1 px-2" type="submit">
+        <img class="search" src="img/search.png" alt="">
+    </button>
+</form>
+@endsection
+                    @section('nav-links')
                         <li class="nav-item active">
                             <a class="nav-link" href="./perfil-usuario.html">Meu perfil</a>
                         </li>
@@ -48,12 +27,9 @@
                         <li class="nav-item">
                             <a class="nav-link" href="cadastro-projeto.html">Enviar projeto</a>
                         </li>
-                    </ul>
-                </div>
-            </nav>
-        </div>
-    </header>
-    <main>
+                    @endsection('nav-links')
+                
+    @section('conteudoPrincipal')
         <div class="container-fluid colborder pb-5" id="main-conteudo">
             <div class="row">
                 <div class="col-md-9">
@@ -315,19 +291,12 @@
                 </div>
             </div>
         </div>
-    </main>
-    <footer>
-        <a class="redes-link " href="# "><img class="redes " src="img/logo-do-facebook.png " alt="facebook "></a>
-        <a class="redes-link " href="# "><img class="redes " src="img/twitter.png " alt="twitter "></a>
-        <a class="redes-link " href="# "><img class="redes " src="img/instagram.png " alt="instagram "></a>
-    </footer>
+        @endsection('conteudoPrincipal')
+
 
     <!-- <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js " integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n " crossorigin="anonymous "></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js " integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo " crossorigin="anonymous "></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js " integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6 " crossorigin="anonymous "></script> -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    {{-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-</body>
-
-</html>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script> --}}

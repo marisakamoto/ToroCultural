@@ -44,3 +44,7 @@ Route::get('/novaSenha', function(){
 Route::get('/feed', function(){
     return view('feed-de-noticias');
 });
+
+Route::get('/user', function(){
+    return view('perfil-usuario');
+});
