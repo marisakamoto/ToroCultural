@@ -18,7 +18,7 @@
     </form>
 @endsection
 
-@section('nav-link')
+@section('nav-links')
     <li class="nav-item active">
         <a class="nav-link" href="./perfil-usuario.html">Meu perfil</a>
     </li>
