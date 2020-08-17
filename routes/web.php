@@ -48,3 +48,7 @@ Route::get('/feed', function(){
 Route::get('/user', function(){
     return view('perfil-usuario');
 });
+
+Route::get('/perfilProjeto', function(){
+    return view('perfil-projeto');
+});
