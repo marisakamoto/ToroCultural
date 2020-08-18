@@ -31,6 +31,8 @@
 
 /* style inputs and link buttons */
 
+
+
 input,
 .botao {
     width: 100%;
@@ -43,6 +45,7 @@ input,
     font-size: 17px;
     line-height: 20px;
     text-decoration: none;
+
     /* remove underline from anchors */
 }
 
@@ -50,6 +53,7 @@ input,
 input:hover,
 .botao:hover {
     opacity: 1;
+    
 }
 
 

@@ -1,5 +1,9 @@
 @extends('layouts.templateBase')
 
+@section('title')
+    <title>Cadastro do Projeto</title>
+@endsection
+
 @section('css')
     <link rel="stylesheet" href="css/cadastro.css">
 @endsection
@@ -38,7 +42,7 @@
                 <div class="col-md-4 text-center pt-3">
                     <canvas id="UgCanvas" width="150px" height="150px" style="border:2.1px solid rgb(165, 157, 157); border-radius: 10px;">
                     </canvas></br>
-                    <button class="alterar-foto btn" type="button">Alterar Foto</button>
+                    <button class="btn-deep-orange btn" type="button">Alterar Foto</button>
                 </div>
                 <div class="col-md-8 form-user">
                     <form action="">
@@ -128,7 +132,7 @@
                     Adicionar profissional
                 </button>
         </div>
-        <div class="botao-final-user"><button class="btn botao-padrao btn-cadastro ml-3" type="Submit" data-toggle="modal" data-target="#modalExemplo">Finalizar</button></div>
+        <div class="botao-final-user"><button class="btn-deep-orange btn" type="Submit" data-toggle="modal" data-target="#modalExemplo">Finalizar</button></div>
 
         <!-- Modal -->
         <div class="modal fade" id="modalExemplo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -145,7 +149,7 @@
                 </div>
                 <div class="modal-footer">
 
-                <button type="button" class="btn botao-padrao btn-cadastro ml-3"><a class="modal-para-perfil"href="perfil-projeto.html"> Ir para o Meu Perfil</a></button>
+                <button type="button" class="btn-deep-orange btn"><a class="modal-para-perfil"href="perfil-projeto.html"> Ir para o Meu Perfil</a></button>
                 </div>
             </div>
             </div>

@@ -1,11 +1,15 @@
 @extends('layouts.templateBase')
 
+@section('title')
+    <title>Cadastro do Usuário</title>
+@endsection
+
 @section('css')
     <link rel="stylesheet" href="css/cadastro.css">
 @endsection
 
 @section('search')
-    <form class="form-inline my-2 my-lg-0" action="./feed-de-noticias.html">
+    <form class="form-inline my-2 my-lg-0" action="./feed">
         <input class="form-control  search" type="search" placeholder="Pesquisar" aria-label="Pesquisar" style="width: 65%;">
         <button class="btn btn-orange btn-search" type="submit">
             <img class="search" src="img/search.png" alt="">
@@ -39,7 +43,7 @@
                 <div class="col-md-4 text-center pt-3">
                     <canvas id="UgCanvas" width="150px" height="150px" style="border:2.1px solid rgb(165, 157, 157); border-radius: 50%;">
                     </canvas></br>
-                    <button class="alterar-foto p-1 btn" type="button">Alterar foto</button>
+                    <button class="btn-deep-orange btn" type="button">Alterar foto</button>
 
                 </div>
 
@@ -89,7 +93,7 @@
                 <div class="col-md-3  text-center my-auto">
                         <canvas id="UgCanvas" width="90px" height="100px" style="background-color: white; border:2.2px solid rgb(165, 157, 157);">
                         </canvas></br>
-                        <button class="add-foto-exp btn" type="button">Adicionar foto</button></br>
+                        <button class="btn-deep-orange btn" type="button">Adicionar foto</button></br>
                 </div>
 
                 <div class="col-md-9 px-4">
@@ -125,7 +129,7 @@
             </button>
         </div>
         <div class="botao-final-user">
-            <button class="btn botao-padrao btn-cadastro ml-3" type="Submit" data-toggle="modal" data-target="#modalExemplo">Finalizar</button>
+            <button class="btn-deep-orange btn " type="Submit" data-toggle="modal" data-target="#modalExemplo">Finalizar</button>
         </div>
         
         <!-- Modal -->
@@ -143,7 +147,7 @@
                 </div>
                 <div class="modal-footer">
                 
-                <button type="button" class="btn botao-padrao btn-cadastro ml-3"><a class="modal-para-perfil"href="perfil-usuario.html"> Ir para o Meu Perfil</a></button>
+                <button type="button" class="btn-deep-orange btn "><a class="modal-para-perfil"href="perfil-usuario.html"> Ir para o Meu Perfil</a></button>
                 </div>
             </div>
             </div>

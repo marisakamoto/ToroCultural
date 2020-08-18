@@ -1,6 +1,8 @@
 @extends('layouts.templateBase')
 
-
+    @section('title')
+        <title>Login</title>
+    @endsection
 
 
     @section('css')

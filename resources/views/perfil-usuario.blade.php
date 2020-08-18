@@ -11,9 +11,9 @@
 @endsection
 
 @section('search')
-    <form class="form-inline my-2 my-lg-0" action="./feed-de-noticias.html">
-        <input class="form-control mr-sm-1" type="search" placeholder="Pesquisar" aria-label="Pesquisar" style="width: 65%;">
-        <button class="btn btn-orange my-1 my-sm-0 py-1 px-2" type="submit">
+    <form class="form-inline my-2 my-lg-0" action="./feed">
+        <input class="form-control  search" type="search" placeholder="Pesquisar" aria-label="Pesquisar" style="width: 65%;">
+        <button class="btn btn-orange btn-search" type="submit">
             <img class="search" src="img/search.png" alt="">
         </button>
     </form>

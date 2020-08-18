@@ -1,5 +1,9 @@
 @extends('layouts.templateBase')
 
+@section('title')
+    <title>Nova Senha</title>
+@endsection
+
 @section('css')
 <link rel="stylesheet" href="css/login.css">
 @endsection
