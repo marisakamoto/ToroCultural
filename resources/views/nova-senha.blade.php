@@ -8,9 +8,13 @@
 <link rel="stylesheet" href="css/login.css">
 @endsection
 
+@section('rota-logo')
+        {{ route('home-principal') }}
+    @endsection
+
 @section('nav-links')
     <li class="nav-item">
-        <a class="nav-link" href="/login">Entrar</a></li>
+        <a class="nav-link" href="{{ route('login') }}">Entrar</a></li>
     </li>
     <li class="nav-item active">
         <a class="nav-link" href="home.html#sobre-nos">Sobre Toró</a>

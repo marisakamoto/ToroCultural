@@ -8,6 +8,9 @@
         <link rel="stylesheet" href="css/home.css">
     @endsection
 
+    @section('rota-logo')
+        {{ route('home-principal') }}
+    @endsection
 
     @section('nav-links')
         <li class="nav-item">

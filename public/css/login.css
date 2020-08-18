@@ -164,8 +164,12 @@ input[type=submit]:hover {
 }
 
 .btn-esqueceu-senha{
-    color:white; 
+    color:white!important; 
         background-color: #666;
+}
+
+.btn-esqueceu-senha:hover{
+    color: rgb(248, 117, 56)!important;
 }
 
 

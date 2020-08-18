@@ -29,7 +29,7 @@
         <header>
             <div class="container-fluid">
                 <nav class="navbar  navbar-expand-lg  navbar-light pt-0 pb-0 menu-geral">
-                    <a class="navbar-brand" href="./home">
+                    <a class="navbar-brand" href="@yield('rota-logo')">
                         <img src="{{ url('./img/toro cultural.png') }}" width="85" height="85" alt="Toró Cultural">
                     </a>
                     <button class="navbar-toggler botao-nav" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
