@@ -17,33 +17,18 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/home', function(){
-    return view('home');
-});
+Route::get('/home', 'homeController@home')->name('home-principal');
 
-Route::get('/login', function(){
-    return view('login');
-});
+Route::get('/login', 'loginController@login')->name('login');
 
-Route::get('/register', function(){
-    return view('register');
-});
+Route::get('/register', 'registerController@register')->name('register');
 
-Route::get('/cadastroUsuario', function(){
-    return view('cadastro-usuario');
-});
+Route::get('/cadastroUsuario', 'cadastroUsuarioController@cadastroUsuario')->name('cadastroUsuario');
 
-Route::get('/cadastroProjeto', function(){
-    return view('cadastro-projeto');
-});
+Route::get('/cadastroProjeto', 'cadastroProjetoController@cadastroProjeto')->name('cadastroProjeto');
 
-Route::get('/novaSenha', function(){
-    return view('nova-senha');
-});
+Route::get('/novaSenha', 'novaSenhaController@novaSenha')->name('novaSenha');
 
-Route::get('/feed', function(){
-    return view('feed-de-noticias');
-});
 
 Route::get('/user', function(){
     return view('perfil-usuario');
@@ -51,4 +36,8 @@ Route::get('/user', function(){
 
 Route::get('/perfilProjeto', function(){
     return view('perfil-projeto');
+});
+
+Route::get('/feed', function(){
+    return view('feed-de-noticias');
 });

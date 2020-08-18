@@ -12,20 +12,24 @@
         <!-- Material Design Bootstrap -->
         <link rel="stylesheet" href="css/mdb.min.css">
         <!-- Your custom styles (optional) -->
-
-        <link rel="stylesheet" href="css/specimen_files/stylesheet.css" type="text/css" charset="utf-8" />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
         <link rel="stylesheet" href="css/estilo.css">
+        <link rel="stylesheet" href="css/specimen_files/stylesheet.css" type="text/css" charset="utf-8" />
+        
+        
         <!-- {{-- ADICIONAR CSS ESPECÍFICO PARA CADA PÁGINA --}} -->
         @yield('css')
+        
+        
 
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        
 
     </head>
     <body>
         <header>
             <div class="container-fluid">
                 <nav class="navbar  navbar-expand-lg  navbar-light pt-0 pb-0 menu-geral">
-                    <a class="navbar-brand" href="./home.html">
+                    <a class="navbar-brand" href="@yield('rota-logo')">
                         <img src="{{ url('./img/toro cultural.png') }}" width="85" height="85" alt="Toró Cultural">
                     </a>
                     <button class="navbar-toggler botao-nav" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">

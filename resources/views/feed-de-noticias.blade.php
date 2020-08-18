@@ -10,9 +10,9 @@
 @endsection
 
 @section('search')
-    <form class="form-inline my-2 my-lg-0" action="./feed-de-noticias.html">
-        <input class="form-control mr-sm-1" type="search" placeholder="Pesquisar" aria-label="Pesquisar" style="width: 65%;">
-        <button class="btn btn-orange my-1 my-sm-0 py-1 px-2" type="submit">
+    <form class="form-inline my-2 my-lg-0" action="./feed">
+        <input class="form-control  search" type="search" placeholder="Pesquisar" aria-label="Pesquisar" style="width: 65%;">
+        <button class="btn btn-orange btn-search" type="submit">
             <img class="search" src="img/search.png" alt="">
         </button>
     </form>
@@ -20,13 +20,13 @@
 
 @section('nav-links')
     <li class="nav-item active">
-        <a class="nav-link" href="./perfil-usuario.html">Meu perfil</a>
+        <a class="nav-link" href="./user">Meu perfil</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="./feed-de-noticias.html">Feed</a></li>
+        <a class="nav-link" href="./feed">Feed</a></li>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="cadastro-projeto.html">Enviar projeto</a>
+        <a class="nav-link" href="./cadastroProjeto">Enviar projeto</a>
     </li>
 @endsection
 
@@ -42,12 +42,12 @@
                     </div>
                 </div>
                 <div class="row">
-                    <p class="mx-auto"><a href="#">Nome de usuário</a></p>
+                    <p class="mx-auto"><a href="./user">Nome de usuário</a></p>
                 </div>
                 <hr class="my-2">
                 <div class="btn-pesquisa-avancada text-center">
-                    <button class="botao-padrao btn pt-2" type="button" data-toggle="collapse" data-target="#nossa-pesquisa" aria-controls="nossa-pesquisa" aria-expanded="false" aria-label="Toggle navigation">
-                        <h5 class="" >Pesquisa avançada</h5>
+                    <button class="btn-deep-orange btn p-1" type="button" data-toggle="collapse" data-target="#nossa-pesquisa" aria-controls="nossa-pesquisa" aria-expanded="false" aria-label="Toggle navigation">
+                        Busca avançada
                     </button>
                 </div>
 
@@ -95,7 +95,7 @@
                             </select>
                         </div>
 
-                        <button type="submit" class="btn mb-2 p-2 botao-padrao ">Pesquisar</button>
+                        <button type="submit" class="btn-deep-orange btn ">Buscar</button>
                     </form>
                 </div>
             </div>

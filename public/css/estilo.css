@@ -130,26 +130,6 @@ h3 {
 
 
 
-/*Botão para pesquisas e formulários*/
-.botao-padrao {
-    background-color: rgb(248, 117, 56);
-    color: white;
-    font-family: 'Lato';
-    font-size: 15px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.botao-padrao:hover{
-    background-color: rgb(255, 94, 20);
-    font-size: .801em!important;
-    color: white;
-
-}
-
-/*btn botao-padrao ml-3*/
-
 
 /*FOOTER*/
 
@@ -184,4 +164,9 @@ footer {
 
 .btn-search{
     margin-left: 0;
+}
+
+
+input{
+    outline: none;
 }

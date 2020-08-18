@@ -1,7 +1,15 @@
 @extends('layouts.templateBase')
 
+    @section('title')
+        <title>Toró Cultural</title>
+    @endsection
+
     @section('css')
         <link rel="stylesheet" href="css/home.css">
+    @endsection
+
+    @section('rota-logo')
+        {{ route('home-principal') }}
     @endsection
 
     @section('nav-links')
@@ -15,6 +23,7 @@
             <a class="nav-link" href="#formEntreEmContato">Contato</a></li>
         </li>
     @endsection
+
 
     @section('conteudoPrincipal')
         <section class="container-fluid content-sobre-toro">
@@ -87,7 +96,7 @@
                         <label for="mensagem">Mensagem</label></br>
                         <textarea name="mensagem" id="mensagem" cols="30" rows="4"></textarea></br>
                     </div>
-                    <button class="btn botao-padrao ml-3">Enviar</button>
+                    <button class="btn btn-deep-orange ml-3">Enviar</button>
                 </form>
             </div>
         </section>
