@@ -34,10 +34,6 @@ Route::get('/user', function(){
     return view('perfil-usuario');
 });
 
-Route::get('/perfilProjeto', function(){
-    return view('perfil-projeto');
-});
+Route::get('/perfilProjeto', 'PerfilProjeto@perfilProjeto')->name('perfilProjeto');
 
-Route::get('/feed', function(){
-    return view('feed-de-noticias');
-});
+Route::get('/feed', 'FeedController@feed')->name('feed');

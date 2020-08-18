@@ -10,7 +10,7 @@
 @endsection
 
 @section('search')
-    <form class="form-inline my-2 my-lg-0" action="./feed">
+    <form class="form-inline my-2 my-lg-0" action="{{route('feed')}}">
         <input class="form-control  search" type="search" placeholder="Pesquisar" aria-label="Pesquisar" style="width: 65%;">
         <button class="btn btn-orange btn-search" type="submit">
             <img class="search" src="img/search.png" alt="">
@@ -23,10 +23,10 @@
         <a class="nav-link" href="./user">Meu perfil</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="./feed">Feed</a></li>
+        <a class="nav-link" href="{{ route('feed') }}">Feed</a></li>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="./cadastroProjeto">Enviar projeto</a>
+        <a class="nav-link" href="{{ route('cadastroProjeto') }}">Enviar projeto</a>
     </li>
 @endsection
 
@@ -176,7 +176,7 @@
                                                 <a class="media-left" href="#"><img class="img-circle img-publi add-profissional" alt="Profile Picture" src="img/mulher1.jpg"></a>
                                                 <div class="media-body">
                                                     <div class="mar-btm">
-                                                        <img class="imagem-perfil-feed mt-1 mr-1" src="img/cinemateca.jpg" alt="">
+                                                        <img class="imagem-perfil-feed mt-1 mr-1" src="{{url('img/cinemateca.jpg')}}" alt="">
                                                         <a href="#" class="text-semibold media-heading box-inline">Inauguração da Cinemacoteca</a>
                                                         <p class="text-muted text-sm"><i class="fa fa-mobile fa-lg"></i> - From Mobile - 7 min ago</p>
                                                     </div>

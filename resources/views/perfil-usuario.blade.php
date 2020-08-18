@@ -11,7 +11,7 @@
 @endsection
 
 @section('search')
-    <form class="form-inline my-2 my-lg-0" action="./feed">
+    <form class="form-inline my-2 my-lg-0" action="{{ route('feed') }}">
         <input class="form-control  search" type="search" placeholder="Pesquisar" aria-label="Pesquisar" style="width: 65%;">
         <button class="btn btn-orange btn-search" type="submit">
             <img class="search" src="img/search.png" alt="">
@@ -24,10 +24,10 @@
         <a class="nav-link" href="./perfil-usuario.html">Meu perfil</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="./feed-de-noticias.html">Feed</a></li>
+        <a class="nav-link" href="{{ route('feed') }}">Feed</a></li>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="cadastro-projeto.html">Enviar projeto</a>
+        <a class="nav-link" href={{ route('cadastroProjeto') }}>Enviar projeto</a>
     </li>
 @endsection
 
@@ -62,7 +62,7 @@
                                 <h3 class="nomeUser text-center">Nome do Usuário</h3>
                             </div>
                             <div class="col-md-6 text-center">
-                                <a href="cadastro-usuario.html"class="text-center"><img class="icon-config pl-1 pt-1 ml-5" src="img/editar.png" alt=""></a>
+                                <a href={{ route('cadastroUsuario') }}"class="text-center"><img class="icon-config pl-1 pt-1 ml-5" src="img/editar.png" alt=""></a>
                                 <button type="button" class="follow btn btn-outline-warning btn-sm m-1 p-2"> Seguir</button>
                             </div>
                         </div>
