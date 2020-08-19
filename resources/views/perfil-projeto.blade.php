@@ -13,7 +13,7 @@
 @endsection
 
 @section('search')
-    <form class="form-inline my-2 my-lg-0" action="./feed">
+    <form class="form-inline my-2 my-lg-0" action="{{route('feed')}}">
         <input class="form-control  search" type="search" placeholder="Pesquisar" aria-label="Pesquisar" style="width: 65%;">
         <button class="btn btn-orange btn-search" type="submit">
             <img class="search" src="img/search.png" alt="">
@@ -26,10 +26,10 @@
         <a class="nav-link" href="./perfil-usuario.html">Meu perfil</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="./feed-de-noticias.html">Feed</a></li>
+        <a class="nav-link" href="{{ route('feed') }}">Feed</a></li>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="cadastro-projeto.html">Enviar projeto</a>
+        <a class="nav-link" href="{{ route('cadastroProjeto') }}">Enviar projeto</a>
     </li>
 @endsection
 

@@ -11,7 +11,7 @@
     @section('rota-logo')
         {{ route('home-principal') }}
     @endsection
-    
+
     @section('nav-links')
         <li class="nav-item">
             <a class="nav-link" href="{{ route('login') }}">Entrar</a></li>
@@ -23,8 +23,7 @@
             <a class="nav-link" href="home.html#formEntreEmContato">Contato</a></li>
         </li>
     @endsection
-    
-        
+
     @section('conteudoPrincipal')
         <div class="caixa-login">
             <form action="/action_page.php">
@@ -66,8 +65,8 @@
                 </div>
                 <div class="coluna">
 
-                    <input type="button" class=" botao btn-esqueceu-senha" href="esqueceu-senha.html" data-toggle="modal" data-target=".bd-example-modal-sm" value="Esqueceu a Senha?">
-        
+                    <input type="button" class=" botao btn-esqueceu-senha" href="{{ route('novaSenha') }}" data-toggle="modal" data-target=".bd-example-modal-sm" value="Esqueceu a Senha?">
+
                     <div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
                         <div class="modal-dialog modal-sm">
                         <div class="modal-content">
@@ -89,4 +88,3 @@
             </div>
         </div>
     @endsection
-        

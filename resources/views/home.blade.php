@@ -14,7 +14,7 @@
 
     @section('nav-links')
         <li class="nav-item">
-            <a class="nav-link" href="/login">Entrar</a></li>
+            <a class="nav-link" href="{{ route('login') }}">Entrar</a></li>
         </li>
         <li class="nav-item active">
             <a class="nav-link" href="#sobre-nos">Sobre Toró</a>
@@ -103,4 +103,3 @@
     @endsection
 
 
- 

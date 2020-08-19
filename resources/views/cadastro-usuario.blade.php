@@ -27,10 +27,10 @@
         <a class="nav-link" href="./user">Meu perfil</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="./feed">Feed</a></li>
+        <a class="nav-link" href="{{ route('feed') }}">Feed</a></li>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="./cadastroProjeto">Enviar projeto</a>
+        <a class="nav-link" href={{ route('cadastroProjeto') }}>Enviar projeto</a>
     </li>
 @endsection
 
@@ -117,14 +117,14 @@
             </div>
         </section>
         <div class="text-center">
-            <button class="btn-exp-user" type="Submit"><img style="width: 1em; margin-right: 5px;" src="img/mais.png" alt="add-experiencia"> 
+            <button class="btn-exp-user" type="Submit"><img style="width: 1em; margin-right: 5px;" src="img/mais.png" alt="add-experiencia">
                 Adicionar experiência
             </button>
         </div>
         <div class="botao-final-user">
             <button class="btn-deep-orange btn " type="Submit" data-toggle="modal" data-target="#modalExemplo">Finalizar</button>
         </div>
-        
+
         <!-- Modal -->
         <div class="modal fade" id="modalExemplo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">

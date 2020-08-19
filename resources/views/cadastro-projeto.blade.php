@@ -9,7 +9,7 @@
 @endsection
 
 @section('search')
-    <form class="form-inline my-2 my-lg-0" action="./feed-de-noticias.html">
+    <form class="form-inline my-2 my-lg-0" action="{{ route('feed') }}">
         <input class="form-control  search" type="search" placeholder="Pesquisar" aria-label="Pesquisar" style="width: 65%;">
         <button class="btn btn-orange btn-search" type="submit">
             <img class="search" src="img/search.png" alt="">
@@ -22,7 +22,7 @@
         <a class="nav-link" href="./user">Meu perfil</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="./feed">Feed</a></li>
+        <a class="nav-link" href="{{ route('feed') }}">Feed</a></li>
     </li>
     <li class="nav-item">
         <a class="nav-link" href="{{ route('cadastroProjeto') }}">Enviar projeto</a>
@@ -122,7 +122,7 @@
                 </button>
         </div>
         <div class="botao-final-user"><button class="btn-deep-orange btn" type="Submit" data-toggle="modal" data-target="#modalExemplo">Finalizar</button></div>
-        
+
         <!-- Modal -->
         <div class="modal fade" id="modalExemplo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
@@ -138,7 +138,7 @@
                 </div>
                 <div class="modal-footer">
 
-                <button type="button" class="btn-deep-orange btn"><a class="modal-para-perfil"href="./perfilProjeto"> Ir para o Meu Projeto</a></button>
+                <button type="button" class="btn-deep-orange btn"><a class="modal-para-perfil"href={{ route('perfiProjeto') }}"> Ir para o Meu Projeto</a></button>
                 </div>
             </div>
             </div>
