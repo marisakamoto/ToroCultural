@@ -13,27 +13,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
-Route::get('/home', 'homeController@home')->name('home-principal');
-
-Route::get('/login', 'loginController@login')->name('login');
-
-Route::get('/register', 'registerController@register')->name('register');
+Route::get('/', 'PaginaInicialController@paginaInicial')->name('paginaInicial');//pagina TORÓ
 
 Route::get('/cadastroUsuario', 'cadastroUsuarioController@cadastroUsuario')->name('cadastroUsuario');
 
 Route::get('/cadastroProjeto', 'cadastroProjetoController@cadastroProjeto')->name('cadastroProjeto');
 
-Route::get('/novaSenha', 'novaSenhaController@novaSenha')->name('novaSenha');
-
-
-Route::get('/user', function(){
-    return view('perfil-usuario');
-});
-
 Route::get('/perfilProjeto', 'PerfilProjeto@perfilProjeto')->name('perfilProjeto');
 
 Route::get('/feed', 'FeedController@feed')->name('feed');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

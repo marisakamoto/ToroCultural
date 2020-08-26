@@ -1,11 +1,11 @@
-@extends('layouts.templateBase')
+@extends('layouts.app')
 
 @section('title')
     <title>Cadastro do Projeto</title>
 @endsection
 
 @section('css')
-    <link rel="stylesheet" href="css/cadastro.css">
+    <link rel="stylesheet" href="{{ asset('css/cadastro.css') }}">
 @endsection
 
 @section('search')
@@ -18,18 +18,47 @@
 @endsection
 
 @section('nav-links')
-    <li class="nav-item active">
-        <a class="nav-link" href="./user">Meu perfil</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="{{ route('feed') }}">Feed</a></li>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="{{ route('cadastroProjeto') }}">Enviar projeto</a>
-    </li>
+    @guest
+        <li class="nav-item">
+            <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+        </li>
+        @if (Route::has('register'))
+            <li class="nav-item">
+                <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+            </li>
+        @endif
+        @else
+            <li class="nav-item active">
+                <a class="nav-link" href="{{  route('home') }}">Meu perfil</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ route('feed') }}">Feed</a></li>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href={{ route('cadastroProjeto') }}>Enviar projeto</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                    {{ Auth::user()->name }}
+                </a>
+
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                
+                    <a class="dropdown-item" href="{{ route('logout') }}"
+                        onclick="event.preventDefault();
+                                        document.getElementById('logout-form').submit();">
+                        {{ __('Logout') }}
+                    </a>
+
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                        @csrf
+                    </form>
+                </div>
+            </li>
+    @endguest
 @endsection
 
-@section('conteudoPrincipal')
+@section('content')
     <main>
         <h2 id="title-form">Cadastro do Projeto</h2>
         <section class="container cadastro-projeto p-4 mb-5">
@@ -138,7 +167,7 @@
                 </div>
                 <div class="modal-footer">
 
-                <button type="button" class="btn-deep-orange btn"><a class="modal-para-perfil"href={{ route('perfiProjeto') }}"> Ir para o Meu Projeto</a></button>
+                <button type="button" class="btn-deep-orange btn"><a class="modal-para-perfil"href={{ route('perfilProjeto') }}"> Ir para o Meu Projeto</a></button>
                 </div>
             </div>
             </div>

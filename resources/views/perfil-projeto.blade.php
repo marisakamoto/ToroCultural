@@ -1,4 +1,4 @@
-@extends('layouts.templateBase')
+@extends('layouts.app')
 
 @section('title')
     <title>Perfil do Projeto</title>
@@ -7,9 +7,9 @@
 @section('css')
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Kaushan+Script|Lobster&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/perfil.css">
-    <link rel="stylesheet" href="css/feed.css">
-    <link rel="stylesheet" href="css/feed-giu.css">
+    <link rel="stylesheet" href="{{ asset('css/perfil.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/feed.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/feed-giu.css') }}">
 @endsection
 
 @section('search')
@@ -22,18 +22,47 @@
 @endsection
 
 @section('nav-links')
-    <li class="nav-item active">
-        <a class="nav-link" href="./perfil-usuario.html">Meu perfil</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="{{ route('feed') }}">Feed</a></li>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="{{ route('cadastroProjeto') }}">Enviar projeto</a>
-    </li>
+    @guest
+        <li class="nav-item">
+            <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+        </li>
+        @if (Route::has('register'))
+            <li class="nav-item">
+                <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+            </li>
+        @endif
+        @else
+            <li class="nav-item active">
+                <a class="nav-link" href="{{  route('home') }}">Meu perfil</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ route('feed') }}">Feed</a></li>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href={{ route('cadastroProjeto') }}>Enviar projeto</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                    {{ Auth::user()->name }}
+                </a>
+
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                
+                    <a class="dropdown-item" href="{{ route('logout') }}"
+                        onclick="event.preventDefault();
+                                        document.getElementById('logout-form').submit();">
+                        {{ __('Logout') }}
+                    </a>
+
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                        @csrf
+                    </form>
+                </div>
+            </li>
+    @endguest
 @endsection
 
-@section('conteudoPrincipal')
+@section('content')
     <div class=" d-flex flex-row-reverse flex-wrap " >
         <div class="col-lg-10 py-3 px-5" id="main-conteudo">
             <div class="row d-flex align-items-center">
