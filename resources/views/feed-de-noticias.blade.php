@@ -1,4 +1,4 @@
-@extends('layouts.templateBase')
+@extends('layouts.app')
 
 @section('title')
     <title>Feed de Notícias</title>
@@ -6,7 +6,7 @@
 
 @section('css')
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/feed.css">
+    <link rel="stylesheet" href="{{ asset('css/feed.css') }}">
 @endsection
 
 @section('search')
@@ -19,21 +19,50 @@
 @endsection
 
 @section('nav-links')
-    <li class="nav-item active">
-        <a class="nav-link" href="./user">Meu perfil</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="{{ route('feed') }}">Feed</a></li>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="{{ route('cadastroProjeto') }}">Enviar projeto</a>
-    </li>
+    @guest
+        <li class="nav-item">
+            <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+        </li>
+        @if (Route::has('register'))
+            <li class="nav-item">
+                <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+            </li>
+        @endif
+        @else
+            <li class="nav-item active">
+                <a class="nav-link" href="{{  route('home') }}">Meu perfil</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ route('feed') }}">Feed</a></li>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href={{ route('cadastroProjeto') }}>Enviar projeto</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                    {{ Auth::user()->name }}
+                </a>
+
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                
+                    <a class="dropdown-item" href="{{ route('logout') }}"
+                        onclick="event.preventDefault();
+                                        document.getElementById('logout-form').submit();">
+                        {{ __('Logout') }}
+                    </a>
+
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                        @csrf
+                    </form>
+                </div>
+            </li>
+    @endguest
 @endsection
 
-@section('conteudoPrincipal')
+
+@section('content')
     <div id="feed-completo" class="container-fluid px-0">
         <div class="row principal mr-0">
-
             <!--Coluna pesquisa-->
             <div class="col-md-3 colPesquisaAvancada">
                 <div class="row pt-5" id="foto">
@@ -50,7 +79,6 @@
                         Busca avançada
                     </button>
                 </div>
-
                 <div id="nossa-pesquisa" class="row form-pesquisa px-0 mx-auto collapse.show justify-content-center">
                     <form class="mx-auto pl-1">
                         <div class="form-group mt-3">
@@ -94,7 +122,6 @@
                             <option>Rio Grande do Sul</option>
                             </select>
                         </div>
-
                         <button type="submit" class="btn-deep-orange btn ">Buscar</button>
                     </form>
                 </div>
@@ -106,8 +133,6 @@
                 <div class="row px-0 pb-2 bg-white mr-0 ml-0 pl-4" style="width: 100%;">
                     <h2 id="titulo-feed">Feed de notícias</h2>
                 </div>
-
-
                 <nav>
                     <div class="nav nav-tabs btn-principais-feed" id="nav-tab" role="tablist">
                         <a class="btn-feed nav-item nav-link active text-center" id="nav-home-tab" data-toggle="tab" href="#feed-user" role="tab" aria-controls="nav-home" aria-selected="true">Meu Feed</a>
@@ -132,22 +157,11 @@
                                 </select>
                             </div>
                         </div>
-
-
-
                         <div class="areaDePostagens container border pt-5 pb-5">
-
-
-
-
                                 <div class="row justify-content-start">
-
-
-
                                     <div class="feed-publicacoes mx-auto">
                                         <div class="card mb-4">
                                             <div class="card-body">
-
                                                 <a class="media-left" href="#"><img class="img-circle img-publi"  alt="Profile Picture" src="img/jardim.jpg"></a>
                                                 <div class="media-body">
                                                     <div class="mar-btm">
