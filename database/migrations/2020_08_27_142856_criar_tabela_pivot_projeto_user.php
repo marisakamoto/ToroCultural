@@ -13,6 +13,7 @@ class CriarTabelaPivotProjetoUser extends Migration
      */
     //PROJETO_USUARIO_COLABORADOR -> Usuario trabalha em vários projetos
     //o projeto rececebe vários usuários como colaboradores
+    //COLABORADORES
     public function up()
     {
         Schema::create('projeto_user', function (Blueprint $table) {
