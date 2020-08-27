@@ -16,9 +16,11 @@ class CreateExperienceCardsTable extends Migration
         Schema::create('experience_cards', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id'); 
-            $table->text('descricao');
-            $table->date('dataRealizacao');
-            $table->string('urlFoto');
+            $table->string('titulo');
+            $table->text('descricao')->nullable();
+            $table->text('localizacao')->nullable();
+            $table->date('data_realizacao')->nullable();
+            $table->string('url_foto')->nullable();
             $table->timestamps();
         });
     }
