@@ -72,8 +72,9 @@
         <section class="container cadastro-user p-4 mb-5">
             <div class="row">
                 <div class="col-md-4 text-center pt-3">
-                    <canvas id="UgCanvas" width="150px" height="150px" style="border:2.1px solid rgb(165, 157, 157); border-radius: 50%;">
-                    </canvas></br>
+                    <img src="{{ Auth::user()->url_foto }}" style="border-radius: 50%;"></img>
+                    {{-- <canvas id="UgCanvas" width="150px" height="150px" style="border:2.1px solid rgb(165, 157, 157); border-radius: 50%;">
+                    </canvas></br> --}}
                     <button class="btn-deep-orange btn" type="button">Alterar foto</button>
                 </div>
                 <div class="col-md-8 form-user">

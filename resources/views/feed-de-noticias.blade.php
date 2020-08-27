@@ -67,11 +67,12 @@
             <div class="col-md-3 colPesquisaAvancada">
                 <div class="row pt-5" id="foto">
                     <div class="foto-perfil mx-auto">
-                        <canvas id="UgCanvas" width="150px" height="150px" style="border:2.5px solid rgb(165, 157, 157); border-radius: 50%;"></canvas>
+                        <img src="{{ Auth::user()->url_foto }}" style="border-radius: 50%;"></img>
+                        {{-- <canvas id="UgCanvas" width="150px" height="150px" style="border:2.5px solid rgb(165, 157, 157); border-radius: 50%;"></canvas> --}}
                     </div>
                 </div>
                 <div class="row">
-                    <p class="mx-auto"><a href="./user">Nome de usuário</a></p>
+                    <p class="mx-auto"><a href="./user">{{ Auth::user()->username }}</a></p>
                 </div>
                 <hr class="my-2">
                 <div class="btn-pesquisa-avancada text-center">

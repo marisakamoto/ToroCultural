@@ -56,7 +56,7 @@ class AddUsers extends Seeder
 
         User::create([
             "name" => "Teste",
-            'username' => "teste",
+            'username' => "testeuser",
             "email" => "teste@gmail.com",
             "password"=> Hash::make('123456'),
             'descricao' => "Contadora de histórias, formação em clown e cantora",
