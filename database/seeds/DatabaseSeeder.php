@@ -15,5 +15,6 @@ class DatabaseSeeder extends Seeder
     {
         $this->call(AddCategorias::class);
         $this->call(AddUsers::class);
+        $this->call(AddProjetos::class);
     }
 }

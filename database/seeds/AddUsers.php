@@ -12,6 +12,7 @@ class AddUsers extends Seeder
      */
     public function run()
     {
+        
         User::create([
             "name" => "João Almeida",
             'username' => "Joal",
@@ -48,6 +49,15 @@ class AddUsers extends Seeder
             "name" => "Joana Maria",
             'username' => "MariaJo",
             "email" => "mjoana@gmail.com",
+            "password"=> Hash::make('123456'),
+            'descricao' => "Contadora de histórias, formação em clown e cantora",
+            'url_foto' => "/img/users/mulher.jpeg"
+        ]);
+
+        User::create([
+            "name" => "Teste",
+            'username' => "teste",
+            "email" => "teste@gmail.com",
             "password"=> Hash::make('123456'),
             'descricao' => "Contadora de histórias, formação em clown e cantora",
             'url_foto' => "/img/users/mulher.jpeg"
