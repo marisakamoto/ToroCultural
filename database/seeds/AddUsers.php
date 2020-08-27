@@ -44,9 +44,9 @@ class AddUsers extends Seeder
             'url_foto' => "/img/users/mulher 2.jpeg"
         ]);
         User::create([
-            "name" => "Maria Carla",
-            'username' => "MariaCarla",
-            "email" => "mcarla@gmail.com",
+            "name" => "Joana Maria",
+            'username' => "MariaJo",
+            "email" => "mjoana@gmail.com",
             "password"=> 1235678,
             'descricao' => "Contadora de histórias, formação em clown e cantora",
             'url_foto' => "/img/users/mulher.jpeg"
