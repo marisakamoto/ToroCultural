@@ -4,6 +4,7 @@
     <title>{{ Auth::user()->name }}</title>
 @endsection
 
+
 @section('css')
     <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Kaushan+Script|Lobster&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -69,8 +70,9 @@
                     <div class="col-md-4 mx-auto" id="foto">
                         <div class="row foto-perfil">
                             <div class="mx-auto">
-                                <canvas class="text-center" id="UgCanvas" width="150px" height="150px" style="border:2.5px solid rgb(165, 157, 157); border-radius: 50%;"></canvas>
-                                </canvas>
+                                <img src="{{ Auth::user()->url_foto }}" style="border-radius: 50%;"></img>
+                                {{-- <canvas class="text-center" id="UgCanvas" width="150px" height="150px" style="border:2.5px solid rgb(165, 157, 157); border-radius: 50%;"></canvas>
+                                </canvas> --}}
                             </div>
                         </div>
                         <div class="row pt-2">
@@ -89,7 +91,7 @@
                     <div class="col-md-8">
                         <div class="row d-flex pb-3 ">
                             <div class="col-md-6">
-                                <h3 class="nomeUser text-center">Nome do Usuário</h3>
+                                <h3 class="nomeUser text-center">{{ Auth::user()->username }}</h3>
 
                             </div>
                             <div class="col-md-6 text-center">

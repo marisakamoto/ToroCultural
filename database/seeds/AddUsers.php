@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Seeder;
 use App\User;
+use Illuminate\Support\Facades\Hash;
 class AddUsers extends Seeder
 {
     /**
@@ -11,11 +12,12 @@ class AddUsers extends Seeder
      */
     public function run()
     {
+        
         User::create([
             "name" => "João Almeida",
             'username' => "Joal",
             "email" => "joalmeida@gmail.com",
-            "password"=> 1235678,
+            "password"=> Hash::make('123456'),
             'descricao' => "Músico com 5 anos de estrada",
             'url_foto' => "/img/users/homem1.jpg"
         ]);
@@ -23,7 +25,7 @@ class AddUsers extends Seeder
             "name" => "Maria Carla",
             'username' => "MariaCarla",
             "email" => "mcarla@gmail.com",
-            "password"=> 1235678,
+            "password"=> Hash::make('123456'),
             'descricao' => "Contadora de histórias, formação em clown e cantora lúdica",
             'url_foto' => "/img/users/mulher.jpeg"
         ]);
@@ -31,7 +33,7 @@ class AddUsers extends Seeder
             "name" => "Ana Lopes",
             'username' => "AninhaLopes",
             "email" => "ana@gmail.com",
-            "password"=> 98765432,
+            "password"=> Hash::make('123456'),
             'descricao' => "Produtora cultural da Filmarte há 3 anos",
             'url_foto' => "/img/users/mulher1.jpg"
         ]);
@@ -39,7 +41,7 @@ class AddUsers extends Seeder
             "name" => "Carolina Duarte",
             'username' => "CarolDu",
             "email" => "duarte@gmail.com",
-            "password"=> "dsdapsdosadjd",
+            "password"=> Hash::make('123456'),
             'descricao' => "Atriz formada pela UFRJ, dançarina contemporânea e amor pela música",
             'url_foto' => "/img/users/mulher 2.jpeg"
         ]);
@@ -47,7 +49,16 @@ class AddUsers extends Seeder
             "name" => "Joana Maria",
             'username' => "MariaJo",
             "email" => "mjoana@gmail.com",
-            "password"=> 1235678,
+            "password"=> Hash::make('123456'),
+            'descricao' => "Contadora de histórias, formação em clown e cantora",
+            'url_foto' => "/img/users/mulher.jpeg"
+        ]);
+
+        User::create([
+            "name" => "Teste",
+            'username' => "testeuser",
+            "email" => "teste@gmail.com",
+            "password"=> Hash::make('123456'),
             'descricao' => "Contadora de histórias, formação em clown e cantora",
             'url_foto' => "/img/users/mulher.jpeg"
         ]);
