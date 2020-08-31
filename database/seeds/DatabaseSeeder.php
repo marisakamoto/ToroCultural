@@ -18,5 +18,6 @@ class DatabaseSeeder extends Seeder
         $this->call(AddProjetos::class);
         $this->call(AddCardsExperiencias::class);
         $this->call(AddPublishes::class);
+        $this->call(AddProjetosCategorias::class);
     }
 }

@@ -11,6 +11,8 @@ class CriarTabelaPivotUserProjeto extends Migration
      *
      * @return void
      */
+
+     //Usuario segue vários projetos
     public function up()
     {
         Schema::create('user_projetoSeguido', function (Blueprint $table) {

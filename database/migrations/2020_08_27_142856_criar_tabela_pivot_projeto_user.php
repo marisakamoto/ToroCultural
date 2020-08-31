@@ -11,8 +11,11 @@ class CriarTabelaPivotProjetoUser extends Migration
      *
      * @return void
      */
-    //PROJETO_USUARIO_COLABORADOR -> Usuario trabalha em vários projetos
-    //o projeto rececebe vários usuários como colaboradores
+
+
+
+    //PROJETO_USUARIO_COLABORADOR -> Um usuario pode trabalhar em vários projetos
+    //um projeto pode receceber vários usuários como colaboradores
     //COLABORADORES
     public function up()
     {
