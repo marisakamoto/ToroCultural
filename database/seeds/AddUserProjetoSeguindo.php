@@ -35,6 +35,36 @@ class AddUserProjetoSeguindo extends Seeder
                   "created_at" => $now,
                   "updated_at"=> $now
             ],
+            [
+                  "user_id" => 6,
+                  "projeto_id" => 2,
+                  "created_at" => $now,
+                  "updated_at"=> $now
+            ],
+            [
+                  "user_id" => 6,
+                  "projeto_id" => 5,
+                  "created_at" => $now,
+                  "updated_at"=> $now
+            ],
+            [
+                  "user_id" => 2,
+                  "projeto_id" => 3,
+                  "created_at" => $now,
+                  "updated_at"=> $now
+            ],
+            [
+                  "user_id" => 3,
+                  "projeto_id" => 3,
+                  "created_at" => $now,
+                  "updated_at"=> $now
+            ],
+            [
+                  "user_id" => 5,
+                  "projeto_id" => 5,
+                  "created_at" => $now,
+                  "updated_at"=> $now
+            ],
       ]);
     }
 }

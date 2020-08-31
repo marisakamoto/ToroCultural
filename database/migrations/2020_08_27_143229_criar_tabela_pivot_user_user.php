@@ -15,7 +15,7 @@ class CriarTabelaPivotUserUser extends Migration
      //USUARIO SEGUE OUTRO USUARIO
     public function up()
     {
-        Schema::create('user_user', function (Blueprint $table) {
+        Schema::create('user_userSeguindo', function (Blueprint $table) {
             $table->foreignId('user_id')->constrained("users");//Principal
             $table->foreignId('user_seguindo_id')->constrained("users");//Seguido
             $table->timestamps();
@@ -29,6 +29,6 @@ class CriarTabelaPivotUserUser extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('user_user');
+        Schema::dropIfExists('user_userSeguindo');
     }
 }

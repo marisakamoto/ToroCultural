@@ -27,8 +27,20 @@ class AddExperienceCardsCategorias extends Seeder
                   "updated_at"=> $now
             ],
             [
-                  "experience_card_id" => 2,
-                  "categoria_id" => 3,
+                  "experience_card_id" => 5,
+                  "categoria_id" => 6,
+                  "created_at" => $now,
+                  "updated_at"=> $now
+            ],
+            [
+                  "experience_card_id" => 5,
+                  "categoria_id" => 7,
+                  "created_at" => $now,
+                  "updated_at"=> $now
+            ],
+            [
+                  "experience_card_id" => 6,
+                  "categoria_id" => 2,
                   "created_at" => $now,
                   "updated_at"=> $now
             ],

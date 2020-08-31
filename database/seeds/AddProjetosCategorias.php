@@ -27,8 +27,38 @@ class AddProjetosCategorias extends Seeder
                   "updated_at"=> $now
             ],
             [
+                  "projeto_id" => 1,
+                  "categoria_id" => 8,
+                  "created_at" => $now,
+                  "updated_at"=> $now
+            ],
+            [
                   "projeto_id" => 2,
                   "categoria_id" => 3,
+                  "created_at" => $now,
+                  "updated_at"=> $now
+            ],
+            [
+                  "projeto_id" => 2,
+                  "categoria_id" => 3,
+                  "created_at" => $now,
+                  "updated_at"=> $now
+            ],
+            [
+                  "projeto_id" => 2,
+                  "categoria_id" => 6,
+                  "created_at" => $now,
+                  "updated_at"=> $now
+            ],
+            [
+                  "projeto_id" => 1,
+                  "categoria_id" => 7,
+                  "created_at" => $now,
+                  "updated_at"=> $now
+            ],
+            [
+                  "projeto_id" => 5,
+                  "categoria_id" => 6,
                   "created_at" => $now,
                   "updated_at"=> $now
             ],

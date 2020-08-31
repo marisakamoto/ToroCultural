@@ -29,6 +29,51 @@ class AddCardsExperiencias extends Seeder
             'descricao' => "teste",
             "localizacao" => "teste",
             'data_realizacao' => Carbon::create('2000', '01', '01'),
+            'url_foto' => "/img/projetos/projeto2.jpg"
+        ]);
+
+        Experience_card::create([
+            "user_id" => 2,
+            "titulo" => "Teste",
+            'descricao' => "teste",
+            "localizacao" => "teste",
+            'data_realizacao' => Carbon::create('2000', '01', '01'),
+            'url_foto' => "/img/projetos/projeto1.jpg"
+        ]);
+
+        Experience_card::create([
+            "user_id" => 2,
+            "titulo" => "Teste",
+            'descricao' => "teste",
+            "localizacao" => "teste",
+            'data_realizacao' => Carbon::create('2000', '01', '01'),
+            'url_foto' => "/img/projetos/projeto2.jpg"
+        ]);
+
+        Experience_card::create([
+            "user_id" => 3,
+            "titulo" => "Teste",
+            'descricao' => "teste",
+            "localizacao" => "teste",
+            'data_realizacao' => Carbon::create('2000', '01', '01'),
+            'url_foto' => "/img/projetos/projeto1.jpg"
+        ]);
+
+        Experience_card::create([
+            "user_id" => 5,
+            "titulo" => "Teste",
+            'descricao' => "teste",
+            "localizacao" => "teste",
+            'data_realizacao' => Carbon::create('2000', '01', '01'),
+            'url_foto' => "/img/projetos/projeto1.jpg"
+        ]);
+
+        Experience_card::create([
+            "user_id" => 4,
+            "titulo" => "Teste",
+            'descricao' => "teste",
+            "localizacao" => "teste",
+            'data_realizacao' => Carbon::create('2000', '01', '01'),
             'url_foto' => "/img/projetos/projeto1.jpg"
         ]);
     }

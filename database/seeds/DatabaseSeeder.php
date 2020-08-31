@@ -22,5 +22,6 @@ class DatabaseSeeder extends Seeder
         $this->call(AddExperienceCardsCategorias::class);
         $this->call(AddUserProjetoSeguindo::class);
         $this->call(AddProjetosUsuariosColaboradores::class);
+        $this->call(AddUsersUsersSeguindo::class);
     }
 }
