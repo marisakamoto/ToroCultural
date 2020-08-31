@@ -17,7 +17,8 @@ class CreateVagasTable extends Migration
             $table->id();
             $table->string('titulo');
             $table->text('descricao')->nullable();
-            $table->foreignId('project_id');
+            $table->string('status');
+            $table->foreignId('projeto_id');
             $table->timestamps();
         });
     }

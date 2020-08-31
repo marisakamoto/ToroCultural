@@ -15,9 +15,10 @@ class CreatePublishesTable extends Migration
     {
         Schema::create('publishes', function (Blueprint $table) {
             $table->id();
-            $table->text('legenda')->nullable();
             $table->foreignId('user_id');
-            $table->foreignId('project_id');
+            $table->foreignId('projeto_id');
+            $table->text('url_foto')->nullable();
+            $table->text('legenda')->nullable();
             $table->text('localizacao')->nullable();
             $table->date('data_de_criacao');
             $table->timestamps();

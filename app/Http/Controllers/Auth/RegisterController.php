@@ -72,6 +72,7 @@ class RegisterController extends Controller
             'password' => Hash::make($data['password']),
             'descricao' => "",
             'url_foto' => '/img/users/default_profile.png'
+            
         ]);
     }
 }
