@@ -24,7 +24,7 @@ class CreateProjetosTable extends Migration
             $table->date('data_de_realizacao');
             $table->string('url_foto')->nullable();
             $table->timestamps();
-            
+
         });
     }
 

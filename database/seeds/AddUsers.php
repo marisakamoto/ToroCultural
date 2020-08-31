@@ -12,7 +12,7 @@ class AddUsers extends Seeder
      */
     public function run()
     {
-        
+
         User::create([
             "name" => "João Almeida",
             'username' => "Joal",
@@ -62,6 +62,6 @@ class AddUsers extends Seeder
             'descricao' => "Contadora de histórias, formação em clown e cantora",
             'url_foto' => "/img/users/mulher.jpeg"
         ]);
-        
+
     }
 }

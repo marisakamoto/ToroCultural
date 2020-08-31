@@ -5,7 +5,7 @@ use App\Categoria;
 
 class AddCategorias extends Seeder
 {
-    
+
     /**
      * Run the database seeds.
      *
