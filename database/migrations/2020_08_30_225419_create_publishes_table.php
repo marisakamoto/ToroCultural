@@ -19,8 +19,6 @@ class CreatePublishesTable extends Migration
             $table->foreignId('projeto_id');
             $table->text('url_foto')->nullable();
             $table->text('legenda')->nullable();
-            $table->text('localizacao')->nullable();
-            $table->date('data_de_criacao');
             $table->timestamps();
         });
     }
