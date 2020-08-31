@@ -20,7 +20,7 @@ class AddProjetos extends Seeder
             'descricao' => "Show voltado para crianças de todas as idades. Contará com a participação da banda Melhor Show Do Mundo",
             "localizacao" => "Sesc Pinheiros",
             'data_de_realizacao' => Carbon::create('2000', '01', '01'),
-            'url_foto' => "/img/projetos/projeto1.jpg"
+            'url_foto' => "/img/projetos/projeto01.jpg"
         ]);
 
         Projeto::create([
@@ -29,7 +29,7 @@ class AddProjetos extends Seeder
             'descricao' => "teste",
             "localizacao" => "teste",
             'data_de_realizacao' => Carbon::create('2000', '01', '01'),
-            'url_foto' => "/img/projetos/projeto1.jpg"
+            'url_foto' => "/img/projetos/projeto02.jpg"
         ]);
 
         Projeto::create([
@@ -38,7 +38,7 @@ class AddProjetos extends Seeder
             'descricao' => "teste",
             "localizacao" => "teste",
             'data_de_realizacao' => Carbon::create('2000', '01', '01'),
-            'url_foto' => "/img/projetos/projeto1.jpg"
+            'url_foto' => "/img/projetos/projeto03.jpg"
         ]);
 
         Projeto::create([
@@ -47,7 +47,52 @@ class AddProjetos extends Seeder
             'descricao' => "teste",
             "localizacao" => "teste",
             'data_de_realizacao' => Carbon::create('2000', '01', '01'),
-            'url_foto' => "/img/projetos/projeto1.jpg"
+            'url_foto' => "/img/projetos/projeto01.jpg"
+        ]);
+
+        Projeto::create([
+            "user_id" => 1,
+            "titulo" => "Teste",
+            'descricao' => "teste",
+            "localizacao" => "teste",
+            'data_de_realizacao' => Carbon::create('2000', '01', '01'),
+            'url_foto' => "/img/projetos/projeto02.jpg"
+        ]);
+
+        Projeto::create([
+            "user_id" => 2,
+            "titulo" => "Teste",
+            'descricao' => "teste",
+            "localizacao" => "teste",
+            'data_de_realizacao' => Carbon::create('2000', '01', '01'),
+            'url_foto' => "/img/projetos/projeto01.jpg"
+        ]);
+
+        Projeto::create([
+            "user_id" => 3,
+            "titulo" => "Teste",
+            'descricao' => "teste",
+            "localizacao" => "teste",
+            'data_de_realizacao' => Carbon::create('2000', '01', '01'),
+            'url_foto' => "/img/projetos/projeto02.jpg"
+        ]);
+
+        Projeto::create([
+            "user_id" => 4,
+            "titulo" => "Teste",
+            'descricao' => "teste",
+            "localizacao" => "teste",
+            'data_de_realizacao' => Carbon::create('2000', '01', '01'),
+            'url_foto' => "/img/projetos/projeto01.jpg"
+        ]);
+
+        Projeto::create([
+            "user_id" => 5,
+            "titulo" => "Teste",
+            'descricao' => "teste",
+            "localizacao" => "teste",
+            'data_de_realizacao' => Carbon::create('2000', '01', '01'),
+            'url_foto' => "/img/projetos/projeto02.jpg"
         ]);
     }
 }

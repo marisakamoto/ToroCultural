@@ -11,12 +11,15 @@ class CriarTabelaPivotProjetoUser extends Migration
      *
      * @return void
      */
-    //PROJETO_USUARIO_COLABORADOR -> Usuario trabalha em vários projetos
-    //o projeto rececebe vários usuários como colaboradores
+
+
+
+    //PROJETO_USUARIO_COLABORADOR -> Um usuario pode trabalhar em vários projetos
+    //um projeto pode receceber vários usuários como colaboradores
     //COLABORADORES
     public function up()
     {
-        Schema::create('projeto_user', function (Blueprint $table) {
+        Schema::create('projeto_user_colaborador', function (Blueprint $table) {
             $table->foreignId('projeto_id')->constrained();
             $table->foreignId('user_id')->constrained();
             $table->timestamps();
@@ -30,6 +33,6 @@ class CriarTabelaPivotProjetoUser extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('projeto_user');
+        Schema::dropIfExists('projeto_user_colaborador');
     }
 }
