@@ -28,15 +28,13 @@ class AddVagas extends Seeder
         ]);
         Vaga::create([
             "titulo" => "Pianista",
-            "descricao" => "Durante todos os sábados de novembro, teremos uma exposição do Masp, que contará a história dos principais pintores e Italianos.
-            Precisamos de um(a) fotógrafo(a) que possa trabalhar todos os sábados, das 12:00h às 17:00h cobrindo o evento e coquete. ",
+            "descricao" => "Tocará durante o mês de Dezembro, três dias por semana (Sexta, sábado e Domingo) em frente ao shopping D. Pianista com experiência profissional de 1 ano, pelo menos",
             "status" => "Teste",
             "projeto_id" => 3
         ]);
         Vaga::create([
             "titulo" => "Organizador",
-            "descricao" => "Durante todos os sábados de novembro, teremos uma exposição do Masp, que contará a história dos principais pintores e Italianos.
-            Precisamos de um(a) fotógrafo(a) que possa trabalhar todos os sábados, das 12:00h às 17:00h cobrindo o evento e coquete. ",
+            "descricao" => "Organizador com experiência em exibições de arte de rua. Trabalhará com time focado e será responsável pelo acolhimento dos artiostas, por buscar fornecedores, organizar e distribuir tarefas e entrega do evento.",
             "status" => "Teste",
             "projeto_id" => 4
         ]);

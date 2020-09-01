@@ -25,7 +25,7 @@ class AddProjetos extends Seeder
 
         Projeto::create([
             "user_id" => 6,
-            "titulo" => "Teste",
+            "titulo" => "Show de música",
             'descricao' => "teste",
             "localizacao" => "teste",
             'data_de_realizacao' => Carbon::create('2000', '01', '01'),
@@ -34,16 +34,16 @@ class AddProjetos extends Seeder
 
         Projeto::create([
             "user_id" => 6,
-            "titulo" => "Teste",
+            "titulo" => "Cinema Para crianças",
             'descricao' => "teste",
             "localizacao" => "teste",
             'data_de_realizacao' => Carbon::create('2000', '01', '01'),
-            'url_foto' => "/img/projetos/projeto03.jpg"
+            'url_foto' => "/img/projetos/projeto02.jpg"
         ]);
 
         Projeto::create([
             "user_id" => 6,
-            "titulo" => "Teste",
+            "titulo" => "Roda cantada",
             'descricao' => "teste",
             "localizacao" => "teste",
             'data_de_realizacao' => Carbon::create('2000', '01', '01'),
@@ -52,7 +52,7 @@ class AddProjetos extends Seeder
 
         Projeto::create([
             "user_id" => 1,
-            "titulo" => "Teste",
+            "titulo" => "Exibição de arte",
             'descricao' => "teste",
             "localizacao" => "teste",
             'data_de_realizacao' => Carbon::create('2000', '01', '01'),
