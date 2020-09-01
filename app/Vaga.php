@@ -12,4 +12,10 @@ class Vaga extends Model
         'status',
         'projeto_id'
     ];
+
+    //Relacionametno Projeto_vaga 1:N
+    public function projetos()
+    {
+        return $this->belongsTo('App\Projeto');
+    }
 }

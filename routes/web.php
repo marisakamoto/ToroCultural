@@ -22,6 +22,8 @@ Route::get('/cadastroProjeto', 'cadastroProjetoController@cadastroProjeto')->nam
 
 Route::get('/perfilProjeto', 'PerfilProjeto@perfilProjeto')->name('perfilProjeto');
 
+Route::get('/projeto/{id}', 'PerfilProjeto@show');
+
 Route::get('/feed', 'FeedController@feed')->name('feed');
 
 Auth::routes();

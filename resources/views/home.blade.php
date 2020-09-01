@@ -4,7 +4,6 @@
     <title>{{ Auth::user()->name }}</title>
 @endsection
 
-
 @section('css')
     <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Kaushan+Script|Lobster&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -60,7 +59,6 @@
             </li>
     @endguest
 @endsection
-
 
 @section('content')
     <div class="container-fluid colborder pb-5" id="main-conteudo">
@@ -151,49 +149,25 @@
 
                                 <!--Slides-->
                                 <div class="carousel-inner " role="listbox ">
-
                                     <!--First slide-->
                                     <div class="carousel-item active ">
-
                                         <div class="row ">
-                                            <div class="col-md-4 ">
-                                                <div class="card mb-2 ">
-                                                    <img class="card-img-top " src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg " alt="Card image cap ">
-                                                    <div class="card-body ">
-                                                        <h4 class="card-title ">Card title</h4>
-                                                        <p class="card-text ">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                                        <a class="btn btn-primary ">Button</a>
+                                            @foreach ( $projetos as $p )
+                                                <div class="col-md-4 clearfix d-none d-md-block ">
+                                                    <div class="card mb-2 ">
+                                                        <img class="card-img-top " src="{{ $p->url_foto}}" alt="Card image cap ">
+                                                        <div class="card-body ">
+                                                            <h4 class="card-title ">{{ $p->titulo }}</h4>
+                                                            <p class="card-text ">{{ $p->descricao }}</p>
+                                                            <a class="btn btn-primary" href="/projeto/{{ $p->id }}">Button</a>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
-
-                                            <div class="col-md-4 clearfix d-none d-md-block ">
-                                                <div class="card mb-2 ">
-                                                    <img class="card-img-top " src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(18).jpg " alt="Card image cap ">
-                                                    <div class="card-body ">
-                                                        <h4 class="card-title ">Card title</h4>
-                                                        <p class="card-text ">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                                        <a class="btn btn-primary ">Button</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-md-4 clearfix d-none d-md-block ">
-                                                <div class="card mb-2 ">
-                                                    <img class="card-img-top " src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(35).jpg " alt="Card image cap ">
-                                                    <div class="card-body ">
-                                                        <h4 class="card-title ">Card title</h4>
-                                                        <p class="card-text ">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                                        <a class="btn btn-primary ">Button</a>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                            @endforeach
                                         </div>
-
                                     </div>
 
                                     <div class="carousel-item ">
-
                                         <div class="row ">
                                             <div class="col-md-4 ">
                                                 <div class="card mb-2 ">
@@ -228,48 +202,9 @@
                                                 </div>
                                             </div>
                                         </div>
-
                                     </div>
                                     <!--/.Second slide-->
 
-                                    <!--Third slide-->
-                                    <div class="carousel-item ">
-
-                                        <div class="row ">
-                                            <div class="col-md-4 ">
-                                                <div class="card mb-2 ">
-                                                    <img class="card-img-top " src="https://mdbootstrap.com/img/Photos/Horizontal/Food/4-col/img%20(53).jpg " alt="Card image cap ">
-                                                    <div class="card-body ">
-                                                        <h4 class="card-title ">Card title</h4>
-                                                        <p class="card-text ">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                                        <a class="btn btn-primary ">Button</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-md-4 clearfix d-none d-md-block ">
-                                                <div class="card mb-2 ">
-                                                    <img class="card-img-top " src="https://mdbootstrap.com/img/Photos/Horizontal/Food/4-col/img%20(45).jpg " alt="Card image cap ">
-                                                    <div class="card-body ">
-                                                        <h4 class="card-title ">Card title</h4>
-                                                        <p class="card-text ">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                                        <a class="btn btn-primary ">Button</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-md-4 clearfix d-none d-md-block ">
-                                                <div class="card mb-2 ">
-                                                    <img class="card-img-top " src="https://mdbootstrap.com/img/Photos/Horizontal/Food/4-col/img%20(51).jpg " alt="Card image cap ">
-                                                    <div class="card-body ">
-                                                        <h4 class="card-title ">Card title</h4>
-                                                        <p class="card-text ">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                                        <a class="btn btn-primary ">Button</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
                         </div>
