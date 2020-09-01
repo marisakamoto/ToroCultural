@@ -10,7 +10,7 @@ class AddUsers extends Seeder
      *
      * @return void
      */
-    
+
     public function run()
     {
 

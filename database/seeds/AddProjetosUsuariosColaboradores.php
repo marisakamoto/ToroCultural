@@ -19,7 +19,7 @@ class AddProjetosUsuariosColaboradores extends Seeder
                   "user_id" => 1,
                   "created_at" => $now,
                   "updated_at"=> $now
-            ], 
+            ],
             [
                   "projeto_id" => 1,
                   "user_id" => 2,
@@ -37,7 +37,7 @@ class AddProjetosUsuariosColaboradores extends Seeder
                   "user_id" => 1,
                   "created_at" => $now,
                   "updated_at"=> $now
-            ], 
+            ],
             [
                   "projeto_id" => 2,
                   "user_id" => 3,
@@ -110,7 +110,7 @@ class AddProjetosUsuariosColaboradores extends Seeder
                   "created_at" => $now,
                   "updated_at"=> $now
             ],
-          
+
       ]);
     }
 }

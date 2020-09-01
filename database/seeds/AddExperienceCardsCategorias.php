@@ -19,7 +19,7 @@ class AddExperienceCardsCategorias extends Seeder
                   "categoria_id" => 1,
                   "created_at" => $now,
                   "updated_at"=> $now
-            ], 
+            ],
             [
                   "experience_card_id" => 1,
                   "categoria_id" => 2,

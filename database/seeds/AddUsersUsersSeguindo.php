@@ -19,7 +19,7 @@ class AddUsersUsersSeguindo extends Seeder
                   "user_seguindo_id" => 1,
                   "created_at" => $now,
                   "updated_at"=> $now
-            ], 
+            ],
             [
                   "user_id" => 6,
                   "user_seguindo_id" => 2,
@@ -37,7 +37,7 @@ class AddUsersUsersSeguindo extends Seeder
                 "user_seguindo_id" => 4,
                 "created_at" => $now,
                 "updated_at"=> $now
-          ], 
+          ],
           [
                 "user_id" => 2,
                 "user_seguindo_id" => 1,

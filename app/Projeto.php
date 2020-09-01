@@ -8,10 +8,10 @@ class Projeto extends Model
 {
     protected $fillable = [
         'user_id',
-        'titulo', 
-        'descricao', 
-        'localizacao', 
-        'data_de_realizacao', 
+        'titulo',
+        'descricao',
+        'localizacao',
+        'data_de_realizacao',
         'url_foto'
     ];
 }
