@@ -19,7 +19,7 @@ class AddProjetosCategorias extends Seeder
                   "categoria_id" => 1,
                   "created_at" => $now,
                   "updated_at"=> $now
-            ], 
+            ],
             [
                   "projeto_id" => 1,
                   "categoria_id" => 2,
