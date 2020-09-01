@@ -14,10 +14,32 @@ class AddVagas extends Seeder
     {
         Vaga::create([
             "titulo" => "Fotografa para exposição no Masp",
+            "descricao" => "Durante todos os sábados de novembro, teremos uma exposição do  Masp, que contará a história dos principais pintores e Italianos.
+            Precisamos de um(a) fotógrafo(a) que possa trabalhar todos os sábados, das 12:00h às 17:00h cobrindo o evento e coquete. ",
+            "status" => "Teste",
+            "projeto_id" => 1
+        ]);
+        Vaga::create([
+            "titulo" => "Teste",
             "descricao" => "Durante todos os sábados de novembro, teremos uma exposição do Masp, que contará a história dos principais pintores e Italianos.
             Precisamos de um(a) fotógrafo(a) que possa trabalhar todos os sábados, das 12:00h às 17:00h cobrindo o evento e coquete. ",
             "status" => "Teste",
-            "projeto_id" => 10,
+            "projeto_id" => 2
+        ]);
+        Vaga::create([
+            "titulo" => "Pianista",
+            "descricao" => "Durante todos os sábados de novembro, teremos uma exposição do Masp, que contará a história dos principais pintores e Italianos.
+            Precisamos de um(a) fotógrafo(a) que possa trabalhar todos os sábados, das 12:00h às 17:00h cobrindo o evento e coquete. ",
+            "status" => "Teste",
+            "projeto_id" => 3
+        ]);
+        Vaga::create([
+            "titulo" => "Organizador",
+            "descricao" => "Durante todos os sábados de novembro, teremos uma exposição do Masp, que contará a história dos principais pintores e Italianos.
+            Precisamos de um(a) fotógrafo(a) que possa trabalhar todos os sábados, das 12:00h às 17:00h cobrindo o evento e coquete. ",
+            "status" => "Teste",
+            "projeto_id" => 4
         ]);
     }
 }
+

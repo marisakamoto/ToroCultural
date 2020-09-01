@@ -19,6 +19,25 @@ class User extends Authenticatable
         'name','username', 'email', 'password', 'descricao', 'url_foto'
     ];
 
+    //Relacionamento com os projetos criados pelo user 1:N
+    public function projetos()
+    {
+        return $this->hasMany('App\Projeto');
+    }
+
+    //Relacionamento Projeto_Usuario_Colaborador N:N
+    public function projeto_user_colaborador()
+    {
+        return $this->belongsToMany('App\Projeto');
+    }
+
+    //Telacionamento: Usuário pode ser guir vários projetos e um projeto pode ser seguido 
+    // por vários usuários N:N
+    public function user_projetoSeguido()
+    {
+        return $this->belongsToMany('App\Projeto');
+    }
+
 
     /**
      * The attributes that should be hidden for arrays.
