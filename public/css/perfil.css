@@ -283,3 +283,17 @@ h1 {
 .card-vagas{
     max-width: 18rem;
 }
+
+.descricao-projeto{
+    height: 150px;
+    overflow: hidden;
+}
+
+.titulo-projeto{
+    height: 60px;
+    overflow: hidden;
+}
+
+.card-projeto{
+    height: 500px;
+}
