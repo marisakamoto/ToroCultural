@@ -14,8 +14,8 @@ class CriaTabelaPivotUserProjeto extends Migration
     public function up()
     {
         Schema::create('user_projetoSeguido', function (Blueprint $table) {
-            $table->foreignId('user_id')->constrained();//Principal
-            $table->foreignId('projeto_id')->constrained();//Seguido
+            $table->foreignId('userSeguindo_id')->constrained('users');//Principal
+            $table->foreignId('projetoSeguido_id')->constrained('projetos');//Seguido
             $table->timestamps();
         });
     }

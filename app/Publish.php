@@ -14,7 +14,7 @@ class Publish extends Model
     ];
 
     //Relacionamento Projeto_Publicação 1:N
-    public function projetos()
+    public function projeto()
     {
         return $this->belongsTo('App\Projeto');
     }
