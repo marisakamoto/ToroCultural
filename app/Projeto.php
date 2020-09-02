@@ -30,8 +30,9 @@ class Projeto extends Model
     //Relacionamento Projeto_Usuario_Colaborador N:N
     public function projeto_user_colaborador()
     {
-        return $this->belongsToMany('App\User', 'projeto_user', 'projeto_id', 'userColaborador_id');
+        return $this->belongsToMany('App\User', 'projeto_user_colaborador', 'projeto_id', 'userColaborador_id');
     }
+
 
     //Relacionametno Projeto_vaga 1:N
     public function vagas()
