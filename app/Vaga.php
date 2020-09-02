@@ -14,7 +14,7 @@ class Vaga extends Model
     ];
 
     //Relacionametno Projeto_vaga 1:N
-    public function projetos()
+    public function projeto()
     {
         return $this->belongsTo('App\Projeto');
     }

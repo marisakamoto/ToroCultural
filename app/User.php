@@ -17,7 +17,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name','username', 'email', 'password', 'descricao', 'url_foto'
+        'name','username', 'email', 'password', 'descricao', 'profissao', 'url_foto'
     ];
 
     //Relacionamento com os projetos criados pelo user 1:N
@@ -29,14 +29,14 @@ class User extends Authenticatable
     //Relacionamento Projeto_Usuario_Colaborador N:N
     public function projeto_user_colaborador()
     {
-        return $this->belongsToMany('App\Projeto');
+        return $this->belongsToMany('App\Projeto', 'projeto_user_colaborador', 'userColaborador_id', 'projeto_id');
     }
 
     //Telacionamento: Usuário pode ser guir vários projetos e um projeto pode ser seguido 
     // por vários usuários N:N
     public function user_projetoSeguido()
     {
-        return $this->belongsToMany('App\Projeto');
+        return $this->belongsToMany('App\Projeto', 'user_projetoSeguido', 'userSeguindo_id', 'projetoSeguido_id');
     }
 
 

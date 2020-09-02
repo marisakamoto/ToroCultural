@@ -20,6 +20,7 @@ class AddUsers extends Seeder
             "email" => "joalmeida@gmail.com",
             "password"=> Hash::make('123456'),
             'descricao' => "Músico com 5 anos de estrada",
+            "profissao" => "Musico",
             'url_foto' => "/img/users/homem1.jpg"
         ]);
         User::create([
@@ -28,6 +29,7 @@ class AddUsers extends Seeder
             "email" => "mcarla@gmail.com",
             "password"=> Hash::make('123456'),
             'descricao' => "Contadora de histórias, formação em clown e cantora lúdica",
+            "profissao" => "Pintora",
             'url_foto' => "/img/users/mulher.jpeg"
         ]);
         User::create([
@@ -36,6 +38,7 @@ class AddUsers extends Seeder
             "email" => "ana@gmail.com",
             "password"=> Hash::make('123456'),
             'descricao' => "Produtora cultural da Filmarte há 3 anos",
+            "profissao" => "Produtora",
             'url_foto' => "/img/users/mulher1.jpg"
         ]);
         User::create([
@@ -44,6 +47,7 @@ class AddUsers extends Seeder
             "email" => "duarte@gmail.com",
             "password"=> Hash::make('123456'),
             'descricao' => "Atriz formada pela UFRJ, dançarina contemporânea e amor pela música",
+            "profissao" => "Atriz",
             'url_foto' => "/img/users/mulher 2.jpeg"
         ]);
         User::create([
@@ -52,6 +56,7 @@ class AddUsers extends Seeder
             "email" => "mjoana@gmail.com",
             "password"=> Hash::make('123456'),
             'descricao' => "Contadora de histórias, formação em clown e cantora",
+            "profissao" => "Maquiadora",
             'url_foto' => "/img/users/mulher.jpeg"
         ]);
 
@@ -61,6 +66,7 @@ class AddUsers extends Seeder
             "email" => "teste@gmail.com",
             "password"=> Hash::make('123456'),
             'descricao' => "Contadora de histórias, formação em clown e cantora",
+            "profissao" => "Artista",
             'url_foto' => "/img/users/mulher.jpeg"
         ]);
 

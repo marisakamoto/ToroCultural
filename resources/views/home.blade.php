@@ -60,6 +60,7 @@
     @endguest
 @endsection
 
+
 @section('content')
     <div class="container-fluid colborder pb-5" id="main-conteudo">
         <div class="row">
@@ -133,18 +134,18 @@
                             <div id="multi-item-example " class="carousel slide carousel-multi-item " data-ride="carousel ">
 
                                 <!--Controls-->
-                                <div class="controls-top ">
+                                {{-- <div class="controls-top ">
                                     <a class="btn-floating " href="#multi-item-example " data-slide="prev "><i class="fa fa-chevron-left "></i></a>
                                     <a class="btn-floating " href="#multi-item-example " data-slide="next "><i class="fa fa-chevron-right "></i></a>
-                                </div>
+                                </div> --}}
                                 <!--/.Controls-->
 
                                 <!--Indicators-->
-                                <ol class="carousel-indicators ">
+                                {{-- <ol class="carousel-indicators ">
                                     <li data-target="#multi-item-example " data-slide-to="0 " class="active "></li>
                                     <li data-target="#multi-item-example " data-slide-to="1 "></li>
                                     <li data-target="#multi-item-example " data-slide-to="2 "></li>
-                                </ol>
+                                </ol> --}}
                                 <!--/.Indicators-->
 
                                 <!--Slides-->
@@ -154,12 +155,12 @@
                                         <div class="row ">
                                             @foreach ( $projetos as $p )
                                                 <div class="col-md-4 clearfix d-none d-md-block ">
-                                                    <div class="card mb-2 ">
-                                                        <img class="card-img-top " src="{{ $p->url_foto}}" alt="Card image cap ">
+                                                    <div class="card card-projeto mb-3">
+                                                        <img class="card-img-top" src="{{ $p->url_foto}}" alt="Card image cap ">
                                                         <div class="card-body ">
-                                                            <h4 class="card-title ">{{ $p->titulo }}</h4>
-                                                            <p class="card-text ">{{ $p->descricao }}</p>
-                                                            <a class="btn btn-primary" href="/projeto/{{ $p->id }}">Button</a>
+                                                            <h4 class="card-title titulo-projeto">{{ $p->titulo }}</h4>
+                                                            <p class="card-text descricao-projeto ">{{ $p->descricao }}</p>
+                                                            <a class="btn peach-gradient btn-mais-projeto" href="/projeto/{{ $p->id }}">Perfil</a>
                                                         </div>
                                                     </div>
                                                 </div>

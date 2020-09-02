@@ -4951,6 +4951,10 @@ input[type=button].btn-block {
   border-radius: 0.25rem;
 }
 
+.card-projeto{
+  height: 500px;
+}
+
 .card > hr {
   margin-right: 0;
   margin-left: 0;
@@ -5053,6 +5057,11 @@ input[type=button].btn-block {
 .card-img-bottom {
   flex-shrink: 0;
   width: 100%;
+}
+
+.card-img-top{
+  height: 180px;
+  object-fit: cover;
 }
 
 .card-img,

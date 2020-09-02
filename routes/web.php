@@ -20,15 +20,17 @@ Route::get('/cadastroUsuario', 'cadastroUsuarioController@cadastroUsuario')->nam
 
 Route::get('/cadastroProjeto', 'cadastroProjetoController@cadastroProjeto')->name('cadastroProjeto');
 
-Route::get('/perfilProjeto', 'PerfilProjeto@perfilProjeto')->name('perfilProjeto');
+Route::get('/perfilProjeto', 'PerfilProjetoController@perfilProjeto')->name('perfilProjeto');
 
-Route::get('/projeto/{id}', 'PerfilProjeto@show');
+Route::get('/projeto/{id}', 'PerfilProjetoController@show');
 
 Route::get('/feed', 'FeedController@feed')->name('feed');
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
 
 // Auth::routes();
 

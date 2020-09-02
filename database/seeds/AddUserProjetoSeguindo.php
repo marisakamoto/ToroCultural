@@ -18,50 +18,50 @@ class AddUserProjetoSeguindo extends Seeder
         $now = date('Y-m-d H:i:s');
         DB::table('user_projetoSeguido')->insert([
             [
-                  "user_id" => 6,
-                  "projeto_id" => 1,
+                  "userSeguindo_id" => 6,
+                  "projetoSeguido_id" => 1,
                   "created_at" => $now,
                   "updated_at"=> $now
             ],
             [
-                  "user_id" => 6,
-                  "projeto_id" => 2,
+                  "userSeguindo_id" => 6,
+                  "projetoSeguido_id" => 2,
                   "created_at" => $now,
                   "updated_at"=> $now
             ],
             [
-                  "user_id" => 1,
-                  "projeto_id" => 3,
+                  "userSeguindo_id" => 1,
+                  "projetoSeguido_id" => 3,
                   "created_at" => $now,
                   "updated_at"=> $now
             ],
             [
-                  "user_id" => 6,
-                  "projeto_id" => 2,
+                  "userSeguindo_id" => 6,
+                  "projetoSeguido_id" => 2,
                   "created_at" => $now,
                   "updated_at"=> $now
             ],
             [
-                  "user_id" => 6,
-                  "projeto_id" => 5,
+                  "userSeguindo_id" => 6,
+                  "projetoSeguido_id" => 5,
                   "created_at" => $now,
                   "updated_at"=> $now
             ],
             [
-                  "user_id" => 2,
-                  "projeto_id" => 3,
+                  "userSeguindo_id" => 2,
+                  "projetoSeguido_id" => 3,
                   "created_at" => $now,
                   "updated_at"=> $now
             ],
             [
-                  "user_id" => 3,
-                  "projeto_id" => 3,
+                  "userSeguindo_id" => 3,
+                  "projetoSeguido_id" => 3,
                   "created_at" => $now,
                   "updated_at"=> $now
             ],
             [
-                  "user_id" => 5,
-                  "projeto_id" => 5,
+                  "userSeguindo_id" => 5,
+                  "projetoSeguido_id" => 5,
                   "created_at" => $now,
                   "updated_at"=> $now
             ],

@@ -16,22 +16,23 @@ class Projeto extends Model
     ];
 
     //Relacionamento com o usuário criador 1:N
-    public function users()
+    public function user()
     {
-        return $this->belongsTo('App\User');
+        return $this->belongsTo('App\User', 'user_id');
     }
 
     //Relacionamento entre Projetos e categorias N:N
     public function categorias()
     {
-        return $this->belongsToMany('App\categoria');
+        return $this->belongsToMany('App\categoria', 'projeto_categoria');
     }
 
     //Relacionamento Projeto_Usuario_Colaborador N:N
     public function projeto_user_colaborador()
     {
-        return $this->belongsToMany('App\User');
+        return $this->belongsToMany('App\User', 'projeto_user_colaborador', 'projeto_id', 'userColaborador_id');
     }
+
 
     //Relacionametno Projeto_vaga 1:N
     public function vagas()
@@ -49,6 +50,6 @@ class Projeto extends Model
     // por vários usuários N:N
     public function user_projetoSeguido()
     {
-        return $this->belongsToMany('App\User');
+        return $this->belongsToMany('App\User', 'user_projetoSeguido', 'projetoSeguido_id', 'userSeguindo_id');
     }
 }
