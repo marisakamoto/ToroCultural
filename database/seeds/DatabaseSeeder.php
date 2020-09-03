@@ -26,6 +26,7 @@ class DatabaseSeeder extends Seeder
         $this->call(AddVagas::class);
         $this->call(AddHabilidades::class);
         $this->call(AddHabilidadesVagas::class);
+        $this->call(AddUsersHabilidades::class);
 
     }
 }
