@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title')
-    <title>{{ Auth::user()->name }}</title>
+    <title>{{ Auth::user()->username }}</title>
 @endsection
 
 @section('css')
@@ -41,7 +41,7 @@
             </li>
             <li class="nav-item dropdown">
                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                    {{ Auth::user()->name }}
+                    {{ Auth::user()->username }}
                 </a>
 
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
@@ -69,7 +69,7 @@
                     <div class="col-md-4 mx-auto" id="foto">
                         <div class="row foto-perfil">
                             <div class="mx-auto">
-                                <img src="{{ Auth::user()->url_foto }}" style="border-radius: 50%;"></img>
+                                <img src="{{ Auth::user()->url_foto }}" style="border-radius: 50%; width:10em;"></img>
                                 {{-- <canvas class="text-center" id="UgCanvas" width="150px" height="150px" style="border:2.5px solid rgb(165, 157, 157); border-radius: 50%;"></canvas>
                                 </canvas> --}}
                             </div>
@@ -77,20 +77,13 @@
                         <div class="row pt-2">
                             <p class="row mx-auto">São Paulo, SP<br> Online há 1 dia</p>
                         </div>
-                        <div class="row mx-auto text-center">
-                            <ul id="social" class="row mx-auto">
-                                <a class="redes-link" href="#"><img class="redes" src="img/logo-do-facebook.png" alt="facebook"></a>
-                                <a class="redes-link" href="#"><img class="redes" src="img/twitter.png" alt="twitter"></a>
-                                <a class="redes-link" href="#"><img class="redes" src="img/instagram.png" alt="instagram"></a>
-                                </a>
-                            </ul>
-                        </div>
+                    
 
                     </div>
                     <div class="col-md-8">
                         <div class="row d-flex pb-3 ">
                             <div class="col-md-6">
-                                <h3 class="nomeUser text-center">{{ Auth::user()->username }}</h3>
+                                <h3 class="nomeUser text-center">{{ Auth::user()->name }}</h3>
 
                             </div>
                             <div class="col-md-6 text-center">
@@ -100,26 +93,33 @@
                         </div>
                         <div class="row d-flex justify-content-center" id="habilidades">
                             <ul>
+
+                                {{-- @foreach ($habilidade as $h)
                                 <li>
-                                    <button type="button" class="btn btn-outline-warning btn-sm m-1 p-2">
+                                    <button type="button" class="btn btn-deep-orange  btn-sm m-1">
+                                     {{$h->habilidade}}  
+                                    </button>
+                                </li>
+                                @endforeach --}}
+                                <li>
+                                    <button type="button" class="btn btn-deep-orange  btn-sm m-1">
                                         teatro
                                     </button>
                                 </li>
                                 <li>
-                                    <button type="button" class="btn btn-outline-warning btn-sm m-1 p-2">
+                                    <button type="button" class="btn btn-deep-orange  btn-sm m-1">
                                         clown
                                     </button>
                                 </li>
-                                <li><button type="button" class="btn btn-outline-warning btn-sm m-1 p-2">
+                                <li><button type="button" class="btn btn-deep-orange  btn-sm m-1">
                                     fotografia
                                 </button></li>
-                                <li><button type="button" class="btn btn-outline-warning btn-sm m-1 p-2">
+                                <li><button type="button" class="btn btn-deep-orange  btn-sm m-1">
                                     edição de vídeo
                                 </button></li>
                             </ul>
                             <p class="ml-4" >
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim sit nobis, aspernatur repudiandae voluptatibus ut dicta porro libero. Dignissimos expedita minima quos iste alias reprehenderit illo corrupti, debitis dicta hic!
-                            </p>
+                                {{ Auth::user()->descricao }} </p>
                         </div>
                     </div>
                 </div>
@@ -227,6 +227,16 @@
                     <p>30 avaliações</p>
                     <p>Torozero Iniciante</p>
                 </div>
+                <hr class="my-4 ">
+                <div class="row mx-auto text-center">
+                    <ul id="social" class="row mx-auto">
+                        <a class="redes-link" href="#"><img class="redes" src="img/logo-do-facebook.png" alt="facebook"></a>
+                        <a class="redes-link" href="#"><img class="redes" src="img/twitter.png" alt="twitter"></a>
+                        <a class="redes-link" href="#"><img class="redes" src="img/instagram.png" alt="instagram"></a>
+                        </a>
+                    </ul>
+                </div>
+
                 <!--                    <hr class="my-4 ">
                 <button type="button " class="btn btn-danger">Enviar Projeto</button>-->
 
