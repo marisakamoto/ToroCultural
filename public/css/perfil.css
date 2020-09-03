@@ -2,7 +2,8 @@
     border: 2px solid coral; 
 }*/
 
-ul {
+ul,
+li {
     list-style-type: none;
 }
 
@@ -12,13 +13,13 @@ ul {
     align-items: center;
 }
 
-
 .nomeUser {
     font-family: 'Lato';
     font-size: 2em;
+    text-transform: capitalize;
 }
 
-.follow:hover{
+.follow:hover {
     background-color: rgb(248, 117, 56)!important;
 }
 
@@ -60,11 +61,8 @@ ul {
     font-family: Lato;
     font-size: medium;
     display: flex;
-
     flex-direction: column;
 }
-
-
 
 .menu-dir {
     border-top-left-radius: 100px;
@@ -274,28 +272,26 @@ h1 {
     height: 100%;
 }
 
-.avatar-projeto{
+.avatar-projeto {
     border-radius: 50%;
     width: 25%;
     object-fit: cover;
 }
 
-.card-vagas{
+.card-vagas {
     max-width: 18rem;
 }
 
-.descricao-projeto{
+.descricao-projeto {
     height: 150px;
     overflow: hidden;
 }
 
-.titulo-projeto{
+.titulo-projeto {
     height: 60px;
     overflow: hidden;
 }
 
-.card-projeto{
+.card-projeto {
     height: 500px;
 }
-
-
