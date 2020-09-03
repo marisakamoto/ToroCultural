@@ -24,10 +24,15 @@ class PerfilProjetoController extends Controller
         $categorias = $projeto->categorias;
         $user_colaborador = $projeto->projeto_user_colaboradores;
         $vagas = $projeto->vagas;
-        $habilidadesVagas = $projeto->habilidades;
-        echo $habilidadesVagas[0];
-        // echo $vagas[0];
-        return view('show', compact('projeto', 'categorias', 'user_colaborador', 'vagas'));
+        // echo $vagas[0]->id;
+        
+        //     for($i = 0; $i < count($vagas); $i++){
+        //         return $vagas = $vagas[$i]->id;
+        //     }
+        
+        $habilidades = Vaga::find($vagas[0]->id)->habilidades;
+        // echo $habilidades[1];
+        return view('show', compact('projeto', 'categorias', 'user_colaborador', 'vagas', 'habilidades'));
     }
 
 

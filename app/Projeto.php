@@ -53,8 +53,8 @@ class Projeto extends Model
         return $this->belongsToMany('App\User', 'user_projetoSeguido', 'projetoSeguido_id', 'userSeguindo_id');
     }
 
-    public function habilidades()
-    {
-        return $this->hasManyThrough('App\Habilidade', 'App\Vaga');
-    }
+    // public function habilidades()
+    // {
+    //     return $this->hasManyThrough('App\Habilidade', 'App\Vaga');
+    // }
 }

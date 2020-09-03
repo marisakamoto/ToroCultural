@@ -244,11 +244,10 @@
                                     <br> <p>{{ $v->descricao }}</p>
                                     <br>
                                     <div class="habilidades d-flex flex-wrap font-smaller ">
-                                        <a class="bg-secondary m-1 text-white " href=" "> Adobe Premiere </a>
-                                        <a class="bg-secondary d-inline m-1 text-white " href=" "> After Effects </a>
-                                        <a class="bg-secondary d-inline m-1 text-white " href=" "> Photoshop </a>
-                                        <a class="bg-secondary d-inline m-1 text-white " href=" "> Storytelling </a>
-                                        <a class="m-1 " href=" ">mais</a>
+                                        @foreach ($habilidades as $h )
+                                            <a class="bg-secondary m-1 text-white " href=" "> {{ $h->habilidade }} </a>
+                                        @endforeach
+                                        
                                     </div>
                                 </p>
                                 <button class="btn peach-gradient ">Aplicar</button>
