@@ -227,20 +227,21 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="card card-vagas bg-light m-3 " >
+                        @foreach ( $vagas as $v )
+                             <div class="card card-vagas bg-light m-3 " >
                             <div class="card-header ">
-                                <img src="{{ url('img/rain.svg') }} " width="20 " alt=" "> Aberto
+                                <img src="{{ url('img/rain.svg') }} " width="20 " alt=" "> {{ $v->status }}
                             </div>
                             <div class="card-body ">
-                                <h5 class="card-title ">Editor de Vídeo</h5>
+                                <h5 class="card-title ">{{ $v->titulo }}</h5>
                                 <p class="card-text justify-content-center ">
                                     <img src="{{ url('img/wallet.svg') }} " width="15 " alt=" "> R$15 a R$20 por hora
                                     <br>
-                                    <img src="{{ url('img/you-are-here.svg') }} " width="15 " alt=" "> São Paulo, SP
+                                    <img src="{{ url('img/you-are-here.svg') }} " width="15 " alt=" "> {{ $projeto->localizacao }}
                                     <br>
-                                    <img src="{{ url('img/round-wall-clock.svg') }} " width="15 " alt=" "> 02/Jul a 02/Ago
+                                    <img src="{{ url('img/round-wall-clock.svg') }} " width="15 " alt=" "> {{ $projeto->data_de_realizacao }}
                                     <br>
-                                    <br> Procuramos profissional que atue com edição de vídeos de forma prática e criativa, desenvolvendo uma boa narrativa para captar a atenção da audiência.
+                                    <br> <p>{{ $v->descricao }}</p>
                                     <br>
                                     <div class="habilidades d-flex flex-wrap font-smaller ">
                                         <a class="bg-secondary m-1 text-white " href=" "> Adobe Premiere </a>
@@ -253,6 +254,7 @@
                                 <button class="btn peach-gradient ">Aplicar</button>
                             </div>
                         </div>
+                        @endforeach
                     </div>
                 </div>
                 <div class="conteudo-feed tab-pane fade px-2 pt-2" id="feed-site" role="tabpanel" aria-labelledby="nav-profile-tab">

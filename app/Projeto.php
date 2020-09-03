@@ -28,7 +28,7 @@ class Projeto extends Model
     }
 
     //Relacionamento Projeto_Usuario_Colaborador N:N
-    public function projeto_user_colaborador()
+    public function projeto_user_colaboradores()
     {
         return $this->belongsToMany('App\User', 'projeto_user_colaborador', 'projeto_id', 'userColaborador_id');
     }
@@ -51,5 +51,10 @@ class Projeto extends Model
     public function user_projetoSeguido()
     {
         return $this->belongsToMany('App\User', 'user_projetoSeguido', 'projetoSeguido_id', 'userSeguindo_id');
+    }
+
+    public function habilidades()
+    {
+        return $this->hasManyThrough('App\Habilidade', 'App\Vaga');
     }
 }

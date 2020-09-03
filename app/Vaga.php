@@ -18,4 +18,9 @@ class Vaga extends Model
     {
         return $this->belongsTo('App\Projeto');
     }
+
+    public function habilidades()
+    {
+        return $this->belongsToMany('App\Vaga', 'habilidade_vaga', 'vaga_id', 'habilidade_id'); 
+    }
 }
