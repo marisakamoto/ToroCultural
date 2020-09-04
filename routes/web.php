@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 
+
 Route::get('/', 'PaginaInicialController@paginaInicial')->name('paginaInicial');//pagina TORÓ
 
 Route::get('/cadastroUsuario', 'cadastroUsuarioController@cadastroUsuario')->name('cadastroUsuario');

@@ -17,22 +17,19 @@ class PerfilProjetoController extends Controller
     }
 
     
+    
     public function show($id)
     {   
         //Como as tabelas estão relacionadas, posso chamá-las através do model projeto
-        $projeto = Projeto::find($id);
+        $projeto = Projeto::find($id); 
         $categorias = $projeto->categorias;
         $user_colaborador = $projeto->projeto_user_colaboradores;
         $vagas = $projeto->vagas;
-        // echo $vagas[0]->id;
+        // $habilidades = $vagas->habilidades;  
+        // Não dá certo, porque $vagas é um array de vagas, então, preciso entrar em cada vaga para buscar as habilidades
+    
         
-        //     for($i = 0; $i < count($vagas); $i++){
-        //         return $vagas = $vagas[$i]->id;
-        //     }
-        
-        $habilidades = Vaga::find($vagas[0]->id)->habilidades;
-        // echo $habilidades[1];
-        return view('show', compact('projeto', 'categorias', 'user_colaborador', 'vagas', 'habilidades'));
+        return view('show', compact('projeto', 'categorias', 'user_colaborador', 'vagas'));
     }
 
 

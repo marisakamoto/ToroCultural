@@ -94,14 +94,15 @@
                         <div class="row d-flex justify-content-center" id="habilidades">
                             <ul>
 
-                                {{-- @foreach ($habilidade as $h)
+                                @foreach ($habilidades as $h)
                                 <li>
                                     <button type="button" class="btn btn-deep-orange  btn-sm m-1">
                                      {{$h->habilidade}}  
                                     </button>
                                 </li>
-                                @endforeach --}}
-                                <li>
+                                @endforeach
+
+                                {{-- <li>
                                     <button type="button" class="btn btn-deep-orange  btn-sm m-1">
                                         teatro
                                     </button>
@@ -116,7 +117,7 @@
                                 </button></li>
                                 <li><button type="button" class="btn btn-deep-orange  btn-sm m-1">
                                     edição de vídeo
-                                </button></li>
+                                </button></li> --}}
                             </ul>
                             <p class="ml-4" >
                                 {{ Auth::user()->descricao }} </p>
@@ -147,6 +148,7 @@
                                     <li data-target="#multi-item-example " data-slide-to="2 "></li>
                                 </ol> --}}
                                 <!--/.Indicators-->
+
 
                                 <!--Slides-->
                                 <div class="carousel-inner " role="listbox ">
