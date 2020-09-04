@@ -33,15 +33,11 @@ class HomeController extends Controller
   
         if (Auth::check()){
             // $projetos = Projeto::search('')->where('user_id', auth()->user()->id);
-            $projetos = Projeto::where('user_id', auth()->user()->id)->get();
+            $projetos = Projeto::where('user_id', auth()->user()->id)->take(3)->get();
             $users = User::find(auth()->user()->id);
                 $habilidades = $users->habilidades;   
             // $habilidades = Habilidade::where('user_id', auth()->user()->id)->get();
             return view('home', compact('projetos', 'habilidades'));
         }
-        
-
-
-        
     }
 }

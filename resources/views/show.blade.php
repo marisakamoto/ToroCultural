@@ -247,7 +247,6 @@
                                         @foreach ($v->habilidades as $habilidade )
                                             <a class="bg-secondary m-1 text-white " href=" "> {{ $habilidade->habilidade }} </a>
                                         @endforeach
-                                        
                                     </div>
                                 </p>
                                 <button class="btn peach-gradient ">Aplicar</button>
