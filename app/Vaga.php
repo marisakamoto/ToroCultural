@@ -21,6 +21,7 @@ class Vaga extends Model
 
     public function habilidades()
     {
-        return $this->belongsToMany('App\Vaga', 'habilidade_vaga', 'vaga_id', 'habilidade_id'); 
+        // var_dump($this->belongsToMany('App\Vaga', 'habilidade_vaga', 'vaga_id', 'habilidade_id'));
+        return $this->belongsToMany('App\Habilidade', 'habilidade_vaga', 'vaga_id', 'habilidade_id'); 
     }
 }

@@ -16,7 +16,7 @@ class Projeto extends Model
     ];
 
     //Relacionamento com o usuário criador 1:N
-    public function user()
+    public function user()  
     {
         return $this->belongsTo('App\User', 'user_id');
     }

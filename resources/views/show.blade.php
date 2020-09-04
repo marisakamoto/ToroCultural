@@ -244,8 +244,8 @@
                                     <br> <p>{{ $v->descricao }}</p>
                                     <br>
                                     <div class="habilidades d-flex flex-wrap font-smaller ">
-                                        @foreach ($habilidades as $h )
-                                            <a class="bg-secondary m-1 text-white " href=" "> {{ $h->habilidade }} </a>
+                                        @foreach ($v->habilidades as $habilidade )
+                                            <a class="bg-secondary m-1 text-white " href=" "> {{ $habilidade->habilidade }} </a>
                                         @endforeach
                                         
                                     </div>

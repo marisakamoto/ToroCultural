@@ -13,7 +13,13 @@ class Habilidade extends Model
     
     public function vagas()
     {
-        return $this->belongsToMany('App\Habilidade', 'habilidade_vaga', 'habilidade_id', 'vaga_id'); 
+        return $this->belongsToMany('App\Vaga', 'habilidade_vaga', 'habilidade_id', 'vaga_id'); 
     }
 
+    // N usuarios: N habilidades
+
+    public function users()
+    {
+        return  $this->belongsToMany('App\User', 'user_habilidade', 'habilidade_id', 'user_id');
+    }
 }
