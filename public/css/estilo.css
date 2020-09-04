@@ -10,6 +10,7 @@ header {
     font-size: 1em;
 }
 
+
 .search{
     width: 20px;
 }
@@ -153,7 +154,6 @@ footer {
 
 
 .redes:hover {
-    width: 2.04em;
     background-color: rgb(248, 117, 56);
     border-radius: 50%;
 }

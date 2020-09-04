@@ -19,6 +19,7 @@
     </form>
 @endsection
 
+
 @section('nav-links')
     @guest
         <li class="nav-item">
@@ -62,16 +63,14 @@
 
 
 @section('content')
-    <div class="container-fluid colborder pb-5" id="main-conteudo">
+    <div class="container-fluid colborder" id="main-conteudo">
         <div class="row">
             <div class="col-md-9">
                 <div class="row ml-0 mt-4 mr-3" id="main-info">
                     <div class="col-md-4 mx-auto" id="foto">
                         <div class="row foto-perfil">
-                            <div class="mx-auto">
-                                <img src="{{ Auth::user()->url_foto }}" style="border-radius: 50%; width:10em;"></img>
-                                {{-- <canvas class="text-center" id="UgCanvas" width="150px" height="150px" style="border:2.5px solid rgb(165, 157, 157); border-radius: 50%;"></canvas>
-                                </canvas> --}}
+                            <div class="mx-auto perfil-foto m-0">
+                                <img  src="{{ Auth::user()->url_foto }}"></img>
                             </div>
                         </div>
                         <div class="row pt-2">
@@ -151,9 +150,9 @@
 
 
                                 <!--Slides-->
-                                <div class="carousel-inner " role="listbox ">
+                                
                                     <!--First slide-->
-                                    <div class="carousel-item active ">
+                                    
                                         <div class="row ">
                                             @foreach ( $projetos as $p )
                                                 <div class="col-md-4 clearfix d-none d-md-block ">
@@ -168,9 +167,9 @@
                                                 </div>
                                             @endforeach
                                         </div>
-                                    </div>
+                                   
 
-                                    <div class="carousel-item ">
+                                    {{-- <div class="carousel-item ">
                                         <div class="row ">
                                             <div class="col-md-4 ">
                                                 <div class="card mb-2 ">
@@ -205,10 +204,10 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> --}}
                                     <!--/.Second slide-->
 
-                                </div>
+                              
                             </div>
                         </div>
                     </div>
@@ -218,7 +217,7 @@
 
             <div class="col-md-3 menu-dir pt-5 px-4"  id="menu-lado">
                 <div id="star-rank" class="text-center">
-                    <h6>Avaliação Geral</h6>
+                    <h4>Avaliação Geral</h4>
 
                     <span class="fa fa-star checked "></span>
                     <span class="fa fa-star checked "></span>
@@ -245,27 +244,26 @@
                 <hr class="my-4 ">
                 <div id="user-statistics ">
                     <h6>Estatísticas</h6>
-                    <ul>
-                        <li class="py-2"><strong>34</strong> Projetos Concluídos</li>
+                    <ul class="estatisticas">
+                
+                        <li class="py-2"><strong>3</strong> Projetos Concluídos</li>
                         <li class="py-2">Recomendam o trabalho <strong>94%</strong> </li>
                         <li class="py-2"><strong>80%</strong>Taxa de resposta</li>
-
                     </ul>
                     <p class="text-center">Ingressou há 2 meses</p>
                 </div>
                 <hr class="my-4 ">
                 <div id="user-network ">
                     <h6>Rede Toró</h6>
-                    <li>
-                        <p><strong>Seguidores</strong> 42</p>
-                    </li>
-                    <li>
-                        <p><strong>Seguindo</strong> 50</p>
-                    </li>
-
-
+                    <ul class="seguidores">
+                        <li>
+                            <p><strong>Seguidores</strong> 42</p>
+                        </li>
+                        <li>
+                            <p><strong>Seguindo</strong> 50</p>
+                        </li>
+                    </ul>
                 </div>
-
             </div>
         </div>
     </div>

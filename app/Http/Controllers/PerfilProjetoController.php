@@ -27,8 +27,6 @@ class PerfilProjetoController extends Controller
         $vagas = $projeto->vagas;
         // $habilidades = $vagas->habilidades;  
         // Não dá certo, porque $vagas é um array de vagas, então, preciso entrar em cada vaga para buscar as habilidades
-    
-        
         return view('show', compact('projeto', 'categorias', 'user_colaborador', 'vagas'));
     }
 
