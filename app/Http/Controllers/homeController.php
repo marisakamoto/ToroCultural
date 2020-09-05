@@ -38,9 +38,11 @@ class HomeController extends Controller
                 // conta quantas pessoas o usuario segue
                 $seguindo = $users->seguindo()->count();
                 $seguidores = $users->seguidores()->count();
+
+                $experiences = $users->experience()->get();
                 // $seguindo = seguindo()->user_seguindo_id;
                 // echo $seguindo;
-            return view('home', compact('projetos', 'habilidades', 'seguindo', 'seguidores'));
+            return view('home', compact('projetos', 'habilidades', 'seguindo', 'seguidores','experiences'));
         }
 
     }

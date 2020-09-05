@@ -211,22 +211,28 @@
                                         <div class="row px-5">
                                             <h3 >Experiências</h3>
 
+                                            {{-- CARD DE EXPERIENCIAS DO USUARIO FORA DO TORO --}}
+                                            @foreach ( $experiences as $xp)
                                             <div class="card card-body mb-4 ">
                                                 <div class="col d-flex align-content-around">
                                                     <div class="col">
-                                                        <h4>Experiencia 1 </h4>
-                                                        <hr>
-                                                        <h5>Localizacao | Data</h5>
+                                                        <h4>{{ $xp->titulo }} </h4>
+                                                        <hr> 
+                                                        <h6>{{ $xp->localizacao }} | {{ $xp->data_realizacao }}</h6>
                                                         
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste quae voluptatibus dignissimos voluptate corrupti, porro corporis error provident dolor placeat accusamus hic iure. Totam, magnam dignissimos quasi velit maxime repudiandae.</p>
+                                                        <p>{{ $xp->descricao }}</p>
 
                                                     </div>                        
-                                                    <div class="xp-foto">
-                                                        <img class="mx-auto d-flex mt-3" src= "/img/projetos/projeto01.jpg">
-                
+                                                    <div class="xp-foto d-none d-lg-block">
+                                                        
+                                                        <img class="mx-auto d-flex   " src= {{ $xp->url_foto }}>
+
                                                     </div>
                                                 </div>
                                             </div>
+                                            @endforeach
+ 
+ 
                                         </div>
                                     </div>    
                         </div>
