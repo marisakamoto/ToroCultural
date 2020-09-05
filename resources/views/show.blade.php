@@ -435,7 +435,7 @@
                         <img class=" rounded-circle peach-gradient " height="85 em " src="{{ $user_c->url_foto }}" alt="perfil-user ">
                     </div>
                     <div class="row mx-auto " style="width: 100%; ">
-                        <p class="text-center mx-auto mb-0 "><a href="# ">{{ $user_c->username }}</a></p>
+                        <p class="text-center mx-auto mb-0 "><a href="/perfil/{{ $user_c->username }}">{{ $user_c->username }}</a></p>
                     </div>
                     <div class="row mx-auto">
                         <p>{{ $user_c->profissao }}</p>
