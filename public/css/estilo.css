@@ -10,8 +10,7 @@ header {
     font-size: 1em;
 }
 
-
-.search{
+.search {
     width: 20px;
 }
 
@@ -19,19 +18,18 @@ header {
     font-size: 1.2em;
 }
 
-
 .nav a {
     color: darkslategrey;
     font-weight: bold;
 }
 
-.nav a:hover{
+.nav a:hover {
     color: rgb(81, 121, 121);
 }
 
 
-
 /*pagina projeto*/
+
 .titulo-secao {
     font-family: 'remachine_script_personal_uRg';
     color: rgb(248, 117, 56);
@@ -40,14 +38,8 @@ header {
 }
 
 
-
-
-
-
-
-
-
 /*OLHAR SE FOI ALTERADO NA PÁGINA DE CADASTRO!!!!!!!!!!*/
+
 h2 {
     color: rgb(248, 117, 56);
     font-family: 'Lato';
@@ -60,11 +52,9 @@ h2 {
     width: 80%;
     margin: 0 auto;
 }
+
+
 /*OLHAR SE FOI ALTERADO NA PÁGINA DE CADASTRO!!!!!!!!!!*/
-
-
-
-
 
 
 /*CONTEUDO DA PÁGINA*/
@@ -98,38 +88,30 @@ h3 {
     padding-top: 40px;
 }
 
-@media(max-width: 1000px){
-    header ul li{
+@media(max-width: 1000px) {
+    header ul li {
         width: 100%;
         float: none;
     }
-    
-    .nav-link{
+    .nav-link {
         padding: 0;
     }
-    
-    a.nav-link{
+    a.nav-link {
         border-bottom: rgb(240, 143, 105) solid 2px;
     }
-
-    .menu-geral{
-        padding-right:0;
+    .menu-geral {
+        padding-right: 0;
     }
-
-    .botao-nav :checked ~ .menu {
+    .botao-nav :checked~.menu {
         margin-left: 0;
     }
-
-    #barra-busca{
+    #barra-busca {
         width: 65%;
     }
-
-    li.nav-item{
+    li.nav-item {
         font-size: 1.2em;
     }
 }
-
-
 
 
 /*FOOTER*/
@@ -146,27 +128,23 @@ footer {
     margin: 10px;
 }
 
-
-.icon-config{
+.icon-config {
     width: 34px;
 }
-
-
 
 .redes:hover {
     background-color: rgb(248, 117, 56);
     border-radius: 50%;
 }
 
-.search{
+.search {
     margin-right: 0;
 }
 
-.btn-search{
+.btn-search {
     margin-left: 0;
 }
 
-
-input{
+input {
     outline: none;
 }

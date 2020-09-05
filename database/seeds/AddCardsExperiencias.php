@@ -20,16 +20,25 @@ class AddCardsExperiencias extends Seeder
             'descricao' => "Show voltado para crianças de todas as idades. Contará com a participação da banda Melhor Show Do Mundo",
             "localizacao" => "Sesc Pinheiros",
             'data_realizacao' => Carbon::create('2000', '01', '01'),
-            'url_foto' => "/img/projetos/projeto1.jpg"
+            'url_foto' => "/img/projetos/projeto01.jpg"
         ]);
 
         Experience_card::create([
             "user_id" => 6,
+            "titulo" => "Curso de Fotografia na Belas Artes",
+            'descricao' => "Concluido com sucesso, o curso de fotografia avançada em movimento",
+            "localizacao" => "Universidade Belas Artes",
+            'data_realizacao' => Carbon::create('2020', '10', '01'),
+            'url_foto' => "/img/projetos/projeto02.jpg"
+        ]);
+
+        Experience_card::create([
+            "user_id" => 2,
             "titulo" => "Teste",
-            'descricao' => "teste",
+            'descricao' => "",
             "localizacao" => "teste",
             'data_realizacao' => Carbon::create('2000', '01', '01'),
-            'url_foto' => "/img/projetos/projeto2.jpg"
+            'url_foto' => "/img/projetos/projeto03.jpg"
         ]);
 
         Experience_card::create([
@@ -38,16 +47,7 @@ class AddCardsExperiencias extends Seeder
             'descricao' => "teste",
             "localizacao" => "teste",
             'data_realizacao' => Carbon::create('2000', '01', '01'),
-            'url_foto' => "/img/projetos/projeto1.jpg"
-        ]);
-
-        Experience_card::create([
-            "user_id" => 2,
-            "titulo" => "Teste",
-            'descricao' => "teste",
-            "localizacao" => "teste",
-            'data_realizacao' => Carbon::create('2000', '01', '01'),
-            'url_foto' => "/img/projetos/projeto2.jpg"
+            'url_foto' => "/img/projetos/projeto02.jpg"
         ]);
 
         Experience_card::create([

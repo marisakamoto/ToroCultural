@@ -96,7 +96,7 @@
                                 @foreach ($habilidades as $h)
                                 <li>
                                     <button type="button" class="btn btn-deep-orange  btn-sm m-1">
-                                     {{$h->habilidade}}  
+                                    {{$h->habilidade}}  
                                     </button>
                                 </li>
                                 @endforeach
@@ -167,7 +167,7 @@
                                                 </div>
                                             @endforeach
                                         </div>
-                                   
+
 
                                     {{-- <div class="carousel-item ">
                                         <div class="row ">
@@ -206,10 +206,37 @@
                                         </div>
                                     </div> --}}
                                     <!--/.Second slide-->
+                                    <hr class="my-4 ">
+                        
+                                        <div class="row px-5">
+                                            <h3 >Experiências</h3>
 
-                              
-                            </div>
+                                            {{-- CARD DE EXPERIENCIAS DO USUARIO FORA DO TORO --}}
+                                            @foreach ( $experiences as $xp)
+                                            <div class="card card-body mb-4 ">
+                                                <div class="col d-flex align-content-around">
+                                                    <div class="col">
+                                                        <h4>{{ $xp->titulo }} </h4>
+                                                        <hr> 
+                                                        <h6>{{ $xp->localizacao }} | {{ $xp->data_realizacao }}</h6>
+                                                        
+                                                        <p>{{ $xp->descricao }}</p>
+
+                                                    </div>                        
+                                                    <div class="xp-foto d-none d-lg-block">
+                                                        
+                                                        <img class="mx-auto d-flex   " src= {{ $xp->url_foto }}>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            @endforeach
+ 
+ 
+                                        </div>
+                                    </div>    
                         </div>
+
                     </div>
                 </div>
             </div>
@@ -257,10 +284,10 @@
                     <h6>Rede Toró</h6>
                     <ul class="seguidores">
                         <li>
-                            <p><strong>Seguidores</strong> 42</p>
+                        <p><strong>Seguidores</strong> {{$seguidores}}</p>
                         </li>
                         <li>
-                            <p><strong>Seguindo</strong> 50</p>
+                        <p><strong>Seguindo</strong> {{$seguindo}}</p>
                         </li>
                     </ul>
                 </div>
