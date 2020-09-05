@@ -53,7 +53,10 @@ class User extends Authenticatable
     return  $this->belongsToMany(User::class, 'user_userseguindo','user_seguindo_id','user_id');
     }
 
-    
+    public function experience()
+    {
+        return $this->hasMany('App\Experience_card','user_id');
+    }
     /**
      * The attributes that should be hidden for arrays.
      *

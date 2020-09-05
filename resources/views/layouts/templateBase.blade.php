@@ -27,7 +27,9 @@
     </head>
     <body>
         <header>
-            <div class="container-fluid">
+            {{-- TIRA AQUELA BORDIDINHA DO NAVBAR --}}
+            {{-- <div class="container-fluid"> --}}
+                <div >
                 <nav class="navbar  navbar-expand-lg  navbar-light pt-0 pb-0 menu-geral">
                     <a class="navbar-brand" href="@yield('rota-logo')">
                         <img src="{{ url('./img/toro cultural.png') }}" width="85" height="85" alt="Toró Cultural">

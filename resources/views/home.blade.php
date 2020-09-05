@@ -206,10 +206,31 @@
                                         </div>
                                     </div> --}}
                                     <!--/.Second slide-->
+                                    <hr class="my-4 ">
+                        
+                                        <div class="row px-5">
+                                            <h3 >Experiências</h3>
 
-                            
-                            </div>
+                                            <div class="card card-body mb-4 ">
+                                                <div class="col d-flex align-content-around">
+                                                    <div class="col">
+                                                        <h4>Experiencia 1 </h4>
+                                                        <hr>
+                                                        <h5>Localizacao | Data</h5>
+                                                        
+                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste quae voluptatibus dignissimos voluptate corrupti, porro corporis error provident dolor placeat accusamus hic iure. Totam, magnam dignissimos quasi velit maxime repudiandae.</p>
+
+                                                    </div>                        
+                                                    <div class="xp-foto">
+                                                        <img class="mx-auto d-flex mt-3" src= "/img/projetos/projeto01.jpg">
+                
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>    
                         </div>
+
                     </div>
                 </div>
             </div>
