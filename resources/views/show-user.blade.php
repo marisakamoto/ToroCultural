@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title')
-    <title>{{ Auth::user()->username }}</title>
+    <title>{{ $user->username }}</title>
 @endsection
 
 @section('css')
@@ -32,7 +32,7 @@
         @endif
         @else
             <li class="nav-item active">
-                <a class="nav-link" href="#">Meu perfil</a>
+                <a class="nav-link" href="{{route('home')}}">Meu perfil</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="{{ route('feed') }}">Feed</a></li>
@@ -70,7 +70,7 @@
                     <div class="col-md-4 mx-auto" id="foto">
                         <div class="row foto-perfil">
                             <div class="mx-auto perfil-foto m-0">
-                                <img  src="{{ Auth::user()->url_foto }}"></img>
+                                <img  src="{{  $user->url_foto }}"></img>
                             </div>
                         </div>
                         <div class="row pt-2">
@@ -80,12 +80,12 @@
 
                     </div>
                     <div class="col-md-8">
-                        <div class="row d-flex pb-3 ">
+                        <div class="col d-flex pb-3 ">
                             <div class="col-md-6">
-                                <h3 class="nomeUser text-center">{{ Auth::user()->name }}</h3>
+                                <h3 class="nomeUser text-center">{{  $user->name }}</h3>
 
                             </div>
-                            <div class="col-md-6 text-center">
+                            <div class="row-md-6 text-center">
                                 <a href="{{ route('cadastroUsuario') }}"class="text-center"><img class="icon-config pl-1 pt-1 ml-5" src="img/editar.png" alt=""></a>
                                 <button type="button" class="follow btn btn-outline-warning btn-sm m-1 p-2"> Seguir</button>
                             </div>
@@ -118,13 +118,15 @@
                                     edição de vídeo
                                 </button></li> --}}
                             </ul>
-                            <p class="ml-4" >
-                                {{ Auth::user()->descricao }} </p>
+                        
+                        </div>
+                        <div class="row d-flex justify-content-center"> 
+                            <p class=" ml-4" >    {{ $user->descricao }} </p>
                         </div>
                     </div>
                 </div>
                 <hr class="my-4 ">
-                <div class="row ml-0 mt-4 mr-3 pt-2" id="portfolio">
+                <div class="col ml-0 mt-4 mr-3 pt-2" id="portfolio">
                     <div class="row px-5">
                         <h3 class="pl-5">Meus torós</h3>
                     </div>
@@ -213,7 +215,7 @@
 
                                             {{-- CARD DE EXPERIENCIAS DO USUARIO FORA DO TORO --}}
                                             @foreach ( $experiences as $xp)
-                                            <div class="card card-body mb-4 ">
+                                            <div class="card card-body mb-4 m-4">
                                                 <div class="col d-flex align-content-around">
                                                     <div class="col">
                                                         <h4>{{ $xp->titulo }} </h4>
@@ -225,7 +227,7 @@
                                                     </div>                        
                                                     <div class="xp-foto d-none d-lg-block">
                                                         
-                                                        <img class="mx-auto d-flex   " src= {{ $xp->url_foto }}>
+                                                        <img class="mx-auto d-flex   " src= "{{ $xp->url_foto }}">
 
                                                     </div>
                                                 </div>
@@ -258,9 +260,9 @@
                 <hr class="my-4 ">
                 <div class="row mx-auto text-center">
                     <ul id="social" class="row mx-auto">
-                        <a class="redes-link" href="#"><img class="redes" src="img/logo-do-facebook.png" alt="facebook"></a>
-                        <a class="redes-link" href="#"><img class="redes" src="img/twitter.png" alt="twitter"></a>
-                        <a class="redes-link" href="#"><img class="redes" src="img/instagram.png" alt="instagram"></a>
+                        <a class="redes-link" href="#"><img class="redes" src="./img/logo-do-facebook.png" alt="facebook"></a>
+                        <a class="redes-link" href="#"><img class="redes" src="./img/twitter.png" alt="twitter"></a>
+                        <a class="redes-link" href="#"><img class="redes" src=".img/instagram.png" alt="instagram"></a>
                         </a>
                     </ul>
                 </div>
@@ -273,7 +275,7 @@
                     <h6>Estatísticas</h6>
                     <ul class="estatisticas">
                 
-                        <li class="py-2"><strong>3</strong> Projetos Concluídos</li>
+                        <li class="py-2"><strong>{{$user->projetos->count()}}</strong> Projetos Concluídos</li>
                         <li class="py-2">Recomendam o trabalho <strong>94%</strong> </li>
                         <li class="py-2"><strong>80%</strong>Taxa de resposta</li>
                     </ul>

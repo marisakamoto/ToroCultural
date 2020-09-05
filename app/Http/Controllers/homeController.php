@@ -43,8 +43,31 @@ class HomeController extends Controller
                 // $seguindo = seguindo()->user_seguindo_id;
                 // echo $seguindo;
             return view('home', compact('projetos', 'habilidades', 'seguindo', 'seguidores','experiences'));
+    
         }
 
+
+    }
+
+    public function show($username)
+    {   
+        //Abre a página de outro usuario
+
+        $user = User::where('username', $username)->first();
+        $projetos = Projeto::where('user_id', $user->id)->take(3)->get();
+        $username = $user->username;
+        $habilidades = $user->habilidades;
+        // conta quantas pessoas o usuario segue
+        $seguindo = $user->seguindo()->count();
+        $seguidores = $user->seguidores()->count();
+
+        $experiences = $user->experience()->get();
+        // $seguindo = seguindo()->user_seguindo_id;
+        // echo $seguindo;
+    
+        // $habilidades = $vagas->habilidades;  
+        // Não dá certo, porque $vagas é um array de vagas, então, preciso entrar em cada vaga para buscar as habilidades
+        return view('show-user', compact('user', 'username','projetos', 'habilidades', 'seguindo', 'seguidores','experiences'));
     }
 
     

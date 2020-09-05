@@ -25,6 +25,8 @@ Route::get('/perfilProjeto', 'PerfilProjetoController@perfilProjeto')->name('per
 
 Route::get('/projeto/{id}', 'PerfilProjetoController@show');
 
+Route::get('/perfil/{username}', 'homeController@show');
+
 Route::get('/feed', 'FeedController@feed')->name('feed');
 
 Auth::routes();
