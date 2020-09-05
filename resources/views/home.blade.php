@@ -96,7 +96,7 @@
                                 @foreach ($habilidades as $h)
                                 <li>
                                     <button type="button" class="btn btn-deep-orange  btn-sm m-1">
-                                     {{$h->habilidade}}  
+                                    {{$h->habilidade}}  
                                     </button>
                                 </li>
                                 @endforeach
@@ -167,7 +167,7 @@
                                                 </div>
                                             @endforeach
                                         </div>
-                                   
+
 
                                     {{-- <div class="carousel-item ">
                                         <div class="row ">
@@ -207,7 +207,7 @@
                                     </div> --}}
                                     <!--/.Second slide-->
 
-                              
+                            
                             </div>
                         </div>
                     </div>
@@ -257,10 +257,10 @@
                     <h6>Rede Toró</h6>
                     <ul class="seguidores">
                         <li>
-                            <p><strong>Seguidores</strong> 42</p>
+                        <p><strong>Seguidores</strong> {{$seguidores}}</p>
                         </li>
                         <li>
-                            <p><strong>Seguindo</strong> 50</p>
+                        <p><strong>Seguindo</strong> {{$seguindo}}</p>
                         </li>
                     </ul>
                 </div>

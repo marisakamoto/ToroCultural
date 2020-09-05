@@ -28,16 +28,22 @@ class HomeController extends Controller
      */
     public function index()
     {
-       
         //     // $projetos = Projeto::all();
-  
+
         if (Auth::check()){
             // $projetos = Projeto::search('')->where('user_id', auth()->user()->id);
             $projetos = Projeto::where('user_id', auth()->user()->id)->take(3)->get();
             $users = User::find(auth()->user()->id);
-                $habilidades = $users->habilidades;   
-            // $habilidades = Habilidade::where('user_id', auth()->user()->id)->get();
-            return view('home', compact('projetos', 'habilidades'));
+                $habilidades = $users->habilidades;
+                // conta quantas pessoas o usuario segue
+                $seguindo = $users->seguindo()->count();
+                $seguidores = $users->seguidores()->count();
+                // $seguindo = seguindo()->user_seguindo_id;
+                // echo $seguindo;
+            return view('home', compact('projetos', 'habilidades', 'seguindo', 'seguidores'));
         }
+
     }
+
+    
 }
