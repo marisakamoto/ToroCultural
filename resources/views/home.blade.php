@@ -87,7 +87,6 @@
                             </div>
                             <div class="col-md-6 text-center">
                                 <a href="{{ route('cadastroUsuario') }}"class="text-center"><img class="icon-config pl-1 pt-1 ml-5" src="img/editar.png" alt=""></a>
-                                <button type="button" class="follow btn btn-outline-warning btn-sm m-1 p-2"> Seguir</button>
                             </div>
                         </div>
                         <div class="row d-flex justify-content-center" id="habilidades">
@@ -258,9 +257,9 @@
                 <hr class="my-4 ">
                 <div class="row mx-auto text-center">
                     <ul id="social" class="row mx-auto">
-                        <a class="redes-link" href="#"><img class="redes" src="img/logo-do-facebook.png" alt="facebook"></a>
-                        <a class="redes-link" href="#"><img class="redes" src="img/twitter.png" alt="twitter"></a>
-                        <a class="redes-link" href="#"><img class="redes" src="img/instagram.png" alt="instagram"></a>
+                        <a class="redes-link" href="#"><img class="redes" src="{{ url('img/logo-do-facebook.png') }}" alt="facebook"></a>
+                        <a class="redes-link" href="#"><img class="redes" src="{{ url('img/twitter.png') }}" alt="twitter"></a>
+                        <a class="redes-link" href="#"><img class="redes" src="{{ url('img/instagram.png') }}" alt="instagram"></a>
                         </a>
                     </ul>
                 </div>

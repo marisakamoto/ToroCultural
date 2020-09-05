@@ -220,7 +220,7 @@
                                     <br> Procuramos profissional que atue com edição de vídeos de forma prática e criativa, desenvolvendo uma boa narrativa para captar a atenção da audiência.
                                     <br>
                                     <div class=" row circle peach-gradient p-4 justify-content-center">
-                                        <div class="foto-perfil image-cropper d-flex justify-content-center ">
+                                        <div class="perfil-foto-colaborador">
                                             <img class="  rounded-circle  peach-gradient " src="{{ url('img/mulher1.jpg') }} " alt="perfil-user ">
                                         </div>
                                     </div>
@@ -399,10 +399,10 @@
         </div>
         <div class="col-lg-2 menu-esq pt-5 d-flex justify-content-start" id="menu-lado">
                 <h6 class="my-0">Sobre o autor</h6> <br>
-                <h5 class="my-0">{{ Auth::user()->username }}</h5> <br>
-                <div class="text-center">
-                    <img src="{{ Auth::user()->url_foto }}" style="border:2.5px rgb(165, 157, 157); border-radius: 50%; width:70%;">
-
+                <h5 class="my-0">{{ $user_criador->username }}</h5> <br>
+                
+                <div class="perfil-foto-proj">
+                    <img  src="{{ $user_criador->url_foto }}">
                 </div>
                 <div class="row  mx-auto">
                     <div id="star-rank ">
@@ -431,7 +431,7 @@
 
                 @foreach ( $user_colaborador as $user_c )
                     <div class="row px-1 pt-2 ">
-                    <div class="row mx-auto">
+                    <div class="row perfil-foto-colaborador">
                         <img class=" rounded-circle peach-gradient " height="85 em " src="{{ $user_c->url_foto }}" alt="perfil-user ">
                     </div>
                     <div class="row mx-auto " style="width: 100%; ">

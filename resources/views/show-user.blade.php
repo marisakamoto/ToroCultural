@@ -14,7 +14,7 @@
     <form class="form-inline my-2 my-lg-0" action="{{ route('feed') }}">
         <input class="form-control  search" type="search" placeholder="Pesquisar" aria-label="Pesquisar" style="width: 65%;">
         <button class="btn btn-orange btn-search" type="submit">
-            <img class="search" src="img/search.png" alt="">
+            <img class="search" src="{{ url('img/search.png') }}" alt="">
         </button>
     </form>
 @endsection
@@ -260,9 +260,9 @@
                 <hr class="my-4 ">
                 <div class="row mx-auto text-center">
                     <ul id="social" class="row mx-auto">
-                        <a class="redes-link" href="#"><img class="redes" src="./img/logo-do-facebook.png" alt="facebook"></a>
-                        <a class="redes-link" href="#"><img class="redes" src="./img/twitter.png" alt="twitter"></a>
-                        <a class="redes-link" href="#"><img class="redes" src=".img/instagram.png" alt="instagram"></a>
+                        <a class="redes-link" href="#"><img class="redes" src="{{ url('./img/logo-do-facebook.png') }}" alt="facebook"></a>
+                        <a class="redes-link" href="#"><img class="redes" src="{{ url('./img/twitter.png') }}" alt="twitter"></a>
+                        <a class="redes-link" href="#"><img class="redes" src="{{ url('./img/instagram.png') }}" alt="instagram"></a>
                         </a>
                     </ul>
                 </div>
