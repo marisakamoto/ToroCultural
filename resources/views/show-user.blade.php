@@ -243,7 +243,6 @@
                 </div>
             </div>
 
-
             <div class="col-md-3 menu-dir pt-5 px-4"  id="menu-lado">
                 <div id="star-rank" class="text-center">
                     <h4>Avaliação Geral</h4>
@@ -266,9 +265,6 @@
                         </a>
                     </ul>
                 </div>
-
-                <!--                    <hr class="my-4 ">
-                <button type="button " class="btn btn-danger">Enviar Projeto</button>-->
 
                 <hr class="my-4 ">
                 <div id="user-statistics ">
@@ -358,5 +354,3 @@
         </div>
     </div>
 @endsection
-
-
