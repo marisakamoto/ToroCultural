@@ -87,7 +87,6 @@
                             </div>
                             <div class="col-md-6 text-center">
                                 <a href="{{ route('cadastroUsuario') }}"class="text-center"><img class="icon-config pl-1 pt-1 ml-5" src="img/editar.png" alt=""></a>
-                                <button type="button" class="follow btn btn-outline-warning btn-sm m-1 p-2"> Seguir</button>
                             </div>
                         </div>
                         <div class="row d-flex justify-content-center" id="habilidades">
@@ -258,9 +257,9 @@
                 <hr class="my-4 ">
                 <div class="row mx-auto text-center">
                     <ul id="social" class="row mx-auto">
-                        <a class="redes-link" href="#"><img class="redes" src="img/logo-do-facebook.png" alt="facebook"></a>
-                        <a class="redes-link" href="#"><img class="redes" src="img/twitter.png" alt="twitter"></a>
-                        <a class="redes-link" href="#"><img class="redes" src="img/instagram.png" alt="instagram"></a>
+                        <a class="redes-link" href="#"><img class="redes" src="{{ url('img/logo-do-facebook.png') }}" alt="facebook"></a>
+                        <a class="redes-link" href="#"><img class="redes" src="{{ url('img/twitter.png') }}" alt="twitter"></a>
+                        <a class="redes-link" href="#"><img class="redes" src="{{ url('img/instagram.png') }}" alt="instagram"></a>
                         </a>
                     </ul>
                 </div>
@@ -280,14 +279,75 @@
                     <p class="text-center">Ingressou há 2 meses</p>
                 </div>
                 <hr class="my-4 ">
-                <div id="user-network ">
+                <div class="user-network ">
                     <h6>Rede Toró</h6>
                     <ul class="seguidores">
                         <li>
-                        <p><strong>Seguidores</strong> {{$seguidores}}</p>
+                            <a href="#" class="mr-2" data-toggle="modal" data-target="#exampleModalCenter"><strong>Seguidores</strong></a> {{$seguidores}}
+                            <!-- Modal -->
+                            <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header modal-titulo">
+                                            <h5 class="modal-title" id="exampleModalLongTitle">Seguidores</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            @if($seguidores > 0)
+                                            @foreach ( $seguidores_users as $seguidor )
+                                                <div class="row seguidores_user">
+                                                    <div class="item-seguidor">
+                                                        <div class="perfil-seguidor">
+                                                            <img src="{{ $seguidor->url_foto }}" alt="">
+                                                        </div>
+                                                        <a href="/perfil/{{ $seguidor->username }}" class="ml-5">{{ $seguidor->username }}</a>
+                                                    </div>
+                                                </div>
+                                            @endforeach
+                                            @elseif ($seguidores == 0)
+                                                <p>No momento, não há seguidores.</p>
+                                            @endif
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
                         </li>
                         <li>
-                        <p><strong>Seguindo</strong> {{$seguindo}}</p>
+                            <a href="#" class="mr-2" data-toggle="modal" data-target="#exampleModalCenter2"><strong>Seguindo</strong></a> {{$seguindo}}
+                            
+
+                            <div class="modal fade" id="exampleModalCenter2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header modal-titulo">
+                                            <h5 class="modal-title" id="exampleModalLongTitle">Seguidores</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            @if ($seguindo > 0)
+                                                @foreach ( $seguindo_user as $seguindo )
+                                                    <div class="row seguidores_user">
+                                                        <div class="item-seguidor">
+                                                            <div class="perfil-seguidor">
+                                                                <img src="{{ $seguindo->url_foto }}" alt="">
+                                                            </div>
+                                                            <a href="/perfil/{{ $seguindo->username }}" class="ml-5">{{ $seguindo->username }}</a>
+                                                        </div>
+                                                    </div>
+                                                @endforeach
+                                            @elseif ($seguindo == 0)
+                                                <p>No momento, você não segue ninguém.</p>
+                                            @endif
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </li>
                     </ul>
                 </div>

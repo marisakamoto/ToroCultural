@@ -37,12 +37,13 @@ class HomeController extends Controller
                 $habilidades = $users->habilidades;
                 // conta quantas pessoas o usuario segue
                 $seguindo = $users->seguindo()->count();
+                $seguindo_user = $users->seguindo;
                 $seguidores = $users->seguidores()->count();
-
+                $seguidores_users = $users->seguidores;
                 $experiences = $users->experience()->get();
                 // $seguindo = seguindo()->user_seguindo_id;
                 // echo $seguindo;
-            return view('home', compact('projetos', 'habilidades', 'seguindo', 'seguidores','experiences'));
+            return view('home', compact('projetos', 'habilidades', 'seguindo', 'seguindo_user', 'seguidores','seguidores_users', 'experiences'));
     
         }
 
@@ -59,16 +60,16 @@ class HomeController extends Controller
         $habilidades = $user->habilidades;
         // conta quantas pessoas o usuario segue
         $seguindo = $user->seguindo()->count();
+        $seguindo_user = $user->seguindo;
         $seguidores = $user->seguidores()->count();
-
+        $seguidores_users = $user->seguidores;
         $experiences = $user->experience()->get();
         // $seguindo = seguindo()->user_seguindo_id;
         // echo $seguindo;
     
         // $habilidades = $vagas->habilidades;  
         // Não dá certo, porque $vagas é um array de vagas, então, preciso entrar em cada vaga para buscar as habilidades
-        return view('show-user', compact('user', 'username','projetos', 'habilidades', 'seguindo', 'seguidores','experiences'));
+        return view('show-user', compact('user', 'username','projetos', 'habilidades', 'seguindo', 'seguindo_user', 'seguidores','seguidores_users', 'experiences'));
     }
-
     
 }

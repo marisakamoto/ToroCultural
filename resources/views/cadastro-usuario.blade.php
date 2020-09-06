@@ -64,9 +64,6 @@
     @endguest
 @endsection
 
-
-
-
 @section('content')
         <h2 id="title-form">Cadastro Usuário</h2>
         <section class="container cadastro-user p-4 mb-5">
@@ -161,16 +158,16 @@
             <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header modal-titulo">
-                <h5 class="modal-title"  id="exampleModalLabel" >Informações salvas com sucesso</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
-                    <span aria-hidden="true">&times;</span>
-                </button>
+                    <h5 class="modal-title"  id="exampleModalLabel" >Informações salvas com sucesso</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
                 </div>
                 <div class="modal-body">
                     Agora entre em seu perfil para ver como ficou!
                 </div>
                 <div class="modal-footer">
-                <button type="button" class="btn-deep-orange btn "><a class="modal-para-perfil" href="{{  route('home') }}"> Ir para o Meu Perfil</a></button>
+                    <button type="button" class="btn-deep-orange btn "><a class="modal-para-perfil" href="{{  route('home') }}"> Ir para o Meu Perfil</a></button>
                 </div>
             </div>
             </div>
