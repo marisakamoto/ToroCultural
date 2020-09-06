@@ -70,6 +70,24 @@
         left: 50%;
         transform: translateX(-50%); 
     }
+
+    .perfil-seguidor{
+        width: 50px;
+        height: 50px;
+        border-radius: 100%;
+        overflow: hidden;
+        position: relative;
+        margin: 0 auto;
+    }
+
+    .perfil-seguidor img{
+        width: initial;
+        height: inherit;
+        max-width: none;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%); 
+    }
     
     ul,
     li {
@@ -155,6 +173,36 @@
         font-size: 1em;
         display: flex;
         justify-content: center;
+    }
+
+    .user-network ul li a{
+        display: inline-block;
+        color: black;
+        text-decoration: none;
+        
+    }
+
+    .seguidores{
+        font-size: 1.3em;
+    }
+    
+    .user-network ul li a:hover{
+        color: rgb(58, 57, 57);
+    }
+
+    .seguidores_user{
+        padding: 30px;
+        display: flex;
+        border-bottom: gray 1px solid;
+    }
+
+    .item-seguidor{
+        display: flex;
+    }
+
+
+    .modal-titulo{
+        background-color: rgb(255, 224, 212) ;
     }
     
     .nossa-equipe h4 {

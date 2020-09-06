@@ -17,7 +17,7 @@
     <form class="form-inline my-2 my-lg-0" action="{{route('feed')}}">
         <input class="form-control  search" type="search" placeholder="Pesquisar" aria-label="Pesquisar" style="width: 65%;">
         <button class="btn btn-orange btn-search" type="submit">
-            <img class="search" src="img/search.png" alt="">
+            <img class="search" src="{{ url('img/search.png') }}" alt="">
         </button>
     </form>
 @endsection
