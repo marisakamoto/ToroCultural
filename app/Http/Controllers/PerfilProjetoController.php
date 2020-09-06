@@ -23,7 +23,7 @@ class PerfilProjetoController extends Controller
     {   
         //Como as tabelas estão relacionadas, posso chamá-las através do model projeto
         $projeto = Projeto::find($id); 
-        $user_criador = User::find($projeto->user_id);
+        $user_criador = $projeto->user_criador;
         $categorias = $projeto->categorias;
         $user_colaborador = $projeto->projeto_user_colaboradores;
         $vagas = $projeto->vagas;
