@@ -74,7 +74,6 @@
                         <div class="row pt-2">
                             <p class="row mx-auto">São Paulo, SP<br> Online há 1 dia</p>
                         </div>
-                    
                     </div>
                     <div class="col-md-8">
                         <div class="row d-flex pb-3">
@@ -105,27 +104,7 @@
                         <h3 class="pl-5">Meus torós</h3>
                     </div>
                     <div class="row px-4">
-                        <div class="container  mx-1 ">
-                            <!--Carousel Wrapper-->
-                            <div id="multi-item-example " class="carousel slide carousel-multi-item " data-ride="carousel ">
-
-                                <!--Controls-->
-                                {{-- <div class="controls-top ">
-                                    <a class="btn-floating " href="#multi-item-example " data-slide="prev "><i class="fa fa-chevron-left "></i></a>
-                                    <a class="btn-floating " href="#multi-item-example " data-slide="next "><i class="fa fa-chevron-right "></i></a>
-                                </div> --}}
-                                <!--/.Controls-->
-                                <!--Indicators-->
-                                {{-- <ol class="carousel-indicators ">
-                                    <li data-target="#multi-item-example " data-slide-to="0 " class="active "></li>
-                                    <li data-target="#multi-item-example " data-slide-to="1 "></li>
-                                    <li data-target="#multi-item-example " data-slide-to="2 "></li>
-                                </ol> --}}
-                                <!--/.Indicators-->
-
-                                <!--Slides-->
-                                
-                                    <!--First slide-->
+                        <div class="container mx-2">
                                         <div class="row ">
                                             @foreach ( $projetos as $p )
                                                 <div class="col-md-4 clearfix d-none d-md-block ">
@@ -155,33 +134,6 @@
                                             @endforeach
                                         </div>
 
-
-                                    {{-- <div class="carousel-item ">
-                                        <div class="row ">
-                                            <div class="col-md-4 ">
-                                                <div class="card mb-2 ">
-                                                    <img class="card-img-top " src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(60).jpg " alt="Card image cap ">
-                                                    <div class="card-body ">
-                                                        <h4 class="card-title ">Card title</h4>
-                                                        <p class="card-text ">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                                        <a class="btn btn-primary ">Button</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-md-4 clearfix d-none d-md-block ">
-                                                <div class="card mb-2 ">
-                                                    <img class="card-img-top " src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(48).jpg " alt="Card image cap ">
-                                                    <div class="card-body ">
-                                                        <h4 class="card-title ">Card title</h4>
-                                                        <p class="card-text ">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                                        <a class="btn btn-primary ">Button</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div> --}}
-                                    <!--/.Second slide-->
                                         @if ($experiences->count() > 0)
                                             <hr class="my-4">
                                             <div class="col px-5">
@@ -204,9 +156,8 @@
                                                 @endforeach
                                             </div>
                                         @endif
-                                    </div>    
+                             
                         </div>
-
                     </div>
                 </div>
             </div>
