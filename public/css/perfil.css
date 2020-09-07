@@ -1,114 +1,114 @@
-    /*.row div {
-    border: 2px solid coral; 
-}*/
-    .perfil-foto {
-        width: 150px;
-        height: 150px;
-        border-radius: 100%;
-        overflow: hidden;
-        position: relative;
-    }
+.perfil-foto {
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    overflow: hidden;
+    position: relative;
+}
     
-    .perfil-foto img {
-        width: initial;
-        height: inherit;
-        max-width: none;
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-    }
+.perfil-foto img {
+    width: initial;
+    height: inherit;
+    max-width: none;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
     
-    .xp-foto {
-        width: 150px;
-        height: 150px;
-        border-radius: 100%;
-        overflow: hidden;
-        position: relative;
-    }
+.xp-foto {
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    overflow: hidden;
+    position: relative;
+}
     
-    .xp-foto img {
-        width: initial;
-        height: inherit;
-        max-width: none;
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-    }
+.xp-foto img {
+    width: initial;
+    height: inherit;
+    max-width: none;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
 
-    .perfil-foto-proj{
-        width: 120px;
-        height: 120px;
-        border-radius: 100%;
-        overflow: hidden;
-        position: relative;
-        margin: 0 auto;
-    }
+.perfil-foto-proj{
+    width: 120px;
+    height: 120px;
+    border-radius: 100%;
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto;
+}
 
-    .perfil-foto-proj img{
-        width: initial;
-        height: inherit;
-        max-width: none;
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%); 
-    }
+.perfil-foto-proj img{
+    width: initial;
+    height: inherit;
+    max-width: none;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%); 
+}
     
-    .perfil-foto-colaborador{
-        width: 95px;
-        height: 95px;
-        border-radius: 100%;
-        overflow: hidden;
-        position: relative;
-        margin: 0 auto;
-    }
+.perfil-foto-colaborador{
+    width: 95px;
+    height: 95px;
+    border-radius: 100%;
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto;
+}
 
-    .perfil-foto-colaborador img{
-        width: initial;
-        height: inherit;
-        max-width: none;
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%); 
-    }
+.perfil-foto-colaborador img{
+    width: initial;
+    height: inherit;
+    max-width: none;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%); 
+}
 
-    .perfil-seguidor{
-        width: 50px;
-        height: 50px;
-        border-radius: 100%;
-        overflow: hidden;
-        position: relative;
-        margin: 0 auto;
-    }
+.perfil-seguidor{
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto;
+}
 
-    .perfil-seguidor img{
-        width: initial;
-        height: inherit;
-        max-width: none;
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%); 
-    }
+.perfil-seguidor img{
+    width: initial;
+    height: inherit;
+    max-width: none;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%); 
+}
     
-    ul,
-    li {
-        list-style-type: none;
-    }
+ul, li {
+    list-style-type: none;
+}
+
+.nomeUser {
+    font-family: 'Lato';
+    font-size: 2em;
+    text-transform: capitalize;
+}
+
+#habilidades .btn {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#habilidades ul{
+    display:flex;
+    justify-content: center;
+    font-family: Lato;
+}
     
-    #habilidades .btn {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-    }
-    
-    .nomeUser {
-        font-family: 'Lato';
-        font-size: 2em;
-        text-transform: capitalize;
-    }
-    
-    .follow:hover {
-        background-color: rgb(248, 117, 56)!important;
-    }
+
     /* #mapa-cal {
     max-height: 500px;
 } */
@@ -118,295 +118,275 @@
     flex-direction: column;
 } */
     
-    #main-info ul {
+.foto-perfil {
+    text-align: center;
+}
+    
+#foto p {
+    text-align: center;
+}
+    
+.checked {
+    color: orange;
+}
+
+#menu-lado {
+    background-color: rgb(226, 226, 226);
+    /* padding-top: 10px; */
+    color: rgb(50, 50, 50);
+    font-family: Lato;
+    font-size: medium;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-dir {
+    border-top-left-radius: 100px;
+}
+
+.menu-esq {
+    border-top-right-radius: 100px;
+}
+
+#menu-lado .my-4 {
+    display: flex;
+    justify-content: center;
+}
+
+#menu-lado h6 {
+    color: rgb(92, 71, 66);
+    font-size: 1.2em;
+    display: flex;
+    font-family: 'Lato';
+    justify-content: center;
+}
+    
+#menu-lado h5 {
+    color: rgb(104, 98, 98);
+    font-size: 1em;
+    display: flex;
+    justify-content: center;
+}
+
+.user-network ul li a{
+    display: inline-block;
+    color: black;
+    text-decoration: none;
+    
+}
+
+.seguidores{
+    font-size: 1.3em;
+}
+
+.user-network ul li a:hover{
+    color: rgb(58, 57, 57);
+}
+
+.seguidores_user{
+    padding: 30px;
+    display: flex;
+    border-bottom: gray 1px solid;
+}
+
+.item-seguidor{
+    display: flex;
+}
+
+.modal-titulo{
+    background-color: rgb(255, 224, 212) ;
+}
+
+
+@media (min-width:1200px) {
+    #info-local-data {
         display: flex;
         flex-direction: row;
-        justify-content: center;
-        font-family: Lato;
+        align-items: center;
+        /* padding: 1em; */
+        /* margin: 1em; */
     }
-    
-    .foto-perfil {
-        text-align: center;
-    }
-    
-    #foto p {
-        text-align: center;
-    }
-    
-    .checked {
-        color: orange;
-    }
-    
-    #menu-lado {
-        background-color: rgb(226, 226, 226);
-        /* padding-top: 10px; */
-        color: rgb(50, 50, 50);
-        font-family: Lato;
-        font-size: medium;
-        display: flex;
-        flex-direction: column;
-    }
-    
-    .menu-dir {
-        border-top-left-radius: 100px;
-    }
-    
-    .menu-esq {
-        border-top-right-radius: 100px;
-    }
-    
-    #menu-lado .my-4 {
-        display: flex;
-        justify-content: center;
-    }
-    
-    #menu-lado h6 {
-        color: rgb(92, 71, 66);
-        font-size: 1.2em;
-        display: flex;
-        font-family: 'Lato';
-        justify-content: center;
-    }
-    
-    #menu-lado h5 {
-        color: rgb(104, 98, 98);
-        font-size: 1em;
-        display: flex;
-        justify-content: center;
-    }
-
-    .user-network ul li a{
-        display: inline-block;
-        color: black;
-        text-decoration: none;
-        
-    }
-
-    .seguidores{
-        font-size: 1.3em;
-    }
-    
-    .user-network ul li a:hover{
-        color: rgb(58, 57, 57);
-    }
-
-    .seguidores_user{
-        padding: 30px;
-        display: flex;
-        border-bottom: gray 1px solid;
-    }
-
-    .item-seguidor{
-        display: flex;
-    }
-
-
-    .modal-titulo{
-        background-color: rgb(255, 224, 212) ;
-    }
-    
-    .nossa-equipe h4 {
-        font-size: 1em;
-        text-align: center;
-        font-weight: bold;
-    }
-    
-    .avatar {
-        border-radius: 50%;
-        /* border: 1px solid slateblue; */
-    }
-    
-    @media (min-width:1200px) {
-        #info-local-data {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            /* padding: 1em; */
-            /* margin: 1em; */
-        }
-    }
-    /* #info-local-data {
-    margin-left: 2em;
+}
+/* #info-local-data {
+margin-left: 2em;
 } */
-    
-    #mapa-cal {
-        background-color: rgb(140, 196, 193);
-        border-radius: 35px;
-        margin: 10px;
-        max-height: 500px;
-    }
-    /* 
+
+#mapa-cal {
+    background-color: rgb(140, 196, 193);
+    border-radius: 35px;
+    margin: 10px;
+    max-height: 500px;
+}
+/* 
 .map-responsive {
-    overflow: hidden;
-    padding-bottom: 56.25%;
-    position: relative;
+overflow: hidden;
+padding-bottom: 56.25%;
+position: relative;
 } */
+
+#mapa-cal iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+.calendar {
+    align-self: center;
+    justify-content: center;
+}
+/* Month header */
+
+.month {
+    /* padding: 70px 25px; */
+    background: #ec8c3d;
+    text-align: center;
+    font-family: Lato, Arial, Helvetica, sans-serif;
+    /* padding: 0;
+margin: 0; */
+    width: 300px;
+    border-radius: 50px;
+    /* width: 100px; */
+    /* padding: 10px 0; */
+    /* margin-top: 1em; */
+}
+/* Month list */
     
-    #mapa-cal iframe {
-        left: 0;
-        top: 0;
-        height: 100%;
-        width: 100%;
-        position: absolute;
-    }
+.month ul {
+    margin: 0.8em;
+    /* padding: 1.5em; */
+}
+
+.month ul li {
+    color: white;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+/* Previous button inside month header */
+
+.month .prev {
+    float: left;
+    padding-top: 10px;
+}
+/* Next button */
+
+.month .next {
+    float: right;
+    padding-top: 10px;
+}
+/* Weekdays (Mon-Sun) */
+
+.weekdays {
+    margin: 0;
+    padding: px 0;
+    background-color: #ddd;
+    width: 300px;
+}
+
+.weekdays li {
+    display: inline-block;
+    width: 12.2%;
+    color: #666;
+    text-align: center;
+}
+/* Days (1-31) */
+
+.days {
+    padding: 0;
+    background: #eee;
+    margin: 1;
+    font-size: 1em;
+    width: 300px;
+}
+
+.days li {
+    list-style-type: none;
+    display: inline-block;
+    width: 12.2%;
+    text-align: center;
+    margin-bottom: 5px;
+    font-size: 1em;
+    color: #777;
+}
+/* Highlight the "current" day */
+
+.days li .active {
+    padding: 5px;
+    background: #ec8c3d;
+    border-radius: 50%;
+    color: white !important
+}
+
+h1 {
+    font-family: Lato;
+    margin-left: .4em;
+    font-size: 2em;
+    color: #444;
+}
+
+.image-cropper {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+}
     
-    .calendar {
-        align-self: center;
-        justify-content: center;
-    }
-    /* Month header */
-    
-    .month {
-        /* padding: 70px 25px; */
-        background: #ec8c3d;
-        text-align: center;
-        font-family: Lato, Arial, Helvetica, sans-serif;
-        /* padding: 0;
-    margin: 0; */
-        width: 300px;
-        border-radius: 50px;
-        /* width: 100px; */
-        /* padding: 10px 0; */
-        /* margin-top: 1em; */
-    }
-    /* Month list */
-    
-    .month ul {
-        margin: 0.8em;
-        /* padding: 1.5em; */
-    }
-    
-    .month ul li {
-        color: white;
-        font-size: 1.2em;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-    }
-    /* Previous button inside month header */
-    
-    .month .prev {
-        float: left;
-        padding-top: 10px;
-    }
-    /* Next button */
-    
-    .month .next {
-        float: right;
-        padding-top: 10px;
-    }
-    /* Weekdays (Mon-Sun) */
-    
-    .weekdays {
-        margin: 0;
-        padding: px 0;
-        background-color: #ddd;
-        width: 300px;
-    }
-    
-    .weekdays li {
-        display: inline-block;
-        width: 12.2%;
-        color: #666;
-        text-align: center;
-    }
-    /* Days (1-31) */
-    
-    .days {
-        padding: 0;
-        background: #eee;
-        margin: 1;
-        font-size: 1em;
-        width: 300px;
-    }
-    
-    .days li {
-        list-style-type: none;
-        display: inline-block;
-        width: 12.2%;
-        text-align: center;
-        margin-bottom: 5px;
-        font-size: 1em;
-        color: #777;
-    }
-    /* Highlight the "current" day */
-    
-    .days li .active {
-        padding: 5px;
-        background: #ec8c3d;
-        border-radius: 50%;
-        color: white !important
-    }
-    
-    h1 {
-        font-family: Lato;
-        margin-left: .4em;
-        font-size: 2em;
-        color: #444;
-    }
-    
-    .image-cropper {
-        width: 100px;
-        height: 100px;
-        position: relative;
-        overflow: hidden;
-        border-radius: 50%;
-    }
-    
-    .image-cropper-sm {
-        width: 60px;
-        height: 60px;
-        position: relative;
-        overflow: hidden;
-        border-radius: 50%;
-    }
-    
-    .image-cropper img,
-    .image-cropper-sm img {
-        display: inline;
-        margin: 0 auto;
-        height: 100%;
-    }
-    
-    .avatar-projeto {
-        border-radius: 50%;
-        width: 25%;
-        object-fit: cover;
-    }
-    /* Cards Projetos */
-    
-    .card-vagas {
-        max-width: 18rem;
-    }
-    
-    .descricao-projeto {
-        height: 85px;
-        overflow: hidden;
-    }
-    
-    .titulo-projeto {
-        height: 55px;
-        overflow: hidden;
-    }
-    
-    .card-projeto {
-        height: 430px;
-    }
-    /* Estatísticas */
-    
-    .estatisticas {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .estatisticas strong {
-        color: rgb(248, 117, 56);
-        font-size: 1.5em;
-    }
-    /* Seguidores */
-    
-    .seguidores {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
+.image-cropper-sm {
+    width: 60px;
+    height: 60px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.image-cropper img,
+.image-cropper-sm img {
+    display: inline;
+    margin: 0 auto;
+    height: 100%;
+}
+/* Cards Projetos Perfil-user */
+
+.card-vagas {
+    max-width: 18rem;
+}
+
+.descricao-projeto {
+    height: 85px;
+    overflow: hidden;
+}
+
+.titulo-projeto {
+    height: 55px;
+    overflow: hidden;
+}
+
+.card-projeto {
+    height: 430px;
+}
+/* Estatísticas */
+
+.estatisticas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.estatisticas strong {
+    color: rgb(248, 117, 56);
+    font-size: 1.5em;
+}
+/* Seguidores */
+
+.seguidores {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.user-link:hover{
+    text-decoration: none;
+}

@@ -1,8 +1,4 @@
-
-
 /*Sobre o Toró*/
-
-
 .content-sobre-toro{
     padding: 0;
 }
@@ -34,8 +30,6 @@ h3 {
 /* FIM Sobre o Toró*/
 
 
-
-
 /*FORMULÁRIO DE CONTATO*/
 
 .form-contato {
@@ -45,12 +39,9 @@ h3 {
     color: rgb(248, 117, 56);
 }
 
-
-
 .caixa-contato {
     width: 90%;
 }
-
 
 .form-contato input,
 .form-contato textarea {
@@ -61,14 +52,10 @@ h3 {
 /*FIM FORMULÁRIO DE CONTATO*/
 
 
-
-
 @media screen and (max-width: 650px) {
     .bola{
         height: 190px;
-    }
-
-    
+    }    
 }
 
 @media screen and (max-width: 800px) {

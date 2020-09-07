@@ -38,7 +38,7 @@ class AddCardsExperiencias extends Seeder
             'descricao' => "",
             "localizacao" => "teste",
             'data_realizacao' => Carbon::create('2000', '01', '01'),
-            'url_foto' => "/img/projetos/projeto03.jpg"
+            'url_foto' => "/img/projetos/projeto03.jpeg"
         ]);
 
         Experience_card::create([

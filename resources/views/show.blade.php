@@ -70,8 +70,15 @@
                 <div class=" titulo-secao">
                     Projeto:
                 </div>
-                <div id="nomeProjeto">
-                    <h1>{{ $projeto->titulo }}</h1>
+                <div id="nomeProjeto d-flex flex-row">
+                    <h1 class="d-inline">{{ $projeto->titulo }}</h1>
+
+                    @if ($projeto->user_id == Auth::user()->id)
+                        <a href="{{ route('cadastroProjeto') }}"class="text-center"><img class="icon-config pl-1 pt-1 ml-5" src="{{ url('img/editar.png') }}" alt=""></a>
+                    @elseif($projeto->user_id != Auth::user()->id)
+                        <button type="button" class="follow btn btn-outline-warning btn-sm m-1 p-2">Seguir</button>
+                    @endif
+
                 </div>
             </div>
             <div class="row justify-content-start mb-4" id="habilidadesProjeto ">
@@ -399,7 +406,7 @@
         </div>
         <div class="col-lg-2 menu-esq pt-5 d-flex justify-content-start" id="menu-lado">
                 <h6 class="my-0">Sobre o autor</h6> <br>
-                <h5 class="my-0">{{ $user_criador->username }}</h5> <br>
+                <h5 class="my-0"><a class="user-link" href="/perfil/{{ $user_criador->username }}">{{ $user_criador->username }}</a></h5> <br>
                 
                 <div class="perfil-foto-proj">
                     <img  src="{{ $user_criador->url_foto }}">
@@ -432,10 +439,10 @@
                 @foreach ( $user_colaborador as $user_c )
                     <div class="row px-1 pt-2 ">
                     <div class="row perfil-foto-colaborador">
-                        <img class=" rounded-circle peach-gradient " height="85 em " src="{{ $user_c->url_foto }}" alt="perfil-user ">
+                        <img class=" rounded-circle peach-gradient " height="85 em " src="{{ $user_c->url_foto }}" alt="perfil-user">
                     </div>
                     <div class="row mx-auto " style="width: 100%; ">
-                        <p class="text-center mx-auto mb-0 "><a href="/perfil/{{ $user_c->username }}">{{ $user_c->username }}</a></p>
+                        <p class="text-center mx-auto mb-0 "><a class="user-link" href="/perfil/{{ $user_c->username }}">{{ $user_c->username }}</a></p>
                     </div>
                     <div class="row mx-auto">
                         <p>{{ $user_c->profissao }}</p>

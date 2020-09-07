@@ -1,7 +1,6 @@
 {{-- @extends('layouts.templateBase') --}}
 @extends('layouts.app')
 
-
     @section('title')
         <title>Toró Cultural</title>
     @endsection
@@ -10,48 +9,44 @@
         <link rel="stylesheet" href="{{ asset('css/home.css') }}">
     @endsection
 
-  
-
     @section('nav-links')
-    @guest
-        <li class="nav-item active">
-                <a class="nav-link" href="#">Sobre o Toró</a>
-            </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">Contato</a></li>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-        </li>
-        @if (Route::has('register'))
+        @guest
+            <li class="nav-item active">
+                    <a class="nav-link" href="#">Sobre o Toró</a>
+                </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                <a class="nav-link" href="#">Contato</a></li>
             </li>
-        @endif
-        @else
-            <li class="nav-item dropdown">
-                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                    {{ Auth::user()->name }}
-                </a>
-
-                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                
-                    <a class="dropdown-item" href="{{ route('logout') }}"
-                        onclick="event.preventDefault();
-                                        document.getElementById('logout-form').submit();">
-                        {{ __('Logout') }}
+            <li class="nav-item">
+                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+            </li>
+            @if (Route::has('register'))
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                </li>
+            @endif
+            @else
+                <li class="nav-item dropdown">
+                    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                        {{ Auth::user()->name }}
                     </a>
 
-                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                        @csrf
-                    </form>
-                </div>
-            </li>
-    @endguest
-@endsection
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                    
+                        <a class="dropdown-item" href="{{ route('logout') }}"
+                            onclick="event.preventDefault();
+                                            document.getElementById('logout-form').submit();">
+                            {{ __('Logout') }}
+                        </a>
+
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                            @csrf
+                        </form>
+                    </div>
+                </li>
+        @endguest
+    @endsection
     
-
-
     @section('content')
         <section class="container-fluid content-sobre-toro">
             <div class="jumbotron">
@@ -60,10 +55,9 @@
                     <p class="lead">A sua rede social para encontrar produtores independentes e oportunidades para participar de projetos culturais. </p>
                 </div>
                 <hr class="my-4">
-
                 <div class="row text-center info py-2">
                     <div class="col-md-6 my-auto">
-                        <img src="img/cultura.jpg" class="img-fluid bola" alt="banner">
+                        <img src="{{ url('img/cultura.jpg') }}" class="img-fluid bola" alt="banner">
                     </div>
                     <div class="col-md-6 my-auto">
                         <div class="texto-sobre-toro">
@@ -74,9 +68,6 @@
                         </div>
                     </div>
                 </div>
-
-
-
                 <div class=" row text-center info py-2  caixa-img-content">
                     <div class=" col-md-6 texto-sobre-toro">
                         <h3>quando? </h3>
@@ -90,8 +81,6 @@
                         <img src="img/maos.png" class="img-fluid  bola"  alt="banner" >
                     </div>
                 </div>
-
-
                 <div class="row text-center info py-2">
                     <div class=" col-md-6 texto-sobre-toro">
                         <img src="img/Lampada.jpg" class="img-fluid  bola"  alt="banner" >
@@ -99,12 +88,10 @@
                     <div class="texto col-md-6 my-auto">
                         <h3>por quê?</h3>
                         <p>Devido a dificuldade de produtores culturais encontrarem talentos que não sejam apenas indicações pessoais e assim encontrarem as melhores pessoas para os seus projetos. Desse jeito, Toró veio fortalecer a comunidade da cultura.</p>
-
                         <h3>como?</h3>
                         <p>Artistas autônomos e produtores independentes se inscrevem no site para então interagirem e trabalharem em projetos em conjunto a partir do cadastro de suas habilidades.</p>
                     </div>
                 </div>
-
             </div>
         </section>
         <section class="container form-contato mx-auto pb-4" id="formEntreEmContato">

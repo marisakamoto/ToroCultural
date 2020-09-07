@@ -34,6 +34,7 @@ class HomeController extends Controller
             // $projetos = Projeto::search('')->where('user_id', auth()->user()->id);
             $projetos = Projeto::where('user_id', auth()->user()->id)->take(3)->get();
             $users = User::find(auth()->user()->id);
+            $projetos_colaborando = $users->projeto_user_colaborador;
                 $habilidades = $users->habilidades;
                 // conta quantas pessoas o usuario segue
                 $seguindo = $users->seguindo()->count();
@@ -41,13 +42,12 @@ class HomeController extends Controller
                 $seguidores = $users->seguidores()->count();
                 $seguidores_users = $users->seguidores;
                 $experiences = $users->experience()->get();
+                $projetos_seguidos = $users->user_projetoSeguido;
                 // $seguindo = seguindo()->user_seguindo_id;
                 // echo $seguindo;
-            return view('home', compact('projetos', 'habilidades', 'seguindo', 'seguindo_user', 'seguidores','seguidores_users', 'experiences'));
+            return view('home', compact('projetos', 'habilidades', 'seguindo', 'seguindo_user', 'seguidores','seguidores_users', 'experiences', 'projetos_seguidos', 'projetos_colaborando'));
     
         }
-
-
     }
 
     public function show($username)
@@ -56,6 +56,7 @@ class HomeController extends Controller
 
         $user = User::where('username', $username)->first();
         $projetos = Projeto::where('user_id', $user->id)->take(3)->get();
+        $projetos_colaborando = $user->projeto_user_colaborador()->take(3)->get();
         $username = $user->username;
         $habilidades = $user->habilidades;
         // conta quantas pessoas o usuario segue
@@ -64,12 +65,13 @@ class HomeController extends Controller
         $seguidores = $user->seguidores()->count();
         $seguidores_users = $user->seguidores;
         $experiences = $user->experience()->get();
+        $projetos_seguidos = $user->user_projetoSeguido;
         // $seguindo = seguindo()->user_seguindo_id;
         // echo $seguindo;
     
         // $habilidades = $vagas->habilidades;  
         // Não dá certo, porque $vagas é um array de vagas, então, preciso entrar em cada vaga para buscar as habilidades
-        return view('show-user', compact('user', 'username','projetos', 'habilidades', 'seguindo', 'seguindo_user', 'seguidores','seguidores_users', 'experiences'));
+        return view('show-user', compact('user', 'username','projetos', 'habilidades', 'seguindo', 'seguindo_user', 'seguidores','seguidores_users', 'experiences', 'projetos_seguidos', 'projetos_colaborando'));
     }
     
 }

@@ -19,7 +19,6 @@
     </form>
 @endsection
 
-
 @section('nav-links')
     @guest
         <li class="nav-item">
@@ -61,7 +60,6 @@
     @endguest
 @endsection
 
-
 @section('content')
     <div class="container-fluid colborder" id="main-conteudo">
         <div class="row">
@@ -76,23 +74,18 @@
                         <div class="row pt-2">
                             <p class="row mx-auto">São Paulo, SP<br> Online há 1 dia</p>
                         </div>
-                    
-
                     </div>
                     <div class="col-md-8">
-                        <div class="col d-flex pb-3 ">
+                        <div class="col d-flex pb-3 justify-content-between">
                             <div class="col-md-6">
                                 <h3 class="nomeUser text-center">{{  $user->name }}</h3>
-
                             </div>
                             <div class="row-md-6 text-center">
-                                <a href="{{ route('cadastroUsuario') }}"class="text-center"><img class="icon-config pl-1 pt-1 ml-5" src="img/editar.png" alt=""></a>
                                 <button type="button" class="follow btn btn-outline-warning btn-sm m-1 p-2"> Seguir</button>
                             </div>
                         </div>
                         <div class="row d-flex justify-content-center" id="habilidades">
                             <ul>
-
                                 @foreach ($habilidades as $h)
                                 <li>
                                     <button type="button" class="btn btn-deep-orange  btn-sm m-1">
@@ -169,6 +162,20 @@
                                                 </div>
                                             @endforeach
                                         </div>
+                                        <div class="row ">
+                                            @foreach ( $projetos_colaborando as $p )
+                                                <div class="col-md-4 clearfix d-none d-md-block ">
+                                                    <div class="card card-projeto mb-3">
+                                                        <img class="card-img-top" src="{{ $p->url_foto}}" alt="Card image cap ">
+                                                        <div class="card-body ">
+                                                            <h4 class="card-title titulo-projeto">{{ $p->titulo }}</h4>
+                                                            <p class="card-text descricao-projeto ">{{ $p->descricao }}</p>
+                                                            <a class="btn peach-gradient btn-mais-projeto" href="/projeto/{{ $p->id }}">Perfil</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            @endforeach
+                                        </div>
 
 
                                     {{-- <div class="carousel-item ">
@@ -176,17 +183,6 @@
                                             <div class="col-md-4 ">
                                                 <div class="card mb-2 ">
                                                     <img class="card-img-top " src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(60).jpg " alt="Card image cap ">
-                                                    <div class="card-body ">
-                                                        <h4 class="card-title ">Card title</h4>
-                                                        <p class="card-text ">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                                        <a class="btn btn-primary ">Button</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-md-4 clearfix d-none d-md-block ">
-                                                <div class="card mb-2 ">
-                                                    <img class="card-img-top " src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(47).jpg " alt="Card image cap ">
                                                     <div class="card-body ">
                                                         <h4 class="card-title ">Card title</h4>
                                                         <p class="card-text ">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -208,37 +204,31 @@
                                         </div>
                                     </div> --}}
                                     <!--/.Second slide-->
-                                    <hr class="my-4 ">
-                        
-                                        <div class="col px-5">
-                                            <h3 >Experiências</h3>
-
-                                            {{-- CARD DE EXPERIENCIAS DO USUARIO FORA DO TORO --}}
-                                            @foreach ( $experiences as $xp)
-                                            <div class="card card-body mb-4 m-4">
-                                                <div class="col d-flex align-content-around">
-                                                    <div class="col">
-                                                        <h4>{{ $xp->titulo }} </h4>
-                                                        <hr> 
-                                                        <h6>{{ $xp->localizacao }} | {{ $xp->data_realizacao }}</h6>
-                                                        
-                                                        <p>{{ $xp->descricao }}</p>
-
-                                                    </div>                        
-                                                    <div class="xp-foto d-none d-lg-block">
-                                                        
-                                                        <img class="mx-auto d-flex   " src= "{{ $xp->url_foto }}">
-
+                                        
+                                        @if ($experiences->count() > 0)
+                                            <hr class="my-4">
+                                            <div class="col px-5">
+                                                <h3 >Experiências</h3>
+                                                {{-- CARD DE EXPERIENCIAS DO USUARIO FORA DO TORO --}}
+                                                @foreach ( $experiences as $xp)
+                                                    <div class="card card-body mb-4 m-4">
+                                                        <div class="col d-flex align-content-around">
+                                                            <div class="col">
+                                                                <h4>{{ $xp->titulo }} </h4>
+                                                                <hr> 
+                                                                <h6>{{ $xp->localizacao }} | {{ $xp->data_realizacao }}</h6>
+                                                                <p>{{ $xp->descricao }}</p>
+                                                            </div>                        
+                                                            <div class="xp-foto d-none d-lg-block">
+                                                                <img class="mx-auto d-flex   " src= "{{ $xp->url_foto }}">
+                                                            </div>
+                                                        </div>
                                                     </div>
-                                                </div>
+                                                @endforeach
                                             </div>
-                                            @endforeach
- 
- 
-                                        </div>
+                                        @endif
                                     </div>    
                         </div>
-
                     </div>
                 </div>
             </div>
@@ -270,7 +260,6 @@
                 <div id="user-statistics ">
                     <h6>Estatísticas</h6>
                     <ul class="estatisticas">
-                
                         <li class="py-2"><strong>{{$user->projetos->count()}}</strong> Projetos Concluídos</li>
                         <li class="py-2">Recomendam o trabalho <strong>94%</strong> </li>
                         <li class="py-2"><strong>80%</strong>Taxa de resposta</li>
@@ -316,13 +305,12 @@
                         </li>
                         <li>
                             <a href="#" class="mr-2" data-toggle="modal" data-target="#exampleModalCenter2"><strong>Seguindo</strong></a> {{$seguindo}}
-                            
 
                             <div class="modal fade" id="exampleModalCenter2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                                 <div class="modal-dialog modal-dialog-centered" role="document">
                                     <div class="modal-content">
                                         <div class="modal-header modal-titulo">
-                                            <h5 class="modal-title" id="exampleModalLongTitle">Seguidores</h5>
+                                            <h5 class="modal-title" id="exampleModalLongTitle">Seguindo</h5>
                                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                             <span aria-hidden="true">&times;</span>
                                             </button>
@@ -336,6 +324,16 @@
                                                                 <img src="{{ $seguindo->url_foto }}" alt="">
                                                             </div>
                                                             <a href="/perfil/{{ $seguindo->username }}" class="ml-5">{{ $seguindo->username }}</a>
+                                                        </div>
+                                                    </div>
+                                                @endforeach
+                                                @foreach ( $projetos_seguidos as $p_s )
+                                                    <div class="row seguidores_user">
+                                                        <div class="item-seguidor">
+                                                            <div class="perfil-seguidor">
+                                                                <img src="{{ $p_s->url_foto }}" alt="">
+                                                            </div>
+                                                            <a href="/projeto/{{ $p_s->id }}" class="ml-5">{{ $p_s->titulo }}</a>
                                                         </div>
                                                     </div>
                                                 @endforeach
