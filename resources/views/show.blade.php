@@ -17,7 +17,7 @@
     <form class="form-inline my-2 my-lg-0" action="{{route('feed')}}">
         <input class="form-control  search" type="search" placeholder="Pesquisar" aria-label="Pesquisar" style="width: 65%;">
         <button class="btn btn-orange btn-search" type="submit">
-            <img class="search" src="img/search.png" alt="">
+            <img class="search" src="{{ url('img/search.png') }}" alt="">
         </button>
     </form>
 @endsection
@@ -70,8 +70,15 @@
                 <div class=" titulo-secao">
                     Projeto:
                 </div>
-                <div id="nomeProjeto">
-                    <h1>{{ $projeto->titulo }}</h1>
+                <div id="nomeProjeto d-flex flex-row">
+                    <h1 class="d-inline">{{ $projeto->titulo }}</h1>
+
+                    @if ($projeto->user_id == Auth::user()->id)
+                        <a href="{{ route('cadastroProjeto') }}"class="text-center"><img class="icon-config pl-1 pt-1 ml-5" src="{{ url('img/editar.png') }}" alt=""></a>
+                    @elseif($projeto->user_id != Auth::user()->id)
+                        <button type="button" class="follow btn btn-outline-warning btn-sm m-1 p-2">Seguir</button>
+                    @endif
+
                 </div>
             </div>
             <div class="row justify-content-start mb-4" id="habilidadesProjeto ">
@@ -220,7 +227,7 @@
                                     <br> Procuramos profissional que atue com edição de vídeos de forma prática e criativa, desenvolvendo uma boa narrativa para captar a atenção da audiência.
                                     <br>
                                     <div class=" row circle peach-gradient p-4 justify-content-center">
-                                        <div class="foto-perfil image-cropper d-flex justify-content-center ">
+                                        <div class="perfil-foto-colaborador">
                                             <img class="  rounded-circle  peach-gradient " src="{{ url('img/mulher1.jpg') }} " alt="perfil-user ">
                                         </div>
                                     </div>
@@ -244,10 +251,9 @@
                                     <br> <p>{{ $v->descricao }}</p>
                                     <br>
                                     <div class="habilidades d-flex flex-wrap font-smaller ">
-                                        @foreach ($habilidades as $h )
-                                            <a class="bg-secondary m-1 text-white " href=" "> {{ $h->habilidade }} </a>
+                                        @foreach ($v->habilidades as $habilidade )
+                                            <a class="bg-secondary m-1 text-white " href=" "> {{ $habilidade->habilidade }} </a>
                                         @endforeach
-                                        
                                     </div>
                                 </p>
                                 <button class="btn peach-gradient ">Aplicar</button>
@@ -400,10 +406,10 @@
         </div>
         <div class="col-lg-2 menu-esq pt-5 d-flex justify-content-start" id="menu-lado">
                 <h6 class="my-0">Sobre o autor</h6> <br>
-                <h5 class="my-0">{{ Auth::user()->username }}</h5> <br>
-                <div class="text-center">
-                    <img src="{{ Auth::user()->url_foto }}" style="border:2.5px rgb(165, 157, 157); border-radius: 50%; width:70%;">
-
+                <h5 class="my-0"><a class="user-link" href="/perfil/{{ $user_criador->username }}">{{ $user_criador->username }}</a></h5> <br>
+                
+                <div class="perfil-foto-proj">
+                    <img  src="{{ $user_criador->url_foto }}">
                 </div>
                 <div class="row  mx-auto">
                     <div id="star-rank ">
@@ -432,11 +438,11 @@
 
                 @foreach ( $user_colaborador as $user_c )
                     <div class="row px-1 pt-2 ">
-                    <div class="row mx-auto">
-                        <img class=" rounded-circle peach-gradient " height="85 em " src="{{ $user_c->url_foto }}" alt="perfil-user ">
+                    <div class="row perfil-foto-colaborador">
+                        <img class=" rounded-circle peach-gradient " height="85 em " src="{{ $user_c->url_foto }}" alt="perfil-user">
                     </div>
                     <div class="row mx-auto " style="width: 100%; ">
-                        <p class="text-center mx-auto mb-0 "><a href="# ">{{ $user_c->username }}</a></p>
+                        <p class="text-center mx-auto mb-0 "><a class="user-link" href="/perfil/{{ $user_c->username }}">{{ $user_c->username }}</a></p>
                     </div>
                     <div class="row mx-auto">
                         <p>{{ $user_c->profissao }}</p>

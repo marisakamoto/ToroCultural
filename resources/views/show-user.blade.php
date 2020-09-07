@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title')
-    <title>{{ Auth::user()->username }}</title>
+    <title>{{ $user->username }}</title>
 @endsection
 
 @section('css')
@@ -14,7 +14,7 @@
     <form class="form-inline my-2 my-lg-0" action="{{ route('feed') }}">
         <input class="form-control  search" type="search" placeholder="Pesquisar" aria-label="Pesquisar" style="width: 65%;">
         <button class="btn btn-orange btn-search" type="submit">
-            <img class="search" src="img/search.png" alt="">
+            <img class="search" src="{{ url('img/search.png') }}" alt="">
         </button>
     </form>
 @endsection
@@ -31,7 +31,7 @@
         @endif
         @else
             <li class="nav-item active">
-                <a class="nav-link" href="#">Meu perfil</a>
+                <a class="nav-link" href="{{route('home')}}">Meu perfil</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="{{ route('feed') }}">Feed</a></li>
@@ -68,7 +68,7 @@
                     <div class="col-md-4 mx-auto" id="foto">
                         <div class="row foto-perfil">
                             <div class="mx-auto perfil-foto m-0">
-                                <img  src="{{ Auth::user()->url_foto }}"></img>
+                                <img  src="{{  $user->url_foto }}"></img>
                             </div>
                         </div>
                         <div class="row pt-2">
@@ -76,16 +76,16 @@
                         </div>
                     </div>
                     <div class="col-md-8">
-                        <div class="row d-flex pb-3">
+                        <div class="col d-flex pb-3 justify-content-between">
                             <div class="col-md-6">
-                                <h3 class="nomeUser text-center">{{ Auth::user()->name }}</h3>
+                                <h3 class="nomeUser text-center">{{  $user->name }}</h3>
                             </div>
-                            <div class="col-md-6 text-center d-flex justify-content-end">
-                                <a href="{{ route('cadastroUsuario') }}"class="text-center"><img class="icon-config pl-1 pt-1 ml-5" src="{{ url('img/editar.png') }}" alt=""></a>
+                            <div class="row-md-6 text-center">
+                                <button type="button" class="follow btn btn-outline-warning btn-sm m-1 p-2"> Seguir</button>
                             </div>
                         </div>
                         <div class="row d-flex justify-content-center" id="habilidades">
-                            <ul >
+                            <ul>
                                 @foreach ($habilidades as $h)
                                 <li>
                                     <button type="button" class="btn btn-deep-orange  btn-sm m-1">
@@ -93,18 +93,61 @@
                                     </button>
                                 </li>
                                 @endforeach
+
+                                {{-- <li>
+                                    <button type="button" class="btn btn-deep-orange  btn-sm m-1">
+                                        teatro
+                                    </button>
+                                </li>
+                                <li>
+                                    <button type="button" class="btn btn-deep-orange  btn-sm m-1">
+                                        clown
+                                    </button>
+                                </li>
+                                <li><button type="button" class="btn btn-deep-orange  btn-sm m-1">
+                                    fotografia
+                                </button></li>
+                                <li><button type="button" class="btn btn-deep-orange  btn-sm m-1">
+                                    edição de vídeo
+                                </button></li> --}}
                             </ul>
-                            <p class="ml-4"> {{ Auth::user()->descricao }} </p>
+                        
+                        </div>
+                        <div class="row d-flex justify-content-center"> 
+                            <p class=" ml-4" >    {{ $user->descricao }} </p>
                         </div>
                     </div>
                 </div>
                 <hr class="my-4 ">
-                <div class="row ml-0 mt-4 mr-3 pt-2" id="portfolio">
+                <div class="col ml-0 mt-4 mr-3 pt-2" id="portfolio">
                     <div class="row px-5">
                         <h3 class="pl-5">Meus torós</h3>
                     </div>
                     <div class="row px-4">
-                        <div class="container mx-2">
+                        <div class="container  mx-1 ">
+                            <!--Carousel Wrapper-->
+                            <div id="multi-item-example " class="carousel slide carousel-multi-item " data-ride="carousel ">
+
+                                <!--Controls-->
+                                {{-- <div class="controls-top ">
+                                    <a class="btn-floating " href="#multi-item-example " data-slide="prev "><i class="fa fa-chevron-left "></i></a>
+                                    <a class="btn-floating " href="#multi-item-example " data-slide="next "><i class="fa fa-chevron-right "></i></a>
+                                </div> --}}
+                                <!--/.Controls-->
+
+                                <!--Indicators-->
+                                {{-- <ol class="carousel-indicators ">
+                                    <li data-target="#multi-item-example " data-slide-to="0 " class="active "></li>
+                                    <li data-target="#multi-item-example " data-slide-to="1 "></li>
+                                    <li data-target="#multi-item-example " data-slide-to="2 "></li>
+                                </ol> --}}
+                                <!--/.Indicators-->
+
+
+                                <!--Slides-->
+                                
+                                    <!--First slide-->
+                                    
                                         <div class="row ">
                                             @foreach ( $projetos as $p )
                                                 <div class="col-md-4 clearfix d-none d-md-block ">
@@ -134,6 +177,34 @@
                                             @endforeach
                                         </div>
 
+
+                                    {{-- <div class="carousel-item ">
+                                        <div class="row ">
+                                            <div class="col-md-4 ">
+                                                <div class="card mb-2 ">
+                                                    <img class="card-img-top " src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(60).jpg " alt="Card image cap ">
+                                                    <div class="card-body ">
+                                                        <h4 class="card-title ">Card title</h4>
+                                                        <p class="card-text ">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                                        <a class="btn btn-primary ">Button</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-4 clearfix d-none d-md-block ">
+                                                <div class="card mb-2 ">
+                                                    <img class="card-img-top " src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(48).jpg " alt="Card image cap ">
+                                                    <div class="card-body ">
+                                                        <h4 class="card-title ">Card title</h4>
+                                                        <p class="card-text ">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                                        <a class="btn btn-primary ">Button</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div> --}}
+                                    <!--/.Second slide-->
+                                        
                                         @if ($experiences->count() > 0)
                                             <hr class="my-4">
                                             <div class="col px-5">
@@ -156,7 +227,7 @@
                                                 @endforeach
                                             </div>
                                         @endif
-                             
+                                    </div>    
                         </div>
                     </div>
                 </div>
@@ -165,29 +236,31 @@
             <div class="col-md-3 menu-dir pt-5 px-4"  id="menu-lado">
                 <div id="star-rank" class="text-center">
                     <h4>Avaliação Geral</h4>
+
                     <span class="fa fa-star checked "></span>
                     <span class="fa fa-star checked "></span>
                     <span class="fa fa-star checked "></span>
                     <span class="fa fa-star "></span>
                     <span class="fa fa-star "></span> 3.0
                     <br>
-                    <p>15 avaliações</p>
+                    <p>30 avaliações</p>
                     <p>Torozero Iniciante</p>
                 </div>
                 <hr class="my-4 ">
                 <div class="row mx-auto text-center">
                     <ul id="social" class="row mx-auto">
-                        <a class="redes-link" href="#"><img class="redes" src="{{ url('img/logo-do-facebook.png') }}" alt="facebook"></a>
-                        <a class="redes-link" href="#"><img class="redes" src="{{ url('img/twitter.png') }}" alt="twitter"></a>
-                        <a class="redes-link" href="#"><img class="redes" src="{{ url('img/instagram.png') }}" alt="instagram"></a>
+                        <a class="redes-link" href="#"><img class="redes" src="{{ url('./img/logo-do-facebook.png') }}" alt="facebook"></a>
+                        <a class="redes-link" href="#"><img class="redes" src="{{ url('./img/twitter.png') }}" alt="twitter"></a>
+                        <a class="redes-link" href="#"><img class="redes" src="{{ url('./img/instagram.png') }}" alt="instagram"></a>
                         </a>
                     </ul>
                 </div>
+
                 <hr class="my-4 ">
                 <div id="user-statistics ">
                     <h6>Estatísticas</h6>
                     <ul class="estatisticas">
-                        <li class="py-2"><strong>3</strong> Projetos Concluídos</li>
+                        <li class="py-2"><strong>{{$user->projetos->count()}}</strong> Projetos Concluídos</li>
                         <li class="py-2">Recomendam o trabalho <strong>94%</strong> </li>
                         <li class="py-2"><strong>80%</strong>Taxa de resposta</li>
                     </ul>
@@ -231,8 +304,7 @@
 
                         </li>
                         <li>
-                            <a href="#" class="mr-2" data-toggle="modal" data-target="#exampleModalCenter2"><strong>Seguindo</strong></a> {{$seguindo + $projetos_seguidos->count()}}
-                            
+                            <a href="#" class="mr-2" data-toggle="modal" data-target="#exampleModalCenter2"><strong>Seguindo</strong></a> {{$seguindo}}
 
                             <div class="modal fade" id="exampleModalCenter2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                                 <div class="modal-dialog modal-dialog-centered" role="document">
@@ -244,7 +316,7 @@
                                             </button>
                                         </div>
                                         <div class="modal-body">
-                                            @if ($seguindo > 0 || $projetos_seguidos->count() > 0)
+                                            @if ($seguindo > 0)
                                                 @foreach ( $seguindo_user as $seguindo )
                                                     <div class="row seguidores_user">
                                                         <div class="item-seguidor">

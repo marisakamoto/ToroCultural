@@ -27,12 +27,6 @@ class AddProjetosUsuariosColaboradores extends Seeder
                   "updated_at"=> $now
             ],
             [
-                  "projeto_id" => 1,
-                  "userColaborador_id" => 6,
-                  "created_at" => $now,
-                  "updated_at"=> $now
-            ],
-            [
                   "projeto_id" => 2,
                   "userColaborador_id" => 1,
                   "created_at" => $now,

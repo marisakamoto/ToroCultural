@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 
+
 Route::get('/', 'PaginaInicialController@paginaInicial')->name('paginaInicial');//pagina TORÓ
 
 Route::get('/cadastroUsuario', 'cadastroUsuarioController@cadastroUsuario')->name('cadastroUsuario');
@@ -23,6 +24,8 @@ Route::get('/cadastroProjeto', 'cadastroProjetoController@cadastroProjeto')->nam
 Route::get('/perfilProjeto', 'PerfilProjetoController@perfilProjeto')->name('perfilProjeto');
 
 Route::get('/projeto/{id}', 'PerfilProjetoController@show');
+
+Route::get('/perfil/{username}', 'homeController@show');
 
 Route::get('/feed', 'FeedController@feed')->name('feed');
 

@@ -61,8 +61,8 @@ class AddUsers extends Seeder
         ]);
 
         User::create([
-            "name" => "Teste",
-            'username' => "testeuser",
+            "name" => "Carla Moraes",
+            'username' => "CMora",
             "email" => "teste@gmail.com",
             "password"=> Hash::make('123456'),
             'descricao' => "Contadora de histórias, formação em clown e cantora",

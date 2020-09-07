@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="{{ asset('css/feed-giu.css') }}">
 @endsection
 
+
 @section('search')
     <form class="form-inline my-2 my-lg-0" action="{{route('feed')}}">
         <input class="form-control  search" type="search" placeholder="Pesquisar" aria-label="Pesquisar" style="width: 65%;">

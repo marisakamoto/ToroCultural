@@ -8,9 +8,16 @@ class Experience_card extends Model
 {
     protected $fillable = ['user_id', 'titulo', 'descricao', 'localizacao', 'data_realizacao', 'url_foto'];
 
-    public function experience_card_categorias()
+    public function categorias()
     {
-      return this->belongsToMany('App\User', 'experience_card_categoria', 'experience_card_id', 'categoria_id');
+      return $this->belongsToMany('App\Categoria', 'experience_card_categoria', 'experience_card_id', 'categoria_id');
+    }
+    
+    
+    public function user()
+    {
+        return $this->belongsTo('App\User');
     }
 
 }
+

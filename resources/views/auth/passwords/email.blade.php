@@ -5,7 +5,7 @@
 @endsection
 
 @section('css')
-    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="{{ url('css/login.css') }}">
 @endsection
 
 @section('nav-links')
@@ -43,23 +43,20 @@
 @endsection
 
 @section('content')
-    <h2 class="titulo-register mt-2" style="text-align:center">Redefinir Senha</h2>
-    <div class="container">
-        <div class="row justify-content-center">
+    <h2 class="titulo-register mt-5" style="text-align:center">Redefinir Senha</h2>
+    <div class="container my-5">
+        <div class="row justify-content-center p-3 pb-5">
             <div class="col-md-8">
-                <div class="card">
-                    <div class="card-header">{{ __('Reset Password') }}</div>
-
+                <div class="card p-4">
+                    
                     <div class="card-body">
                         @if (session('status'))
                             <div class="alert alert-success" role="alert">
                                 {{ session('status') }}
                             </div>
                         @endif
-
                         <form method="POST" action="{{ route('password.email') }}">
                             @csrf
-
                             <div class="form-group row">
                                 <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
 
