@@ -10,10 +10,10 @@ class Habilidade extends Model
         'habilidade',
     ];
 
-    
     public function vagas()
     {
         return $this->belongsToMany('App\Vaga', 'habilidade_vaga', 'habilidade_id', 'vaga_id'); 
+
     }
 
     // N usuarios: N habilidades

@@ -31,7 +31,7 @@ class User extends Authenticatable
         return $this->belongsToMany('App\Projeto', 'projeto_user_colaborador', 'userColaborador_id', 'projeto_id');
     }
 
-    //Telacionamento: Usuário pode ser guir vários projetos e um projeto pode ser seguido 
+    //Telacionamento: Usuário pode ser guir vários projetos e um projeto pode ser seguido
     // por vários usuários N:N
     public function user_projetoSeguido()
     {

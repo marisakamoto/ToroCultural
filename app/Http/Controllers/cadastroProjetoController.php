@@ -9,5 +9,4 @@ class cadastroProjetoController extends Controller
     public function cadastroProjeto(){
         return view('cadastro-projeto');
     }
-    
 }
