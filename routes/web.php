@@ -20,7 +20,8 @@ Route::post('/contato', 'PaginaInicialController@enviaContato')->name('contato')
 
 Route::get('/cadastroUsuario', 'cadastroUsuarioController@cadastroUsuario')->name('cadastroUsuario');
 
-Route::get('/cadastroProjeto', 'cadastroProjetoController@cadastroProjeto')->name('cadastroProjeto');
+Route::get('/projetos/create', 'PerfilProjetoController@create')->name('cadastroProjeto');
+
 
 Route::get('/perfilProjeto', 'PerfilProjetoController@perfilProjeto')->name('perfilProjeto');
 

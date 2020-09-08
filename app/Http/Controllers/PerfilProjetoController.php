@@ -25,5 +25,10 @@ class PerfilProjetoController extends Controller
         return view('show', compact('projeto', 'categorias', 'user_colaborador', 'vagas', 'user_criador'));
     }
 
+    public function create()
+    {
+        return view ('projetos.create');
+    }
+
 
 }

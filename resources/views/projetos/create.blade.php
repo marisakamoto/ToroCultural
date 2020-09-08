@@ -63,33 +63,35 @@
         <h2 id="title-form">Cadastro do Projeto</h2>
         <section class="container cadastro-projeto p-4 mb-5">
             <div class="row">
-                <div class="col-md-4 text-center pt-3">
-                    <canvas id="UgCanvas" width="150px" height="150px" style="border:2.1px solid rgb(165, 157, 157); border-radius: 10px;">
-                    </canvas></br>
-                    <button class="btn-deep-orange btn" type="button">Alterar Foto</button>
-                </div>
-                <div class="col-md-8 form-user">
-                    <form action="">
-                        <div class="form-group mb-0">
-                            <label for="titulo-proj">Título do Projeto</label>
-                            <input class=" form-control" type="text" name="tirulo-proj" id="titulo-proj" Required>
+                <div class="col">
+                    <form action="" class="d-flex align-items-center">
+                        <div class="col-md-4 text-center pt-3">
+                            <canvas id="UgCanvas" width="150px" height="150px" style="border:2.1px solid rgb(165, 157, 157); border-radius: 10px;">
+                            </canvas></br>
+                            <button class="btn-deep-orange btn" type="button">Alterar Foto</button>
                         </div>
-                        <div class="form-group mb-0">
-                            <label for="disponivel">Data do evento</label>
-                            <input class="form-control"  type="date" name="disponivel" id="disponivel" Required>
-                        </div>
-                        <div class="form-group mb-0">
-                            <label for="localizacao">Local</label>
-                            <input class="form-control" type="text" name="localizacao" id="localizacao" Required>
-                        </div>
-                        <div class="form-group mb-0">
-                            <label for="descricaoProj">Descrição </label>
-                            <textarea name="descricaoProj" id="descricaoProj" class="form-control"></textarea>
-                        </div>
-                        <div class="form-group mb-0">
-                            <label for="categoriasProj">Categorias</label>
-                            <textarea name="categoriasProj" id="categoriasProj" class="form-control">
-                            </textarea></br>
+                        <div class="col-md-8 form-user">
+                            <div class="form-group mb-0">
+                                <label for="titulo-proj">Título do Projeto</label>
+                                <input class=" form-control" type="text" name="tirulo-proj" id="titulo-proj" Required>
+                            </div>
+                            <div class="form-group mb-0">
+                                <label for="disponivel">Data do evento</label>
+                                <input class="form-control"  type="date" name="disponivel" id="disponivel" Required>
+                            </div>
+                            <div class="form-group mb-0">
+                                <label for="localizacao">Local</label>
+                                <input class="form-control" type="text" name="localizacao" id="localizacao" Required>
+                            </div>
+                            <div class="form-group mb-0">
+                                <label for="descricaoProj">Descrição </label>
+                                <textarea name="descricaoProj" id="descricaoProj" class="form-control"></textarea>
+                            </div>
+                            <div class="form-group mb-0">
+                                <label for="categoriasProj">Categorias</label>
+                                <textarea name="categoriasProj" id="categoriasProj" class="form-control">
+                                </textarea></br>
+                            </div>
                         </div>
                     </form>
                 </div>
@@ -167,7 +169,7 @@
                 </div>
                 <div class="modal-footer">
 
-                <button type="button" class="btn-deep-orange btn"><a class="modal-para-perfil"href={{ route('perfilProjeto') }}"> Ir para o Meu Projeto</a></button>
+                <button type="button" class="btn-deep-orange btn"><a class="modal-para-perfil"href="{{ route('perfilProjeto') }}"> Ir para o Meu Projeto</a></button>
                 </div>
             </div>
             </div>
