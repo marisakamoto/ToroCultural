@@ -97,7 +97,8 @@
         <section class="container form-contato mx-auto pb-4" id="formEntreEmContato">
             <div class="caixa-contato mx-auto">
                 <h1 class="display-4 pl-3">Entre em contato</h1>
-                <form>
+                <form method="POST" action= "/contato">
+                @csrf
                     <div class="form-group pl-3">
                         <label for="nome">Nome</label></br>
                         <input type="text" id="nome" name="nome" required></br>
