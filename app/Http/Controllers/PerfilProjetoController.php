@@ -15,6 +15,8 @@ class PerfilProjetoController extends Controller
 
     public function show($id)
     {
+        
+            
         //Como as tabelas estão relacionadas, posso chamá-las através do model projeto
         $projeto = Projeto::find($id); 
         $user_criador = $projeto->user_criador;
@@ -28,6 +30,25 @@ class PerfilProjetoController extends Controller
     public function create()
     {
         return view ('projetos.create');
+    }
+
+    public function store(Request $request)
+    {
+        $projeto = new Projeto;
+        if($request->hasfile('url_foto') && $request->url_foto->isvalid()){
+            $url_foto = $request->url_foto->store('projetos');
+        }
+        $projeto->url_foto = $url_foto;
+        $projeto->user_id = auth()->user()->id;
+        $projeto->titulo = request('titulo');
+        $projeto->descricao = request('descricao');
+        $projeto->localizacao = request('localizacao');
+        $projeto->data_de_realizacao = request('data_de_realizacao');
+        $projeto->save();
+
+        // dd($projeto->id);
+        return redirect('/projeto/'.$projeto->id);
+
     }
 
 

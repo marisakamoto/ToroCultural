@@ -19,8 +19,8 @@ class CreateProjetosTable extends Migration
             $table->string('titulo');
             $table->text('descricao')->nullable();
             $table->text('localizacao')->nullable();
-            $table->date('data_de_realizacao');
-            $table->string('url_foto')->nullable();
+            $table->date('data_de_realizacao')->nullable();
+            $table->string('url_foto')->default('/img/projetos/default_profile.png');
             $table->timestamps();
 
         });

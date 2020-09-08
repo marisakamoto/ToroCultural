@@ -12,7 +12,7 @@
     <form class="form-inline my-2 my-lg-0" action="{{ route('feed') }}">
         <input class="form-control  search" type="search" placeholder="Pesquisar" aria-label="Pesquisar" style="width: 65%;">
         <button class="btn btn-orange btn-search" type="submit">
-            <img class="search" src="img/search.png" alt="">
+            <img class="search" src="{{ url('img/search.png') }}" alt="">
         </button>
     </form>
 @endsection
@@ -64,35 +64,40 @@
         <section class="container cadastro-projeto p-4 mb-5">
             <div class="row">
                 <div class="col">
-                    <form action="" class="d-flex align-items-center">
-                        <div class="col-md-4 text-center pt-3">
-                            <canvas id="UgCanvas" width="150px" height="150px" style="border:2.1px solid rgb(165, 157, 157); border-radius: 10px;">
-                            </canvas></br>
-                            <button class="btn-deep-orange btn" type="button">Alterar Foto</button>
+                    <form action="" method="POST" enctype="multipart/form-data">
+                    @csrf
+                        <div class="d-flex align-items-center">
+                            <div class="col-md-4 text-center pt-3 d-flex align-items-center flex-column">
+                                <canvas id="UgCanvas" width="150px" height="150px" style="border:2.1px solid rgb(165, 157, 157); border-radius: 10px;">
+                                </canvas></br>
+                                <input type="file" name="url_foto" class="btn block">
+                            </div>
+                            <div class="col-md-8 form-user">
+                                <div class="form-group mb-0">
+                                    <label for="titulo">Título do Projeto</label>
+                                    <input class=" form-control" type="text" name="titulo" id="titulo" >
+                                </div>
+                                <div class="form-group mb-0">
+                                    <label for="data_de_realizacao">Data do evento</label>
+                                    <input class="form-control"  type="date" name="data_de_realizacao" id="data_de_realizacao" >
+                                </div>
+                                <div class="form-group mb-0">
+                                    <label for="localizacao">Local</label>
+                                    <input class="form-control" type="text" name="localizacao" id="localizacao" >
+                                </div>
+                                <div class="form-group mb-0">
+                                    <label for="descricao">Descrição </label>
+                                    <textarea name="descricao" id="descricao" class="form-control"></textarea>
+                                </div>
+                                <div class="form-group mb-0">
+                                    <label for="categoriasProj">Categorias</label>
+                                    <textarea name="categoriasProj" id="categoriasProj" class="form-control">
+                                    </textarea></br>
+                                </div>
+                            </div>
                         </div>
-                        <div class="col-md-8 form-user">
-                            <div class="form-group mb-0">
-                                <label for="titulo-proj">Título do Projeto</label>
-                                <input class=" form-control" type="text" name="tirulo-proj" id="titulo-proj" Required>
-                            </div>
-                            <div class="form-group mb-0">
-                                <label for="disponivel">Data do evento</label>
-                                <input class="form-control"  type="date" name="disponivel" id="disponivel" Required>
-                            </div>
-                            <div class="form-group mb-0">
-                                <label for="localizacao">Local</label>
-                                <input class="form-control" type="text" name="localizacao" id="localizacao" Required>
-                            </div>
-                            <div class="form-group mb-0">
-                                <label for="descricaoProj">Descrição </label>
-                                <textarea name="descricaoProj" id="descricaoProj" class="form-control"></textarea>
-                            </div>
-                            <div class="form-group mb-0">
-                                <label for="categoriasProj">Categorias</label>
-                                <textarea name="categoriasProj" id="categoriasProj" class="form-control">
-                                </textarea></br>
-                            </div>
-                        </div>
+                        <button class="btn-deep-orange btn align-self-center" type="Submit">Finalizar</button>
+                        
                     </form>
                 </div>
             </div>
@@ -106,17 +111,17 @@
                     <form action="">
                     <div class="form-group my-0">
                         <label for="tituloUser">Profissão ou nome de usuário</label>
-                        <input class="form-control py-0" type="text" name="tituloUser" id="tituloUser" Required>
+                        <input class="form-control py-0" type="text" name="tituloUser" id="tituloUser" >
                     </div>
                     <div class="form-group my-0">
                         <div class="row">
                             <div class="col-md-6">
                                 <label class="my-0" for="primeiraData"> Duração de:</label>
-                                <input  class="form-control" type="date" name="primeiraData" id="primeiraData" Required>
+                                <input  class="form-control" type="date" name="primeiraData" id="primeiraData" >
                             </div>
                             <div class="col-md-6">
                                 <label  class="my-0" for="segundaData">até:</label>
-                                <input  class="form-control" type="date" name="segundaData" id="segundaData" Required>
+                                <input  class="form-control" type="date" name="segundaData" id="segundaData" >
                             </div>
                         </div>
                     </div>
@@ -148,13 +153,13 @@
             </div>
         </section>
         <div class="add-experiencia">
-            <button class="btn-exp-user" type="Submit"><img style="width: 1em; margin-right: 5px;" src="img/mais.png" alt="add-experiencia">
+            <button class="btn-exp-user" type="Submit"><img style="width: 1em; margin-right: 5px;" src="{{ url('img/mais.png') }}" alt="add-experiencia">
                     Adicionar profissional
                 </button>
         </div>
-        <div class="botao-final-user"><button class="btn-deep-orange btn" type="Submit" data-toggle="modal" data-target="#modalExemplo">Finalizar</button></div>
+        
 
-        <!-- Modal -->
+        {{-- <!-- Modal -->
         <div class="modal fade" id="modalExemplo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -174,6 +179,6 @@
             </div>
             </div>
         </div>
-        <!--fim Modal-->
+        <!--fim Modal--> --}}
     </main>
 @endsection
