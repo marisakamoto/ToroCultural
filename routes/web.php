@@ -22,8 +22,7 @@ Route::get('/cadastroUsuario', 'cadastroUsuarioController@cadastroUsuario')->nam
 
 Route::get('/projetos/create', 'PerfilProjetoController@create')->name('cadastroProjeto');
 Route::post('/projetos/create', 'PerfilProjetoController@store');
-Route::get('/perfilProjeto', 'PerfilProjetoController@perfilProjeto')->name('perfilProjeto');
-
+Route::get('/projetos/vaga', 'PerfilProjetoController@createVaga')->name('cadastroVaga');
 Route::get('/projeto/{id}', 'PerfilProjetoController@show');
 
 Route::get('/perfil/{username}', 'homeController@show');

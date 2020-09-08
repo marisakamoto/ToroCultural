@@ -48,7 +48,11 @@ class PerfilProjetoController extends Controller
 
         // dd($projeto->id);
         return redirect('/projeto/'.$projeto->id);
+    }
 
+    public function createVaga()
+    {
+        return view ('projetos.vagas.create');
     }
 
 

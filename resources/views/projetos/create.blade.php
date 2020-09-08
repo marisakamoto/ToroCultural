@@ -6,6 +6,7 @@
 
 @section('css')
     <link rel="stylesheet" href="{{ asset('css/cadastro.css') }}">
+    <script src="{{ asset('js/categoria.js') }}" defer></script>
 @endsection
 
 @section('search')
@@ -66,7 +67,7 @@
                 <div class="col">
                     <form action="" method="POST" enctype="multipart/form-data">
                     @csrf
-                        <div class="d-flex align-items-center">
+                        <div class="d-flex align-items-center content-projeto">
                             <div class="col-md-4 text-center pt-3 d-flex align-items-center flex-column">
                                 <canvas id="UgCanvas" width="150px" height="150px" style="border:2.1px solid rgb(165, 157, 157); border-radius: 10px;">
                                 </canvas></br>
@@ -90,9 +91,12 @@
                                     <textarea name="descricao" id="descricao" class="form-control"></textarea>
                                 </div>
                                 <div class="form-group mb-0">
-                                    <label for="categoriasProj">Categorias</label>
-                                    <textarea name="categoriasProj" id="categoriasProj" class="form-control">
-                                    </textarea></br>
+                                    <label for="categoria">Categorias</label>
+                                    <div class="cont-categoria">
+                                        <div class="tag-cont-categoria">
+                                            <input type="text" id="g_autocomplete" name="categoria" class="form-control"><br>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -102,83 +106,5 @@
                 </div>
             </div>
         </section>
-        <section class="container cadastro-profissionais p-3">
-            <div class="row px-4">
-                <h4 class="pl-3 pt-3">Profissional 1</h4>
-            </div>
-            <div class="row px-4 ">
-                <div class="col-md-6">
-                    <form action="">
-                    <div class="form-group my-0">
-                        <label for="tituloUser">Profissão ou nome de usuário</label>
-                        <input class="form-control py-0" type="text" name="tituloUser" id="tituloUser" >
-                    </div>
-                    <div class="form-group my-0">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <label class="my-0" for="primeiraData"> Duração de:</label>
-                                <input  class="form-control" type="date" name="primeiraData" id="primeiraData" >
-                            </div>
-                            <div class="col-md-6">
-                                <label  class="my-0" for="segundaData">até:</label>
-                                <input  class="form-control" type="date" name="segundaData" id="segundaData" >
-                            </div>
-                        </div>
-                    </div>
-                    </form>
-                </div>
-                <div class="col-md-6">
-                    <form action="">
-                        <div class="form-group my-0">
-                            <label for="projHabilidades">Habilidades</label>
-                            <textarea class="form-control py-0" name="projHabilidades"  id="projHabilidades"  rows="2"></textarea>
-                        </div>
-
-                        <div class="form-group my-0">
-                            <div class="form-group my-0">
-                                <label for="tituloUser">Remuneração até:</label>
-                                <input class="form-control py-0" type="text" name="tituloUser" id="tituloUser" placeholder="R$"Required>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-            <div class="row px-5" >
-                <form action="" class="descricaoProfissional">
-                    <div class="form-group my-0">
-                        <label for="descProfissional">Descrição do profissional</label>
-                        <textarea class="form-control py-0" name="descProfissional"  id="descProfissional"  rows="2"></textarea>
-                    </div>
-                </form>
-            </div>
-        </section>
-        <div class="add-experiencia">
-            <button class="btn-exp-user" type="Submit"><img style="width: 1em; margin-right: 5px;" src="{{ url('img/mais.png') }}" alt="add-experiencia">
-                    Adicionar profissional
-                </button>
-        </div>
-        
-
-        {{-- <!-- Modal -->
-        <div class="modal fade" id="modalExemplo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header modal-titulo">
-                <h5 class="modal-title"  id="exampleModalLabel" >Informações salvas com sucesso</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-                </div>
-                <div class="modal-body">
-                    Agora entre em seu projeto para ver como ficou!
-                </div>
-                <div class="modal-footer">
-
-                <button type="button" class="btn-deep-orange btn"><a class="modal-para-perfil"href="{{ route('perfilProjeto') }}"> Ir para o Meu Projeto</a></button>
-                </div>
-            </div>
-            </div>
-        </div>
-        <!--fim Modal--> --}}
     </main>
 @endsection

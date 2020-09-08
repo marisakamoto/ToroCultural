@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -22,7 +24,6 @@
     border: rgb(165, 157, 157) 1px solid;
     border-radius: 10px;
 }
-
 
 .alterar-foto {
     font-family: 'Lato';
@@ -71,13 +72,13 @@
 
 
 .cadastro-exp-extra, .cadastro-profissionais{
-    width: 70%!important;
+    width: 60%!important;
     border: rgb(165, 157, 157) 1.4px solid;
     font-family: 'Lato';
     font-size: 1.2em;
     color: rgb(248, 117, 56);
-    background-color: rgb(255, 224, 212);
-    border-radius: 20px 20px 0 0;
+    background-color: white;
+    border-radius: 10px 10px 10px 10px;
 }
 
 .add-foto-exp {
@@ -133,4 +134,71 @@
 .btn-cadastro:hover{
     font-size: 1.02em!important;
 
+}
+
+
+@media screen and (max-width: 650px) {
+    .content-projeto {
+        display: flex;
+        flex-direction: column;
+    }    
+}
+
+@media screen and (max-width: 800px) {
+    .content-projeto {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+
+
+
+
+
+
+/* CATEGORIAS */
+
+
+
+
+.cont, .cont-categoria {
+    text-align: center;
+    padding: 5px;
+    border-radius: 10px 10px 10px 10px;
+    border: solid 1px rgb(161, 156, 156);
+    margin: 0 auto;
+    margin-bottom: 8px;
+}
+.tag-cont, .tag-cont-categoria{
+    padding: 2px;
+    display: flex;
+    
+}
+
+.tag-cont .tag, .tag-cont-categoria .tagCategoria {
+    padding: 5px;
+    border: 1px solid #ccc;
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+}
+
+.tag i, .tagCategoria i{
+    font-size: 16px;
+    margin-left: 5px;
+}
+
+.tag-cont input, .tag-cont-categoria input{
+    flex:1;
+    font-size: 16px;
+    padding: 5px;
+    outline: none;
+    border: 0;
+}
+
+.material-icons:hover{
+    cursor: pointer;
 }

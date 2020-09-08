@@ -75,6 +75,7 @@
 
                     @if ($projeto->user_id == Auth::user()->id)
                         <a href="{{ route('cadastroProjeto') }}"class="text-center"><img class="icon-config pl-1 pt-1 ml-5" src="{{ url('img/editar.png') }}" alt=""></a>
+                        <a href="{{ route('cadastroVaga') }}"class="text-center">Nova Vaga</a>
                     @elseif($projeto->user_id != Auth::user()->id)
                         <button type="button" class="follow btn btn-outline-warning btn-sm m-1 p-2">Seguir</button>
                     @endif
