@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Projeto;
+use App\Categoria;
+use App\Habilidade;
 
 
 class PerfilProjetoController extends Controller
@@ -29,7 +31,8 @@ class PerfilProjetoController extends Controller
 
     public function create()
     {
-        return view ('projetos.create');
+        $categorias = Categoria::All();
+        return view ('projetos.create', compact('categorias'));
     }
 
     public function store(Request $request)
@@ -52,7 +55,8 @@ class PerfilProjetoController extends Controller
 
     public function createVaga()
     {
-        return view ('projetos.vagas.create');
+        $habilidades = Habilidade::All();
+        return view ('projetos.vagas.create', compact('habilidades'));
     }
 
 

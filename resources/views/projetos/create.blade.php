@@ -6,7 +6,6 @@
 
 @section('css')
     <link rel="stylesheet" href="{{ asset('css/cadastro.css') }}">
-    <script src="{{ asset('js/categoria.js') }}" defer></script>
 @endsection
 
 @section('search')
@@ -90,14 +89,24 @@
                                     <label for="descricao">Descrição </label>
                                     <textarea name="descricao" id="descricao" class="form-control"></textarea>
                                 </div>
-                                <div class="form-group mb-0">
-                                    <label for="categoria">Categorias</label>
-                                    <div class="cont-categoria">
-                                        <div class="tag-cont-categoria">
-                                            <input type="text" id="g_autocomplete" name="categoria" class="form-control"><br>
-                                        </div>
+
+                                <div class="form-group mb-0 my-2 p-2" style="border: solid gray 1px">
+                                    <label for="categoria">Categorias</label></br>
+                                    
+                                    @foreach ($categorias as $categoria )
+                                        <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="{{ $categoria->categoria }}" value="{{ $categoria->categoria }}">
+                                        <label class="form-check-label" for="{{ $categoria->categoria }}">{{ $categoria->categoria }}</label>
                                     </div>
+                                    @endforeach
+ 
                                 </div>
+
+
+
+
+
+
                             </div>
                         </div>
                         <button class="btn-deep-orange btn align-self-center" type="Submit">Finalizar</button>
