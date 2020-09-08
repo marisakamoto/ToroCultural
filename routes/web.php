@@ -20,10 +20,9 @@ Route::post('/contato', 'PaginaInicialController@enviaContato')->name('contato')
 
 Route::get('/cadastroUsuario', 'cadastroUsuarioController@cadastroUsuario')->name('cadastroUsuario');
 
-Route::get('/cadastroProjeto', 'cadastroProjetoController@cadastroProjeto')->name('cadastroProjeto');
-
-Route::get('/perfilProjeto', 'PerfilProjetoController@perfilProjeto')->name('perfilProjeto');
-
+Route::get('/projetos/create', 'PerfilProjetoController@create')->name('cadastroProjeto');
+Route::post('/projetos/create', 'PerfilProjetoController@store');
+Route::get('/projetos/vaga', 'PerfilProjetoController@createVaga')->name('cadastroVaga');
 Route::get('/projeto/{id}', 'PerfilProjetoController@show');
 
 Route::get('/perfil/{username}', 'homeController@show');
