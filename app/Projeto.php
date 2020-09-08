@@ -16,7 +16,7 @@ class Projeto extends Model
     ];
 
     //Relacionamento com o usuário criador 1:N
-    public function user_criador()  
+    public function user_criador()
     {
         return $this->belongsTo('App\User', 'user_id');
     }
@@ -24,7 +24,7 @@ class Projeto extends Model
     //Relacionamento entre Projetos e categorias N:N
     public function categorias()
     {
-        return $this->belongsToMany('App\categoria', 'projeto_categoria');
+        return $this->belongsToMany('App\Categoria', 'projeto_categoria');
     }
 
     //Relacionamento Projeto_Usuario_Colaborador N:N
@@ -46,7 +46,7 @@ class Projeto extends Model
         return $this->hasMany('App\Publish');
     }
 
-    //Telacionamento: Usuário pode ser guir vários projetos e um projeto pode ser seguido 
+    //Telacionamento: Usuário pode ser guir vários projetos e um projeto pode ser seguido
     // por vários usuários N:N
     public function user_projetoSeguido()
     {
