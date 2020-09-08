@@ -6,6 +6,7 @@
 
 @section('css')
     <link rel="stylesheet" href="{{ asset('css/cadastro.css') }}">
+    <script src="{{ asset('js/habilidade.js') }}" defer></script>
 @endsection
 
 @section('search')
@@ -84,9 +85,13 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="form-group my-0">
-                            <label for="projHabilidades">Habilidades</label>
-                            <textarea class="form-control py-0" name="projHabilidades"  id="projHabilidades"  rows="2"></textarea>
+                        <div class="form-group mb-0">
+                            <label for="habilidades">Habilidades</label>
+                            <div class="cont-habilidade">
+                                <div class="tag-cont-habilidade">
+                                    <input type="text" id="h_autocomplete" name="habilidades" class="form-control"><br>
+                                </div>
+                            </div>
                         </div>
                         <div class="form-group my-0">
                             <div class="form-group my-0">
@@ -98,9 +103,9 @@
                         <label for="descProfissional">Descrição do profissional</label>
                             <textarea class="form-control py-0" name="descProfissional"  id="descProfissional"  rows="2"></textarea>
                          </div>
-                        <button class="btn-deep-orange btn" type="Submit"><img style="width: 1em; margin-right: 5px;" src="{{ url('img/mais.png') }}" alt="add-experiencia">
+                        {{-- <button class="btn-deep-orange btn" type="Submit"><img style="width: 1em; margin-right: 5px;" src="{{ url('img/mais.png') }}" alt="add-experiencia">
                             Adicionar profissional
-                        </button>
+                        </button> --}}
                     </form>
                 </div>  
             </div>

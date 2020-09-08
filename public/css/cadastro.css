@@ -159,9 +159,6 @@
 
 /* CATEGORIAS */
 
-
-
-
 .cont, .cont-categoria {
     text-align: center;
     padding: 5px;
@@ -192,6 +189,50 @@
 }
 
 .tag-cont input, .tag-cont-categoria input{
+    flex:1;
+    font-size: 16px;
+    padding: 5px;
+    outline: none;
+    border: 0;
+}
+
+.material-icons:hover{
+    cursor: pointer;
+}
+
+
+/* HABILIDADES */
+
+.cont, .cont-habilidade {
+    text-align: center;
+    padding: 5px;
+    border-radius: 10px 10px 10px 10px;
+    border: solid 1px rgb(161, 156, 156);
+    margin: 0 auto;
+    margin-bottom: 8px;
+}
+.tag-cont, .tag-cont-habilidade{
+    padding: 2px;
+    display: flex;
+    
+}
+
+.tag-cont .tag, .tag-cont-habilidade .tagHabilidade {
+    padding: 5px;
+    border: 1px solid #ccc;
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+}
+
+.tag i, .tagHabilidade i{
+    font-size: 16px;
+    margin-left: 5px;
+}
+
+.tag-cont input, .tag-cont-habilidade input{
     flex:1;
     font-size: 16px;
     padding: 5px;
