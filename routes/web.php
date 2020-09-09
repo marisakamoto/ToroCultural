@@ -20,10 +20,13 @@ Route::post('/contato', 'PaginaInicialController@enviaContato')->name('contato')
 
 Route::get('/cadastroUsuario', 'cadastroUsuarioController@cadastroUsuario')->name('cadastroUsuario');
 
-Route::get('/projetos/create', 'PerfilProjetoController@create')->name('cadastroProjeto');
-Route::post('/projetos/create', 'PerfilProjetoController@store');
-Route::get('/projetos/vaga', 'PerfilProjetoController@createVaga')->name('cadastroVaga');
-Route::get('/projeto/{id}', 'PerfilProjetoController@show');
+Route::get('/projetos/create', 'PerfilProjetoController@create')->name('cadastroProjeto'); // CADASTRO
+Route::post('/projetos/create', 'PerfilProjetoController@store'); //MÉTODO PARA SALVAR DADOS
+Route::get('/projetos/vaga', 'PerfilProjetoController@createVaga')->name('cadastroVaga'); // CADASTRO
+Route::get('/projeto/{id}', 'PerfilProjetoController@show');//VIEW DO PROJETO
+Route::get('/projeto/edit/{id}', 'PerfilProjetoController@edit')->name('editar');//VIEW EDIT
+Route::put('/projeto/update/{id}', 'PerfilProjetoController@update')->name('update'); //Atulizar dados
+Route::delete('/projeto/delete/{id}', 'PerfilProjetoController@delete')->name('delete');
 
 Route::get('/perfil/{username}', 'homeController@show');
 

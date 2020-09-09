@@ -33,7 +33,7 @@ class HomeController extends Controller
 
         if (Auth::check()){
             // $projetos = Projeto::search('')->where('user_id', auth()->user()->id);
-            $projetos = Projeto::where('user_id', auth()->user()->id)->take(5)->get();
+            $projetos = Projeto::where('user_id', auth()->user()->id)->take(4)->get();
             $users = User::find(auth()->user()->id);
             $projetos_colaborando = $users->projeto_user_colaborador;
                 $habilidades = $users->habilidades;
@@ -66,11 +66,7 @@ class HomeController extends Controller
         $seguidores_users = $user->seguidores;
         $experiences = $user->experience()->get();
         $projetos_seguidos = $user->user_projetoSeguido;
-        // $seguindo = seguindo()->user_seguindo_id;
-        // echo $seguindo;
 
-        // $habilidades = $vagas->habilidades;
-        // Não dá certo, porque $vagas é um array de vagas, então, preciso entrar em cada vaga para buscar as habilidades
         return view('show-user', compact('user', 'username','projetos', 'habilidades', 'seguindo', 'seguindo_user', 'seguidores','seguidores_users', 'experiences', 'projetos_seguidos', 'projetos_colaborando'));
     }
 

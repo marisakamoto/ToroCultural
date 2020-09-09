@@ -81,7 +81,7 @@
                                 <h3 class="nomeUser text-center">{{ Auth::user()->name }}</h3>
                             </div>
                             <div class="col-md-6 text-center d-flex justify-content-end">
-                                <a href="{{ route('cadastroUsuario') }}"class="text-center"><img class="icon-config pl-1 pt-1 ml-5" src="{{ url('img/editar.png') }}" alt=""></a>
+                                <a href="{{ route('cadastroUsuario') }}"class="text-center"><img class="icon-config pl-1 pt-1 ml-5" src="{{ url('img/edit.svg') }}" alt=""></a>
                             </div>
                         </div>
                         <div class="row d-flex justify-content-center" id="habilidades">
@@ -105,6 +105,8 @@
                     </div>
                     <div class="row px-4">
                         <div class="container mx-2">
+
+                                        {{-- CARDS PROJETOS CRIADOS PELO USUARIO --}}
                                         <div class="row ">
                                             @foreach ( $projetos as $p )
                                                 <div class="col-md-4 clearfix d-none d-md-block ">
@@ -119,13 +121,15 @@
                                                 </div>
                                             @endforeach
                                         </div>
+
+                                        {{-- CARDS ONDE O USUARIO É O COLABORADOR --}}
                                         <div class="row ">
                                             @foreach ( $projetos_colaborando as $p )
                                                 <div class="col-md-4 clearfix d-none d-md-block ">
                                                     <div class="card card-projeto mb-3">
                                                         <img class="card-img-top" src="{{ $p->url_foto}}" alt="Card image cap ">
                                                         <div class="card-body ">
-                                                            <h4 class="card-title titulo-projeto">{{ $p->titulo }}</h4>
+                                                            <h4 class="card-title titulo-projeto">{{ $p->titulo }} - Colaborador</h4>
                                                             <p class="card-text descricao-projeto ">{{ $p->descricao }}</p>
                                                             <a class="btn peach-gradient btn-mais-projeto" href="/projeto/{{ $p->id }}">Perfil</a>
                                                         </div>
@@ -134,11 +138,11 @@
                                             @endforeach
                                         </div>
 
+                                        {{-- CARDS EXPERIENCIAS --}}
                                         @if ($experiences->count() > 0)
                                             <hr class="my-4">
                                             <div class="col px-5">
                                                 <h3 >Experiências</h3>
-                                                {{-- CARD DE EXPERIENCIAS DO USUARIO FORA DO TORO --}}
                                                 @foreach ( $experiences as $xp)
                                                     <div class="card card-body mb-4 m-4">
                                                         <div class="col d-flex align-content-around">
