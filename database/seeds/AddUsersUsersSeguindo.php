@@ -13,7 +13,7 @@ class AddUsersUsersSeguindo extends Seeder
     public function run()
     {
         $now = date('Y-m-d H:i:s');
-        DB::table('user_userSeguindo')->insert([
+        DB::table('user_userseguindo')->insert([
             [
                   "user_id" => 6,
                   "user_seguindo_id" => 1,

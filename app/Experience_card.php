@@ -12,8 +12,7 @@ class Experience_card extends Model
     {
       return $this->belongsToMany('App\Categoria', 'experience_card_categoria', 'experience_card_id', 'categoria_id');
     }
-    
-    
+
     public function user()
     {
         return $this->belongsTo('App\User');
