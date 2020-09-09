@@ -52,6 +52,39 @@ class PerfilProjetoController extends Controller
         return redirect('/projeto/'.$projeto->id);
     }
 
+    //RETORNA VIEW COM FORMULÁRIO PARA EDITAR
+    public function edit($id)
+    {
+        $projeto = Projeto::find($id);
+        return view('projetos.edit', compact('projeto'));
+    }
+
+    public function update($id, Request $request)
+    {
+        $projeto = Projeto::find($id);
+
+        // $projeto = new Projeto;
+        // if($request->hasfile('url_foto') && $request->url_foto->isvalid()){
+        //     $url_foto = $request->url_foto->store('projetos');
+        // }
+        // $projeto->url_foto = $url_foto;
+        $projeto->titulo = request('titulo');
+        $projeto->descricao = request('descricao');
+        $projeto->localizacao = request('localizacao');
+        $projeto->data_de_realizacao = request('data_de_realizacao');
+        $projeto->save();
+
+        // dd($projeto->id);
+        return redirect('/projeto/'.$projeto->id);
+    }
+
+    public function delete($id)
+    {
+        Projeto::find($id)->delete();
+        return redirect('/home');
+
+    }
+
     public function createVaga()
     {
         $habilidades = Habilidade::All();

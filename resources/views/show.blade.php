@@ -66,28 +66,44 @@
 @section('content')
     <div class=" d-flex flex-row-reverse flex-wrap " >
         <div class="col-lg-10 py-3 px-5" id="main-conteudo">
-            <div class="row d-flex align-items-center">
-                <div class=" titulo-secao">
-                    Projeto:
-                </div>
-                <div id="nomeProjeto d-flex flex-row">
-                    <h1 class="d-inline">{{ $projeto->titulo }}</h1>
+            <div class="row">
+                <div class="col-lg-9">
+                    <div class="row d-flex align-items-center">
+                        <div class=" titulo-secao">
+                            Projeto:
+                            <div class="nomeProjeto">
 
+                            </div>
+                        </div>
+                        <div id="nomeProjeto d-flex flex-row">
+                            <h1 class="">{{ $projeto->titulo }}</h1>
+                        </div>
+                    </div>
+                    <div class="row justify-content-start mb-4" id="vategoriasProjeto ">
+                        @foreach ($categorias as $c )
+                            <button type="button " class="btn btn-deep-orange  btn-sm m-1 ">{{ $c->categoria }}</button>
+                        @endforeach    
+                    </div>
+                </div>
+                <div class="col-lg-3">
                     @if ($projeto->user_id == Auth::user()->id)
-                        <a href="{{ route('cadastroProjeto') }}"class="text-center"><img class="icon-config pl-1 pt-1 ml-5" src="{{ url('img/editar.png') }}" alt=""></a>
-                        <a href="{{ route('cadastroVaga') }}"class="text-center">Nova Vaga</a>
+                        <div class="config d-flex">
+                            <a href="/projeto/edit/{{ $projeto->id }}"class="text-center"><img class="icon-config pl-1 pt-1 ml-5" src="{{ url('img/edit.svg') }}" alt=""></a>
+                            
+                            <a class="btn-orange btn p-1" href="{{ route('cadastroVaga') }}">Vaga</a>
+                            <form action="/projeto/delete/{{ $projeto->id }}" method="POST">
+                                @method('delete')
+                                @csrf
+                                <button class="btn-orange btn p-1">Delete</button>
+                            </form>
+                        </div>
+
                     @elseif($projeto->user_id != Auth::user()->id)
                         <button type="button" class="follow btn btn-outline-warning btn-sm m-1 p-2">Seguir</button>
                     @endif
-
                 </div>
             </div>
-            <div class="row justify-content-start mb-4" id="habilidadesProjeto ">
-                @foreach ($categorias as $c )
-                    <button type="button " class="btn btn-deep-orange  btn-sm m-1 ">{{ $c->categoria }}</button>
-                @endforeach
-                
-            </div>
+
             <nav>
                 <div class="nav nav-tabs btn-principais-feed" id="nav-tab" role="tablist">
                     <a class="btn-feed nav-item nav-link active text-center" id="nav-home-tab" data-toggle="tab" href="#feed-user" role="tab" aria-controls="nav-home" aria-selected="true">Sobre</a>
