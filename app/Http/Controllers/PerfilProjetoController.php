@@ -46,8 +46,12 @@ class PerfilProjetoController extends Controller
         $projeto->descricao = request('descricao');
         $projeto->localizacao = request('localizacao');
         $projeto->data_de_realizacao = request('data_de_realizacao');
+        
+        $categorias = $request->get('checkbox'); //array3:[2, 3, 8]
+        
         $projeto->save();
-
+        $projeto->categorias()->attach($categorias, ['projeto_id' => $projeto->id]);
+        
         // dd($projeto->id);
         return redirect('/projeto/'.$projeto->id);
     }

@@ -95,18 +95,16 @@
                                     
                                     @foreach ($categorias as $categoria )
                                         <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="checkbox" id="{{ $categoria->categoria }}" value="{{ $categoria->categoria }}">
+                                        <input class="form-check-input" 
+                                                type="checkbox" 
+                                                id="{{ $categoria->categoria }}" 
+                                                value="{{ $categoria->id }}"
+                                                name = "checkbox[]">
                                         <label class="form-check-label" for="{{ $categoria->categoria }}">{{ $categoria->categoria }}</label>
                                     </div>
                                     @endforeach
  
                                 </div>
-
-
-
-
-
-
                             </div>
                         </div>
                         <button class="btn-deep-orange btn align-self-center" type="Submit">Enviar</button>

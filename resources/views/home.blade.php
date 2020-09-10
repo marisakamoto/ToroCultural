@@ -120,13 +120,10 @@
                                                     </div>
                                                 </div>
                                             @endforeach
-                                        </div>
-
-                                        {{-- CARDS ONDE O USUARIO É O COLABORADOR --}}
-                                        <div class="row ">
+                                            {{-- CARDS ONDE O USUARIO É O COLABORADOR --}}
                                             @foreach ( $projetos_colaborando as $p )
                                                 <div class="col-md-4 clearfix d-none d-md-block ">
-                                                    <div class="card card-projeto mb-3">
+                                                    <div class="card card-projeto mb-3 bg-warning">
                                                         <img class="card-img-top" src="{{ $p->url_foto}}" alt="Card image cap ">
                                                         <div class="card-body ">
                                                             <h4 class="card-title titulo-projeto">{{ $p->titulo }} - Colaborador</h4>
@@ -137,6 +134,8 @@
                                                 </div>
                                             @endforeach
                                         </div>
+
+                                        
 
                                         {{-- CARDS EXPERIENCIAS --}}
                                         @if ($experiences->count() > 0)
@@ -269,7 +268,7 @@
                                                         </div>
                                                     </div>
                                                 @endforeach
-                                            @elseif ($seguindo == 0)
+                                            @elseif ($seguindo == 0 && $projetos_seguidos->count() == 0)
                                                 <p>No momento, você não segue ninguém.</p>
                                             @endif
                                             

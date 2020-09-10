@@ -29,8 +29,6 @@ class HomeController extends Controller
     public function index()
     {
 
-        //     // $projetos = Projeto::all();
-
         if (Auth::check()){
             // $projetos = Projeto::search('')->where('user_id', auth()->user()->id);
             $projetos = Projeto::where('user_id', auth()->user()->id)->take(4)->get();
