@@ -109,7 +109,8 @@
 
                             </div>
                         </div>
-                        <button class="btn-deep-orange btn align-self-center" type="Submit">Finalizar</button>
+                        <button class="btn-deep-orange btn align-self-center" type="Submit">Enviar</button>
+                        <a class="btn-deep-orange btn align-self-center" href="{{ URL::previous() }}" >Voltar</a>
                         
                     </form>
                 </div>

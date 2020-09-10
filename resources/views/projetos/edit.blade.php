@@ -94,7 +94,7 @@
                             </div>
                         </div>
                         <button class="btn-deep-orange btn align-self-center" type="Submit">Atualizar</button>
-                        
+                        <a class="btn-deep-orange btn align-self-center" href="{{ URL::previous() }}" >Voltar</a>
                     </form>
                 </div>
             </div>
