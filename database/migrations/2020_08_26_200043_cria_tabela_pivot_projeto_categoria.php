@@ -14,7 +14,7 @@ class CriaTabelaPivotProjetoCategoria extends Migration
     public function up()
     {
         Schema::create('projeto_categoria', function (Blueprint $table) {
-            $table->foreignId('projeto_id')->constrained();
+            $table->foreignId('projeto_id')->constrained()->constrained()->onDelete('cascade');
             $table->foreignId('categoria_id')->constrained();
             $table->timestamps();
         });
