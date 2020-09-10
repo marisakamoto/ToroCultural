@@ -44,6 +44,7 @@ class HomeController extends Controller
                 $projetos_seguidos = $users->user_projetoSeguido;
                 // $seguindo = seguindo()->user_seguindo_id;
                 // echo $seguindo;
+                
             return view('home', compact('projetos', 'habilidades', 'seguindo', 'seguindo_user', 'seguidores','seguidores_users', 'experiences', 'projetos_seguidos', 'projetos_colaborando'));
         }
     }

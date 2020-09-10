@@ -3,6 +3,7 @@
 use Illuminate\Database\Seeder;
 use App\User;
 use Illuminate\Support\Facades\Hash;
+use Carbon\Carbon;
 class AddUsers extends Seeder
 {
     /**
@@ -21,6 +22,7 @@ class AddUsers extends Seeder
             "password"=> Hash::make('123456'),
             'descricao' => "Músico com 5 anos de estrada",
             "profissao" => "Musico",
+            "aniversario" => Carbon::create('1996', '08', '17'),
             'url_foto' => "/img/users/homem1.jpg"
         ]);
         User::create([
@@ -29,6 +31,7 @@ class AddUsers extends Seeder
             "email" => "mcarla@gmail.com",
             "password"=> Hash::make('123456'),
             'descricao' => "Contadora de histórias, formação em clown e cantora lúdica",
+            "aniversario" => Carbon::create('1994', '03', '15'),
             "profissao" => "Pintora",
             'url_foto' => "/img/users/mulher.jpeg"
         ]);
@@ -39,6 +42,7 @@ class AddUsers extends Seeder
             "password"=> Hash::make('123456'),
             'descricao' => "Produtora cultural da Filmarte há 3 anos",
             "profissao" => "Produtora",
+            "aniversario" => Carbon::create('1990', '05', '15'),
             'url_foto' => "/img/users/mulher1.jpg"
         ]);
         User::create([
@@ -48,6 +52,7 @@ class AddUsers extends Seeder
             "password"=> Hash::make('123456'),
             'descricao' => "Atriz formada pela UFRJ, dançarina contemporânea e amor pela música",
             "profissao" => "Atriz",
+            "aniversario" => Carbon::create('1990', '05', '15'),
             'url_foto' => "/img/users/mulher 2.jpeg"
         ]);
         User::create([
@@ -57,6 +62,7 @@ class AddUsers extends Seeder
             "password"=> Hash::make('123456'),
             'descricao' => "Contadora de histórias, formação em clown e cantora",
             "profissao" => "Maquiadora",
+            "aniversario" => Carbon::create('1990', '05', '15'),
             'url_foto' => "/img/users/mulher.jpeg"
         ]);
 
@@ -67,6 +73,7 @@ class AddUsers extends Seeder
             "password"=> Hash::make('123456'),
             'descricao' => "Contadora de histórias, formação em clown e cantora",
             "profissao" => "Artista",
+            "aniversario" => Carbon::create('1990', '05', '15'),
             'url_foto' => "/img/users/mulher.jpeg"
         ]);
 

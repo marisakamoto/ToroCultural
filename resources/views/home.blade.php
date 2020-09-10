@@ -82,6 +82,7 @@
                             </div>
                             <div class="col-md-6 text-center d-flex justify-content-end">
                                 <a href="{{ route('cadastroUsuario') }}"class="text-center"><img class="icon-config pl-1 pt-1 ml-5" src="{{ url('img/edit.svg') }}" alt=""></a>
+                                <a class="btn-orange btn p-1" href="{{ route('cadastroVaga') }}">+ Experiência</a>
                             </div>
                         </div>
                         <div class="row d-flex justify-content-center" id="habilidades">

@@ -7,6 +7,24 @@
 }
 
 
+.perfil-foto-cadastro {
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    overflow: hidden;
+    position: relative;
+}
+    
+.perfil-foto-cadastro img {
+    width: initial;
+    height: inherit;
+    max-width: none;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
 /*CONTEUDO DA PÁGINA*/
 
 #title-form {

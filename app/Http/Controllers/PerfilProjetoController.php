@@ -43,10 +43,10 @@ class PerfilProjetoController extends Controller
     {
         $projeto = new Projeto;
         //Ele salvará a imagem com o caminho 
-            if($request->hasfile('url_foto') && $request->url_foto->isvalid()){
-                $url_foto = $request->url_foto->store('projetos');
-                $projeto->url_foto = $url_foto;
-            }
+        if($request->hasfile('url_foto') && $request->url_foto->isvalid()){
+            $url_foto = $request->url_foto->store('projetos');
+            $projeto->url_foto = $url_foto;
+        }
         $projeto->user_id = auth()->user()->id;
         $projeto->titulo = request('titulo');
         $projeto->descricao = request('descricao');
@@ -81,13 +81,15 @@ class PerfilProjetoController extends Controller
 
     public function update($id, Request $request)
     {
+        
+        
         $projeto = Projeto::find($id);
+        //Ele salvará a imagem com o caminho 
+        if($request->hasfile('url_foto') && $request->url_foto->isvalid()){
+            $url_foto = $request->url_foto->store('projetos');
+            $projeto->url_foto = $url_foto;
+        }
 
-        // $projeto = new Projeto;
-        // if($request->hasfile('url_foto') && $request->url_foto->isvalid()){
-        //     $url_foto = $request->url_foto->store('projetos');
-        // }
-        // $projeto->url_foto = $url_foto;
         $projeto->titulo = request('titulo');
         $projeto->descricao = request('descricao');
         $projeto->localizacao = request('localizacao');

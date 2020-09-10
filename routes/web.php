@@ -43,7 +43,7 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 
-
+Route::get('/experiencia', 'CadastroUsuarioController@experiencia');
 // Auth::routes();
 
 // Route::get('/home', 'HomeController@index')->name('home');
