@@ -20,9 +20,9 @@ class PerfilProjetoController extends Controller
         return view ('perfil-projeto');
     }
 
+
     public function show($id)
     {
-
         //Como as tabelas estão relacionadas, posso chamá-las através do model projeto
         $projeto = Projeto::find($id);
         $user_criador = $projeto->user_criador;
@@ -41,22 +41,25 @@ class PerfilProjetoController extends Controller
 
     public function store(Request $request)
     {
+
         $projeto = new Projeto;
+
+
         //Ele salvará a imagem com o caminho 
-        if($request->hasfile('url_foto') && $request->url_foto->isvalid()){
-            $url_foto = $request->url_foto->store('projetos');
+        if($request->hasfile('url_foto') && $request->url_foto->isvalid()){ //name do input
+            $url_foto = $request->url_foto->store('projetos');          //salvar o caminho da imagem
             $projeto->url_foto = $url_foto;
         }
+        
         $projeto->user_id = auth()->user()->id;
         $projeto->titulo = request('titulo');
         $projeto->descricao = request('descricao');
         $projeto->localizacao = request('localizacao');
         $projeto->data_de_realizacao = request('data_de_realizacao');
         
-        $categorias = $request->get('checkbox'); //array3:[2, 3, 8]
-        $projeto->save();
+        $categorias = $request->get('checkbox'); //array:[2, 3, 8]
+        $projeto->save(); //id
         $projeto->categorias()->attach($categorias, ['projeto_id' => $projeto->id]);
-        
         // dd($projeto->id);
         return redirect('/projeto/'.$projeto->id);
     }
@@ -78,6 +81,7 @@ class PerfilProjetoController extends Controller
         $projeto = Projeto::find($id);
         return view('projetos.edit', compact('projeto'));
     }
+    
 
     public function update($id, Request $request)
     {

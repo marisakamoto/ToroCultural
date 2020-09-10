@@ -94,11 +94,13 @@
                             <a href="/projeto/edit/{{ $projeto->id }}"class="text-center"><img class="icon-config pl-1 pt-1 ml-5" src="{{ url('img/edit.svg') }}" alt=""></a>
                             
                             <a class="btn-orange btn p-1" href="{{ route('cadastroVaga') }}">Vaga</a>
+
                             <form action="/projeto/delete/{{ $projeto->id }}" method="POST">
                                 @method('delete')
                                 @csrf
                                 <button class="btn-orange btn p-1" onclick="return confirm('Deseja mesmo deletar esse projeto?');">Delete</button>
                             </form>
+                            
                         </div>
 
                     @elseif($projeto->user_id != Auth::user()->id)

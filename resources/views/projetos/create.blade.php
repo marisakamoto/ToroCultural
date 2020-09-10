@@ -66,7 +66,7 @@
         <section class="container cadastro-projeto p-4 mb-5">
             <div class="row">
                 <div class="col">
-                    <form action="" method="POST" enctype="multipart/form-data">
+                    <form action="/projetos/create" method="POST" enctype="multipart/form-data">
                     @csrf
                         <div class="d-flex align-items-center content-projeto">
                             <div class="col-md-4 text-center pt-3 d-flex align-items-center flex-column">

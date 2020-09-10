@@ -23,6 +23,9 @@ Route::get('/cadastroUsuario', 'cadastroUsuarioController@cadastroUsuario')->nam
 //PROJETO
 Route::get('/projetos/create', 'PerfilProjetoController@create')->name('cadastroProjeto'); // CADASTRO
 Route::post('/projetos/create', 'PerfilProjetoController@store'); //MÉTODO PARA SALVAR DADOS
+
+
+
 Route::get('/projetos/vaga', 'PerfilProjetoController@createVaga')->name('cadastroVaga'); // CADASTRO
 Route::get('/projeto/{id}', 'PerfilProjetoController@show');//VIEW DO PROJETO
 Route::get('/projeto/edit/{id}', 'PerfilProjetoController@edit')->name('editar');//VIEW EDIT
