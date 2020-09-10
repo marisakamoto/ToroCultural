@@ -15,12 +15,19 @@ class Projeto extends Model
         'url_foto'
     ];
 
-    public function getUrlFotoAttribute($value)
-    {
-        $explode = explode('/', $value);
-        $nomeArquivo = $explode[1];
+    
+    // public function getUrlFotoAttribute($value)
+    // {
+    //     $explode = explode('/', $value);
+    //     $nomeArquivo = $explode[1];
+    //     return $nomeArquivo;
+    // }
 
-        return $nomeArquivo;
+    public function getDataderealizacaoAttribute($value)
+    {
+        //ALETERAR FORMATO DA DATA QUE VEM DO DATABASE
+        return \Carbon\Carbon::parse($value)->format('d/m/Y');
+	    
     }
 
     //Relacionamento com o usuário criador 1:N

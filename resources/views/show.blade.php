@@ -79,10 +79,13 @@
                             <h1 class="">{{ $projeto->titulo }}</h1>
                         </div>
                     </div>
-                    <div class="row justify-content-start mb-4" id="vategoriasProjeto ">
+                    <div class="row mb-2" id="categoriasProjeto ">
                         @foreach ($categorias as $c )
                             <button type="button " class="btn btn-deep-orange  btn-sm m-1 ">{{ $c->categoria }}</button>
                         @endforeach    
+                    </div>
+                    <div class="row">
+                        <p class="data-realizacao">Data: {{$projeto->data_de_realizacao}}</p>
                     </div>
                 </div>
                 <div class="col-lg-3">
@@ -115,7 +118,7 @@
                     <div class="row " id="descricao-projeto ">
                         <p class="text-justify p-3"> {{ $projeto->descricao }}
 
-                        {{-- <img src="/projetos/imagens/{{ $projeto->url_foto }}"></br> --}}
+                        <img src="/projetos/imagens/{{ $projeto->url_foto }}"></br>
                         
 
                         </p>
