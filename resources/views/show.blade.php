@@ -94,7 +94,7 @@
                             <form action="/projeto/delete/{{ $projeto->id }}" method="POST">
                                 @method('delete')
                                 @csrf
-                                <button class="btn-orange btn p-1">Delete</button>
+                                <button class="btn-orange btn p-1" onclick="return confirm('Deseja mesmo deletar esse projeto?');">Delete</button>
                             </form>
                         </div>
 

@@ -101,19 +101,24 @@
                 @csrf
                     <div class="form-group pl-3">
                         <label for="nome">Nome</label></br>
-                        <input type="text" id="nome" name="nome" required></br>
+                        <input class="p-2" type="text" id="nome" name="nome" required></br>
                     </div>
                     <div class="form-group pl-3">
                         <label for="email">Email</label></br>
-                        <input type="email" id="email" name="email"></br>
+                        <input class="p-2" type="email" id="email" name="email"></br>
                     </div>
                     <div class="form-group pl-3">
                         <label for="mensagem">Mensagem</label></br>
-                        <textarea name="mensagem" id="mensagem" cols="30" rows="4"></textarea></br>
+                        <textarea class="p-2" name="mensagem" id="mensagem" cols="30" rows="4"></textarea></br>
                     </div>
                     <button class="btn btn-deep-orange ml-3">Enviar</button>
                 </form>
             </div>
+            @if(session('mensagem'))
+                <div class="alert alert-success">
+                    <p>{{session('mensagem')}}</p>
+                </div>
+            @endif
         </section>
     @endsection
 

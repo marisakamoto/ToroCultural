@@ -18,8 +18,7 @@ class PaginaInicialController extends Controller
 
         // dd($request->all());
 
-        return redirect('/');
-
-        
+        return redirect('/')
+                ->with('mensagem', 'Mensagem enviada!');
     }
 }
