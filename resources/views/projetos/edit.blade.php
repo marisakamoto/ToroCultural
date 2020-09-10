@@ -68,13 +68,31 @@
                     @method('put')
                     @csrf
                         <div class="d-flex align-items-center content-projeto">
-                            {{-- <div class="col-md-4 text-center pt-3 d-flex align-items-center flex-column">
-                                <canvas id="UgCanvas" width="150px" height="150px" style="border:2.1px solid rgb(165, 157, 157); border-radius: 10px;">
-                                </canvas></br>
-                                <input type="file" name="url_foto" class="btn block">
-                            </div> --}} 
+                            <div class="col-md-4 text-center pt-3 d-flex align-items-center flex-column">
+                                <img src="{{$projeto->url_foto}}" style = "width:130px; height:130px; object-fit: cover;" id="preview-img">
+                                <input type="file" name="imagem" class="btn block" id="imagem" onchange="previewImagem()">
+                                {{-- NÃO CONSEGUI FAZER FUNCIONAR DEIXANDO O JS EM OUTRO ARQUIVO --}}
+                                <script>
+                                    function previewImagem(){
+                                        var imagem = document.querySelector('input[name=imagem]').files[0];
+                                        var preview = document.querySelector('#preview-img');
+                                        
+                                        var reader = new FileReader();
+                                        
+                                        reader.onloadend = function () {
+                                            preview.src = reader.result;
+                                        }
+                                        
+                                        if(imagem){
+                                            reader.readAsDataURL(imagem);
+                                        }else{
+                                            preview.src = "{{$projeto->url_foto}}";
+                                        }
+                                    }
+                                </script>
+                            </div>
                             {{-- Alterar para col-md-8 quando descomentar --}}
-                            <div class="col-md-12 form-user">
+                            <div class="col-md-8 form-user">
                                 <div class="form-group mb-0">
                                     <label for="titulo">Título do Projeto</label>
                                     <input class=" form-control" type="text" name="titulo" id="titulo" value="{{ $projeto->titulo }}" >
@@ -94,7 +112,7 @@
                             </div>
                         </div>
                         <button class="btn-deep-orange btn align-self-center" type="Submit">Atualizar</button>
-                        
+                        <a class="btn-deep-orange btn align-self-center" href="{{ URL::previous() }}" >Voltar</a>
                     </form>
                 </div>
             </div>

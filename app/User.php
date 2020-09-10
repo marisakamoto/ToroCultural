@@ -16,7 +16,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name','username', 'email', 'password', 'descricao', 'profissao', 'url_foto'
+        'name','username', 'email', 'password', 'descricao', 'profissao', 'aniversario', 'url_foto'
     ];
 
     //Relacionamento com os projetos criados pelo user 1:N

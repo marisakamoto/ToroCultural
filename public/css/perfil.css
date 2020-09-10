@@ -125,6 +125,13 @@ ul, li {
     text-align: center;
 }
 
+.data-realizacao{
+    font-size: 1.5em;
+    color:orange;
+    font-weight: bold;
+    margin-left: 5px;
+}
+
     
 .checked {
     color: orange;

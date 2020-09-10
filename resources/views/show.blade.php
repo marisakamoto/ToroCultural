@@ -79,10 +79,13 @@
                             <h1 class="">{{ $projeto->titulo }}</h1>
                         </div>
                     </div>
-                    <div class="row justify-content-start mb-4" id="vategoriasProjeto ">
+                    <div class="row mb-2" id="categoriasProjeto ">
                         @foreach ($categorias as $c )
                             <button type="button " class="btn btn-deep-orange  btn-sm m-1 ">{{ $c->categoria }}</button>
                         @endforeach    
+                    </div>
+                    <div class="row">
+                        <p class="data-realizacao">Data: {{$projeto->data_de_realizacao}}</p>
                     </div>
                 </div>
                 <div class="col-lg-3">
@@ -94,7 +97,7 @@
                             <form action="/projeto/delete/{{ $projeto->id }}" method="POST">
                                 @method('delete')
                                 @csrf
-                                <button class="btn-orange btn p-1">Delete</button>
+                                <button class="btn-orange btn p-1" onclick="return confirm('Deseja mesmo deletar esse projeto?');">Delete</button>
                             </form>
                         </div>
 
@@ -114,6 +117,10 @@
                 <div class="conteudo-sobre tab-pane fade show px-2 py-2 active" id="feed-user" role="tabpanel" aria-labelledby="nav-home-tab">
                     <div class="row " id="descricao-projeto ">
                         <p class="text-justify p-3"> {{ $projeto->descricao }}
+
+                        <img src="/projetos/imagens/{{ $projeto->url_foto }}"></br>
+                        
+
                         </p>
                     </div>
                     <div class="row" id="mapa-cal">

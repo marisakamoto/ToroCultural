@@ -29,8 +29,6 @@ class HomeController extends Controller
     public function index()
     {
 
-        //     // $projetos = Projeto::all();
-
         if (Auth::check()){
             // $projetos = Projeto::search('')->where('user_id', auth()->user()->id);
             $projetos = Projeto::where('user_id', auth()->user()->id)->take(4)->get();
@@ -46,6 +44,7 @@ class HomeController extends Controller
                 $projetos_seguidos = $users->user_projetoSeguido;
                 // $seguindo = seguindo()->user_seguindo_id;
                 // echo $seguindo;
+                
             return view('home', compact('projetos', 'habilidades', 'seguindo', 'seguindo_user', 'seguidores','seguidores_users', 'experiences', 'projetos_seguidos', 'projetos_colaborando'));
         }
     }
