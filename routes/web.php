@@ -30,6 +30,10 @@ Route::put('/projeto/update/{id}', 'PerfilProjetoController@update')->name('upda
 Route::delete('/projeto/delete/{id}', 'PerfilProjetoController@delete')->name('delete');
 // FIM PROJETO
 
+//ROTA PARA ACESSAR IMAGEM NO STORAGE
+Route::get('/projetos/imagens/{imagem}', "PerfilProjetoController@image");
+//FIM DA ROTA
+
 Route::get('/perfil/{username}', 'homeController@show');
 
 Route::get('/feed', 'FeedController@feed')->name('feed');

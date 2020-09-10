@@ -114,6 +114,10 @@
                 <div class="conteudo-sobre tab-pane fade show px-2 py-2 active" id="feed-user" role="tabpanel" aria-labelledby="nav-home-tab">
                     <div class="row " id="descricao-projeto ">
                         <p class="text-justify p-3"> {{ $projeto->descricao }}
+
+                        {{-- <img src="/projetos/imagens/{{ $projeto->url_foto }}"></br> --}}
+                        
+
                         </p>
                     </div>
                     <div class="row" id="mapa-cal">
