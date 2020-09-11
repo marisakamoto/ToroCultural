@@ -97,7 +97,7 @@
                                     }
                                 </script>
                         </div>
-
+                        
                         <div class="form-group mb-0">
                             <label for="nome">Nome de usuário</label>
                             <input class="form-control" type="text" name="username" id="username" value="{{ Auth::user()->username }}" Required>
