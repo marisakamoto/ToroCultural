@@ -87,27 +87,19 @@
                                     <button type="button" class="follow btn btn-outline-warning btn-sm m-1 p-2"> Deixar de Seguir</button>
                                     @break
                                 @elseif($seguidores_users[$i]->id != Auth::user()->id)
-                                    <button type="button" class="follow btn btn-outline-warning btn-sm m-1 p-2"> Seguir</button>
+                                    <form action="/user/seguir/{{ $user->id }}" method="POST">
+                                        @csrf
+                                        <button type="button" class="follow btn btn-outline-warning btn-sm m-1 p-2"> Seguir</button>
+                                    </form>
+                               
                                 @endif
                             @endfor
                         @elseif($seguidores == 0)
-                            <button type="button" class="follow btn btn-outline-warning btn-sm m-1 p-2"> Seguir</button>
+                            <form action="/user/seguir/{{ $user->id }}" method="POST">
+                                @csrf
+                                <button type="button" class="follow btn btn-outline-warning btn-sm m-1 p-2"> Seguir</button>
+                            </form>
                         @endif
-                            
-
-                            {{-- [
-                                0 => objeto_seguidor,   1
-                                1 => objeto_seguidor,   2 
-                                2 => objeto_seguidor    3
-                            ] --}}
-
- 
-
-                            
-{{-- 
-                            PERFIL -> SEGUIDORES -> EU ESTIVER -> DEIXAR DE Seguir
-                            PERFIL -> SEGUIDORES -> NÃO ESTIVER -> SEGUIR --}}
-                               
                             </div>
                         </div>
                         <div class="row d-flex justify-content-center" id="habilidades">

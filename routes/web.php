@@ -54,3 +54,14 @@ Route::get('/home', 'HomeController@index')->name('home');
 // Auth::routes();
 
 // Route::get('/home', 'homeController@index')->name('home');
+
+
+
+
+//SEGUIR / DEIXAR DE SEGUIR (ENTRE USUARIOS)
+Route::post('/user/seguir/{id}', 'HomeController@seguir');
+
+
+//FIM SEGUIR
+
+
