@@ -48,7 +48,7 @@
                 </a>
 
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                
+
                     <a class="dropdown-item" href="{{ route('logout') }}"
                         onclick="event.preventDefault();
                                         document.getElementById('logout-form').submit();">
@@ -82,7 +82,7 @@
                     <div class="row mb-2" id="categoriasProjeto ">
                         @foreach ($categorias as $c )
                             <button type="button " class="btn btn-deep-orange  btn-sm m-1 ">{{ $c->categoria }}</button>
-                        @endforeach    
+                        @endforeach
                     </div>
                     <div class="row">
                         <p class="data-realizacao">Data: {{$projeto->data_de_realizacao}}</p>
@@ -92,7 +92,7 @@
                     @if ($projeto->user_id == Auth::user()->id)
                         <div class="config d-flex">
                             <a href="/projeto/edit/{{ $projeto->id }}"class="text-center"><img class="icon-config pl-1 pt-1 ml-5" src="{{ url('img/edit.svg') }}" alt=""></a>
-                            
+
                             <a class="btn-orange btn p-1" href="{{ route('cadastroVaga') }}">Vaga</a>
 
                             <form action="/projeto/delete/{{ $projeto->id }}" method="POST">
@@ -100,7 +100,7 @@
                                 @csrf
                                 <button class="btn-orange btn p-1" onclick="return confirm('Deseja mesmo deletar esse projeto?');">Delete</button>
                             </form>
-                            
+
                         </div>
 
                     @elseif($projeto->user_id != Auth::user()->id)
@@ -121,7 +121,7 @@
                         <p class="text-justify p-3"> {{ $projeto->descricao }}
 
                         <img src="/projetos/imagens/{{ $projeto->url_foto }}"></br>
-                        
+
 
                         </p>
                     </div>
@@ -433,7 +433,7 @@
         <div class="col-lg-2 menu-esq pt-5 d-flex justify-content-start" id="menu-lado">
                 <h6 class="my-0">Sobre o autor</h6> <br>
                 <h5 class="my-0"><a class="user-link" href="/perfil/{{ $user_criador->username }}">{{ $user_criador->username }}</a></h5> <br>
-                
+
                 <div class="perfil-foto-proj">
                     <img  src="{{ $user_criador->url_foto }}">
                 </div>
