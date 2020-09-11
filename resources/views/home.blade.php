@@ -31,14 +31,14 @@
         @endif
         @else
             <li class="nav-item active">
-                <a class="nav-link" href="#">Meu perfil</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{{ route('feed') }}">Feed</a></li>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href={{ route('cadastroProjeto') }}>Enviar projeto</a>
-            </li>
+                    <a class="nav-link" href="{{  route('home') }}">Meu perfil</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('feed') }}">Feed</a></li>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href={{ route('cadastroProjeto') }}>Enviar projeto</a>
+                </li>
             <li class="nav-item dropdown">
                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                     {{ Auth::user()->username }}
@@ -243,8 +243,8 @@
                             <a href="#" class="mr-2" data-toggle="modal" data-target="#exampleModalCenter2"><strong>Seguindo</strong></a> {{$seguindo + $projetos_seguidos->count()}}
 
 
-                            <div class="modal fade" id="exampleModalCenter2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                                <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal fade" id="exampleModalCenter2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" >
+                                <div class="modal-dialog modal-dialog-centered"  role="document">
                                     <div class="modal-content">
                                         <div class="modal-header modal-titulo">
                                             <h5 class="modal-title" id="exampleModalLongTitle">Seguindo</h5>
@@ -252,6 +252,7 @@
                                             <span aria-hidden="true">&times;</span>
                                             </button>
                                         </div>
+
                                         <div class="modal-body">
                                             @if ($seguindo > 0 || $projetos_seguidos->count() > 0)
                                                 @foreach ( $seguindo_user as $seguindo )
