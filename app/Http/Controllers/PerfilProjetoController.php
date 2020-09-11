@@ -7,6 +7,7 @@ use App\Projeto;
 use App\Categoria;
 use App\Habilidade;
 use Illuminate\Support\Facades\Storage;
+use App\Publish;
 
 class PerfilProjetoController extends Controller
 {
@@ -29,8 +30,9 @@ class PerfilProjetoController extends Controller
         $categorias = $projeto->categorias;
         $user_colaborador = $projeto->projeto_user_colaboradores;
         $vagas = $projeto->vagas;
+        $posts = Publish::where('projeto_id',  $id)->get();
 
-        return view('show', compact('projeto', 'categorias', 'user_colaborador', 'vagas', 'user_criador'));
+        return view('show', compact('projeto', 'categorias', 'user_colaborador', 'vagas', 'user_criador','posts' ));
     }
 
     public function create()
