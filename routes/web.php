@@ -18,8 +18,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', 'PaginaInicialController@paginaInicial')->name('paginaInicial');//pagina TORÓ
 Route::post('/contato', 'PaginaInicialController@enviaContato')->name('contato');
 
-Route::get('/cadastroUsuario', 'cadastroUsuarioController@cadastroUsuario')->name('cadastroUsuario');
-
 //PROJETO
 Route::get('/projetos/create', 'PerfilProjetoController@create')->name('cadastroProjeto'); // CADASTRO
 Route::post('/projetos/create', 'PerfilProjetoController@store'); //MÉTODO PARA SALVAR DADOS
@@ -33,20 +31,26 @@ Route::put('/projeto/update/{id}', 'PerfilProjetoController@update')->name('upda
 Route::delete('/projeto/delete/{id}', 'PerfilProjetoController@delete')->name('delete');
 // FIM PROJETO
 
+//USUARIO
+Route::get('/experiencia', 'HomeController@experiencia');
+Route::get('/perfil/{username}', 'HomeController@show');
+Route::get('/user/edit/{id}', 'HomeController@edit');
+Route::put('/user/update/{id}', 'HomeController@update');
+Route::delete('/user/delete/{id}', 'HomeController@delete');
+
+//FIM USUARIO
+
+
+
 //ROTA PARA ACESSAR IMAGEM NO STORAGE
 Route::get('/projetos/imagens/{imagem}', "PerfilProjetoController@image");
 //FIM DA ROTA
-
-Route::get('/perfil/{username}', 'homeController@show');
 
 Route::get('/feed', 'FeedController@feed')->name('feed');
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-
-
-Route::get('/experiencia', 'CadastroUsuarioController@experiencia');
 // Auth::routes();
 
-// Route::get('/home', 'HomeController@index')->name('home');
+// Route::get('/home', 'homeController@index')->name('home');

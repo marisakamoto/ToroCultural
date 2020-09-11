@@ -49,7 +49,7 @@
                 </a>
 
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                
+
                     <a class="dropdown-item" href="{{ route('logout') }}"
                         onclick="event.preventDefault();
                                         document.getElementById('logout-form').submit();">
@@ -68,57 +68,60 @@
         <h2 id="title-form">Cadastro Usuário</h2>
         <section class="container cadastro-user p-4 mb-5">
             <div class="row">
-                <div class="col-md-4 text-center pt-3">
-                        <div class="mx-auto perfil-foto-cadastro m-0" >
-                                <img  src="{{ Auth::user()->url_foto }}" id="preview-img" ></img>
-                            </div>
-                        <input type="file" name="imagem" class="btn block" id="imagem" onchange="previewImagem()">
-                        {{-- NÃO CONSEGUI FAZER FUNCIONAR DEIXANDO O JS EM OUTRO ARQUIVO --}}
-                        <script>
-                            function previewImagem(){
-                                var imagem = document.querySelector('input[name=imagem]').files[0];
-                                var preview = document.querySelector('#preview-img');
-                                
-                                var reader = new FileReader();
-                                
-                                reader.onloadend = function () {
-                                    preview.src = reader.result;
-                                }
-                                
-                                if(imagem){
-                                    reader.readAsDataURL(imagem);
-                                }else{
-                                    preview.src = "";
-                                }
-                            }
-                        </script>
-                </div>
                 <div class="col-md-8 form-user">
-                    <form>
+                    <form method="POST" action = "/user/update/{{Auth::user()->id}}">
+                    @method('put')
+                    @csrf
+                        <div class="col-md-4 text-center pt-3">
+                            <div class="mx-auto perfil-foto-cadastro m-0" >
+                                <img src="{{ Auth::user()->url_foto }}" id="preview-img" ></img>
+                            </div>
+                            <input type="file" name="imagem" class="btn block" id="imagem" onchange="previewImagem()">
+                            {{-- NÃO CONSEGUI FAZER FUNCIONAR DEIXANDO O JS EM OUTRO ARQUIVO --}}
+                                <script>
+                                    function previewImagem(){
+                                        var imagem = document.querySelector('input[name=imagem]').files[0];
+                                        var preview = document.querySelector('#preview-img');
+
+                                        var reader = new FileReader();
+
+                                        reader.onloadend = function () {
+                                            preview.src = reader.result;
+                                        }
+
+                                        if(imagem){
+                                            reader.readAsDataURL(imagem);
+                                        }else{
+                                            preview.src = "";
+                                        }
+                                    }
+                                </script>
+                        </div>
+                        
                         <div class="form-group mb-0">
                             <label for="nome">Nome de usuário</label>
-                            <input class="form-control" type="text" name="nome-usuario" id="nome-usuario" Required>
+                            <input class="form-control" type="text" name="username" id="username" value="{{ Auth::user()->username }}" Required>
                         </div>
                         <div class="form-group mb-0">
                             <label for="aniversario">Aniversário</label>
-                            <input class="form-control" type="date" name="aniversario" id="aniversario" Required>
+                            <input class="form-control" type="date" name="aniversario" id="aniversario" value="{{ Auth::user()->aniversario}}" Required>
                         </div>
                         <div class="form-group mb-0">
                             <label for="profissao">Profissão</label>
-                            <input class="form-control" type="text" name="profissao" id="profissao" Required>
+                            <input class="form-control" type="text" name="profissao" id="profissao" value="{{ Auth::user()->profissao}}" Required>
                         </div>
                         <div class="form-group">
-                            <label for="descricao-user">Descrição</label>
-                            <textarea name="descricao-user" class="form-control" id="descricao-user" rows="5"></textarea>
+                            <label for="descricao">Descrição</label>
+                            <textarea name="descricao" class="form-control" id="descricao" rows="5">{{ Auth::user()->descricao}}</textarea>
                         </div>
                         <div class=" form-group my-0 p-2" style="border: solid gray 1px" >
-                        <label for="pcp-habilidades">Principais Habilidades:</label></br>
-                        @foreach ($habilidades as $h )
-                            <div class="form-check form-check-inline">
-                            <input class="form-check-input" 
-                                    type="checkbox" 
-                                    id="{{ $h->id }}" 
-                                    value="{{ $h->habilidade}}"
+                            <label for="pcp-habilidades">Principais Habilidades:</label></br>
+                            @foreach ($habilidades as $h )
+                                <div class="form-check form-check-inline">
+                                <input class="form-check-input"
+                                    type="checkbox"
+                                    id="{{ $h->id }}"
+                                    value="{{ $h->id}}"
                                     name = "checkbox[]">
                             <label class="form-check-label" for="{{ $h->habilidade }}">{{ $h->habilidade }}</label>
                         </div>
@@ -132,13 +135,7 @@
                     </form>
                 </div>
             </div>
-            <div class="row">
-                <form class="form-user formHabilidadesInteresses m-3">
-                    
-                   
-                </form>
-            </div>
         </section>
-        
+
 
 @endsection

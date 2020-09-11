@@ -14,7 +14,7 @@ class CriaTabelaPivotUserHabilidade extends Migration
     public function up()
     {
         Schema::create('user_habilidade', function (Blueprint $table) {
-            $table->foreignId('user_id')->constrained();
+            $table->foreignId('user_id')->constrained()->onDelete('cascade');
             $table->foreignId('habilidade_id')->constrained();
             $table->timestamps();
         });
