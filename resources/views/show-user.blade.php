@@ -91,7 +91,7 @@
                                         @csrf
                                         <button type="button" class="follow btn btn-outline-warning btn-sm m-1 p-2"> Seguir</button>
                                     </form>
-                                    
+                               
                                 @endif
                             @endfor
                         @elseif($seguidores == 0)
@@ -100,7 +100,6 @@
                                 <button type="button" class="follow btn btn-outline-warning btn-sm m-1 p-2"> Seguir</button>
                             </form>
                         @endif
-
                             </div>
                         </div>
                         <div class="row d-flex justify-content-center" id="habilidades">
