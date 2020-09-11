@@ -64,6 +64,7 @@
 @endsection
 
 @section('content')
+{{-- {{$posts}} --}}
     <div class=" d-flex flex-row-reverse flex-wrap " >
         <div class="col-lg-10 py-3 px-5" id="main-conteudo">
             <div class="row">
@@ -302,6 +303,30 @@
                                     </div>
                             </div>
                             <div class="feed-publicacoes mx-auto">
+                                
+                                @foreach($posts as $post)
+                                <div class="card mb-4">
+                                    <div class="card-body">
+                                            <a class="media-left" href="#"><img class="img-circle img-publi"  alt="Profile Picture" src="{{ url($post->url_foto) }}"></a>
+                                            <div class="media-body">
+                                                <div class="mar-btm">
+                                                    <a href="#" class="btn-link text-semibold media-heading box-inline"> {{$user_criador->username}}</a>
+                                                    <p class="text-muted text-sm"><i class="fa fa-mobile fa-lg"></i> - From Mobile - 11 min ago</p>
+                                                </div>
+                                                <p>
+                                                    {{$post->legenda}}
+                                                </p>
+                                                <div class="pad-ver">
+                                                    <div class="btn-group">
+                                                        <a class="btn btn-sm btn-default btn-hover-success" href="#"><i class="fa fa-thumbs-up"></i></a>
+                                                        <a class="btn btn-sm btn-default btn-hover-danger" href="#"><i class="fa fa-thumbs-down"></i></a>
+                                                    </div>
+                                                    <a class="btn btn-sm btn-default btn-hover-primary" href="#">Comment</a>
+                                                </div>
+                                            </div>
+                                    </div>
+                                </div>
+                                @endforeach
                                 <div class="card mb-4">
                                     <div class="card-body">
                                             <a class="media-left" href="#"><img class="img-circle img-publi"  alt="Profile Picture" src="{{ url('img/clubeLeitura.jpeg') }}"></a>
