@@ -42,9 +42,7 @@ class HomeController extends Controller
                 $seguidores_users = $users->seguidores;
                 $experiences = $users->experience()->get();
                 $projetos_seguidos = $users->user_projetoSeguido;
-                // $seguindo = seguindo()->user_seguindo_id;
-                // echo $seguindo;
-
+                
             return view('home', compact('projetos', 'habilidades', 'seguindo', 'seguindo_user', 'seguidores','seguidores_users', 'experiences', 'projetos_seguidos', 'projetos_colaborando'));
         }
     }
@@ -65,6 +63,8 @@ class HomeController extends Controller
         $seguidores_users = $user->seguidores;
         $experiences = $user->experience()->get();
         $projetos_seguidos = $user->user_projetoSeguido;
+
+        // dd($seguidores_users[0]->username);
 
         return view('show-user', compact('user', 'username','projetos', 'habilidades', 'seguindo', 'seguindo_user', 'seguidores','seguidores_users', 'experiences', 'projetos_seguidos', 'projetos_colaborando'));
     }

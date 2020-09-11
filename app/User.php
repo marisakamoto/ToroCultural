@@ -43,11 +43,13 @@ class User extends Authenticatable
     return  $this->belongsToMany('App\Habilidade', 'user_habilidade', 'user_id', 'habilidade_id');
     }
 
+    //User_id é quem recebe os seguidores
     public function seguidores()
     {
     return  $this->belongsToMany(User::class, 'user_userseguindo','user_id','user_seguindo_id');
     }
 
+    //user_seguindo_id é quem segue
     public function seguindo()
     {
     return  $this->belongsToMany(User::class, 'user_userseguindo','user_seguindo_id','user_id');

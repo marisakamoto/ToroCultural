@@ -16,8 +16,8 @@ class CriarTabelaPivotUserUser extends Migration
     public function up()
     {
         Schema::create('user_userseguindo', function (Blueprint $table) {
-            $table->foreignId('user_id')->constrained("users")->onDelete('cascade');//Principal
-            $table->foreignId('user_seguindo_id')->constrained("users")->onDelete('cascade');//Seguido
+            $table->foreignId('user_id')->constrained("users")->onDelete('cascade');//Principal 
+            $table->foreignId('user_seguindo_id')->constrained("users")->onDelete('cascade');//Quem segue
             $table->timestamps();
         });
     }

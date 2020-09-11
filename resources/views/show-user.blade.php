@@ -61,7 +61,7 @@
 @endsection
 
 @section('content')
-    <div class="container-fluid colborder" id="main-conteudo">
+        <div class="container-fluid colborder" id="main-conteudo">
         <div class="row">
             <div class="col-md-9">
                 <div class="row ml-0 mt-4 mr-3" id="main-info">
@@ -81,7 +81,33 @@
                                 <h3 class="nomeUser text-center">{{  $user->name }}</h3>
                             </div>
                             <div class="row-md-6 text-center">
-                                <button type="button" class="follow btn btn-outline-warning btn-sm m-1 p-2"> Seguir</button>
+                        @if($seguidores > 0)
+                            @for ($i = 0 ; $i < count($seguidores_users) ; $i++)
+                                @if($seguidores_users[$i]->id == Auth::user()->id)
+                                    <button type="button" class="follow btn btn-outline-warning btn-sm m-1 p-2"> Deixar de Seguir</button>
+                                    @break
+                                @elseif($seguidores_users[$i]->id != Auth::user()->id)
+                                    <button type="button" class="follow btn btn-outline-warning btn-sm m-1 p-2"> Seguir</button>
+                                @endif
+                            @endfor
+                        @elseif($seguidores == 0)
+                            <button type="button" class="follow btn btn-outline-warning btn-sm m-1 p-2"> Seguir</button>
+                        @endif
+                            
+
+                            {{-- [
+                                0 => objeto_seguidor,   1
+                                1 => objeto_seguidor,   2 
+                                2 => objeto_seguidor    3
+                            ] --}}
+
+ 
+
+                            
+{{-- 
+                            PERFIL -> SEGUIDORES -> EU ESTIVER -> DEIXAR DE Seguir
+                            PERFIL -> SEGUIDORES -> NÃO ESTIVER -> SEGUIR --}}
+                               
                             </div>
                         </div>
                         <div class="row d-flex justify-content-center" id="habilidades">
@@ -93,23 +119,6 @@
                                     </button>
                                 </li>
                                 @endforeach
-
-                                {{-- <li>
-                                    <button type="button" class="btn btn-deep-orange  btn-sm m-1">
-                                        teatro
-                                    </button>
-                                </li>
-                                <li>
-                                    <button type="button" class="btn btn-deep-orange  btn-sm m-1">
-                                        clown
-                                    </button>
-                                </li>
-                                <li><button type="button" class="btn btn-deep-orange  btn-sm m-1">
-                                    fotografia
-                                </button></li>
-                                <li><button type="button" class="btn btn-deep-orange  btn-sm m-1">
-                                    edição de vídeo
-                                </button></li> --}}
                             </ul>
                         
                         </div>
