@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -60,6 +61,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 //SEGUIR / DEIXAR DE SEGUIR (ENTRE USUARIOS)
 Route::post('/user/seguir/{id}', 'HomeController@seguir');
+Route::delete('/user/unfollow/{id}', 'HomeController@unfollow');
 
 
 //FIM SEGUIR

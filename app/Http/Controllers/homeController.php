@@ -7,6 +7,7 @@ use App\Projeto;
 use App\User;
 use App\Habilidade;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 
 class HomeController extends Controller
@@ -113,7 +114,27 @@ class HomeController extends Controller
     //SEGUIR
     public function seguir($id)
     {
+        $user_logado = User::find(auth()->user()->id);
+        $user_seguido = User::find($id);
         //$id -> quem será seguido -> user_id
         //auth::user()->id -> user_seguindo_id
+        $user_logado->seguindo()->attach(['user_seguindo_id' => auth()->user()->id], ['user_id' => $id]);
+
+        return redirect('/perfil/'.$user_seguido->username);
+    }
+
+    public function unfollow($id)
+    {
+        $user_logado = User::find(auth()->user()->id);
+        $user_seguido = User::find($id);
+
+        $user_logado->seguindo()->attach(['user_seguindo_id' => auth()->user()->id], ['user_id' => $id]);
+
+        DB::table('user_userseguindo')
+                ->where('user_id', $id)
+                ->where('user_seguindo_id', auth()->user()->id)
+                ->delete();
+
+                return redirect('/perfil/'.$user_seguido->username);
     }
 }
