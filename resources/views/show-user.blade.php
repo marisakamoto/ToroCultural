@@ -81,24 +81,24 @@
                                 <h3 class="nomeUser text-center">{{  $user->name }}</h3>
                             </div>
                             <div class="row-md-6 text-center">
-                            @foreach ( $seguidores_users as $seguidor)
-                                @if($seguidor->id == Auth::user()->id)
-                                    @if ($seguidor->id == Auth::user()->id)
-                                        <button type="button" class="follow btn btn-outline-warning btn-sm m-1 p-2"> Deixar de Seguir</button>
-                                    
-                                    @elseif($seguidor->id != Auth::user()->id)
-                                        <button type="button" class="follow btn btn-outline-warning btn-sm m-1 p-2"> Seguir</button>
-                                    @endif  
+                        @if($seguidores > 0)
+                            @for ($i = 0 ; $i < count($seguidores_users) ; $i++)
+                                @if($seguidores_users[$i]->id == Auth::user()->id)
+                                    <button type="button" class="follow btn btn-outline-warning btn-sm m-1 p-2"> Deixar de Seguir</button>
+                                    @break
+                                @elseif($seguidores_users[$i]->id != Auth::user()->id)
+                                    <button type="button" class="follow btn btn-outline-warning btn-sm m-1 p-2"> Seguir</button>
                                 @endif
-                                {{-- {{ $seguidor->id }} --}}
-                                
-                            @endforeach
-
+                            @endfor
+                        @elseif($seguidores == 0)
+                            <button type="button" class="follow btn btn-outline-warning btn-sm m-1 p-2"> Seguir</button>
+                        @endif
+                            
 
                             {{-- [
-                                0 => objeto_seguidor, 
-                                1 => objeto_seguidor,
-                                2 => objeto_seguidor
+                                0 => objeto_seguidor,   1
+                                1 => objeto_seguidor,   2 
+                                2 => objeto_seguidor    3
                             ] --}}
 
  
