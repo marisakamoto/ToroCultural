@@ -45,7 +45,7 @@
                 </a>
 
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                
+
                     <a class="dropdown-item" href="{{ route('logout') }}"
                         onclick="event.preventDefault();
                                         document.getElementById('logout-form').submit();">
@@ -81,8 +81,13 @@
                                 <h3 class="nomeUser text-center">{{ Auth::user()->name }}</h3>
                             </div>
                             <div class="col-md-6 text-center d-flex justify-content-end">
-                                <a href="{{ route('cadastroUsuario') }}"class="text-center"><img class="icon-config pl-1 pt-1 ml-5" src="{{ url('img/edit.svg') }}" alt=""></a>
+                                <a href="/user/edit/{{Auth::user()->id}}"class="text-center"><img class="icon-config pl-1 pt-1 ml-5" src="{{ url('img/edit.svg') }}" alt=""></a>
                                 <a class="btn-orange btn p-1" href="{{ route('cadastroVaga') }}">+ Experiência</a>
+                            <form action="/user/delete/{{ Auth::user()->id}}" method="POST">
+                                @method('delete')
+                                @csrf
+                                <button class="btn-orange btn p-1" onclick="return confirm('Deseja mesmo deletar esse usuário?');">Delete</button>
+                            </form>
                             </div>
                         </div>
                         <div class="row d-flex justify-content-center" id="habilidades">
@@ -90,7 +95,7 @@
                                 @foreach ($habilidades as $h)
                                 <li>
                                     <button type="button" class="btn btn-deep-orange  btn-sm m-1">
-                                    {{$h->habilidade}}  
+                                    {{$h->habilidade}}
                                     </button>
                                 </li>
                                 @endforeach
@@ -136,7 +141,7 @@
                                             @endforeach
                                         </div>
 
-                                        
+
 
                                         {{-- CARDS EXPERIENCIAS --}}
                                         @if ($experiences->count() > 0)
@@ -148,10 +153,10 @@
                                                         <div class="col d-flex align-content-around">
                                                             <div class="col">
                                                                 <h4>{{ $xp->titulo }} </h4>
-                                                                <hr> 
+                                                                <hr>
                                                                 <h6>{{ $xp->localizacao }} | {{ $xp->data_realizacao }}</h6>
                                                                 <p>{{ $xp->descricao }}</p>
-                                                            </div>                        
+                                                            </div>
                                                             <div class="xp-foto d-none d-lg-block">
                                                                 <img class="mx-auto d-flex   " src= "{{ $xp->url_foto }}">
                                                             </div>
@@ -160,7 +165,7 @@
                                                 @endforeach
                                             </div>
                                         @endif
-                             
+
                         </div>
                     </div>
                 </div>
@@ -236,7 +241,7 @@
                         </li>
                         <li>
                             <a href="#" class="mr-2" data-toggle="modal" data-target="#exampleModalCenter2"><strong>Seguindo</strong></a> {{$seguindo + $projetos_seguidos->count()}}
-                            
+
 
                             <div class="modal fade" id="exampleModalCenter2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                                 <div class="modal-dialog modal-dialog-centered" role="document">
@@ -272,7 +277,7 @@
                                             @elseif ($seguindo == 0 && $projetos_seguidos->count() == 0)
                                                 <p>No momento, você não segue ninguém.</p>
                                             @endif
-                                            
+
                                         </div>
                                     </div>
                                 </div>

@@ -44,7 +44,7 @@ class HomeController extends Controller
                 $projetos_seguidos = $users->user_projetoSeguido;
                 // $seguindo = seguindo()->user_seguindo_id;
                 // echo $seguindo;
-                
+
             return view('home', compact('projetos', 'habilidades', 'seguindo', 'seguindo_user', 'seguidores','seguidores_users', 'experiences', 'projetos_seguidos', 'projetos_colaborando'));
         }
     }
@@ -69,4 +69,43 @@ class HomeController extends Controller
         return view('show-user', compact('user', 'username','projetos', 'habilidades', 'seguindo', 'seguindo_user', 'seguidores','seguidores_users', 'experiences', 'projetos_seguidos', 'projetos_colaborando'));
     }
 
+    public function edit($id)
+    {
+        $habilidades = Habilidade::all();
+        return view('users.edit', compact('habilidades'));
+    }
+
+    public function update($id, Request $request)
+    {
+
+        $user = User::find($id);
+        // //Ele salvará a imagem com o caminho
+        // // if($request->hasfile('url_foto') && $request->url_foto->isvalid()){
+        // //     $url_foto = $request->url_foto->store('user');
+        // //     $user->url_foto = $url_foto;
+        // }
+
+        $user->username = request('username');
+        $user->descricao = request('descricao');
+        $user->aniversario = request('aniversario');
+        $user->profissao = request('profissao');
+        $habilidades = $request->get('checkbox'); //array:[2, 3, 8]
+        $user->save();
+
+        $user->habilidades()->attach($habilidades, ['user_id' => $user->id]);
+
+        return redirect('/home');
+    }
+
+    public function delete($id)
+    {
+        User::find($id)->delete();
+        return redirect('/');
+
+    }
+
+    public function experiencia()
+    {
+        return view('users.experiencias.create');
+    }
 }

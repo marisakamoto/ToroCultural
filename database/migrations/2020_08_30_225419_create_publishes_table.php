@@ -15,7 +15,7 @@ class CreatePublishesTable extends Migration
     {
         Schema::create('publishes', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id');
+            $table->foreignId('user_id')->onDelete('cascade');
             $table->foreignId('projeto_id');
             $table->text('url_foto')->nullable();
             $table->text('legenda')->nullable();

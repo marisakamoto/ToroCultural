@@ -21,7 +21,7 @@ class CriarTabelaPivotProjetoUser extends Migration
     {
         Schema::create('projeto_user_colaborador', function (Blueprint $table) {
             $table->foreignId('projeto_id')->constrained()->onDelete('cascade');
-            $table->foreignId('userColaborador_id')->constrained('users');
+            $table->foreignId('userColaborador_id')->constrained('users')->onDelete('cascade');
             $table->timestamps();
         });
     }
