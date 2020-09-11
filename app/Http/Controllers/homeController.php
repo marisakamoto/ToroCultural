@@ -108,4 +108,12 @@ class HomeController extends Controller
     {
         return view('users.experiencias.create');
     }
+
+
+    //SEGUIR
+    public function seguir($id)
+    {
+        //$id -> quem será seguido -> user_id
+        //auth::user()->id -> user_seguindo_id
+    }
 }
