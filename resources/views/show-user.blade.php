@@ -84,7 +84,12 @@
                         @if($seguidores > 0)
                             @for ($i = 0 ; $i < count($seguidores_users) ; $i++)
                                 @if($seguidores_users[$i]->id == Auth::user()->id)
-                                    <button type="button" class="follow btn btn-outline-warning btn-sm m-1 p-2"> Deixar de Seguir</button>
+                                    <form action="/user/unfollow/{{ $user->id }}" method="POST">
+                                        @method('delete')
+                                        @csrf
+                                        <button class="follow btn btn-orange font-weight-bold btn-sm m-1 p-2"> Deixar de Seguir</button>
+                                    </form>
+
                                     @break
                                 @elseif($seguidores_users[$i]->id != Auth::user()->id)
                                     <form action="/user/seguir/{{ $user->id }}" method="POST">
@@ -97,9 +102,10 @@
                         @elseif($seguidores == 0)
                             <form action="/user/seguir/{{ $user->id }}" method="POST">
                                 @csrf
-                                <button type="button" class="follow btn btn-outline-warning btn-sm m-1 p-2"> Seguir</button>
+                                <button class="follow btn btn-outline-warning btn-sm m-1 p-2"> Seguir</button>
                             </form>
                         @endif
+                        
                             </div>
                         </div>
                         <div class="row d-flex justify-content-center" id="habilidades">
