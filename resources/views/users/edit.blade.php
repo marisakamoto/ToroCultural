@@ -69,7 +69,7 @@
         <section class="container cadastro-user p-4 mb-5">
             <div class="row">
                 <div class="col-md-4 text-center pt-3">
-                    <div class="mx-auto perfil-foto-cadastro m-0" >
+                        <div class="mx-auto perfil-foto-cadastro m-0" >
                                 <img  src="{{ Auth::user()->url_foto }}" id="preview-img" ></img>
                             </div>
                         <input type="file" name="imagem" class="btn block" id="imagem" onchange="previewImagem()">
@@ -111,12 +111,7 @@
                             <label for="descricao-user">Descrição</label>
                             <textarea name="descricao-user" class="form-control" id="descricao-user" rows="5"></textarea>
                         </div>
-                    </form>
-                </div>
-            </div>
-            <div class="row">
-                <form class="form-user formHabilidadesInteresses m-3">
-                    <div class=" form-group my-0 p-2" style="border: solid gray 1px" >
+                        <div class=" form-group my-0 p-2" style="border: solid gray 1px" >
                         <label for="pcp-habilidades">Principais Habilidades:</label></br>
                         @foreach ($habilidades as $h )
                             <div class="form-check form-check-inline">
@@ -134,6 +129,12 @@
                         <textarea name="interesses" class="form-control my-0 p-2" id="interesse" rows="5" disabled></textarea></br>
                     </div>
                         <button class="btn-deep-orange btn " type="Submit">Atualizar</button>
+                    </form>
+                </div>
+            </div>
+            <div class="row">
+                <form class="form-user formHabilidadesInteresses m-3">
+                    
                    
                 </form>
             </div>
