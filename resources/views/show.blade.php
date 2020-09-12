@@ -90,7 +90,7 @@
                     </div>
                 </div>
                 <div class="col-lg-3">
-                    @if ($projeto->user_id == Auth::user()->id)
+                    @if ( $projeto->user_id == Auth::user()->id )
                         <div class="config d-flex">
                             <a href="/projeto/edit/{{ $projeto->id }}"class="text-center"><img class="icon-config pl-1 pt-1 ml-5" src="{{ url('img/edit.svg') }}" alt=""></a>
 
@@ -262,7 +262,7 @@
                             </div>
                         </div>
                         @foreach ( $vagas as $v )
-                             <div class="card card-vagas bg-light m-3 " >
+                            <div class="card card-vagas bg-light m-3 " >
                             <div class="card-header ">
                                 <img src="{{ url('img/rain.svg') }} " width="20 " alt=" "> {{ $v->status }}
                             </div>
@@ -292,15 +292,23 @@
                 <div class="conteudo-feed tab-pane fade px-2 pt-2" id="feed-site" role="tabpanel" aria-labelledby="nav-profile-tab">
                     <div class="container border p-4">
                         <div class="row justify-content-start">
-
                             <div class="pesquisa-feed-projeto mx-auto">
-                                    <textarea class="form-control" rows="2" placeholder="O que seu toró está pensando?"></textarea>
+
+                            <form method="POST" action="/projeto/{{$projeto->id}}/post">
+                                @csrf
+                                    <textarea name = postagem class="form-control" rows="2" placeholder="O que seu toró está pensando?"></textarea>
                                     <div class="mar-top clearfix">
                                         <button class="btn btn-sm btn-compartilhar pull-right" type="submit"><i class="fa fa-pencil fa-fw"></i> Share</button>
+                                        
                                         <a class="btn btn-trans btn-icon fa fa-video-camera add-tooltip" href="#"></a>
                                         <a class="btn btn-trans btn-icon fa fa-camera add-tooltip" href="#"></a>
                                         <a class="btn btn-trans btn-icon fa fa-file add-tooltip" href="#"></a>
                                     </div>
+
+                                </form>
+
+                            
+
                             </div>
                             <div class="feed-publicacoes mx-auto">
                                 
@@ -310,7 +318,7 @@
                                             <a class="media-left" href="#"><img class="img-circle img-publi"  alt="Profile Picture" src="{{ url($post->url_foto) }}"></a>
                                             <div class="media-body">
                                                 <div class="mar-btm">
-                                                    <a href="#" class="btn-link text-semibold media-heading box-inline"> {{$user_criador->username}}</a>
+                                                    <a href="#" class="btn-link text-semibold media-heading box-inline"> {{Auth::user()->username}}</a>
                                                     <p class="text-muted text-sm"><i class="fa fa-mobile fa-lg"></i> - From Mobile - 11 min ago</p>
                                                 </div>
                                                 <p>
