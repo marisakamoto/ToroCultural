@@ -90,7 +90,7 @@
                     </div>
                 </div>
                 <div class="col-lg-3">
-                    @if ($projeto->user_id == Auth::user()->id)
+                    @if ( $projeto->user_id == Auth::user()->id )
                         <div class="config d-flex">
                             <a href="/projeto/edit/{{ $projeto->id }}"class="text-center"><img class="icon-config pl-1 pt-1 ml-5" src="{{ url('img/edit.svg') }}" alt=""></a>
 

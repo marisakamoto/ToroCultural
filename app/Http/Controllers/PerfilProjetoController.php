@@ -32,6 +32,8 @@ class PerfilProjetoController extends Controller
         $vagas = $projeto->vagas;
         $posts = Publish::where('projeto_id',  $id)->get();
 
+     
+
         return view('show', compact('projeto', 'categorias', 'user_colaborador', 'vagas', 'user_criador','posts' ));
     }
 
