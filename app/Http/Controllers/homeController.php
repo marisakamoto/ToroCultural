@@ -65,9 +65,28 @@ class HomeController extends Controller
         $experiences = $user->experience()->get();
         $projetos_seguidos = $user->user_projetoSeguido;
 
-        // dd($seguidores_users[0]->username);
+        //Verificando se o usuario logado segue o perfil show
+        function pegaIdSeguidores($seguidores_users)
+        {
+            $id_seguidores = [];
+            for ($i=0; $i < count($seguidores_users); $i++) { 
+                $id_seguidores[] = $seguidores_users[$i]->id;
+            }
+            return $id_seguidores;
+        }
 
-        return view('show-user', compact('user', 'username','projetos', 'habilidades', 'seguindo', 'seguindo_user', 'seguidores','seguidores_users', 'experiences', 'projetos_seguidos', 'projetos_colaborando'));
+        $id_seguidores = pegaIdSeguidores($seguidores_users);
+
+        function verificaId($id_seguidores)
+        {
+            if(in_array(auth()->user()->id, $id_seguidores)){
+                return true;
+            }
+        }
+
+        $seguididoPeloLogado = verificaId($id_seguidores);
+
+        return view('show-user', compact('user', 'username','projetos', 'habilidades', 'seguindo', 'seguindo_user', 'seguidores','seguidores_users', 'experiences', 'projetos_seguidos', 'projetos_colaborando', 'seguididoPeloLogado'));
     }
 
     public function edit($id)
