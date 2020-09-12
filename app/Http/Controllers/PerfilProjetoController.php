@@ -13,7 +13,7 @@ class PerfilProjetoController extends Controller
 {
     public function __contruct()
     {//a pessoa precisa estar logada para construir um projeto
-	    $this->middlewate('auth');
+	$this->middlewate('auth');
     }
 
     public function  perfilProjeto ()
@@ -41,6 +41,18 @@ class PerfilProjetoController extends Controller
         return view ('projetos.create', compact('categorias'));
     }
 
+    public function storePost($projeto_id, Request $resquest)
+    {
+        $publicacao = new Publish();   
+        $publicacao->user_id = auth()->user()->id;
+        $publicacao->projeto_id = $projeto_id;
+        $publicacao->legenda = request('postagem');
+        
+        $publicacao->url_foto = '/img/publishes/cinema.jpg';
+
+        $publicacao->save();
+        return redirect('/projeto/'.$publicacao->projeto_id);
+    }
     public function store(Request $request)
     {
 
