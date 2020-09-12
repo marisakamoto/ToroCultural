@@ -45,7 +45,7 @@
                 </a>
 
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                
+
                     <a class="dropdown-item" href="{{ route('logout') }}"
                         onclick="event.preventDefault();
                                         document.getElementById('logout-form').submit();">
@@ -81,7 +81,7 @@
                                 <h3 class="nomeUser text-center">{{  $user->name }}</h3>
                             </div>
                             <div class="row-md-6 text-center">
-                            
+
                                 @if($seguididoPeloLogado)
                                     <form action="/user/unfollow/{{ $user->id }}" method="POST">
                                         @method('delete')
@@ -94,24 +94,24 @@
                                         <button class="follow btn btn-outline-warning btn-sm m-1 p-2"> Seguir</button>
                                     </form>
                                 @endif
-                        
+
                             </div>
                         </div>
                         <div class="row d-flex justify-content-center" id="habilidades">
                             <ul>
                                 @foreach ($habilidades as $h)
                                 <li>
-                                    <button type="button" class="btn btn-deep-orange  btn-sm m-1">
-                                    {{$h->habilidade}}  
+                                    <button type="button" class="btn btn-orange btn-sm m-1">
+                                    {{$h->habilidade}}
                                     </button>
                                 </li>
                                 @endforeach
                             </ul>
-                        
+
                         </div>
-                        <div class="row d-flex justify-content-center"> 
-                            <p class=" ml-4" >    {{ $user->descricao }} </p>
-                        </div>
+                    <div class="row d-flex justify-content-center">
+                        <p class=" ml-4" >    {{ $user->descricao }} </p>
+                    </div>
                     </div>
                 </div>
                 <hr class="my-4 ">
@@ -141,12 +141,12 @@
 
 
                                 <!--Slides-->
-                                
+
                                     <!--First slide-->
-                                    
+
                                         <div class="row ">
                                             @foreach ( $projetos as $p )
-                                                <div class="col-md-4 clearfix d-none d-md-block ">
+                                                <div class="col-md-4 clearfix d-md-block ">
                                                     <div class="card card-projeto mb-3">
                                                         <img class="card-img-top" src="{{ $p->url_foto}}" alt="Card image cap ">
                                                         <div class="card-body ">
@@ -158,7 +158,7 @@
                                                 </div>
                                             @endforeach
                                             @foreach ( $projetos_colaborando as $p )
-                                                <div class="col-md-4 clearfix d-none d-md-block ">
+                                                <div class="col-md-4 clearfix d-md-block ">
                                                     <div class="card card-projeto mb-3 bg-warning">
                                                         <img class="card-img-top" src="{{ $p->url_foto}}" alt="Card image cap ">
                                                         <div class="card-body ">
@@ -170,8 +170,8 @@
                                                 </div>
                                             @endforeach
                                         </div>
- 
-                                        
+
+
                                         @if ($experiences->count() > 0)
                                             <hr class="my-4">
                                             <div class="col px-5">
@@ -182,10 +182,10 @@
                                                         <div class="col d-flex align-content-around">
                                                             <div class="col">
                                                                 <h4>{{ $xp->titulo }} </h4>
-                                                                <hr> 
+                                                                <hr>
                                                                 <h6>{{ $xp->localizacao }} | {{ $xp->data_realizacao }}</h6>
                                                                 <p>{{ $xp->descricao }}</p>
-                                                            </div>                        
+                                                            </div>
                                                             <div class="xp-foto d-none d-lg-block">
                                                                 <img class="mx-auto d-flex   " src= "{{ $xp->url_foto }}">
                                                             </div>
@@ -194,7 +194,7 @@
                                                 @endforeach
                                             </div>
                                         @endif
-                                    </div>    
+                                    </div>
                         </div>
                     </div>
                 </div>
@@ -307,7 +307,7 @@
                                             @elseif ($seguindo == 0 && $projetos_seguidos->count() == 0)
                                                 <p>No momento, você não segue ninguém.</p>
                                             @endif
-                                            
+
                                         </div>
                                     </div>
                                 </div>

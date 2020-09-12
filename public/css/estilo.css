@@ -88,6 +88,30 @@ h3 {
     padding-top: 40px;
 }
 
+.no-padding-left {
+    padding-left: 0px !important;
+}
+
+.no-margin-left {
+    margin-left: 0px !important;
+}
+
+.no-padding-right {
+    padding-right: 0px;
+}
+
+.btn.btn-orange {
+    background-color: #f4a460 !important;
+}
+
+.btn.btn-deep-orange {
+    background-color: #f4a460 !important;
+}
+
+.btn.btn-outline-success  {
+    background-color: #f4a460 !important;
+}
+
 @media(max-width: 1000px) {
     header ul li {
         width: 100%;
