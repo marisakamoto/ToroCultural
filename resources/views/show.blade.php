@@ -79,6 +79,10 @@
                         <div id="nomeProjeto d-flex flex-row">
                             <h1 class="">{{ $projeto->titulo }}</h1>
                         </div>
+
+                    {{-- <img src="{{url("storage/{$projeto->url_foto}")}}"> --}}
+ 
+
                     </div>
                     <div class="row mb-2" id="categoriasProjeto ">
                         @foreach ($categorias as $c )
@@ -468,7 +472,7 @@
                 <h5 class="my-0"><a class="user-link" href="/perfil/{{ $user_criador->username }}">{{ $user_criador->username }}</a></h5> <br>
 
                 <div class="perfil-foto-proj">
-                    <img  src="{{ $user_criador->url_foto }}">
+                    <img  src="{{url("storage/".Auth::user()->url_foto)}}">
                 </div>
                 <div class="row  mx-auto">
                     <div id="star-rank ">
@@ -498,7 +502,7 @@
                 @foreach ( $user_colaborador as $user_c )
                     <div class="row px-1 pt-2 ">
                     <div class="row perfil-foto-colaborador">
-                        <img class=" rounded-circle peach-gradient " height="85 em " src="{{ $user_c->url_foto }}" alt="perfil-user">
+                        <img class=" rounded-circle peach-gradient " height="85 em " src="{{ url("storage/{$user_c->url_foto}") }}" alt="perfil-user">
                     </div>
                     <div class="row mx-auto " style="width: 100%; ">
                         <p class="text-center mx-auto mb-0 "><a class="user-link" href="/perfil/{{ $user_c->username }}">{{ $user_c->username }}</a></p>

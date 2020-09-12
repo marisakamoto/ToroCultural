@@ -68,7 +68,8 @@
                     <div class="col-md-4 mx-auto" id="foto">
                         <div class="row foto-perfil">
                             <div class="mx-auto perfil-foto m-0">
-                                <img  src="{{ Auth::user()->url_foto }}"></img>
+                                <img  src="{{url("storage/".Auth::user()->url_foto)}}">
+                                
                             </div>
                         </div>
                         <div class="row pt-2">
@@ -112,12 +113,13 @@
                     <div class="row px-4">
                         <div class="container mx-2">
 
+
                                         {{-- CARDS PROJETOS CRIADOS PELO USUARIO --}}
                                         <div class="row ">
                                             @foreach ( $projetos as $p )
                                                 <div class="col-md-4 clearfix d-none d-md-block ">
                                                     <div class="card card-projeto mb-3">
-                                                        <img class="card-img-top" src="{{ $p->url_foto}}" alt="Card image cap ">
+                                                        <img class="card-img-top" src="{{url("storage/{$p->url_foto}")}}" alt="Card image cap ">
                                                         <div class="card-body ">
                                                             <h4 class="card-title titulo-projeto">{{ $p->titulo }}</h4>
                                                             <p class="card-text descricao-projeto ">{{ $p->descricao }}</p>
@@ -130,7 +132,7 @@
                                             @foreach ( $projetos_colaborando as $p )
                                                 <div class="col-md-4 clearfix d-none d-md-block ">
                                                     <div class="card card-projeto mb-3 bg-warning">
-                                                        <img class="card-img-top" src="{{ $p->url_foto}}" alt="Card image cap ">
+                                                        <img class="card-img-top" src="{{url("storage/{$p->url_foto}")}}" alt="Card image cap ">
                                                         <div class="card-body ">
                                                             <h4 class="card-title titulo-projeto">{{ $p->titulo }} - Colaborador</h4>
                                                             <p class="card-text descricao-projeto ">{{ $p->descricao }}</p>
@@ -158,7 +160,7 @@
                                                                 <p>{{ $xp->descricao }}</p>
                                                             </div>
                                                             <div class="xp-foto d-none d-lg-block">
-                                                                <img class="mx-auto d-flex   " src= "{{ $xp->url_foto }}">
+                                                                <img class="mx-auto d-flex   " src= "{{url("storage/{$xp->url_foto}")}}">
                                                             </div>
                                                         </div>
                                                     </div>

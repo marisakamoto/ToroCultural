@@ -69,12 +69,12 @@
         <section class="container cadastro-user p-4 mb-5">
             <div class="row">
                 <div class="col-md-8 form-user">
-                    <form method="POST" action = "/user/update/{{Auth::user()->id}}">
+                    <form method="POST" action ="/user/update/{{Auth::user()->id}}" enctype="multipart/form-data">
                     @method('put')
                     @csrf
                         <div class="col-md-4 text-center pt-3">
                             <div class="mx-auto perfil-foto-cadastro m-0" >
-                                <img src="{{ Auth::user()->url_foto }}" id="preview-img" ></img>
+                                <img src="{{url("storage/".Auth::user()->url_foto)}}" id="preview-img" id="preview-img" ></img>
                             </div>
                             <input type="file" name="imagem" class="btn block" id="imagem" onchange="previewImagem()">
                             {{-- NÃO CONSEGUI FAZER FUNCIONAR DEIXANDO O JS EM OUTRO ARQUIVO --}}

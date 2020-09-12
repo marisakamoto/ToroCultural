@@ -57,14 +57,13 @@ class PerfilProjetoController extends Controller
     }
     public function store(Request $request)
     {
-
         $projeto = new Projeto;
 
-
-        //Ele salvará a imagem com o caminho
-        if($request->hasfile('url_foto') && $request->url_foto->isvalid()){ //name do input
-            $url_foto = $request->url_foto->store('projetos');          //salvar o caminho da imagem
-            $projeto->url_foto = $url_foto;
+        if($request->hasfile('imagem') && $request->imagem->isvalid()){ //name do input 
+            $imagePath = $request->file('imagem');
+            $imageName = $imagePath->getClientOriginalName();
+            $path = $request->file('imagem')->storeAs('img/projetos', $imageName, 'public');
+            $projeto->url_foto = $path;
         }
 
         $projeto->user_id = auth()->user()->id;
@@ -79,18 +78,6 @@ class PerfilProjetoController extends Controller
         // dd($projeto->id);
         return redirect('/projeto/'.$projeto->id);
     }
-
-    public function image($imagem) // $projeto->url_foto => projetos/hsdjhsajhaksjhdjkas.jpg
-    {
-        $caminho = "projetos/$imagem";
-        $arquivo = Storage::get($caminho); //binário
-        $type = Storage::mimeType($caminho); //formato do arquivo png ou jpg
-
-        return response($arquivo, 200)->header('Content-Type', $type);
-    }
-
-
-
     //RETORNA VIEW COM FORMULÁRIO PARA EDITAR
     public function edit($id)
     {
@@ -104,11 +91,12 @@ class PerfilProjetoController extends Controller
 
         $projeto = Projeto::find($id);
         //Ele salvará a imagem com o caminho
-        if($request->hasfile('url_foto') && $request->url_foto->isvalid()){
-            $url_foto = $request->url_foto->store('projetos');
-            $projeto->url_foto = $url_foto;
+        if($request->hasfile('imagem') && $request->imagem->isvalid()){ //name do input 
+            $imagePath = $request->file('imagem');
+            $imageName = $imagePath->getClientOriginalName();
+            $path = $request->file('imagem')->storeAs('img/projetos', $imageName, 'public');
+            $projeto->url_foto = $path;
         }
-
         $projeto->titulo = request('titulo');
         $projeto->descricao = request('descricao');
         $projeto->localizacao = request('localizacao');

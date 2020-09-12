@@ -44,7 +44,7 @@ class HomeController extends Controller
                 $experiences = $users->experience()->get();
                 $projetos_seguidos = $users->user_projetoSeguido;
                 
-            return view('home', compact('projetos', 'habilidades', 'seguindo', 'seguindo_user', 'seguidores','seguidores_users', 'experiences', 'projetos_seguidos', 'projetos_colaborando'));
+            return view('home', compact('users','projetos', 'habilidades', 'seguindo', 'seguindo_user', 'seguidores','seguidores_users', 'experiences', 'projetos_seguidos', 'projetos_colaborando'));
         }
     }
 
@@ -98,22 +98,23 @@ class HomeController extends Controller
         return view('users.edit', compact('habilidades'));
     }
 
-    public function update($id, Request $request)
+    public function update(Request $request, $id)
     {
 
         $user = User::find($id);
-        // //Ele salvará a imagem com o caminho
-        // // if($request->hasfile('url_foto') && $request->url_foto->isvalid()){
-        // //     $url_foto = $request->url_foto->store('user');
-        // //     $user->url_foto = $url_foto;
-        // }
+        if($request->hasfile('imagem') && $request->imagem->isvalid()){ //name do input 
+            $imagePath = $request->file('imagem');
+            $imageName = $imagePath->getClientOriginalName();
+            $path = $request->file('imagem')->storeAs('img/users', $imageName, 'public');
+            $user->url_foto = $path;
+        }
 
         $user->username = request('username');
         $user->descricao = request('descricao');
         $user->aniversario = request('aniversario');
         $user->profissao = request('profissao');
         $habilidades = $request->get('checkbox'); //array:[2, 3, 8]
-        $user->save();
+        $user->update();
 
         $user->habilidades()->attach($habilidades, ['user_id' => $user->id]);
 
