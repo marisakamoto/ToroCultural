@@ -81,24 +81,20 @@
                                 <h3 class="nomeUser text-center">{{  $user->name }}</h3>
                             </div>
                             <div class="row-md-6 text-center">
+                            
                         @if($seguidores > 0)
-                            @for ($i = 0 ; $i < count($seguidores_users) ; $i++)
-                                @if($seguidores_users[$i]->id == Auth::user()->id)
+                                @if($seguididoPeloLogado ==true)
                                     <form action="/user/unfollow/{{ $user->id }}" method="POST">
                                         @method('delete')
                                         @csrf
                                         <button class="follow btn btn-orange font-weight-bold btn-sm m-1 p-2"> Deixar de Seguir</button>
                                     </form>
-
-                                    @break
-                                @elseif($seguidores_users[$i]->id != Auth::user()->id)
+                                @elseif($seguididoPeloLogado ==false)
                                     <form action="/user/seguir/{{ $user->id }}" method="POST">
                                         @csrf
                                         <button type="button" class="follow btn btn-outline-warning btn-sm m-1 p-2"> Seguir</button>
                                     </form>
-                               
                                 @endif
-                            @endfor
                         @elseif($seguidores == 0)
                             <form action="/user/seguir/{{ $user->id }}" method="POST">
                                 @csrf
