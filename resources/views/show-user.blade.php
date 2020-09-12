@@ -82,13 +82,13 @@
                             </div>
                             <div class="row-md-6 text-center">
                             
-                                @if($seguididoPeloLogado ==true)
+                                @if($seguididoPeloLogado)
                                     <form action="/user/unfollow/{{ $user->id }}" method="POST">
                                         @method('delete')
                                         @csrf
                                         <button class="follow btn btn-orange font-weight-bold btn-sm m-1 p-2"> Deixar de Seguir</button>
                                     </form>
-                                @elseif($seguididoPeloLogado ==false)
+                                @else
                                     <form action="/user/seguir/{{ $user->id }}" method="POST">
                                         @csrf
                                         <button class="follow btn btn-outline-warning btn-sm m-1 p-2"> Seguir</button>
