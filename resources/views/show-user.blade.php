@@ -82,7 +82,6 @@
                             </div>
                             <div class="row-md-6 text-center">
                             
-                        @if($seguidores > 0)
                                 @if($seguididoPeloLogado ==true)
                                     <form action="/user/unfollow/{{ $user->id }}" method="POST">
                                         @method('delete')
@@ -95,12 +94,6 @@
                                         <button class="follow btn btn-outline-warning btn-sm m-1 p-2"> Seguir</button>
                                     </form>
                                 @endif
-                        @elseif($seguidores == 0)
-                            <form action="/user/seguir/{{ $user->id }}" method="POST">
-                                @csrf
-                                <button class="follow btn btn-outline-warning btn-sm m-1 p-2"> Seguir</button>
-                            </form>
-                        @endif
                         
                             </div>
                         </div>
