@@ -92,7 +92,7 @@
                                 @elseif($seguididoPeloLogado ==false)
                                     <form action="/user/seguir/{{ $user->id }}" method="POST">
                                         @csrf
-                                        <button type="button" class="follow btn btn-outline-warning btn-sm m-1 p-2"> Seguir</button>
+                                        <button class="follow btn btn-outline-warning btn-sm m-1 p-2"> Seguir</button>
                                     </form>
                                 @endif
                         @elseif($seguidores == 0)
