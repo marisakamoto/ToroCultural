@@ -8,7 +8,7 @@
  */
 
 :root {
-  
+
   --indigo: #07080a;
   --purple: #9561e2;
   --pink: #f66d9b;
@@ -2846,7 +2846,7 @@ fieldset:disabled a.btn {
 
 .btn-warning:hover {
   color: #212529;
-  background-color: #ffe924;
+  background-color: #CFCFCF;
   border-color: #ffe817;
 }
 
@@ -7013,7 +7013,7 @@ button.bg-info:focus {
 }
 
 .bg-warning {
-  background-color: #ffed4a !important;
+  background-color: #CFCFCF !important;
 }
 
 a.bg-warning:hover,

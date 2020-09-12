@@ -78,10 +78,10 @@
                     </div>
                     <div class="col-md-8">
                         <div class="row d-flex pb-3">
-                            <div class="col-md-6">
-                                <h3 class="nomeUser text-center">{{ Auth::user()->name }}</h3>
+                            <div class="col-md-6 no-padding-left">
+                                <h3 class="nomeUser text">{{ Auth::user()->name }}</h3>
                             </div>
-                            <div class="col-md-6 text-center d-flex justify-content-end">
+                            <div class="col-md-6 text-center d-flex justify-content-end no-padding-right">
                                 <a href="/user/edit/{{Auth::user()->id}}"class="text-center"><img class="icon-config pl-1 pt-1 ml-5" src="{{ url('img/edit.svg') }}" alt=""></a>
                                 <a class="btn-orange btn p-1" href="{{ route('cadastroVaga') }}">+ Experiência</a>
                             <form action="/user/delete/{{ Auth::user()->id}}" method="POST">
@@ -91,18 +91,21 @@
                             </form>
                             </div>
                         </div>
-                        <div class="row d-flex justify-content-center" id="habilidades">
+                        <div class="row d-flex justify-content" id="habilidades">
                             <ul >
                                 @foreach ($habilidades as $h)
                                 <li>
-                                    <button type="button" class="btn btn-deep-orange  btn-sm m-1">
-                                    {{$h->habilidade}}
+                                    <button type="button" class="btn btn-orange btn-sm m-1">
+                                    <b>{{$h->habilidade}}</b>
                                     </button>
                                 </li>
                                 @endforeach
                             </ul>
-                            <p class="ml-4"> {{ Auth::user()->descricao }} </p>
                         </div>
+                        <div class="row d-flex justify-content" id="habilidades">
+                            <p class="ml-4 no-margin-left"> <b> {{ Auth::user()->descricao }} </b> </p>
+                        </div>
+
                     </div>
                 </div>
                 <hr class="my-4 ">
@@ -117,7 +120,7 @@
                                         {{-- CARDS PROJETOS CRIADOS PELO USUARIO --}}
                                         <div class="row ">
                                             @foreach ( $projetos as $p )
-                                                <div class="col-md-4 clearfix d-none d-md-block ">
+                                                <div class="col-md-4 clearfix d-md-block ">
                                                     <div class="card card-projeto mb-3">
                                                         <img class="card-img-top" src="{{url("storage/{$p->url_foto}")}}" alt="Card image cap ">
                                                         <div class="card-body ">
@@ -130,11 +133,14 @@
                                             @endforeach
                                             {{-- CARDS ONDE O USUARIO É O COLABORADOR --}}
                                             @foreach ( $projetos_colaborando as $p )
-                                                <div class="col-md-4 clearfix d-none d-md-block ">
+                                                <div class="col-md-4 clearfix d-md-block ">
                                                     <div class="card card-projeto mb-3 bg-warning">
                                                         <img class="card-img-top" src="{{url("storage/{$p->url_foto}")}}" alt="Card image cap ">
                                                         <div class="card-body ">
-                                                            <h4 class="card-title titulo-projeto">{{ $p->titulo }} - Colaborador</h4>
+                                                            <div class="row">
+                                                                <h4 class="col-md-10 card-title titulo-projeto">{{ $p->titulo }} - Colaborador</h4>
+                                                                <img class="col-md-2 colaboracao no-padding-right" src="{{url('img/perfil-users/colaboracao.png')}}">
+                                                            </div>
                                                             <p class="card-text descricao-projeto ">{{ $p->descricao }}</p>
                                                             <a class="btn peach-gradient btn-mais-projeto" href="/projeto/{{ $p->id }}">Perfil</a>
                                                         </div>

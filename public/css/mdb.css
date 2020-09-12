@@ -3,26 +3,26 @@
 /*!
  * Material Design for Bootstrap 4
  *   Version: MDB FREE 4.14.1
- * 
- * 
+ *
+ *
  *   Copyright: Material Design for Bootstrap
  *   https://mdbootstrap.com/
- * 
+ *
  *   Read the license: https://mdbootstrap.com/general/license/
- * 
- * 
+ *
+ *
  *   Documentation: https://mdbootstrap.com/
- * 
+ *
  *   Getting started: https://mdbootstrap.com/docs/jquery/getting-started/download/
- * 
+ *
  *   Tutorials: https://mdbootstrap.com/education/bootstrap/
- * 
+ *
  *   Templates: https://mdbootstrap.com/templates/
- * 
+ *
  *   Support: https://mdbootstrap.com/support/
- * 
+ *
  *   Contact: office@mdbootstrap.com
- * 
+ *
  *   Attribution: Animate CSS, Twitter Bootstrap, Materialize CSS, Normalize CSS, Waves JS, WOW JS, Toastr, Chart.js
  */
 .mdb-color.lighten-5 {
@@ -1182,7 +1182,7 @@
 }
 
 .orange.darken-2 {
-    background-color: #f57c00 !important
+    background-color: #F4A460 !important
 }
 
 .orange.darken-3 {
@@ -1226,7 +1226,7 @@
 }
 
 .deep-orange.lighten-1 {
-    background-color: #ff7043 !important
+    background-color: #F4A460 !important
 }
 
 .deep-orange {
@@ -8678,7 +8678,11 @@ table.table a.btn.btn-amber {
 
 .btn-orange {
     color: #fff;
-    background-color: #f57c00 !important
+    background-color: #F4A460 !important;
+}
+
+.btn-light-orange {
+    background-color: #f4a460 !important;
 }
 
 .btn-orange:hover {
@@ -8699,7 +8703,7 @@ table.table a.btn.btn-amber {
 }
 
 .btn-orange.dropdown-toggle {
-    background-color: #f57c00 !important
+    background-color: #F4A460 !important
 }
 
 .btn-orange.dropdown-toggle:hover,
@@ -8775,7 +8779,7 @@ table.table a.btn.btn-orange {
 
 .btn-deep-orange {
     color: #fff;
-    background-color: #ff7043 !important
+    background-color: #F4A460 !important
 }
 
 .btn-deep-orange:hover {
@@ -8796,7 +8800,7 @@ table.table a.btn.btn-orange {
 }
 
 .btn-deep-orange.dropdown-toggle {
-    background-color: #ff7043 !important
+    background-color: #F4A460 !important
 }
 
 .btn-deep-orange.dropdown-toggle:hover,

@@ -98,7 +98,7 @@
                         <div class="config d-flex">
                             <a href="/projeto/edit/{{ $projeto->id }}"class="text-center"><img class="icon-config pl-1 pt-1 ml-5" src="{{ url('img/edit.svg') }}" alt=""></a>
 
-                            <a class="btn-orange btn p-1" href="{{ route('cadastroVaga') }}">Vaga</a>
+                            <a class="btn-orange p-1" href="{{ route('cadastroVaga') }}">Vaga</a>
 
                             <form action="/projeto/delete/{{ $projeto->id }}" method="POST">
                                 @method('delete')
@@ -303,7 +303,7 @@
                                     <textarea name = postagem class="form-control" rows="2" placeholder="O que seu toró está pensando?"></textarea>
                                     <div class="mar-top clearfix">
                                         <button class="btn btn-sm btn-compartilhar pull-right" type="submit"><i class="fa fa-pencil fa-fw"></i> Share</button>
-                                        
+
                                         <a class="btn btn-trans btn-icon fa fa-video-camera add-tooltip" href="#"></a>
                                         <a class="btn btn-trans btn-icon fa fa-camera add-tooltip" href="#"></a>
                                         <a class="btn btn-trans btn-icon fa fa-file add-tooltip" href="#"></a>
@@ -311,11 +311,11 @@
 
                                 </form>
 
-                            
+
 
                             </div>
                             <div class="feed-publicacoes mx-auto">
-                                
+
                                 @foreach($posts as $post)
                                 <div class="card mb-4">
                                     <div class="card-body">
