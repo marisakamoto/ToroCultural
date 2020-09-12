@@ -53,6 +53,9 @@ class HomeController extends Controller
         //Abre a página de outro usuario
 
         $user = User::where('username', $username)->first();
+        if($user->id == auth()->user()->id){
+            return redirect('/home');
+        }
         $projetos = Projeto::where('user_id', $user->id)->take(3)->get();
         $projetos_colaborando = $user->projeto_user_colaborador()->take(3)->get();
         $username = $user->username;
