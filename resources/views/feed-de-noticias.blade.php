@@ -67,7 +67,7 @@
             <div class="col-md-3 colPesquisaAvancada">
                 <div class="row pt-5" id="foto">
                     <div class="foto-perfil mx-auto">
-                        <img src="{{ Auth::user()->url_foto }}" style="border-radius: 50%;"></img>
+                        <img src="{{url("storage/".Auth::user()->url_foto)}}" style="border-radius: 50%;"></img>
                         {{-- <canvas id="UgCanvas" width="150px" height="150px" style="border:2.5px solid rgb(165, 157, 157); border-radius: 50%;"></canvas> --}}
                     </div>
                 </div>

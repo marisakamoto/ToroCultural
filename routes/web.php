@@ -43,11 +43,6 @@ Route::delete('/user/delete/{id}', 'HomeController@delete');
 //FIM USUARIO
 
 
-
-//ROTA PARA ACESSAR IMAGEM NO STORAGE
-Route::get('/projetos/imagens/{imagem}', "PerfilProjetoController@image");
-//FIM DA ROTA
-
 Route::get('/feed', 'FeedController@feed')->name('feed');
 
 Auth::routes();

@@ -69,7 +69,7 @@
                     @csrf
                         <div class="d-flex align-items-center content-projeto">
                             <div class="col-md-4 text-center pt-3 d-flex align-items-center flex-column">
-                                <img src="{{$projeto->url_foto}}" style = "width:130px; height:130px; object-fit: cover;" id="preview-img">
+                                <img src="{{url("storage/{$projeto->url_foto}")}}" style = "width:130px; height:130px; object-fit: cover;" id="preview-img">
                                 <input type="file" name="imagem" class="btn block" id="imagem" onchange="previewImagem()">
                                 {{-- NÃO CONSEGUI FAZER FUNCIONAR DEIXANDO O JS EM OUTRO ARQUIVO --}}
                                 <script>

@@ -16,13 +16,6 @@ class Projeto extends Model
     ];
 
     
-    // public function getUrlFotoAttribute($value)
-    // {
-    //     $explode = explode('/', $value);
-    //     $nomeArquivo = $explode[1];
-    //     return $nomeArquivo;
-    // }
-
     public function getDataderealizacaoAttribute($value)
     {
         //ALETERAR FORMATO DA DATA QUE VEM DO DATABASE
