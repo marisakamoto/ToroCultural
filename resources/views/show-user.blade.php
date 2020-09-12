@@ -81,6 +81,7 @@
                                 <h3 class="nomeUser text-center">{{  $user->name }}</h3>
                             </div>
                             <div class="row-md-6 text-center">
+                            
                         @if($seguidores > 0)
                                 @if($seguididoPeloLogado ==true)
                                     <form action="/user/unfollow/{{ $user->id }}" method="POST">
