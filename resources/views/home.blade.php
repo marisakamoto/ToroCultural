@@ -69,7 +69,7 @@
                         <div class="row foto-perfil">
                             <div class="mx-auto perfil-foto m-0">
                                 <img  src="{{url("storage/".Auth::user()->url_foto)}}">
-                                
+
                             </div>
                         </div>
                         <div class="row pt-2">
@@ -83,7 +83,7 @@
                             </div>
                             <div class="col-md-6 text-center d-flex justify-content-end no-padding-right">
                                 <a href="/user/edit/{{Auth::user()->id}}"class="text-center"><img class="icon-config pl-1 pt-1 ml-5" src="{{ url('img/edit.svg') }}" alt=""></a>
-                                <a class="btn-orange btn p-1" href="{{ route('cadastroVaga') }}">+ Experiência</a>
+                                <a class="btn-orange btn p-1" href="{{ route('cadastroVaga') }}">+Experiência</a>
                             <form action="/user/delete/{{ Auth::user()->id}}" method="POST">
                                 @method('delete')
                                 @csrf
@@ -139,7 +139,7 @@
                                                         <div class="card-body ">
                                                             <div class="row">
                                                                 <h4 class="col-md-10 card-title titulo-projeto">{{ $p->titulo }} - Colaborador</h4>
-                                                                <img class="col-md-2 colaboracao no-padding-right" src="{{url('img/perfil-users/colaboracao.png')}}">
+                                                                <img class="col-md-2 colaboracao no-padding-right" src="{{url('img/perfil-users/supervisor_account-24px.svg')}}">
                                                             </div>
                                                             <p class="card-text descricao-projeto ">{{ $p->descricao }}</p>
                                                             <a class="btn peach-gradient btn-mais-projeto" href="/projeto/{{ $p->id }}">Perfil</a>

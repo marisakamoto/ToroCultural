@@ -100,12 +100,30 @@ h3 {
     padding-right: 0px;
 }
 
+.btn.block {
+    width: 205px;
+}
+
+.colaboracao {
+    margin-bottom: 26px;
+    width: 4em;
+}
+
 .btn.btn-orange {
     background-color: #f4a460 !important;
+    font-family: lato;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.7875rem;
+    line-height: 1.5;
+    border-radius: 0.2rem;
 }
 
 .btn.btn-deep-orange {
     background-color: #f4a460 !important;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.7875rem;
+    line-height: 1.5;
+    border-radius: 0.2rem;
 }
 
 .btn.btn-outline-success  {

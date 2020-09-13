@@ -49,7 +49,7 @@
                 </a>
 
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                
+
                     <a class="dropdown-item" href="{{ route('logout') }}"
                         onclick="event.preventDefault();
                                         document.getElementById('logout-form').submit();">
@@ -66,7 +66,7 @@
 
 @section('content')
         <h2 id="title-form">Cadastro Usuário</h2>
-        
+
         <section class="container cadastro-exp-extra pb-3">
             <div class="row">
                 <h3 class="pl-4 py-2">Experiências extras</h3>
