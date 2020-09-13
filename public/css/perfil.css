@@ -136,8 +136,40 @@ li {
     margin-left: 5px;
 }
 
-p#descricao-projeto {
-    font-size: 1em !important;
+#upload-button {
+    display: block;
+    align-items: flex-start;
+    width: 30vw;
+    max-width: 100px;
+    margin: auto auto;
+    background-color: rgb(231, 231, 231);
+    border-radius: 4px;
+    font-size: 1em;
+    line-height: 2em;
+    text-align: center;
+}
+
+#upload-button:hover {
+    background-color: rgb(158, 158, 158);
+}
+
+#upload-button:active {
+    background-color: rgb(255, 132, 60);
+}
+
+#apply {
+    border: 0;
+    clip: rect(1px, 1px, 1px, 1px);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+#descricao-projeto {
+    font-size: 2em !important;
     font-family: Lato;
 }
 

@@ -43,14 +43,48 @@ class PerfilProjetoController extends Controller
         return view ('projetos.create', compact('categorias'));
     }
 
-    public function storePost($projeto_id, Request $resquest)
+    public function storePost($projeto_id, Request $request)
     {
         $publicacao = new Publish();   
         $publicacao->user_id = auth()->user()->id;
         $publicacao->projeto_id = $projeto_id;
         $publicacao->legenda = request('postagem');
         
-        $publicacao->url_foto = '/img/publishes/cinema.jpg';
+        
+
+        // $publicacao->url_foto = '/img/publishes/cinema.jpg';
+
+        if($request->hasfile('imagePost') && $request->imagePost->isvalid()){ //name do input 
+            $imagePath = $request->file('imagePost');
+            $imageName = $imagePath->getClientOriginalName();
+            $path = $request->file('imagePost')->storeAs('/img/publishes', $imageName, 'public');
+            $publicacao->url_foto = $path;
+        }
+
+        
+        
+        function timeago($date) {
+           $timestamp = strtotime($date);	
+           
+           $strTime = array("second", "minute", "hour", "day", "month", "year");
+           $length = array("60","60","24","30","12","10");
+    
+           $currentTime = time();
+           if($currentTime >= $timestamp) {
+                $diff     = time()- $timestamp;
+                for($i = 0; $diff >= $length[$i] && $i < count($length)-1; $i++) {
+                $diff = $diff / $length[$i];
+                }
+    
+                $diff = round($diff);
+                return $diff . " " . $strTime[$i] . "(s) ago ";
+           }
+        }
+
+        
+        $strTimeAgo = timeago($publicacao->created_at);
+
+
 
         $publicacao->save();
         return redirect('/projeto/'.$publicacao->projeto_id);
@@ -101,6 +135,7 @@ class PerfilProjetoController extends Controller
         $projeto->descricao = request('descricao');
         $projeto->localizacao = request('localizacao');
         $projeto->data_de_realizacao = request('data_de_realizacao');
+        
         $projeto->save();
 
         // dd($projeto->id);

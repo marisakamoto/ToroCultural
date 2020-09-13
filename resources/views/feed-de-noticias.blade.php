@@ -161,6 +161,7 @@
                         <div class="areaDePostagens container border pt-5 pb-5">
                                 <div class="row justify-content-start">
                                     <div class="feed-publicacoes mx-auto">
+                                        
                                         <div class="card mb-4">
                                             <div class="card-body">
                                                 <a class="media-left" href="#"><img class="img-circle img-publi"  alt="Profile Picture" src="img/jardim.jpg"></a>
