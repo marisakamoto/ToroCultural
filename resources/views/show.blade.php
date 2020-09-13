@@ -122,13 +122,11 @@
             </nav>
             <div class="tab-content" id="nav-tabContent">
                 <div class="conteudo-sobre tab-pane fade show px-2 py-2 active" id="feed-user" role="tabpanel" aria-labelledby="nav-home-tab">
-                    <div class="row " id="descricao-projeto ">
-                        <p class="text-justify p-3"> {{ $projeto->descricao }}
+                    <div class="row " >
+                        <p class="text-justify p-3 accent-2" id="descricao-projeto "> {{ $projeto->descricao }}</p>
 
-                        <img src="/projetos/imagens/{{ $projeto->url_foto }}"></br>
+                        {{-- <img src="{{url("storage/{$projeto->url_foto}")}}" class="col d-flex justify-content-center"> --}}
 
-
-                        </p>
                     </div>
                     <div class="row" id="mapa-cal">
                         <div class="col-md-6   justify-content-center ">

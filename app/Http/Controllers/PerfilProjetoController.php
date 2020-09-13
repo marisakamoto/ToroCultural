@@ -88,7 +88,6 @@ class PerfilProjetoController extends Controller
 
     public function update($id, Request $request)
     {
-
         $projeto = Projeto::find($id);
         //Ele salvará a imagem com o caminho
         if($request->hasfile('imagem') && $request->imagem->isvalid()){ //name do input 
@@ -97,6 +96,7 @@ class PerfilProjetoController extends Controller
             $path = $request->file('imagem')->storeAs('img/projetos', $imageName, 'public');
             $projeto->url_foto = $path;
         }
+    
         $projeto->titulo = request('titulo');
         $projeto->descricao = request('descricao');
         $projeto->localizacao = request('localizacao');

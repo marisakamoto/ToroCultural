@@ -232,7 +232,9 @@
                                                 <div class="row seguidores_user">
                                                     <div class="item-seguidor">
                                                         <div class="perfil-seguidor">
-                                                            <img src="{{ $seguidor->url_foto }}" alt="">
+
+                                                            
+                                                            <img src="{{url("storage/".$seguidor->url_foto )}}" alt="">
                                                         </div>
                                                         <a href="/perfil/{{ $seguidor->username }}" class="ml-5">{{ $seguidor->username }}</a>
                                                     </div>
@@ -267,7 +269,7 @@
                                                     <div class="row seguidores_user">
                                                         <div class="item-seguidor">
                                                             <div class="perfil-seguidor">
-                                                                <img src="{{ $seguindo->url_foto }}" alt="">
+                                                                <img src="{{url("storage/".$seguindo->url_foto)}}" alt="">
                                                             </div>
                                                             <a href="/perfil/{{ $seguindo->username }}" class="ml-5">{{ $seguindo->username }}</a>
                                                         </div>
@@ -277,7 +279,7 @@
                                                     <div class="row seguidores_user">
                                                         <div class="item-seguidor">
                                                             <div class="perfil-seguidor">
-                                                                <img src="{{ $p_s->url_foto }}" alt="">
+                                                                <img src="{{url("storage/".$p_s->url_foto) }}" alt="">
                                                             </div>
                                                             <a href="/projeto/{{ $p_s->id }}" class="ml-5">{{ $p_s->titulo }}</a>
                                                         </div>
