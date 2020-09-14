@@ -5,7 +5,7 @@
     overflow: hidden;
     position: relative;
 }
-    
+
 .perfil-foto img {
     width: initial;
     height: inherit;
@@ -14,7 +14,7 @@
     left: 50%;
     transform: translateX(-50%);
 }
-    
+
 .xp-foto {
     width: 150px;
     height: 150px;
@@ -22,7 +22,7 @@
     overflow: hidden;
     position: relative;
 }
-    
+
 .xp-foto img {
     width: initial;
     height: inherit;
@@ -32,7 +32,7 @@
     transform: translateX(-50%);
 }
 
-.perfil-foto-proj{
+.perfil-foto-proj {
     width: 120px;
     height: 120px;
     border-radius: 100%;
@@ -41,16 +41,16 @@
     margin: 0 auto;
 }
 
-.perfil-foto-proj img{
+.perfil-foto-proj img {
     width: initial;
     height: inherit;
     max-width: none;
     position: absolute;
     left: 50%;
-    transform: translateX(-50%); 
+    transform: translateX(-50%);
 }
-    
-.perfil-foto-colaborador{
+
+.perfil-foto-colaborador {
     width: 95px;
     height: 95px;
     border-radius: 100%;
@@ -59,16 +59,16 @@
     margin: 0 auto;
 }
 
-.perfil-foto-colaborador img{
+.perfil-foto-colaborador img {
     width: initial;
     height: inherit;
     max-width: none;
     position: absolute;
     left: 50%;
-    transform: translateX(-50%); 
+    transform: translateX(-50%);
 }
 
-.perfil-seguidor{
+.perfil-seguidor {
     width: 50px;
     height: 50px;
     border-radius: 100%;
@@ -77,16 +77,17 @@
     margin: 0 auto;
 }
 
-.perfil-seguidor img{
+.perfil-seguidor img {
     width: initial;
     height: inherit;
     max-width: none;
     position: absolute;
     left: 50%;
-    transform: translateX(-50%); 
+    transform: translateX(-50%);
 }
-    
-ul, li {
+
+ul,
+li {
     list-style-type: none;
 }
 
@@ -102,37 +103,76 @@ ul, li {
     align-items: center;
 }
 
-#habilidades ul{
-    display:flex;
+#habilidades ul {
+    display: flex;
     justify-content: center;
     font-family: Lato;
 }
 
-    /* #mapa-cal {
+
+/* #mapa-cal {
     max-height: 500px;
 } */
-    /* #main-info .col-sm-4 {
+
+
+/* #main-info .col-sm-4 {
     display: flex;
     justify-content: center;
     flex-direction: column;
 } */
-    
+
 .foto-perfil {
     text-align: center;
 }
-    
+
 #foto p {
     text-align: center;
 }
 
-.data-realizacao{
+.data-realizacao {
     font-size: 1.5em;
-    color:orange;
+    color: orange;
     font-weight: bold;
     margin-left: 5px;
 }
 
-    
+#upload-button {
+    display: block;
+    align-items: flex-start;
+    width: 30vw;
+    max-width: 100px;
+    margin: auto auto;
+    background-color: rgb(231, 231, 231);
+    border-radius: 4px;
+    font-size: 1em;
+    line-height: 2em;
+    text-align: center;
+}
+
+#upload-button:hover {
+    background-color: rgb(158, 158, 158);
+}
+
+#upload-button:active {
+    background-color: rgb(255, 132, 60);
+}
+
+#apply {
+    border: 0;
+    clip: rect(1px, 1px, 1px, 1px);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+#descricao-projeto {
+    font-size: 2em !important;
+    font-family: Lato;
+}
+
 .checked {
     color: orange;
 }
@@ -167,7 +207,7 @@ ul, li {
     font-family: 'Lato';
     justify-content: center;
 }
-    
+
 #menu-lado h5 {
     color: rgb(104, 98, 98);
     font-size: 1em;
@@ -175,35 +215,33 @@ ul, li {
     justify-content: center;
 }
 
-.user-network ul li a{
+.user-network ul li a {
     display: inline-block;
     color: black;
     text-decoration: none;
-    
 }
 
-.seguidores{
+.seguidores {
     font-size: 1.3em;
 }
 
-.user-network ul li a:hover{
+.user-network ul li a:hover {
     color: rgb(58, 57, 57);
 }
 
-.seguidores_user{
+.seguidores_user {
     padding: 30px;
     display: flex;
     border-bottom: gray 1px solid;
 }
 
-.item-seguidor{
+.item-seguidor {
     display: flex;
 }
 
-.modal-titulo{
-    background-color: rgb(255, 224, 212) ;
+.modal-titulo {
+    background-color: rgb(255, 224, 212);
 }
-
 
 @media (min-width:1200px) {
     #info-local-data {
@@ -214,6 +252,8 @@ ul, li {
         /* margin: 1em; */
     }
 }
+
+
 /* #info-local-data {
 margin-left: 2em;
 } */
@@ -224,6 +264,8 @@ margin-left: 2em;
     margin: 10px;
     max-height: 500px;
 }
+
+
 /* 
 .map-responsive {
 overflow: hidden;
@@ -243,6 +285,8 @@ position: relative;
     align-self: center;
     justify-content: center;
 }
+
+
 /* Month header */
 
 .month {
@@ -258,8 +302,10 @@ margin: 0; */
     /* padding: 10px 0; */
     /* margin-top: 1em; */
 }
+
+
 /* Month list */
-    
+
 .month ul {
     margin: 0.8em;
     /* padding: 1.5em; */
@@ -271,18 +317,24 @@ margin: 0; */
     text-transform: uppercase;
     letter-spacing: 2px;
 }
+
+
 /* Previous button inside month header */
 
 .month .prev {
     float: left;
     padding-top: 10px;
 }
+
+
 /* Next button */
 
 .month .next {
     float: right;
     padding-top: 10px;
 }
+
+
 /* Weekdays (Mon-Sun) */
 
 .weekdays {
@@ -298,6 +350,8 @@ margin: 0; */
     color: #666;
     text-align: center;
 }
+
+
 /* Days (1-31) */
 
 .days {
@@ -317,6 +371,8 @@ margin: 0; */
     font-size: 1em;
     color: #777;
 }
+
+
 /* Highlight the "current" day */
 
 .days li .active {
@@ -340,7 +396,7 @@ h1 {
     overflow: hidden;
     border-radius: 50%;
 }
-    
+
 .image-cropper-sm {
     width: 60px;
     height: 60px;
@@ -355,6 +411,8 @@ h1 {
     margin: 0 auto;
     height: 100%;
 }
+
+
 /* Cards Projetos Perfil-user */
 
 .card-vagas {
@@ -374,6 +432,8 @@ h1 {
 .card-projeto {
     height: 430px;
 }
+
+
 /* Estatísticas */
 
 .estatisticas {
@@ -386,6 +446,8 @@ h1 {
     color: rgb(248, 117, 56);
     font-size: 1.5em;
 }
+
+
 /* Seguidores */
 
 .seguidores {
@@ -394,6 +456,6 @@ h1 {
     align-items: center;
 }
 
-.user-link:hover{
+.user-link:hover {
     text-decoration: none;
 }

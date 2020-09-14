@@ -8,6 +8,11 @@
     }
 }
 
+#descricao-projeto {
+    font-size: 0.8em;
+    font-family: Lato;
+}
+
 #info-local-data {
     margin-left: 2em;
 }

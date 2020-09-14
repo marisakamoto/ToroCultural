@@ -122,13 +122,11 @@
             </nav>
             <div class="tab-content" id="nav-tabContent">
                 <div class="conteudo-sobre tab-pane fade show px-2 py-2 active" id="feed-user" role="tabpanel" aria-labelledby="nav-home-tab">
-                    <div class="row " id="descricao-projeto ">
-                        <p class="text-justify p-3"> {{ $projeto->descricao }}
+                    <div class="row " >
+                        <p class="text-justify p-3 accent-2" id="descricao-projeto "> {{ $projeto->descricao }}</p>
 
-                        <img src="/projetos/imagens/{{ $projeto->url_foto }}"></br>
+                        {{-- <img src="{{url("storage/{$projeto->url_foto}")}}" class="col d-flex justify-content-center"> --}}
 
-
-                        </p>
                     </div>
                     <div class="row" id="mapa-cal">
                         <div class="col-md-6   justify-content-center ">
@@ -298,32 +296,30 @@
                         <div class="row justify-content-start">
                             <div class="pesquisa-feed-projeto mx-auto">
 
-                            <form method="POST" action="/projeto/{{$projeto->id}}/post">
+                            <form method="POST" action="/projeto/{{$projeto->id}}/post" enctype="multipart/form-data">
                                 @csrf
                                     <textarea name = postagem class="form-control" rows="2" placeholder="O que seu toró está pensando?"></textarea>
-                                    <div class="mar-top clearfix">
-                                        <button class="btn btn-sm btn-compartilhar pull-right" type="submit"><i class="fa fa-pencil fa-fw"></i> Share</button>
-
-                                        <a class="btn btn-trans btn-icon fa fa-video-camera add-tooltip" href="#"></a>
+                                    <div class="row d-flex align-content-center mar-top clearfix">
+                                         <label id = "upload-button"  for="apply"><input type="file" name="imagePost" id="apply" accept="image/*,.pdf">Get file</label>
+                                         <button class="btn btn-sm btn-compartilhar pull-right" type="submit"><i class="fa fa-pencil fa-fw"></i> Share</button>
+                                      
+                                        
+                                         {{-- <a class="btn btn-trans btn-icon fa fa-video-camera add-tooltip" href="#"></a>
                                         <a class="btn btn-trans btn-icon fa fa-camera add-tooltip" href="#"></a>
-                                        <a class="btn btn-trans btn-icon fa fa-file add-tooltip" href="#"></a>
+                                        <a class="btn btn-trans btn-icon fa fa-file add-tooltip" href="#"></a> --}}
                                     </div>
-
                                 </form>
-
-
-
                             </div>
                             <div class="feed-publicacoes mx-auto">
 
                                 @foreach($posts as $post)
                                 <div class="card mb-4">
                                     <div class="card-body">
-                                            <a class="media-left" href="#"><img class="img-circle img-publi"  alt="Profile Picture" src="{{ url($post->url_foto) }}"></a>
+                                            <a class="media-left" href="#"><img class="img-circle img-publi"  alt="Post Image" src="{{url("storage/{$post->url_foto}")}}"></a>
                                             <div class="media-body">
                                                 <div class="mar-btm">
                                                     <a href="#" class="btn-link text-semibold media-heading box-inline"> {{Auth::user()->username}}</a>
-                                                    <p class="text-muted text-sm"><i class="fa fa-mobile fa-lg"></i> - From Mobile - 11 min ago</p>
+                                                    <p class="text-muted text-sm"><i class="fa fa-mobile fa-lg"></i> - From Mobile - {{$post->created_at}}</p>
                                                 </div>
                                                 <p>
                                                     {{$post->legenda}}
@@ -459,7 +455,6 @@
                                     </div>
                                 </div>
                             </div>
-
                                 <!--===================================================-->
                                 <!-- End Newsfeed Content -->
                         </div>
