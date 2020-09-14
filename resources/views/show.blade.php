@@ -81,7 +81,7 @@
                         </div>
 
                     {{-- <img src="{{url("storage/{$projeto->url_foto}")}}"> --}}
- 
+
 
                     </div>
                     <div class="row mb-2" id="categoriasProjeto ">
@@ -98,7 +98,7 @@
                         <div class="config d-flex">
                             <a href="/projeto/edit/{{ $projeto->id }}"class="text-center"><img class="icon-config pl-1 pt-1 ml-5" src="{{ url('img/edit.svg') }}" alt=""></a>
 
-                            <a class="btn-orange p-1" href="{{ route('cadastroVaga') }}">Vaga</a>
+                            <a class="btn btn-orange p-1" href="{{ route('cadastroVaga') }}">Vaga</a>
 
                             <form action="/projeto/delete/{{ $projeto->id }}" method="POST">
                                 @method('delete')

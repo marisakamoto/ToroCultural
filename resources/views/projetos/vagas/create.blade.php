@@ -43,7 +43,7 @@
                 </a>
 
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                
+
                     <a class="dropdown-item" href="{{ route('logout') }}"
                         onclick="event.preventDefault();
                                         document.getElementById('logout-form').submit();">
@@ -105,13 +105,12 @@
                          </div>
                         <button class="btn-deep-orange btn" type="Submit"><img style="width: 1em; margin-right: 5px;" src="{{ url('img/mais.png') }}" alt="add-experiencia">
                             Adicionar profissional
-                        </button> 
+                        </button>
                     </form>
-                </div>  
+                </div>
             </div>
-            
+
         </section>
-        
 
     </main>
 @endsection
