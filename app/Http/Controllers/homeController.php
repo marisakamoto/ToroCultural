@@ -53,6 +53,7 @@ class HomeController extends Controller
     {
         //Abre a página de outro usuario
 
+
         $user = User::where('username', $username)->first();
         if($user->id == auth()->user()->id){
             return redirect('/home');
@@ -88,9 +89,9 @@ class HomeController extends Controller
             }
         }
 
-        $seguididoPeloLogado = verificaId($id_seguidores);
+        $seguidoPeloLogado = verificaId($id_seguidores);
 
-        return view('show-user', compact('user', 'username','projetos', 'habilidades', 'seguindo', 'seguindo_user', 'seguidores','seguidores_users', 'experiences', 'projetos_seguidos', 'projetos_colaborando', 'seguididoPeloLogado'));
+        return view('show-user', compact('user', 'username','projetos', 'habilidades', 'seguindo', 'seguindo_user', 'seguidores','seguidores_users', 'experiences', 'projetos_seguidos', 'projetos_colaborando', 'seguidoPeloLogado'));
     }
 
     public function edit($id)

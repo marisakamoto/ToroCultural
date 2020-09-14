@@ -59,6 +59,11 @@ class User extends Authenticatable
     {
         return $this->hasMany('App\Experience_card','user_id');
     }
+
+    public function Publishes()
+    {
+        return $this->hasMany('App\Publish');
+    }
     /**
      * The attributes that should be hidden for arrays.
      *

@@ -20,6 +20,7 @@ class FeedController extends Controller
         $seguindo_user = $user->seguindo;
         $num = $projetos_seguidos->count();
         
+        $id_projetos = []; 
         for ( $i=0 ;$i< $num; $i++){
             $id_projetos[$i] = $projetos_seguidos[$i]->pivot->projetoSeguido_id;
         }

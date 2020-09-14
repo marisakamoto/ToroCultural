@@ -76,7 +76,7 @@
                             </div>
                         </div>
                         <div class="row pt-2">
-                            <p class="row mx-auto">São Paulo, SP<br> Online há 1 dia</p>
+                            <p class="row mx-auto">São Paulo, SP</p>
                         </div>
                     </div>
                     <div class="col-md-8">

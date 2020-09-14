@@ -110,7 +110,19 @@
                         </div>
 
                     @elseif($projeto->user_id != Auth::user()->id)
-                        <button type="button" class="follow btn btn-outline-warning btn-sm m-1 p-2">Seguir</button>
+                        @if($seguidoPeloLogado)
+                            <form action="/projeto/unfollow/{{ $projeto->id }}" method="POST">
+                                @method('delete')
+                                @csrf
+                                <button class="follow btn btn-orange font-weight-bold btn-sm m-1 p-2"> Deixar de Seguir</button>
+                            </form>
+                        @else
+                            <form action="/projeto/seguir/{{ $projeto->id }}" method="POST">
+                                @csrf
+                                <button class="follow btn btn-outline-warning btn-sm m-1 p-2"> Seguir</button>
+                            </form>
+                        @endif
+
                     @endif
                 </div>
             </div>
@@ -319,7 +331,7 @@
                                             <a class="media-left" href="#"><img class="img-circle img-publi"  alt="Post Image" src="{{url("storage/{$post->url_foto}")}}"></a>
                                             <div class="media-body">
                                                 <div class="mar-btm">
-                                                    <a href="#" class="btn-link text-semibold media-heading box-inline"> {{Auth::user()->username}}</a>
+                                                    <a href="#" class="btn-link text-semibold media-heading box-inline"> {{$post->user->username}}</a>
                                                     <p class="text-muted text-sm"><i class="fa fa-mobile fa-lg"></i> - From Mobile - {{$post->created_at}}</p>
                                                 </div>
                                                 <p>
@@ -329,8 +341,17 @@
                                                     <div class="btn-group">
                                                         <a class="btn btn-sm btn-default btn-hover-success" href="#"><i class="fa fa-thumbs-up"></i></a>
                                                         <a class="btn btn-sm btn-default btn-hover-danger" href="#"><i class="fa fa-thumbs-down"></i></a>
+                                                        <a class="btn btn-sm btn-default btn-hover-primary" href="#">Comment</a>
                                                     </div>
-                                                    <a class="btn btn-sm btn-default btn-hover-primary" href="#">Comment</a>
+                                                    
+                                                    @if($post->user_id == Auth::user()->id || $post->projeto->user_id == Auth::user()->id )
+                                                        <form action="/post/delete/{{ $post->projeto->id }}/{{ $post->id }}" method="POST">
+                                                            @method('delete')
+                                                            @csrf
+                                                            <button class="btn btn-sm btn-default btn-hover-primary" onclick="return confirm('Deseja mesmo apagar essa publicação?');">Delete</button>
+                                                        </form>
+                                                    @endif
+                                                   
                                                 </div>
                                             </div>
                                     </div>

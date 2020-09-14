@@ -123,7 +123,7 @@
                                     id="{{ $h->id }}"
                                     value="{{ $h->id}}"
                                     name = "checkbox[]">
-                            <label class="form-check-label" for="{{ $h->habilidade }}">{{ $h->habilidade }}</label>
+                            <label class="form-check-label" for="{{ $h->id }}">{{ $h->habilidade }}</label>
                         </div>
                         @endforeach
                     </div>
