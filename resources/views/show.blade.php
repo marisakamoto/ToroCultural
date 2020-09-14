@@ -80,7 +80,8 @@
                             <h1 class="">{{ $projeto->titulo }}</h1>
                         </div>
 
-                    <img src="{{url("storage/{$projeto->url_foto}")}}">
+                    {{-- para teste de imagem    --}}
+                    {{-- <img src="{{url("storage/{$projeto->url_foto}")}}"> --}}
 
 
                     </div>

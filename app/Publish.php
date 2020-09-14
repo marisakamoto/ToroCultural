@@ -18,4 +18,5 @@ class Publish extends Model
     {
         return $this->belongsTo('App\Projeto');
     }
+
 }

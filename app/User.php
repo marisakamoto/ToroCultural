@@ -18,12 +18,6 @@ class User extends Authenticatable
     protected $fillable = [
         'name','username', 'email', 'password', 'descricao', 'profissao', 'aniversario', 'url_foto'
     ];
-    // public function getUrlFotoAttribute($value)
-    // {
-    //     $explode = explode('/', $value);
-    //     $nomeArquivo = $explode[2];
-    //     return $nomeArquivo;
-    // }
 
     //Relacionamento com os projetos criados pelo user 1:N
     public function projetos()
@@ -49,13 +43,13 @@ class User extends Authenticatable
     return  $this->belongsToMany('App\Habilidade', 'user_habilidade', 'user_id', 'habilidade_id');
     }
 
-    //User_id é quem recebe os seguidores
+    //User_id é quem recebe os seguidores //Quem me segue
     public function seguidores()
     {
     return  $this->belongsToMany(User::class, 'user_userseguindo','user_id','user_seguindo_id');
     }
 
-    //user_seguindo_id é quem segue
+    //user_seguindo_id é quem segue //Quem eu sigo
     public function seguindo()
     {
     return  $this->belongsToMany(User::class, 'user_userseguindo','user_seguindo_id','user_id');

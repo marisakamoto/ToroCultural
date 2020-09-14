@@ -50,15 +50,9 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 // Auth::routes();
 
-// Route::get('/home', 'homeController@index')->name('home');
-
-// Route::get('/storage/{imagem}', "HomeController@image");
-
 //SEGUIR / DEIXAR DE SEGUIR (ENTRE USUARIOS)
 Route::post('/user/seguir/{id}', 'HomeController@seguir');
 Route::delete('/user/unfollow/{id}', 'HomeController@unfollow');
-
-
 //FIM SEGUIR
 
 

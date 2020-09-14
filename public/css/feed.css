@@ -3,6 +3,23 @@
 }
 
 
+.perfil-foto-user-feed {
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.perfil-foto-user-feed img {
+    width: initial;
+    height: inherit;
+    max-width: none;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
 
 #titulo-feed{
     font-family: 'remachine_script_personal_uRg';

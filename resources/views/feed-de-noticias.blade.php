@@ -64,13 +64,13 @@
 
 {{-- {{$posts_proj}} --}}
 {{-- {{$id_projetos}} --}}
-<br>
+{{-- <br> --}}
 
 
 {{-- 
 {{$projetos_seguidos->count()}} --}}
 
-User <br>
+{{-- User <br> --}}
 
 {{-- {{$posts}} --}}
     <div id="feed-completo" class="container-fluid px-0">
@@ -78,9 +78,8 @@ User <br>
             <!--Coluna pesquisa-->
             <div class="col-md-3 colPesquisaAvancada">
                 <div class="row pt-5" id="foto">
-                    <div class="foto-perfil mx-auto">
+                    <div class="perfil-foto-user-feed mx-auto">
                         <img src="{{url("storage/".Auth::user()->url_foto)}}" style="border-radius: 50%;">
-                        {{-- <canvas id="UgCanvas" width="150px" height="150px" style="border:2.5px solid rgb(165, 157, 157); border-radius: 50%;"></canvas> --}}
                     </div>
                 </div>
                 <div class="row">
@@ -173,9 +172,9 @@ User <br>
                         <div class="areaDePostagens container border pt-5 pb-5">
                                 <div class="row justify-content-start">
                                     <div class="feed-publicacoes mx-auto">
-                                        @for ( $i = 0; $i < $num;$i++)
+                                        {{-- @for ( $i = 0; $i < $num;$i++)
                                                             {{-- {{$post_autor}} --}}
-                                            <div class="card mb-4">
+                                            {{-- <div class="card mb-4">
                                                 <div class="card-body">
                                                     <a class="media-left" href="#"><img class="img-circle img-publi"  alt="Profile Picture" src="{{ url("storage/{$posts[$i]->url_foto}") }}") }></a>
                                                     <div class="media-body">
@@ -197,8 +196,8 @@ User <br>
                                                         </div>
                                                     </div>
     
-                                                </div>
-                                        @endfor 
+                                                </div> --}}
+                                        {{-- @endfor  --}} 
                                         <div class="card mb-4">
                                             <div class="card-body">
                                                 <a class="media-left" href="#"><img class="img-circle img-publi"  alt="Profile Picture" src="img/jardim.jpg"></a>
