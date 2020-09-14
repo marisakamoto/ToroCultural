@@ -8,6 +8,7 @@ use App\User;
 use App\Habilidade;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Storage;
 
 
 class HomeController extends Controller
@@ -100,12 +101,28 @@ class HomeController extends Controller
 
     public function update(Request $request, $id)
     {
-
         $user = User::find($id);
-        if($request->hasfile('imagem') && $request->imagem->isvalid()){ //name do input 
-            $imagePath = $request->file('imagem');
-            $imageName = $imagePath->getClientOriginalName();
-            $path = $request->file('imagem')->storeAs('img/users', $imageName, 'public');
+        // if($request->hasfile('imagem') && $request->imagem->isvalid()){ //name do input 
+        //     $imagePath = $request->file('imagem');
+        //     $imageName = $imagePath->getClientOriginalName();
+        //     $imageExt = $imagePath->getClientOriginalExtension();
+        //     $imageFinal = $imageName.date('Y-m-d-H-i-s').".".$imageExt;
+        //     $path = $request->file('imagem')->storeAs('img/users', $imageFinal, 'public');
+        //     $user->url_foto = $path;
+        // }
+
+        // if($request->hasfile('imagem') && $request->imagem->isvalid()){ //name do input
+        //     // $imageName = $request->file('imagem')->getClientOriginalName();
+        //     // $url_foto = $request->imagem->storeAs('img/users',$imageName ,'public'); 
+        //     $url_foto = $request->imagem->store('img/users', 'public');          //salvar o caminho da imagem
+        //     $user->url_foto = $url_foto;
+        // }
+
+        if($request->hasfile('imagem') && $request->imagem->isvalid()){
+            $destination_path = 'img/users';
+            $image = $request->file('imagem');
+            $image_name = $image->getClientOriginalName();
+            $path = $request->file('imagem')->storeAs($destination_path, $image_name, 'public');
             $user->url_foto = $path;
         }
 
@@ -121,6 +138,22 @@ class HomeController extends Controller
         return redirect('/home');
     }
 
+
+    // public function image($imagem) // $projeto->url_foto => projetos/hsdjhsajhaksjhdjkas.jpg
+    // {
+    //     //storage/dashdjhaskd.jpg
+    //     $caminho_ = "img/users/$imagem";
+    //     $caminho = realpath(storage_path($caminho_));
+    //     // dd($caminho);
+    //     $arquivo = Storage::get($caminho); //binário
+      
+    //     $type = Storage::mimeType($caminho); //formato do arquivo png ou jpg
+
+    //     return response($arquivo, 200)->header('Content-Type', $type);
+    // }
+
+
+
     public function delete($id)
     {
         User::find($id)->delete();
@@ -132,7 +165,6 @@ class HomeController extends Controller
     {
         return view('users.experiencias.create');
     }
-
 
     //SEGUIR
     public function seguir($id)

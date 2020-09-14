@@ -80,7 +80,7 @@
                             <h1 class="">{{ $projeto->titulo }}</h1>
                         </div>
 
-                    {{-- <img src="{{url("storage/{$projeto->url_foto}")}}"> --}}
+                    <img src="{{url("storage/{$projeto->url_foto}")}}">
 
 
                     </div>

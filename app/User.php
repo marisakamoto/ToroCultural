@@ -18,6 +18,12 @@ class User extends Authenticatable
     protected $fillable = [
         'name','username', 'email', 'password', 'descricao', 'profissao', 'aniversario', 'url_foto'
     ];
+    // public function getUrlFotoAttribute($value)
+    // {
+    //     $explode = explode('/', $value);
+    //     $nomeArquivo = $explode[2];
+    //     return $nomeArquivo;
+    // }
 
     //Relacionamento com os projetos criados pelo user 1:N
     public function projetos()

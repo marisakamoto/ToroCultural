@@ -52,8 +52,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 // Route::get('/home', 'homeController@index')->name('home');
 
-
-
+// Route::get('/storage/{imagem}', "HomeController@image");
 
 //SEGUIR / DEIXAR DE SEGUIR (ENTRE USUARIOS)
 Route::post('/user/seguir/{id}', 'HomeController@seguir');
