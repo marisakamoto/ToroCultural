@@ -36,5 +36,14 @@ class AddHabilidades extends Seeder
         Habilidade::create([
             "habilidade" => "Sapateado",
         ]);
+        Habilidade::create([
+            "habilidade" => "Pintura",
+        ]);
+        Habilidade::create([
+            "habilidade" => "Organização",
+        ]);
+        Habilidade::create([
+            "habilidade" => "Música",
+        ]);
     }
 }

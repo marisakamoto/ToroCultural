@@ -14,17 +14,17 @@ class FeedController extends Controller
     public function feed (){
         $user = User::find(auth()->user()->id);
         
+        
         $seguidores_users = $user->seguidores;
         $projetos_seguidos = $user->user_projetoSeguido;
         $seguindo_user = $user->seguindo;
         $num = $projetos_seguidos->count();
         
+        $id_projetos = []; 
         for ( $i=0 ;$i< $num; $i++){
             $id_projetos[$i] = $projetos_seguidos[$i]->pivot->projetoSeguido_id;
         }
 
-
-        
         $posts = Publish::whereIn('projeto_id', $id_projetos)->get();
 
         // $post_autor = User::where('id',$posts->user_id)->value('url_foto');

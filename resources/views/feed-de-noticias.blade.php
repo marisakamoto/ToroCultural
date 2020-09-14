@@ -64,13 +64,13 @@
 
 {{-- {{$posts_proj}} --}}
 {{-- {{$id_projetos}} --}}
-<br>
+{{-- <br> --}}
 
 
 {{-- 
 {{$projetos_seguidos->count()}} --}}
 
-User <br>
+{{-- User <br> --}}
 
 {{-- {{$posts}} --}}
     <div id="feed-completo" class="container-fluid px-0">
@@ -78,9 +78,8 @@ User <br>
             <!--Coluna pesquisa-->
             <div class="col-md-3 colPesquisaAvancada">
                 <div class="row pt-5" id="foto">
-                    <div class="foto-perfil mx-auto">
+                    <div class="perfil-foto-user-feed mx-auto">
                         <img src="{{url("storage/".Auth::user()->url_foto)}}" style="border-radius: 50%;">
-                        {{-- <canvas id="UgCanvas" width="150px" height="150px" style="border:2.5px solid rgb(165, 157, 157); border-radius: 50%;"></canvas> --}}
                     </div>
                 </div>
                 <div class="row">
@@ -173,32 +172,78 @@ User <br>
                         <div class="areaDePostagens container border pt-5 pb-5">
                                 <div class="row justify-content-start">
                                     <div class="feed-publicacoes mx-auto">
-                                        @for ( $i = 0; $i < $num;$i++)
-                                                            {{-- {{$post_autor}} --}}
-                                            <div class="card mb-4">
-                                                <div class="card-body">
-                                                    <a class="media-left" href="#"><img class="img-circle img-publi"  alt="Profile Picture" src="{{ url("storage/{$posts[$i]->url_foto}") }}") }></a>
-                                                    <div class="media-body">
-                                                        
-                                                        <div class="mar-btm">
-                                                            <img class="imagem-perfil-feed mt-1 mr-1" alt="img-autor" src="{{ url('storage/'.DB::table('projetos')->where('id',$posts[$i]->projeto_id)->value('url_foto')) }}" >
-                                                            <a href="#" class="text-semibold media-heading box-inline"> {{ DB::table('users')->where('id',$posts[$i]->user_id)->value('username')}}</a>
-                                                            <p class="text-muted text-sm"><i class="fa fa-mobile fa-lg"></i> - From Mobile - {{ $posts[$i]->created_at }}</p>
-                                                        </div>
-                                                        <p>
-                                                            {{$posts[$i]->legenda}}
-                                                        </p>
-                                                        <div class="pad-ver">
-                                                            <div class="btn-group">
-                                                                <a class="btn btn-sm btn-default btn-hover-success btn-curtir" href="#"><i class="fa fa-thumbs-up"></i></a>
-                                                                <a class="btn btn-sm btn-default btn-hover-danger btn-curtir" href="#"><i class="fa fa-thumbs-down"></i></a>
+
+                                    @foreach ( $posts as $p )
+                                        <div class="card mb-4">
+                                            <div class="card-body">
+                                                <a class="media-left" href="{{url("storage/".$p->url_foto)}}"><img class="img-circle img-publi"  alt="Profile Picture" src="{{url("storage/".$p->url_foto)}}"></a>
+                                                <div class="media-body">
+                                                    <div class="mar-btm">
+                                                        <div class="d-flex align-items-center m-2">
+                                                            <div class="imagem-perfil-user">
+                                                                <img class=""src="{{url('storage/'.$p->user->url_foto) }}" alt="">
                                                             </div>
-                                                            <a class="btn btn-sm btn-default btn-hover-primary btn-curtir" href="#">Comment</a>
+                                                            <a href="/projeto/{{ $p->projeto->id }}" class="text-semibold media-heading box-inline ml-2">{{ $p->user->username  }}</a>
+                                                        
+                                                            <img src="{{ url('img/arrow.svg') }}" class="arrow">
+                                                            <img class="imagem-perfil-feed mt-1 mr-1" src="img/cinemateca.jpg" alt="">
+                                                            <a href="/projeto/{{ $p->projeto->id }}" class="text-semibold media-heading box-inline">{{ $p->projeto->titulo  }}</a>
                                                         </div>
+                                                        <p class="text-muted text-sm"><i class="fa fa-mobile fa-lg"></i> - From Mobile - 11 min ago</p>
                                                     </div>
-    
+                                                    <p>
+                                                        {{ $p->legenda }}
+                                                    </p>
+                                                    <div class="pad-ver">
+                                                        <div class="btn-group">
+                                                            <a class="btn btn-sm btn-default btn-hover-success btn-curtir" href="#"><i class="fa fa-thumbs-up"></i></a>
+                                                            <a class="btn btn-sm btn-default btn-hover-danger btn-curtir" href="#"><i class="fa fa-thumbs-down"></i></a>
+                                                        </div>
+                                                        <a class="btn btn-sm btn-default btn-hover-primary btn-curtir" href="#">Comment</a>
+                                                        @if($p->user_id == Auth::user()->id || $p->projeto->user_id == Auth::user()->id )
+                                                            <form action="/feed/post/delete/{{ $p->id }}" method="POST">
+                                                                @method('delete')
+                                                                @csrf
+                                                                <button class="btn btn-sm btn-default btn-hover-primary" onclick="return confirm('Deseja mesmo apagar essa publicação?');">Delete</button>
+                                                            </form>
+                                                        @endif
+                                                    </div>
                                                 </div>
-                                        @endfor 
+                                            </div>
+                                            
+                                        </div>
+                                        
+                                    @endforeach
+
+                                    
+                                        {{-- @for ( $i = 0; $i < $num;$i++)
+                                                        
+                                                <div class="card mb-4">
+                                            <div class="card-body">
+                                                <a class="media-left" href="#"><img class="img-circle img-publi"  alt="Profile Picture" src="{{ url("storage/{$posts[$i]->url_foto}") }}"></a>
+                                                <div class="media-body">
+                                                    <div class="mar-btm">
+                                                        <img class="imagem-perfil-feed mt-1 mr-1" src="{{ url('storage/'.DB::table('projetos')->where('id',$posts[$i]->projeto_id)->value('url_foto')) }}" alt="">
+                                                        <a href="#" class="text-semibold media-heading box-inline">{{ DB::table('users')->where('id',$posts[$i]->user_id)->value('username')}}</a>
+                                                        <p class="text-muted text-sm"><i class="fa fa-mobile fa-lg"></i> - From Mobile - {{ $posts[$i]->created_at }}</p>
+                                                    </div>
+                                                    <p>
+                                                        {{$posts[$i]->legenda}}
+                                                    </p>
+                                                    <div class="pad-ver">
+                                                        <div class="btn-group">
+                                                            <a class="btn btn-sm btn-default btn-hover-success btn-curtir" href="#"><i class="fa fa-thumbs-up"></i></a>
+                                                            <a class="btn btn-sm btn-default btn-hover-danger btn-curtir" href="#"><i class="fa fa-thumbs-down"></i></a>
+                                                        </div>
+                                                        <a class="btn btn-sm btn-default btn-hover-primary btn-curtir" href="#">Comment</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        @endfor   --}}
+
+
+
                                         <div class="card mb-4">
                                             <div class="card-body">
                                                 <a class="media-left" href="#"><img class="img-circle img-publi"  alt="Profile Picture" src="img/jardim.jpg"></a>

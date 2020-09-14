@@ -18,4 +18,10 @@ class Publish extends Model
     {
         return $this->belongsTo('App\Projeto');
     }
+
+    public function user()
+    {
+        return $this->belongsTo('App\User');
+    }
+
 }

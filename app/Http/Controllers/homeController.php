@@ -8,6 +8,7 @@ use App\User;
 use App\Habilidade;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Storage;
 
 
 class HomeController extends Controller
@@ -52,6 +53,7 @@ class HomeController extends Controller
     {
         //Abre a página de outro usuario
 
+
         $user = User::where('username', $username)->first();
         if($user->id == auth()->user()->id){
             return redirect('/home');
@@ -87,9 +89,9 @@ class HomeController extends Controller
             }
         }
 
-        $seguididoPeloLogado = verificaId($id_seguidores);
+        $seguidoPeloLogado = verificaId($id_seguidores);
 
-        return view('show-user', compact('user', 'username','projetos', 'habilidades', 'seguindo', 'seguindo_user', 'seguidores','seguidores_users', 'experiences', 'projetos_seguidos', 'projetos_colaborando', 'seguididoPeloLogado'));
+        return view('show-user', compact('user', 'username','projetos', 'habilidades', 'seguindo', 'seguindo_user', 'seguidores','seguidores_users', 'experiences', 'projetos_seguidos', 'projetos_colaborando', 'seguidoPeloLogado'));
     }
 
     public function edit($id)
@@ -100,12 +102,14 @@ class HomeController extends Controller
 
     public function update(Request $request, $id)
     {
-
         $user = User::find($id);
-        if($request->hasfile('imagem') && $request->imagem->isvalid()){ //name do input 
-            $imagePath = $request->file('imagem');
-            $imageName = $imagePath->getClientOriginalName();
-            $path = $request->file('imagem')->storeAs('img/users', $imageName, 'public');
+        if($request->hasfile('imagem') && $request->imagem->isvalid()){
+            $destination_path = 'img/users';
+            $image = $request->file('imagem');
+            $image_name = $image->getClientOriginalName();
+            $imageExt = $image->getClientOriginalExtension();
+            $imageFinal = $image_name.date('Y-m-d-H-i-s').".".$imageExt;
+            $path = $request->file('imagem')->storeAs($destination_path, $imageFinal, 'public');
             $user->url_foto = $path;
         }
 
@@ -114,7 +118,7 @@ class HomeController extends Controller
         $user->aniversario = request('aniversario');
         $user->profissao = request('profissao');
         $habilidades = $request->get('checkbox'); //array:[2, 3, 8]
-        $user->update();
+        $user->save();
 
         $user->habilidades()->attach($habilidades, ['user_id' => $user->id]);
 
@@ -132,7 +136,6 @@ class HomeController extends Controller
     {
         return view('users.experiencias.create');
     }
-
 
     //SEGUIR
     public function seguir($id)

@@ -8,6 +8,8 @@ use App\Categoria;
 use App\Habilidade;
 use Illuminate\Support\Facades\Storage;
 use App\Publish;
+use App\User;
+use Illuminate\Support\Facades\DB;
 
 class PerfilProjetoController extends Controller
 {
@@ -15,12 +17,6 @@ class PerfilProjetoController extends Controller
     {//a pessoa precisa estar logada para construir um projeto
 	$this->middlewate('auth');
     }
-
-    public function  perfilProjeto ()
-    {
-        return view ('perfil-projeto');
-    }
-
 
     public function show($id)
     {
@@ -31,16 +27,110 @@ class PerfilProjetoController extends Controller
         $user_colaborador = $projeto->projeto_user_colaboradores;
         $vagas = $projeto->vagas;
         $posts = Publish::where('projeto_id',  $id)->get();
+        $seguidores = $projeto->user_projetoSeguido()->get();
 
-     
+        function pegaIdSeguidores($seguidores)
+        {
+            $id_seguidores = [];
+            for ($i=0; $i < count($seguidores); $i++) { 
+                $id_seguidores[] = $seguidores[$i]->id;
+            }
+            return $id_seguidores;
+        }
 
-        return view('show', compact('projeto', 'categorias', 'user_colaborador', 'vagas', 'user_criador','posts' ));
+        $id_seguidores = pegaIdSeguidores($seguidores);
+
+        function verificaId($id_seguidores)
+        {
+            if(in_array(auth()->user()->id, $id_seguidores)){
+                return true;
+            }
+        }
+
+        $seguidoPeloLogado = verificaId($id_seguidores);
+  
+
+        return view('show', compact('projeto', 'categorias', 'user_colaborador', 'vagas', 'user_criador','posts', 'seguidoPeloLogado', 'seguidores'));
     }
 
     public function create()
     {
         $categorias = Categoria::All();
         return view ('projetos.create', compact('categorias'));
+    }
+
+    
+    public function store(Request $request)
+    {
+        $projeto = new Projeto;
+
+        if($request->hasfile('imagem') && $request->imagem->isvalid()){
+            $destination_path = 'img/users';
+            $image = $request->file('imagem');
+            $image_name = $image->getClientOriginalName();
+            $imageExt = $image->getClientOriginalExtension();
+            $imageFinal = $image_name.date('Y-m-d-H-i-s').".".$imageExt;
+            $path = $request->file('imagem')->storeAs($destination_path, $imageFinal, 'public');
+            $projeto->url_foto = $path;
+        }
+
+        $projeto->user_id = auth()->user()->id;
+        $projeto->titulo = request('titulo');
+        $projeto->descricao = request('descricao');
+        $projeto->localizacao = request('localizacao');
+        $projeto->data_de_realizacao = request('data_de_realizacao');
+
+        $categorias = $request->get('checkbox'); //array:[2, 3, 8]
+        $projeto->save(); //id
+        $projeto->categorias()->attach($categorias, ['projeto_id' => $projeto->id]);
+        $projeto->user_projetoSeguido()->attach( ['userSeguindo_id' => $projeto->user_id], ['projetoSeguido_id' => $projeto->id]);
+        // dd($projeto->id);
+        return redirect('/projeto/'.$projeto->id);
+    }
+    //RETORNA VIEW COM FORMULÁRIO PARA EDITAR
+    public function edit($id)
+    {
+        $projeto = Projeto::find($id);
+        return view('projetos.edit', compact('projeto'));
+    }
+
+
+    public function update($id, Request $request)
+    {
+        $projeto = Projeto::find($id);
+        //Ele salvará a imagem com o caminho
+        if($request->hasfile('imagem') && $request->imagem->isvalid()){
+            $destination_path = 'img/users';
+            $image = $request->file('imagem');
+            $image_name = $image->getClientOriginalName();
+            $imageExt = $image->getClientOriginalExtension();
+            $imageFinal = $image_name.date('Y-m-d-H-i-s').".".$imageExt;
+            $path = $request->file('imagem')->storeAs($destination_path, $imageFinal, 'public');
+            $projeto->url_foto = $path;
+        }
+    
+        $projeto->titulo = request('titulo');
+        $projeto->descricao = request('descricao');
+        $projeto->localizacao = request('localizacao');
+        $projeto->data_de_realizacao = request('data_de_realizacao');
+        
+        $projeto->save();
+
+        // dd($projeto->id);
+        return redirect('/projeto/'.$projeto->id);
+    }
+
+    public function delete($id)
+    {
+        Projeto::find($id)->delete();
+        return redirect('/home');
+
+    }
+
+    public function createVaga()
+    {
+        $habilidades = Habilidade::All();
+        return view ('projetos.vagas.create', compact('habilidades'));
     }
 
     public function storePost($projeto_id, Request $request)
@@ -53,14 +143,15 @@ class PerfilProjetoController extends Controller
         
 
         // $publicacao->url_foto = '/img/publishes/cinema.jpg';
-
-        if($request->hasfile('imagePost') && $request->imagePost->isvalid()){ //name do input 
-            $imagePath = $request->file('imagePost');
-            $imageName = $imagePath->getClientOriginalName();
-            $path = $request->file('imagePost')->storeAs('/img/publishes', $imageName, 'public');
+        if($request->hasfile('imagePost') && $request->imagePost->isvalid()){
+            $destination_path = 'img/publishes';
+            $image = $request->file('imagePost');
+            $image_name = $image->getClientOriginalName();
+            $imageExt = $image->getClientOriginalExtension();
+            $imageFinal = $image_name.date('Y-m-d-H-i-s').".".$imageExt;
+            $path = $request->file('imagePost')->storeAs($destination_path, $imageFinal, 'public');
             $publicacao->url_foto = $path;
         }
-
         
         
         function timeago($date) {
@@ -89,71 +180,35 @@ class PerfilProjetoController extends Controller
         $publicacao->save();
         return redirect('/projeto/'.$publicacao->projeto_id);
     }
-    public function store(Request $request)
+
+    public function deletePost($projeto_id,$id)
     {
-        $projeto = new Projeto;
-
-        if($request->hasfile('imagem') && $request->imagem->isvalid()){ //name do input 
-            $imagePath = $request->file('imagem');
-            $imageName = $imagePath->getClientOriginalName();
-            $path = $request->file('imagem')->storeAs('img/projetos', $imageName, 'public');
-            $projeto->url_foto = $path;
-        }
-
-        $projeto->user_id = auth()->user()->id;
-        $projeto->titulo = request('titulo');
-        $projeto->descricao = request('descricao');
-        $projeto->localizacao = request('localizacao');
-        $projeto->data_de_realizacao = request('data_de_realizacao');
-
-        $categorias = $request->get('checkbox'); //array:[2, 3, 8]
-        $projeto->save(); //id
-        $projeto->categorias()->attach($categorias, ['projeto_id' => $projeto->id]);
-        // dd($projeto->id);
-        return redirect('/projeto/'.$projeto->id);
-    }
-    //RETORNA VIEW COM FORMULÁRIO PARA EDITAR
-    public function edit($id)
-    {
-        $projeto = Projeto::find($id);
-        return view('projetos.edit', compact('projeto'));
-    }
-
-
-    public function update($id, Request $request)
-    {
-        $projeto = Projeto::find($id);
-        //Ele salvará a imagem com o caminho
-        if($request->hasfile('imagem') && $request->imagem->isvalid()){ //name do input 
-            $imagePath = $request->file('imagem');
-            $imageName = $imagePath->getClientOriginalName();
-            $path = $request->file('imagem')->storeAs('img/projetos', $imageName, 'public');
-            $projeto->url_foto = $path;
-        }
-    
-        $projeto->titulo = request('titulo');
-        $projeto->descricao = request('descricao');
-        $projeto->localizacao = request('localizacao');
-        $projeto->data_de_realizacao = request('data_de_realizacao');
+        Publish::find($id)->delete();
+        // $projeto = $publicacao->projeto_id;
         
-        $projeto->save();
-
-        // dd($projeto->id);
-        return redirect('/projeto/'.$projeto->id);
+        return redirect('/projeto/'.$projeto_id);
     }
 
-    public function delete($id)
+    //SEGUIR
+    public function seguirProjeto($id)
     {
-        Projeto::find($id)->delete();
-        return redirect('/home');
+        $user_logado = User::find(auth()->user()->id);
+        $projeto_seguido = Projeto::find($id);
+        //$id -> quem será seguido -> user_id
+        //auth::user()->id -> user_seguindo_id
+        $projeto_seguido->user_projetoSeguido()->attach( ['userSeguindo_id' => $user_logado->id], ['projetoSeguido_id' => $projeto_seguido->id]);
+       
 
+        return redirect('/projeto/'.$projeto_seguido->id);
     }
 
-    public function createVaga()
+    public function unfollowProjeto($id)
     {
-        $habilidades = Habilidade::All();
-        return view ('projetos.vagas.create', compact('habilidades'));
+        DB::table('user_projetoSeguido')
+                ->where('projetoSeguido_id', $id)
+                ->where('userSeguindo_id', auth()->user()->id)
+                ->delete();
+
+                return redirect('/projeto/'.$id);
     }
-
-
 }

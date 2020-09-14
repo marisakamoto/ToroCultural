@@ -43,13 +43,13 @@ class User extends Authenticatable
     return  $this->belongsToMany('App\Habilidade', 'user_habilidade', 'user_id', 'habilidade_id');
     }
 
-    //User_id é quem recebe os seguidores
+    //User_id é quem recebe os seguidores //Quem me segue
     public function seguidores()
     {
     return  $this->belongsToMany(User::class, 'user_userseguindo','user_id','user_seguindo_id');
     }
 
-    //user_seguindo_id é quem segue
+    //user_seguindo_id é quem segue //Quem eu sigo
     public function seguindo()
     {
     return  $this->belongsToMany(User::class, 'user_userseguindo','user_seguindo_id','user_id');
@@ -58,6 +58,11 @@ class User extends Authenticatable
     public function experience()
     {
         return $this->hasMany('App\Experience_card','user_id');
+    }
+
+    public function Publishes()
+    {
+        return $this->hasMany('App\Publish');
     }
     /**
      * The attributes that should be hidden for arrays.

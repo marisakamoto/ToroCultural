@@ -68,12 +68,15 @@
                     <div class="col-md-4 mx-auto" id="foto">
                         <div class="row foto-perfil">
                             <div class="mx-auto perfil-foto m-0">
-                                <img  src="{{url("storage/".Auth::user()->url_foto)}}">
+                                {{-- <img  src="{{url("storage/".Auth::user()->url_foto)}}"> --}}
+                                {{-- <img  src="/storage/{{ Auth::user()->url_foto }}"> --}}
+                                <img  src="{{asset('/storage/'.Auth::user()->url_foto)}}">
+                               
 
                             </div>
                         </div>
                         <div class="row pt-2">
-                            <p class="row mx-auto">São Paulo, SP<br> Online há 1 dia</p>
+                            <p class="row mx-auto">São Paulo, SP</p>
                         </div>
                     </div>
                     <div class="col-md-8">

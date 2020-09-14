@@ -23,8 +23,10 @@ Route::post('/contato', 'PaginaInicialController@enviaContato')->name('contato')
 Route::get('/projetos/create', 'PerfilProjetoController@create')->name('cadastroProjeto'); // CADASTRO
 Route::post('/projetos/create', 'PerfilProjetoController@store'); //MÉTODO PARA SALVAR DADOS
 
-
-Route::post('/projeto/{projeto_id}/post', 'PerfilProjetoController@storePost');
+//POSTS
+Route::post('/projeto/{projeto_id}/post', 'PerfilProjetoController@storePost'); //criar post
+Route::delete('/post/delete/{projeto_id}/{id} ', 'PerfilProjetoController@deletePost');//deletar POSTS
+//FIM POSTS
 
 Route::get('/projetos/vaga', 'PerfilProjetoController@createVaga')->name('cadastroVaga'); // CADASTRO
 Route::get('/projeto/{id}', 'PerfilProjetoController@show');//VIEW DO PROJETO
@@ -39,7 +41,6 @@ Route::get('/perfil/{username}', 'HomeController@show');
 Route::get('/user/edit/{id}', 'HomeController@edit');
 Route::put('/user/update/{id}', 'HomeController@update');
 Route::delete('/user/delete/{id}', 'HomeController@delete');
-
 //FIM USUARIO
 
 
@@ -50,16 +51,14 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 // Auth::routes();
 
-// Route::get('/home', 'homeController@index')->name('home');
-
-
-
-
 //SEGUIR / DEIXAR DE SEGUIR (ENTRE USUARIOS)
 Route::post('/user/seguir/{id}', 'HomeController@seguir');
 Route::delete('/user/unfollow/{id}', 'HomeController@unfollow');
+//FIM SEGUIR
 
-
+//SEGUIR / USUARIO / PROJETO
+Route::post('/projeto/seguir/{id}', 'PerfilProjetoController@seguirProjeto');
+Route::delete('/projeto/unfollow/{id}', 'PerfilProjetoController@unfollowProjeto');
 //FIM SEGUIR
 
 
