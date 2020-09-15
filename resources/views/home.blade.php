@@ -86,7 +86,7 @@
                             </div>
                             <div class="col-md-6 text-center d-flex justify-content-end no-padding-right">
                                 <a href="/user/edit/{{Auth::user()->id}}"class="text-center"><img class="icon-config pl-1 pt-1 ml-5" src="{{ url('img/edit.svg') }}" alt=""></a>
-                                <a class="btn-orange btn p-1" href="{{ route('cadastroVaga') }}">+Experiência</a>
+                                <a class="btn-orange btn p-1" href="{{ route('experiencias') }}">+Experiência</a>
                             <form action="/user/delete/{{ Auth::user()->id}}" method="POST">
                                 @method('delete')
                                 @csrf
@@ -163,7 +163,17 @@
                                                     <div class="card card-body mb-4 m-4">
                                                         <div class="col d-flex align-content-around">
                                                             <div class="col">
-                                                                <h4>{{ $xp->titulo }} </h4>
+                                                                <div class="d-flex align-items-center justify-content-between">
+                                                                    <h4>{{ $xp->titulo }} </h4>
+                                                                    <div class="d-flex">
+                                                                        <a href="/home/experiencias/edit/{{ $xp->id }}"class="text-center"><img class="icon-config pl-1 pt-1 ml-5" src="{{ url('img/edit.svg') }}" alt=""></a>
+                                                                        <form action="/home/experiencias/delete/{{ $xp->id }}" method="POST">
+                                                                            @method('delete')
+                                                                            @csrf
+                                                                            <button class="btn-deep-orange btn" onclick="return confirm('Deseja mesmo deletar essa experiência?');">Delete</button>
+                                                                        </form>
+                                                                    </div>
+                                                                </div>
                                                                 <hr>
                                                                 <h6>{{ $xp->localizacao }} | {{ $xp->data_realizacao }}</h6>
                                                                 <p>{{ $xp->descricao }}</p>
