@@ -10,8 +10,9 @@
 @endsection
 
 @section('search')
-    <form class="form-inline my-2 my-lg-0" action="{{route('feed')}}">
-        <input class="form-control  search" type="search" placeholder="Pesquisar" aria-label="Pesquisar" style="width: 65%;">
+    <form class="form-inline my-2 my-lg-0" action="/search" method="get">
+        @csrf
+        <input class="form-control  search" type="search" placeholder="Pesquisar" aria-label="Pesquisar" style="width: 65%;" name="search">
         <button class="btn btn-orange btn-search" type="submit">
             <img class="search" src="img/search.png" alt="">
         </button>
@@ -359,7 +360,7 @@
                     </div>
 
 
-
+                    {{-- {{ $pesquisa }} --}}
                     <!--área da pesquisa no feed-->
                     <div class="conteudo-feed tab-pane fade px-2 pt-2" id="feed-site" role="tabpanel" aria-labelledby="nav-profile-tab">
                         <div class="row justify-content-end">
@@ -373,7 +374,7 @@
                         </div>
                         <div class="areaDePesquisa container border pt-5">
                             <div class="row">
-                                <p class="text-secundario-feed pl-5">Resultados encontrados para: <a href="#">Artur Oliveira </a></p>
+                                <p class="text-secundario-feed pl-5">Resultados encontrados para: <a href="#"> </a></p>
                             </div>
                             <div class="conteudo-meu-feed row pl-1 d-flex justify-content-around">
                                 <div class="card ml-1 mb-4" style="width: 40%;">

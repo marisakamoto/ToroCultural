@@ -15,8 +15,9 @@
 @endsection --}}
 
 @section('search')
-    <form class="form-inline my-2 my-lg-0" action="./feed">
-        <input class="form-control  search" type="search" placeholder="Pesquisar" aria-label="Pesquisar" style="width: 65%;">
+    <form class="form-inline my-2 my-lg-0" action="/search" method="get">
+        @csrf
+        <input class="form-control  search" type="search" placeholder="Pesquisar" aria-label="Pesquisar" style="width: 65%;" name="search">
         <button class="btn btn-orange btn-search" type="submit">
             <img class="search" src="img/search.png" alt="">
         </button>

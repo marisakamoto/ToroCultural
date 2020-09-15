@@ -11,7 +11,8 @@ use Illuminate\Http\Request;
 
 class FeedController extends Controller
 {
-    public function feed (){
+    public function feed ()
+    {
         $user = User::find(auth()->user()->id);
         
         
@@ -38,4 +39,22 @@ class FeedController extends Controller
 
         return view ('feed-de-noticias', compact(  'user',  'projetos_seguidos', 'id_projetos', 'num','posts', 'myTime'));
     }
+
+    //PESQUISA
+    function search(Request $request)
+    {
+        $pesquisa = request('search');
+        $user = User::where('username', 'LIKE', $pesquisa, '%' );
+        // dd($user);
+        $users = DB::table('users')
+                ->where('name', 'LIKE', '%'.$pesquisa.'%')
+                ->orWhere('username', 'LIKE', '%'.$pesquisa.'%')
+                ->get();
+        // dd($users);
+        // return redirect()->route('feed')->with(['pesquisa' => $pesquisa])->with(['users' => $users]);
+        // return redirect('feed')->with('pesquisa', $pesquisa);
+        return redirect('feed');
+    }
+
+    //FIM PESQUISA
 }
