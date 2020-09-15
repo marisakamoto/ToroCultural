@@ -26,7 +26,7 @@ class PerfilProjetoController extends Controller
         $categorias = $projeto->categorias;
         $user_colaborador = $projeto->projeto_user_colaboradores;
         $vagas = $projeto->vagas;
-        $posts = Publish::where('projeto_id',  $id)->get();
+        $posts = Publish::where('projeto_id',  $id)->orderBy('id', 'DESC')->get();
         $seguidores = $projeto->user_projetoSeguido()->get();
 
         function pegaIdSeguidores($seguidores)
