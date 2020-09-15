@@ -30,6 +30,7 @@ class PerfilProjetoController extends Controller
         $seguidores = $projeto->user_projetoSeguido()->get();
         $myTime = \Carbon\Carbon::now();
 
+
         function pegaIdSeguidores($seguidores)
         {
             $id_seguidores = [];
