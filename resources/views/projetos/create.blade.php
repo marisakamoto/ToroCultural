@@ -6,7 +6,7 @@
 
 @section('css')
     <link rel="stylesheet" href="{{ asset('css/cadastro.css') }}">
-    
+
 
 @endsection
 
@@ -45,7 +45,7 @@
                 </a>
 
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                
+
                     <a class="dropdown-item" href="{{ route('logout') }}"
                         onclick="event.preventDefault();
                                         document.getElementById('logout-form').submit();">
@@ -78,13 +78,13 @@
                                     function previewImagem(){
                                         var imagem = document.querySelector('input[name=imagem]').files[0];
                                         var preview = document.querySelector('#preview-img');
-                                        
+
                                         var reader = new FileReader();
-                                        
+
                                         reader.onloadend = function () {
                                             preview.src = reader.result;
                                         }
-                                        
+
                                         if(imagem){
                                             reader.readAsDataURL(imagem);
                                         }else{
@@ -116,24 +116,23 @@
 
                                 <div class="form-group mb-0 my-2 p-2" style="border: solid gray 1px">
                                     <label for="categoria">Categorias</label></br>
-                                    
+
                                     @foreach ($categorias as $categoria )
                                         <div class="form-check form-check-inline">
-                                        <input class="form-check-input" 
-                                                type="checkbox" 
-                                                id="{{ $categoria->categoria }}" 
+                                        <input class="form-check-input"
+                                                type="checkbox"
+                                                id="{{ $categoria->categoria }}"
                                                 value="{{ $categoria->id }}"
                                                 name = "checkbox[]">
                                         <label class="form-check-label" for="{{ $categoria->categoria }}">{{ $categoria->categoria }}</label>
                                     </div>
                                     @endforeach
- 
+
                                 </div>
                             </div>
                         </div>
                         <button class="btn-deep-orange btn align-self-center" type="Submit">Enviar</button>
                         <a class="btn-deep-orange btn align-self-center" href="{{ URL::previous() }}" >Voltar</a>
-                        
                     </form>
                 </div>
             </div>

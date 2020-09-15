@@ -106,7 +106,7 @@
                                     }
                                 </script>
                         </div>
-                        
+
                         <div class="form-group mb-0">
                             <label for="nome">Nome de usuário</label>
                             <input class="form-control" type="text" name="username" id="username" value="{{ Auth::user()->username }}" Required>
@@ -142,7 +142,6 @@
                                     name = "habilidades[]">
                                 @endif
                             <label class="form-check-label" for="{{ $h->id }}">{{ $h->habilidade }}</label>
-                            
                         </div>
                         @endforeach
 
@@ -152,6 +151,7 @@
                         <textarea name="interesses" class="form-control my-0 p-2" id="interesse" rows="5" disabled></textarea></br>
                     </div>
                         <button class="btn-deep-orange btn " type="Submit">Atualizar</button>
+                        <a class="btn-deep-orange btn align-self-center" href="{{ URL::previous() }}" >Voltar</a>
                     </form>
                 </div>
             </div>
