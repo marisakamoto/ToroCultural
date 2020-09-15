@@ -25,7 +25,7 @@ class FeedController extends Controller
             $id_projetos[$i] = $projetos_seguidos[$i]->pivot->projetoSeguido_id;
         }
 
-        $posts = Publish::whereIn('projeto_id', $id_projetos)->get();
+        $posts = Publish::whereIn('projeto_id', $id_projetos)->orderBy('id', 'DESC')->get();
 
         // $post_autor = User::where('id',$posts->user_id)->value('url_foto');
         // $posts_projeto = Publish::

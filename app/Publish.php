@@ -16,7 +16,7 @@ class Publish extends Model
     public function getCreatedAtAttribute($value)
     {
         //ALETERAR FORMATO DA DATA QUE VEM DO DATABASE
-        return \Carbon\Carbon::parse($value)->format('d/m/y H:i');
+        return \Carbon\Carbon::parse($value)->format('d/m/y');
 	    
     }
 
