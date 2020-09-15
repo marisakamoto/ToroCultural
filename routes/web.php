@@ -49,7 +49,6 @@ Route::post('/home/experiencias/store', 'HomeController@storeExperiencias'); //A
 Route::get('/home/experiencias/edit/{id}', 'HomeController@editExperiencia');//Formulário de edição
 Route::put('/home/experiencias/update/{id}', 'HomeController@updateExperiencia');//ação de update
 Route::delete('/home/experiencias/delete/{id}', 'HomeController@deleteExperiencia');//ação de excluir
-
 //FIM EXPERIENCIAS
 
 
@@ -70,5 +69,10 @@ Route::delete('/user/unfollow/{id}', 'HomeController@unfollow');
 Route::post('/projeto/seguir/{id}', 'PerfilProjetoController@seguirProjeto');
 Route::delete('/projeto/unfollow/{id}', 'PerfilProjetoController@unfollowProjeto');
 //FIM SEGUIR
+
+//PESQUISAR
+// Route::get('/search', 'FeedController@search');
+
+//FIM PESQUISAR
 
 

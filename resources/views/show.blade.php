@@ -14,10 +14,11 @@
 @endsection
 
 @section('search')
-    <form class="form-inline my-2 my-lg-0" action="{{route('feed')}}">
-        <input class="form-control  search" type="search" placeholder="Pesquisar" aria-label="Pesquisar" style="width: 65%;">
+    <form class="form-inline my-2 my-lg-0" action="/search" method="get">
+        @csrf
+        <input class="form-control  search" type="search" placeholder="Pesquisar" aria-label="Pesquisar" style="width: 65%;" name="search">
         <button class="btn btn-orange btn-search" type="submit">
-            <img class="search" src="{{ url('img/search.png') }}" alt="">
+            <img class="search" src="img/search.png" alt="">
         </button>
     </form>
 @endsection
@@ -152,7 +153,7 @@
                                     <ul>
                                         <li class="prev ">&#10094;</li>
                                         <li class="next ">&#10095;</li>
-                                        <li>Agosto<br><span>2020</span></li>
+                                        <li>Setembro<br><span>2020</span></li>
                                     </ul>
                                 </div>
                                 <ul class="weekdays">

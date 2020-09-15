@@ -213,4 +213,5 @@ class PerfilProjetoController extends Controller
 
                 return redirect('/projeto/'.$id);
     }
+    //FIM SEGUIR
 }

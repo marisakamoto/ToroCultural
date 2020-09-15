@@ -9,8 +9,9 @@
 @endsection
 
 @section('search')
-    <form class="form-inline my-2 my-lg-0" action="{{ route('feed') }}">
-        <input class="form-control  search" type="search" placeholder="Pesquisar" aria-label="Pesquisar" style="width: 65%;">
+    <form class="form-inline my-2 my-lg-0" action="/search" method="get">
+        @csrf
+        <input class="form-control  search" type="search" placeholder="Pesquisar" aria-label="Pesquisar" style="width: 65%;" name="search">
         <button class="btn btn-orange btn-search" type="submit">
             <img class="search" src="{{ url('img/search.png') }}" alt="">
         </button>
@@ -69,7 +70,7 @@
                 <div class="col-md-12">
                     <form action="">
                         <div class="form-group my-0">
-                            <label for="titulo">Profissão ou nome de usuário</label>
+                            <label for="titulo">Vaga ou nome de usuário</label>
                             <input class="form-control py-0" type="text" name="titulo" id="titulo" >
                         </div>
                         <div class="form-group my-0">

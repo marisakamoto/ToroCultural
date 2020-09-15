@@ -15,10 +15,11 @@
 @endsection --}}
 
 @section('search')
-    <form class="form-inline my-2 my-lg-0" action="./feed">
-        <input class="form-control  search" type="search" placeholder="Pesquisar" aria-label="Pesquisar" style="width: 65%;">
+    <form class="form-inline my-2 my-lg-0" action="/search" method="get">
+        @csrf
+        <input class="form-control  search" type="search" placeholder="Pesquisar" aria-label="Pesquisar" style="width: 65%;" name="search">
         <button class="btn btn-orange btn-search" type="submit">
-            <img class="search" src="img/search.png" alt="">
+            <img class="search" src="{{ url('img/search.png') }}" alt="">
         </button>
     </form>
 @endsection
@@ -67,18 +68,18 @@
 @section('content')
         <h2 id="title-form">Cadastro Usuário</h2>
         <section class="container cadastro-user p-4 mb-5">
-            <div class="row">
-                <div class="col-md-8 form-user">
-                @if ($errors->any())
-                <div class="alert alert-danger">
-                    <ul>
-                        @foreach ($errors->all() as $error)
-                            <li>{{ $error }}</li>
-                        @endforeach
-                    </ul>
-                </div>
-            @endif
-                    <form method="POST" action ="/user/update/{{Auth::user()->id}}" enctype="multipart/form-data">
+           
+              
+                    @if ($errors->any())
+                        <div class="alert alert-danger">
+                            <ul>
+                                @foreach ($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    @endif
+                    <form class="form-user row"method="POST" action ="/user/update/{{Auth::user()->id}}" enctype="multipart/form-data">
                     @method('put')
                     @csrf
                         <div class="col-md-4 text-center pt-3">
@@ -106,55 +107,56 @@
                                     }
                                 </script>
                         </div>
-                        
-                        <div class="form-group mb-0">
-                            <label for="nome">Nome de usuário</label>
-                            <input class="form-control" type="text" name="username" id="username" value="{{ Auth::user()->username }}" Required>
-                        </div>
-                        <div class="form-group mb-0">
-                            <label for="aniversario">Aniversário</label>
-                            <input class="form-control" type="date" name="aniversario" id="aniversario" value="{{ Auth::user()->aniversario}}" Required>
-                        </div>
-                        <div class="form-group mb-0">
-                            <label for="profissao">Profissão</label>
-                            <input class="form-control" type="text" name="profissao" id="profissao" value="{{ Auth::user()->profissao}}" Required>
-                        </div>
-                        <div class="form-group">
-                            <label for="descricao">Descrição</label>
-                            <textarea name="descricao" class="form-control" id="descricao" rows="5">{{ Auth::user()->descricao}}</textarea>
-                        </div>
-                        <div class=" form-group my-0 p-2" style="border: solid gray 1px" >
-                            <label for="pcp-habilidades">Principais Habilidades:</label></br>
+                        <div class="col-md-8">
+                            <div class="form-group mb-0">
+                                <label for="nome">Nome de usuário</label>
+                                <input class="form-control" type="text" name="username" id="username" value="{{ Auth::user()->username }}" Required>
+                            </div>
+                            <div class="form-group mb-0">
+                                <label for="aniversario">Aniversário</label>
+                                <input class="form-control" type="date" name="aniversario" id="aniversario" value="{{ Auth::user()->aniversario}}" Required>
+                            </div>
+                            <div class="form-group mb-0">
+                                <label for="profissao">Profissão</label>
+                                <input class="form-control" type="text" name="profissao" id="profissao" value="{{ Auth::user()->profissao}}" Required>
+                            </div>
+                            <div class="form-group">
+                                <label for="descricao">Descrição</label>
+                                <textarea name="descricao" class="form-control" id="descricao" rows="5">{{ Auth::user()->descricao}}</textarea>
+                            </div>
+                            <div class=" form-group my-0 p-2" style="border: solid gray 1px" >
+                                <label for="pcp-habilidades">Principais Habilidades:</label></br>
 
-                            @foreach ($habilidades as $h )
+                                @foreach ($habilidades as $h )
                                 <div class="form-check form-check-inline">
-                                @if(in_array($h->id, $id_habilidades))
-                                    <input class="form-check-input"
+                                    @if(in_array($h->id, $id_habilidades))
+                                        <input class="form-check-input"
+                                            type="checkbox"
+                                            id="{{ $h->id }}"
+                                            checked value="{{ $h->id}}"
+                                            name = "habilidades[]">
+                                    @else
+                                        <input class="form-check-input"
                                         type="checkbox"
                                         id="{{ $h->id }}"
-                                        checked value="{{ $h->id}}"
+                                        value="{{ $h->id}}"
                                         name = "habilidades[]">
-                                @else
-                                    <input class="form-check-input"
-                                    type="checkbox"
-                                    id="{{ $h->id }}"
-                                    value="{{ $h->id}}"
-                                    name = "habilidades[]">
-                                @endif
-                            <label class="form-check-label" for="{{ $h->id }}">{{ $h->habilidade }}</label>
-                            
+                                    @endif
+                                    <label class="form-check-label" for="{{ $h->id }}">{{ $h->habilidade }}</label>
+                                </div>
+                                @endforeach
+                            </div>
+                            <div class="form-group my-0">
+                                <label for="interesses">Interesses</label>
+                                <textarea name="interesses" class="form-control my-0 p-2" id="interesse" rows="5" disabled></textarea></br>
+                            </div>
                         </div>
-                        @endforeach
+                    
 
-                    </div>
-                    <div class="form-group my-0">
-                        <label for="interesses">Interesses</label>
-                        <textarea name="interesses" class="form-control my-0 p-2" id="interesse" rows="5" disabled></textarea></br>
-                    </div>
                         <button class="btn-deep-orange btn " type="Submit">Atualizar</button>
                     </form>
-                </div>
-            </div>
+         
+            
         </section>
 
 
