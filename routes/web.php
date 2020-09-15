@@ -71,7 +71,7 @@ Route::delete('/projeto/unfollow/{id}', 'PerfilProjetoController@unfollowProjeto
 //FIM SEGUIR
 
 //PESQUISAR
-Route::get('/search', 'FeedController@search');
+// Route::get('/search', 'FeedController@search');
 
 //FIM PESQUISAR
 
