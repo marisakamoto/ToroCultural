@@ -8,7 +8,6 @@ use App\User;
 use App\Habilidade;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Storage;
 
 
 class HomeController extends Controller
@@ -53,7 +52,6 @@ class HomeController extends Controller
     {
         //Abre a página de outro usuario
 
-
         $user = User::where('username', $username)->first();
         if($user->id == auth()->user()->id){
             return redirect('/home');
@@ -89,27 +87,53 @@ class HomeController extends Controller
             }
         }
 
-        $seguidoPeloLogado = verificaId($id_seguidores);
+        $seguididoPeloLogado = verificaId($id_seguidores);
 
-        return view('show-user', compact('user', 'username','projetos', 'habilidades', 'seguindo', 'seguindo_user', 'seguidores','seguidores_users', 'experiences', 'projetos_seguidos', 'projetos_colaborando', 'seguidoPeloLogado'));
+        return view('show-user', compact('user', 'username','projetos', 'habilidades', 'seguindo', 'seguindo_user', 'seguidores','seguidores_users', 'experiences', 'projetos_seguidos', 'projetos_colaborando', 'seguididoPeloLogado'));
     }
 
     public function edit($id)
     {
+
         $habilidades = Habilidade::all();
-        return view('users.edit', compact('habilidades'));
+            $idHabilidades = [];
+            for($i = 0; $i <count($habilidades); $i++){
+                $idHabilidades[] = $habilidades[$i]->id;
+            };
+
+        $habilidades_user = User::find(auth()->user()->id)->habilidades;
+        
+            $id_habilidades = [];
+            for($i = 0; $i <count($habilidades_user); $i++){
+                $id_habilidades[] = $habilidades_user[$i]->id;
+            };
+            
+        function verifica($idHabilidades, $id_habilidades){
+            if(in_array($id_habilidades, $idHabilidades)){
+                return true;
+            };   
+        }
+
+        $check_validacao = verifica($idHabilidades, $id_habilidades);
+         
+        
+        return view('users.edit', compact('habilidades', 'id_habilidades'));
     }
 
     public function update(Request $request, $id)
     {
         $user = User::find($id);
-        if($request->hasfile('imagem') && $request->imagem->isvalid()){
-            $destination_path = 'img/users';
-            $image = $request->file('imagem');
-            $image_name = $image->getClientOriginalName();
-            $imageExt = $image->getClientOriginalExtension();
-            $imageFinal = $image_name.date('Y-m-d-H-i-s').".".$imageExt;
-            $path = $request->file('imagem')->storeAs($destination_path, $imageFinal, 'public');
+        request()->validate(
+            [
+                'habilidades' =>'required',
+            ]
+        );
+
+        
+        if($request->hasfile('imagem') && $request->imagem->isvalid()){ //name do input 
+            $imagePath = $request->file('imagem');
+            $imageName = $imagePath->getClientOriginalName();
+            $path = $request->file('imagem')->storeAs('img/users', $imageName, 'public');
             $user->url_foto = $path;
         }
 
@@ -117,10 +141,10 @@ class HomeController extends Controller
         $user->descricao = request('descricao');
         $user->aniversario = request('aniversario');
         $user->profissao = request('profissao');
-        $habilidades = $request->get('checkbox'); //array:[2, 3, 8]
-        $user->save();
-
-        $user->habilidades()->attach($habilidades, ['user_id' => $user->id]);
+        $habilidades = $request->get('habilidades'); //array:[2, 3, 8]
+        $user->update();           
+        
+        $user->habilidades()->sync($habilidades);
 
         return redirect('/home');
     }

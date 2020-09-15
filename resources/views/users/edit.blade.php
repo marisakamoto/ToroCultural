@@ -69,6 +69,15 @@
         <section class="container cadastro-user p-4 mb-5">
             <div class="row">
                 <div class="col-md-8 form-user">
+                @if ($errors->any())
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
                     <form method="POST" action ="/user/update/{{Auth::user()->id}}" enctype="multipart/form-data">
                     @method('put')
                     @csrf
@@ -116,16 +125,27 @@
                         </div>
                         <div class=" form-group my-0 p-2" style="border: solid gray 1px" >
                             <label for="pcp-habilidades">Principais Habilidades:</label></br>
+
                             @foreach ($habilidades as $h )
                                 <div class="form-check form-check-inline">
-                                <input class="form-check-input"
+                                @if(in_array($h->id, $id_habilidades))
+                                    <input class="form-check-input"
+                                        type="checkbox"
+                                        id="{{ $h->id }}"
+                                        checked value="{{ $h->id}}"
+                                        name = "habilidades[]">
+                                @else
+                                    <input class="form-check-input"
                                     type="checkbox"
                                     id="{{ $h->id }}"
                                     value="{{ $h->id}}"
-                                    name = "checkbox[]">
+                                    name = "habilidades[]">
+                                @endif
                             <label class="form-check-label" for="{{ $h->id }}">{{ $h->habilidade }}</label>
+                            
                         </div>
                         @endforeach
+
                     </div>
                     <div class="form-group my-0">
                         <label for="interesses">Interesses</label>
