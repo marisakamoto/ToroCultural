@@ -331,6 +331,7 @@
                                             <a class="media-left" href="#"><img class="img-circle img-publi"  alt="Post Image" src="{{url("storage/{$post->url_foto}")}}"></a>
                                             <div class="media-body">
                                                 <div class="mar-btm">
+                                                
                                                     <a href="#" class="btn-link text-semibold media-heading box-inline"> {{$post->user->username}}</a>
                                                     <p class="text-muted text-sm"><i class="fa fa-mobile fa-lg"></i> - From Mobile - {{$post->created_at}}</p>
                                                 </div>
