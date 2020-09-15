@@ -153,7 +153,7 @@
                                     <ul>
                                         <li class="prev ">&#10094;</li>
                                         <li class="next ">&#10095;</li>
-                                        <li>Agosto<br><span>2020</span></li>
+                                        <li>Setembro<br><span>2020</span></li>
                                     </ul>
                                 </div>
                                 <ul class="weekdays">
