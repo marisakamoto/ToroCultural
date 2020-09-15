@@ -176,7 +176,10 @@
                                     @foreach ( $posts as $p )
                                         <div class="card mb-4">
                                             <div class="card-body">
-                                                <a class="media-left" href="{{url("storage/".$p->url_foto)}}"><img class="img-circle img-publi"  alt="Profile Picture" src="{{url("storage/".$p->url_foto)}}"></a>
+                                                @if($p->url_foto != null)
+                                                    <a class="media-left" href="{{url("storage/".$p->url_foto)}}"><img class="img-circle img-publi"  alt="Profile Picture" src="{{url("storage/".$p->url_foto)}}"></a>
+                                                @endif
+
                                                 <div class="media-body">
                                                     <div class="mar-btm">
                                                         <div class="d-flex align-items-center m-2">
@@ -189,7 +192,7 @@
                                                             <img class="imagem-perfil-feed mt-1 mr-1" src="img/cinemateca.jpg" alt="">
                                                             <a href="/projeto/{{ $p->projeto->id }}" class="text-semibold media-heading box-inline">{{ $p->projeto->titulo  }}</a>
                                                         </div>
-                                                        <p class="text-muted text-sm"><i class="fa fa-mobile fa-lg"></i> - From Mobile - 11 min ago</p>
+                                                        <p class="text-muted text-sm"><i class="fa fa-mobile fa-lg"></i> - From Mobile - há {{ $myTime->diffInDays($p->updated_at) }} dias</p>
                                                     </div>
                                                     <p>
                                                         {{ $p->legenda }}

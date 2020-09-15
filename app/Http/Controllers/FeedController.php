@@ -19,13 +19,14 @@ class FeedController extends Controller
         $projetos_seguidos = $user->user_projetoSeguido;
         $seguindo_user = $user->seguindo;
         $num = $projetos_seguidos->count();
+        $myTime = \Carbon\Carbon::now();
         
         $id_projetos = []; 
         for ( $i=0 ;$i< $num; $i++){
             $id_projetos[$i] = $projetos_seguidos[$i]->pivot->projetoSeguido_id;
         }
 
-        $posts = Publish::whereIn('projeto_id', $id_projetos)->get();
+        $posts = Publish::whereIn('projeto_id', $id_projetos)->orderBy('id', 'DESC')->get();
 
         // $post_autor = User::where('id',$posts->user_id)->value('url_foto');
         // $posts_projeto = Publish::
@@ -35,6 +36,6 @@ class FeedController extends Controller
         // $id_proj_seguindo = Projeto::where('userSeguindo_id', auth()->user()->id)->projeto_id->get();
         // $posts_proj = Publish::where('projeto_id',$id_proj_seguindo);
 
-        return view ('feed-de-noticias', compact(  'user',  'projetos_seguidos', 'id_projetos', 'num','posts'));
+        return view ('feed-de-noticias', compact(  'user',  'projetos_seguidos', 'id_projetos', 'num','posts', 'myTime'));
     }
 }

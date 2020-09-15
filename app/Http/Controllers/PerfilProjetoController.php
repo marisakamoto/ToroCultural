@@ -26,8 +26,10 @@ class PerfilProjetoController extends Controller
         $categorias = $projeto->categorias;
         $user_colaborador = $projeto->projeto_user_colaboradores;
         $vagas = $projeto->vagas;
-        $posts = Publish::where('projeto_id',  $id)->get();
+        $posts = Publish::where('projeto_id',  $id)->orderBy('id', 'DESC')->get();
         $seguidores = $projeto->user_projetoSeguido()->get();
+        $myTime = \Carbon\Carbon::now();
+
 
         function pegaIdSeguidores($seguidores)
         {
@@ -50,7 +52,7 @@ class PerfilProjetoController extends Controller
         $seguidoPeloLogado = verificaId($id_seguidores);
   
 
-        return view('show', compact('projeto', 'categorias', 'user_colaborador', 'vagas', 'user_criador','posts', 'seguidoPeloLogado', 'seguidores'));
+        return view('show', compact('projeto', 'categorias', 'user_colaborador', 'vagas', 'user_criador','posts', 'seguidoPeloLogado', 'seguidores', 'myTime'));
     }
 
     public function create()

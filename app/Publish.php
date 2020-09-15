@@ -13,6 +13,13 @@ class Publish extends Model
         'legenda'
     ];
 
+    public function getCreatedAtAttribute($value)
+    {
+        //ALETERAR FORMATO DA DATA QUE VEM DO DATABASE
+        return \Carbon\Carbon::parse($value)->format('d/m/y');
+	    
+    }
+
     //Relacionamento Projeto_Publicação 1:N
     public function projeto()
     {
