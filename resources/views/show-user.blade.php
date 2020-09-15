@@ -69,8 +69,8 @@
                     <div class="col-md-4 mx-auto" id="foto">
                         <div class="row foto-perfil">
                             <div class="mx-auto perfil-foto m-0">
-                            
-                            
+
+
                                 <img  src=  "{{url("storage/".$user->url_foto)}}">
                             </div>
                         </div>
@@ -92,7 +92,7 @@
                                         <button class="follow btn btn-orange font-weight-bold btn-sm m-1 p-2"> Deixar de Seguir</button>
                                     </form>
                                 @else
-                                    <form action="/user/seguir/{{ $projeto->id }}/{{ $user->id }}" method="POST">
+                                    <form action="/user/seguir/{{ $user->id }}" method="POST">
                                         @csrf
                                         <button class="follow btn btn-outline-warning btn-sm m-1 p-2"> Seguir</button>
                                     </form>
@@ -258,7 +258,7 @@
                                                 <div class="row seguidores_user">
                                                     <div class="item-seguidor">
                                                         <div class="perfil-seguidor">
-                                                        
+
                                                             <img src="{{url("storage/".$seguidor->url_foto )}}" alt="">
                                                         </div>
                                                         <a href="/perfil/{{ $seguidor->username }}" class="ml-5">{{ $seguidor->username }}</a>

@@ -45,7 +45,7 @@ class HomeController extends Controller
                 $seguidores_users = $users->seguidores;
                 $experiences = $users->experience()->get();
                 $projetos_seguidos = $users->user_projetoSeguido;
-                
+
             return view('home', compact('users','projetos', 'habilidades', 'seguindo', 'seguindo_user', 'seguidores','seguidores_users', 'experiences', 'projetos_seguidos', 'projetos_colaborando'));
         }
     }
@@ -74,7 +74,7 @@ class HomeController extends Controller
         function pegaIdSeguidores($seguidores_users)
         {
             $id_seguidores = [];
-            for ($i=0; $i < count($seguidores_users); $i++) { 
+            for ($i=0; $i < count($seguidores_users); $i++) {
                 $id_seguidores[] = $seguidores_users[$i]->id;
             }
             return $id_seguidores;
@@ -89,9 +89,9 @@ class HomeController extends Controller
             }
         }
 
-        $seguididoPeloLogado = verificaId($id_seguidores);
+        $seguidoPeloLogado = verificaId($id_seguidores);
 
-        return view('show-user', compact('user', 'username','projetos', 'habilidades', 'seguindo', 'seguindo_user', 'seguidores','seguidores_users', 'experiences', 'projetos_seguidos', 'projetos_colaborando', 'seguididoPeloLogado'));
+        return view('show-user', compact('user', 'username','projetos', 'habilidades', 'seguindo', 'seguindo_user', 'seguidores','seguidores_users', 'experiences', 'projetos_seguidos', 'projetos_colaborando', 'seguidoPeloLogado'));
     }
 
     public function edit($id)
@@ -104,21 +104,21 @@ class HomeController extends Controller
             };
 
         $habilidades_user = User::find(auth()->user()->id)->habilidades;
-        
+
             $id_habilidades = [];
             for($i = 0; $i <count($habilidades_user); $i++){
                 $id_habilidades[] = $habilidades_user[$i]->id;
             };
-            
+
         function verifica($idHabilidades, $id_habilidades){
             if(in_array($id_habilidades, $idHabilidades)){
                 return true;
-            };   
+            };
         }
 
         $check_validacao = verifica($idHabilidades, $id_habilidades);
-         
-        
+
+
         return view('users.edit', compact('habilidades', 'id_habilidades'));
     }
 
@@ -131,8 +131,8 @@ class HomeController extends Controller
             ]
         );
 
-        
-        if($request->hasfile('imagem') && $request->imagem->isvalid()){ //name do input 
+
+        if($request->hasfile('imagem') && $request->imagem->isvalid()){ //name do input
             $imagePath = $request->file('imagem');
             $imageName = $imagePath->getClientOriginalName();
             $path = $request->file('imagem')->storeAs('img/users', $imageName, 'public');
@@ -144,8 +144,8 @@ class HomeController extends Controller
         $user->aniversario = request('aniversario');
         $user->profissao = request('profissao');
         $habilidades = $request->get('habilidades'); //array:[2, 3, 8]
-        $user->update();           
-        
+        $user->update();
+
         $user->habilidades()->sync($habilidades);
 
         return redirect('/home');

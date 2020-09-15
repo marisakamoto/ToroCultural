@@ -11,7 +11,7 @@
 @endsection
 
 @section('search')
-    <form class="form-inline my-2 my-lg-0" action="/search" method="get">
+    <form class="form-inline my-2 my-lg-0" action="{{route('feed')}}" method="get">
         @csrf
         <input class="form-control  search" type="search" placeholder="Pesquisar" aria-label="Pesquisar" style="width: 65%;" name="search">
         <button class="btn btn-orange btn-search" type="submit">
@@ -72,7 +72,7 @@
                                 {{-- <img  src="{{url("storage/".Auth::user()->url_foto)}}"> --}}
                                 {{-- <img  src="/storage/{{ Auth::user()->url_foto }}"> --}}
                                 <img  src="{{asset('/storage/'.Auth::user()->url_foto)}}">
-                               
+
 
                             </div>
                         </div>
@@ -247,7 +247,7 @@
                                                     <div class="item-seguidor">
                                                         <div class="perfil-seguidor">
 
-                                                            
+
                                                             <img src="{{url("storage/".$seguidor->url_foto )}}" alt="">
                                                         </div>
                                                         <a href="/perfil/{{ $seguidor->username }}" class="ml-5">{{ $seguidor->username }}</a>
