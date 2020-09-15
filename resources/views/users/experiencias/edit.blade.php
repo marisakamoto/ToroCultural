@@ -65,17 +65,18 @@
 @endsection
 
 @section('content')
-        <h2 id="title-form">Experiências</h2>
+        <h2 id="title-form">Editar Experiência</h2>
 
         <section class="container cadastro-exp-extra mb-5">
             <div class="row">
                 <h3 class="pl-4 py-2">Experiências extras</h3>
             </div>
             <div class="row p-0">
-                    <form class="form-user row p-3" action="/home/experiencias/store" method="POST" enctype="multipart/form-data">
+                    <form class="form-user row p-3" action="/home/experiencias/update/{{ $experiencia->id }}" method="POST" enctype="multipart/form-data">
+                    @method('put')
                     @csrf
                         <div class="col-md-3  text-center my-auto">
-                            <img style = "width:130px; height:130px; object-fit: cover;" id="preview-img" >
+                            <img src="{{url("storage/{$experiencia->url_foto}")}}"style = "width:130px; height:130px; object-fit: cover;" id="preview-img" >
                                     <input type="file" name="imagem" class="btn block" id="imagem" onchange="previewImagem()">
                                     {{-- NÃO CONSEGUI FAZER FUNCIONAR DEIXANDO O JS EM OUTRO ARQUIVO --}}
                                     <script>
@@ -100,27 +101,27 @@
                         <div class="col-md-9 px-4">
                             <div class="form-group my-0">
                                 <label class="my-0"for="titulo">Título</label>
-                                <input class="form-control py-0"  type="text" name="titulo" id="titulo" Required>
+                                <input class="form-control py-0"  type="text" name="titulo" id="titulo" value="{{ $experiencia->titulo }}" Required>
                             </div>
                             <div class="form-group my-0">
                                 <div class="row">
                                     <div class="col-md-6">
                                         <label class="my-0" for="data_realizacao"> Quando?</label>
-                                        <input  class="form-control " type="date" name="data_realizacao" id="data_realizacao" Required>
+                                        <input  class="form-control " type="date" name="data_realizacao" id="data_realizacao" value="{{ $experiencia->data_realizacao }}"Required>
                                     </div>
                                     <div class="col-md-6">
                                         <label  class="my-0" for="localizacao">Onde?</label>
-                                        <input  class="form-control" type="texte" name="localizacao" id="lcoalizacao" Required>
+                                        <input  class="form-control" type="texte" name="localizacao" id="lcoalizacao" value="{{ $experiencia->localizacao }}" Required>
                                     </div>
                                 </div>
                             </div>
                             <div class="form-group my-0">
                                 <label class="my-0" for="descricao">Descrição do projeto</label>
-                                <textarea class="form-control" name="descricao" id="descricao"  rows="2"></textarea></br>
+                                <textarea class="form-control" name="descricao" id="descricao"  rows="2">{{ $experiencia->descricao }}</textarea></br>
                             </div>
                         </div>
                         <div class="botao-final-user">
-                            <button class="btn-deep-orange btn " type="Submit">Adicionar</button>
+                            <button class="btn-deep-orange btn " type="Submit">Atualizar</button>
                             <a class="btn-deep-orange btn align-self-center" href="{{ URL::previous() }}" >Voltar</a>
                         </div>
                     </form>

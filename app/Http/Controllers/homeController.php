@@ -8,6 +8,8 @@ use App\User;
 use App\Habilidade;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use App\Categoria;
+use App\Experience_card;
 
 
 class HomeController extends Controller
@@ -161,7 +163,7 @@ class HomeController extends Controller
         return view('users.experiencias.create');
     }
 
-    //SEGUIR
+    //SEGUIR USER/USER
     public function seguir($id)
     {
         $user_logado = User::find(auth()->user()->id);
@@ -187,4 +189,75 @@ class HomeController extends Controller
 
                 return redirect('/perfil/'.$user_seguido->username);
     }
+    //FIM SEGUIR
+
+    //EXPERIENCIAS
+    public function createExperiencias()
+    {
+        return view('users.experiencias.create');
+    }
+
+    public function storeExperiencias(Request $request)
+    {
+        $experiencia = new Experience_card;
+
+        if($request->hasfile('imagem') && $request->imagem->isvalid()){
+            $destination_path = 'img/experiencias';
+            $image = $request->file('imagem');
+            $image_name = $image->getClientOriginalName();
+            $imageExt = $image->getClientOriginalExtension();
+            $imageFinal = $image_name.date('Y-m-d-H-i-s').".".$imageExt;
+            $path = $request->file('imagem')->storeAs($destination_path, $imageFinal, 'public');
+            $experiencia->url_foto = $path;
+        }
+
+        $experiencia->user_id = auth()->user()->id;
+        $experiencia->titulo = request('titulo');
+        $experiencia->descricao = request('descricao');
+        $experiencia->localizacao = request('localizacao');
+        $experiencia->data_realizacao = request('data_realizacao');
+
+        $experiencia->save();
+
+        return redirect('/home');
+
+    }
+
+    public function editExperiencia($id)
+    {
+        $experiencia = Experience_card::find($id);
+        return view('users.experiencias.edit', compact('experiencia'));
+    }
+
+    public function updateExperiencia(Request $request, $id)
+    {
+        $experiencia = Experience_card::find($id);
+
+        if($request->hasfile('imagem') && $request->imagem->isvalid()){
+            $destination_path = 'img/experiencias';
+            $image = $request->file('imagem');
+            $image_name = $image->getClientOriginalName();
+            $imageExt = $image->getClientOriginalExtension();
+            $imageFinal = $image_name.date('Y-m-d-H-i-s').".".$imageExt;
+            $path = $request->file('imagem')->storeAs($destination_path, $imageFinal, 'public');
+            $experiencia->url_foto = $path;
+        }
+
+        $experiencia->user_id = auth()->user()->id;
+        $experiencia->titulo = request('titulo');
+        $experiencia->descricao = request('descricao');
+        $experiencia->localizacao = request('localizacao');
+        $experiencia->data_realizacao = request('data_realizacao');
+
+        $experiencia->update();
+
+        return redirect('/home');
+    }
+
+    public function deleteExperiencia($id)
+    {
+        Experience_card::find($id)->delete();
+        return redirect('/home');
+    }
+
 }

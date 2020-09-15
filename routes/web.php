@@ -43,6 +43,16 @@ Route::put('/user/update/{id}', 'HomeController@update');
 Route::delete('/user/delete/{id}', 'HomeController@delete');
 //FIM USUARIO
 
+//EXPERIENCIAS
+Route::get('/home/experiencias/create', 'HomeController@createExperiencias')->name('experiencias'); //Formulário para criar
+Route::post('/home/experiencias/store', 'HomeController@storeExperiencias'); //Ação de salvar
+Route::get('/home/experiencias/edit/{id}', 'HomeController@editExperiencia');//Formulário de edição
+Route::put('/home/experiencias/update/{id}', 'HomeController@updateExperiencia');//ação de update
+Route::delete('/home/experiencias/delete/{id}', 'HomeController@deleteExperiencia');//ação de excluir
+
+//FIM EXPERIENCIAS
+
+
 
 Route::get('/feed', 'FeedController@feed')->name('feed');
 
