@@ -133,10 +133,13 @@ class HomeController extends Controller
 
 
         if($request->hasfile('imagem') && $request->imagem->isvalid()){ //name do input
-            $imagePath = $request->file('imagem');
-            $imageName = $imagePath->getClientOriginalName();
-            $path = $request->file('imagem')->storeAs('img/users', $imageName, 'public');
-            $user->url_foto = $path;
+            $destination_path = 'img/users';
+            $image = $request->file('imagem');
+            $image_name = $image->getClientOriginalName();
+            $imageExt = $image->getClientOriginalExtension();
+            $imageFinal = $image_name.date('Y-m-d-H-i-s').".".$imageExt;
+            $path = $request->file('imagem')->move($destination_path, $imageFinal);
+            $user->url_foto = $path;;
         }
 
         $user->username = request('username');
@@ -201,14 +204,14 @@ class HomeController extends Controller
     {
         $experiencia = new Experience_card;
 
-        if($request->hasfile('imagem') && $request->imagem->isvalid()){
-            $destination_path = 'img/experiencias';
+        if($request->hasfile('imagem') && $request->imagem->isvalid()){ //name do input
+            $destination_path = 'img/projetos';
             $image = $request->file('imagem');
             $image_name = $image->getClientOriginalName();
             $imageExt = $image->getClientOriginalExtension();
             $imageFinal = $image_name.date('Y-m-d-H-i-s').".".$imageExt;
-            $path = $request->file('imagem')->storeAs($destination_path, $imageFinal, 'public');
-            $experiencia->url_foto = $path;
+            $path = $request->file('imagem')->move($destination_path, $imageFinal);
+            $experiencia->url_foto = $path;;
         }
 
         $experiencia->user_id = auth()->user()->id;

@@ -15,7 +15,7 @@
 @endsection --}}
 
 @section('search')
-    <form class="form-inline my-2 my-lg-0" action="/search" method="get">
+    <form class="form-inline my-2 my-lg-0" action="{{ route('feed') }}" method="GET">
         @csrf
         <input class="form-control  search" type="search" placeholder="Pesquisar" aria-label="Pesquisar" style="width: 65%;" name="search">
         <button class="btn btn-orange btn-search" type="submit">
@@ -77,7 +77,7 @@
                     @method('put')
                     @csrf
                         <div class="col-md-3  text-center my-auto">
-                            <img src="{{url("storage/{$experiencia->url_foto}")}}"style = "width:130px; height:130px; object-fit: cover;" id="preview-img" >
+                            <img src="{{ url($experiencia->url_foto)}}"style = "width:130px; height:130px; object-fit: cover;" id="preview-img" >
                                     <input type="file" name="imagem" class="btn block" id="imagem" onchange="previewImagem()">
                                     {{-- NÃO CONSEGUI FAZER FUNCIONAR DEIXANDO O JS EM OUTRO ARQUIVO --}}
                                     <script>

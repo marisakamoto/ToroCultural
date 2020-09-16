@@ -14,11 +14,11 @@
 @endsection
 
 @section('search')
-    <form class="form-inline my-2 my-lg-0" action="/search" method="get">
+    <form class="form-inline my-2 my-lg-0" action="{{ route('feed') }}" method="GET">
         @csrf
         <input class="form-control  search" type="search" placeholder="Pesquisar" aria-label="Pesquisar" style="width: 65%;" name="search">
         <button class="btn btn-orange btn-search" type="submit">
-            <img class="search" src="img/search.png" alt="">
+            <img class="search" src="{{ url('img/search.png') }}" alt="">
         </button>
     </form>
 @endsection
@@ -167,7 +167,6 @@
                                     <li>Dom</li>
                                 </ul>
                                 <ul class="days">
-                                
                                     <li><span class="{{ $day=='01' ? 'active' : '' }}">1</span></li>
                                     <li><span class="{{ $day=='02' ? 'active' : '' }}">2</span></li>
                                     <li><span class="{{ $day=='03' ? 'active' : '' }}">3</span></li>
@@ -332,7 +331,7 @@
                                 <div class="card mb-4">
                                     <div class="card-body">
                                             @if($post->url_foto != null)
-                                            <a class="media-left" href="#"><img class="img-circle img-publi"  alt="Post Image" src="{{url("storage/{$post->url_foto}")}}"></a>
+                                            <a class="media-left" href="#"><img class="img-circle img-publi"  alt="Post Image" src="{{ url($post->url_foto)}}"></a>
                                             @endif
                                             <div class="media-body">
                                             
@@ -500,7 +499,7 @@
                 <h5 class="my-0"><a class="user-link" href="/perfil/{{ $user_criador->username }}">{{ $user_criador->username }}</a></h5> <br>
 
                 <div class="perfil-foto-proj">
-                    <img  src="{{url("storage/".Auth::user()->url_foto)}}">
+                    <img  src="{{ url($user_criador->url_foto)}}">
                 </div>
                 <div class="row  mx-auto">
                     <div id="star-rank ">
@@ -525,12 +524,12 @@
                 <p class="text-center">Publicado há 1 mês</p>
             </div>
             <hr class="my-4 ">
-            <div id="user-network ">
-
+            <div id="user-network">
+                <h3 class="text-center">Equipe</h3>
                 @foreach ( $user_colaborador as $user_c )
                     <div class="row px-1 pt-2 ">
                     <div class="row perfil-foto-colaborador">
-                        <img class=" rounded-circle peach-gradient " height="85 em " src="{{ url("storage/{$user_c->url_foto}") }}" alt="perfil-user">
+                        <img class=" rounded-circle peach-gradient " height="85 em " src="{{ url($user_c->url_foto)}}" alt="perfil-user">
                     </div>
                     <div class="row mx-auto " style="width: 100%; ">
                         <p class="text-center mx-auto mb-0 "><a class="user-link" href="/perfil/{{ $user_c->username }}">{{ $user_c->username }}</a></p>
