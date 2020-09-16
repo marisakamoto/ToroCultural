@@ -30,7 +30,13 @@ class PerfilProjetoController extends Controller
         $seguidores = $projeto->user_projetoSeguido()->get();
         $myTime = \Carbon\Carbon::now();
 
+        $data_realizacao = $projeto->data_de_realizacao;
+        $data_date = date_create_from_format('d/m/Y',$data_realizacao);
 
+        $month = $data_date->format('F');
+        $year = $data_date->format('Y');
+        $day = $data_date->format('d');
+        
         function pegaIdSeguidores($seguidores)
         {
             $id_seguidores = [];
@@ -52,7 +58,7 @@ class PerfilProjetoController extends Controller
         $seguidoPeloLogado = verificaId($id_seguidores);
   
 
-        return view('show', compact('projeto', 'categorias', 'user_colaborador', 'vagas', 'user_criador','posts', 'seguidoPeloLogado', 'seguidores', 'myTime'));
+        return view('show', compact('projeto', 'categorias', 'user_colaborador', 'vagas', 'user_criador','posts', 'seguidoPeloLogado', 'seguidores', 'myTime', 'month', 'year', 'day'));
     }
 
     public function create()
@@ -86,6 +92,9 @@ class PerfilProjetoController extends Controller
         $projeto->save(); //id
         $projeto->categorias()->attach($categorias, ['projeto_id' => $projeto->id]);
         $projeto->user_projetoSeguido()->attach( ['userSeguindo_id' => $projeto->user_id], ['projetoSeguido_id' => $projeto->id]);
+
+
+
         // dd($projeto->id);
         return redirect('/projeto/'.$projeto->id);
     }
