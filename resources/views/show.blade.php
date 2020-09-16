@@ -148,12 +148,13 @@
                                 width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
                         </div>
                         <div class="col-md-6  justify-content-center ">
+                            {{-- {{ strftime($projeto->data_de_realizacao) }} --}}
                             <div class="calendar">
                                 <div class="month">
                                     <ul>
                                         <li class="prev ">&#10094;</li>
                                         <li class="next ">&#10095;</li>
-                                        <li>Setembro<br><span>2020</span></li>
+                                    <li>{{$month}} <br><span>{{$year}}</span></li>
                                     </ul>
                                 </div>
                                 <ul class="weekdays">
@@ -166,37 +167,38 @@
                                     <li>Dom</li>
                                 </ul>
                                 <ul class="days">
-                                    <li>1</li>
-                                    <li>2</li>
-                                    <li>3</li>
-                                    <li>4</li>
-                                    <li>5</li>
-                                    <li>6</li>
-                                    <li>7</li>
-                                    <li>8</li>
-                                    <li>9</li>
-                                    <li><span class="active ">10</span></li>
-                                    <li>11</li>
-                                    <li>12</li>
-                                    <li>13</li>
-                                    <li>14</li>
-                                    <li>15</li>
-                                    <li>16</li>
-                                    <li>17</li>
-                                    <li>18</li>
-                                    <li>19</li>
-                                    <li>20</li>
-                                    <li>21</li>
-                                    <li>22</li>
-                                    <li>23</li>
-                                    <li>24</li>
-                                    <li>25</li>
-                                    <li>26</li>
-                                    <li>27</li>
-                                    <li>28</li>
-                                    <li>29</li>
-                                    <li>30</li>
-                                    <li>31</li>
+                                
+                                    <li><span class="{{ $day=='01' ? 'active' : '' }}">1</span></li>
+                                    <li><span class="{{ $day=='02' ? 'active' : '' }}">2</span></li>
+                                    <li><span class="{{ $day=='03' ? 'active' : '' }}">3</span></li>
+                                    <li><span class="{{ $day=='04' ? 'active' : '' }}">4</span></li>
+                                    <li><span class="{{ $day=='05' ? 'active' : '' }}">5</span></li>
+                                    <li><span class="{{ $day=='06' ? 'active' : '' }}">6</span></li>
+                                    <li><span class="{{ $day=='07' ? 'active' : '' }}">7</span></li>
+                                    <li><span class="{{ $day=='08' ? 'active' : '' }}">8</span></li>
+                                    <li><span class="{{ $day=='09' ? 'active' : '' }}">9</span></li>
+                                    <li><span class="{{ $day=='10' ? 'active' : '' }}">10</span></li>
+                                    <li><span class="{{ $day=='11' ? 'active' : '' }}">11</span></li>
+                                    <li><span class="{{ $day=='12' ? 'active' : '' }}">12</span></li>
+                                    <li><span class="{{ $day=='13' ? 'active' : '' }}">13</span></li>
+                                    <li><span class="{{ $day=='14' ? 'active' : '' }}">14</span></li>
+                                    <li><span class="{{ $day=='15' ? 'active' : '' }}">15</span></li>
+                                    <li><span class="{{ $day=='16' ? 'active' : '' }}">16</span></li>
+                                    <li><span class="{{ $day=='17' ? 'active' : '' }}">17</span></li>
+                                    <li><span class="{{ $day=='18' ? 'active' : '' }}">18</span></li>
+                                    <li><span class="{{ $day=='19' ? 'active' : '' }}">19</span></li>
+                                    <li><span class="{{ $day=='20' ? 'active' : '' }}">20</span></li>
+                                    <li><span class="{{ $day=='21' ? 'active' : '' }}">21</span></li>
+                                    <li><span class="{{ $day=='22' ? 'active' : '' }}">22</span></li>
+                                    <li><span class="{{ $day=='23' ? 'active' : '' }}">23</span></li>
+                                    <li><span class="{{ $day=='24' ? 'active' : '' }}">24</span></li>
+                                    <li><span class="{{ $day=='25' ? 'active' : '' }}">25</span></li>
+                                    <li><span class="{{ $day=='26' ? 'active' : '' }}">26</span></li>
+                                    <li><span class="{{ $day=='27' ? 'active' : '' }}">27</span></li>
+                                    <li><span class="{{ $day=='28' ? 'active' : '' }}">28</span></li>
+                                    <li><span class="{{ $day=='29' ? 'active' : '' }}">29</span></li>
+                                    <li><span class="{{ $day=='30' ? 'active' : '' }}">30</span></li>
+                                    <li><span class="{{ $day=='31' ? 'active' : '' }}">31</span></li>
                                 </ul>
                             </div>
                         </div>
