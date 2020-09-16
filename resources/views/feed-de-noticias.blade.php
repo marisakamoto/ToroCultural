@@ -183,7 +183,7 @@
                                                             <a href="/projeto/{{ $p->projeto->id }}" class="text-semibold media-heading box-inline ml-2">{{ $p->user->username  }}</a>
                                                         
                                                             <img src="{{ url('img/arrow.svg') }}" class="arrow">
-                                                            <img class="imagem-perfil-feed mt-1 mr-1" src="img/cinemateca.jpg" alt="">
+                                                            <img class="imagem-perfil-feed mt-1 mr-1" src="{{ $p->projeto->url_foto }}" alt="">
                                                             <a href="/projeto/{{ $p->projeto->id }}" class="text-semibold media-heading box-inline">{{ $p->projeto->titulo  }}</a>
                                                         </div>
                                                         <p class="text-muted text-sm"><i class="fa fa-mobile fa-lg"></i> - From Mobile - há {{ $myTime->diffInDays($p->updated_at) }} dias</p>
