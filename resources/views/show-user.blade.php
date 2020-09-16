@@ -71,7 +71,7 @@
                             <div class="mx-auto perfil-foto m-0">
 
 
-                                <img  src=  "{{url("storage/".$user->url_foto)}}">
+                                <img  src=  "{{ url($user->url_foto)}}">
                             </div>
                         </div>
                         <div class="row pt-2">
@@ -151,7 +151,7 @@
                                             @foreach ( $projetos as $p )
                                                 <div class="col-md-4 clearfix d-md-block ">
                                                     <div class="card card-projeto mb-3">
-                                                        <img class="card-img-top" src="{{url("storage/{$p->url_foto}")}}" alt="Card image cap ">
+                                                        <img class="card-img-top" src="{{ url($p->url_foto)}}" alt="Card image cap ">
                                                         <div class="card-body ">
                                                             <h4 class="card-title titulo-projeto">{{ $p->titulo }}</h4>
                                                             <p class="card-text descricao-projeto ">{{ $p->descricao }}</p>
@@ -163,7 +163,7 @@
                                             @foreach ( $projetos_colaborando as $p )
                                                 <div class="col-md-4 clearfix d-md-block ">
                                                     <div class="card card-projeto mb-3 bg-warning">
-                                                        <img class="card-img-top" src="{{url("storage/{$p->url_foto}")}}" alt="Card image cap ">
+                                                        <img class="card-img-top" src="{{ url($p->url_foto)}}" alt="Card image cap ">
                                                         <div class="card-body ">
                                                             <h4 class="card-title titulo-projeto">{{ $p->titulo }}</h4>
                                                             <p class="card-text descricao-projeto ">{{ $p->descricao }}</p>
@@ -190,7 +190,7 @@
                                                                 <p>{{ $xp->descricao }}</p>
                                                             </div>
                                                             <div class="xp-foto d-none d-lg-block">
-                                                                <img class="mx-auto d-flex   " src="{{url("storage/{$xp->url_foto}")}}">
+                                                                <img class="mx-auto d-flex   " src="{{ url($xp->url_foto)}}">
                                                             </div>
                                                         </div>
                                                     </div>
@@ -259,7 +259,7 @@
                                                     <div class="item-seguidor">
                                                         <div class="perfil-seguidor">
 
-                                                            <img src="{{url("storage/".$seguidor->url_foto )}}" alt="">
+                                                            <img src="{{ url($seguidor->url_foto)}}" alt="">
                                                         </div>
                                                         <a href="/perfil/{{ $seguidor->username }}" class="ml-5">{{ $seguidor->username }}</a>
                                                     </div>
@@ -292,7 +292,7 @@
                                                     <div class="row seguidores_user">
                                                         <div class="item-seguidor">
                                                             <div class="perfil-seguidor">
-                                                                <img src="{{url("storage/".$seguindo->url_foto )}}" alt="">
+                                                                <img src="{{ url($seguindo->url_foto)}}" alt="">
                                                             </div>
                                                             <a href="/perfil/{{ $seguindo->username }}" class="ml-5">{{ $seguindo->username }}</a>
                                                         </div>
@@ -302,7 +302,7 @@
                                                     <div class="row seguidores_user">
                                                         <div class="item-seguidor">
                                                             <div class="perfil-seguidor">
-                                                                <img src="{{url("storage/".$p_s->url_foto) }}" alt="">
+                                                                <img src="{{ url($p_s->url_foto)}}" alt="">
                                                             </div>
                                                             <a href="/projeto/{{ $p_s->id }}" class="ml-5">{{ $p_s->titulo }}</a>
                                                         </div>

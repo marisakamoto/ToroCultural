@@ -70,7 +70,7 @@
             <div class="col-md-3 colPesquisaAvancada">
                 <div class="row pt-5" id="foto">
                     <div class="perfil-foto-user-feed mx-auto">
-                        <img src="{{url("storage/".Auth::user()->url_foto)}}" style="border-radius: 50%;">
+                        <img src="{{ url(Auth::user()->url_foto)}}" style="border-radius: 50%;">
                     </div>
                 </div>
                 <div class="row">
@@ -171,14 +171,14 @@
                                         <div class="card mb-4">
                                             <div class="card-body">
                                                 @if($p->url_foto != null)
-                                                    <a class="media-left" href="{{url("storage/".$p->url_foto)}}"><img class="img-circle img-publi"  alt="Profile Picture" src="{{url("storage/".$p->url_foto)}}"></a>
+                                                    <a class="media-left" href="{{url("storage/".$p->url_foto)}}"><img class="img-circle img-publi"  alt="Profile Picture" src="{{ url($p->url_foto)}}"></a>
                                                 @endif
 
                                                 <div class="media-body">
                                                     <div class="mar-btm">
                                                         <div class="d-flex align-items-center m-2">
                                                             <div class="imagem-perfil-user">
-                                                                <img class=""src="{{url('storage/'.$p->user->url_foto) }}" alt="">
+                                                                <img class=""src="{{ url($p->user->url_foto)}}" alt="">
                                                             </div>
                                                             <a href="/projeto/{{ $p->projeto->id }}" class="text-semibold media-heading box-inline ml-2">{{ $p->user->username  }}</a>
                                                         
@@ -321,7 +321,7 @@
                                             {{-- <div class="row py-3 d-flex justify-content-between"> --}}
                                                 <div class="col-md-5 ">
                                                     <div class="perfil-foto-search">
-                                                        <img src="{{url("storage/".$resultado->url_foto)}}">
+                                                        <img src="{{ url($resultado->url_foto)}}">
                                                     </div>
                                                 </div>
                                                 <div class="col-md-7 px-1 my-auto">
