@@ -34,7 +34,7 @@ class HomeController extends Controller
 
         if (Auth::check()){
             // $projetos = Projeto::search('')->where('user_id', auth()->user()->id);
-            $projetos = Projeto::where('user_id', auth()->user()->id)->take(4)->get();
+            $projetos = Projeto::where('user_id', auth()->user()->id)->take(4)->orderBy('id', 'DESC')->get();
             $users = User::find(auth()->user()->id);
             $projetos_colaborando = $users->projeto_user_colaborador;
                 $habilidades = $users->habilidades;
@@ -58,7 +58,7 @@ class HomeController extends Controller
         if($user->id == auth()->user()->id){
             return redirect('/home');
         }
-        $projetos = Projeto::where('user_id', $user->id)->take(3)->get();
+        $projetos = Projeto::where('user_id', $user->id)->take(3)->orderBy('id', 'DESC')->get();
         $projetos_colaborando = $user->projeto_user_colaborador()->take(3)->get();
         $username = $user->username;
         $habilidades = $user->habilidades;
