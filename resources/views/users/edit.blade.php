@@ -154,6 +154,7 @@
                     
 
                         <button class="btn-deep-orange btn " type="Submit">Atualizar</button>
+                        <a class="btn-deep-orange btn align-self-center" href="{{ URL::previous() }}" >Voltar</a>
                     </form>
          
             

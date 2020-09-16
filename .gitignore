@@ -10,10 +10,4 @@ Homestead.json
 Homestead.yaml
 npm-debug.log
 yarn-error.log
-app.docker
-db.docker
-web.docker
-vhost.conf
-LICENSE
-docker-compose.yml
-/docker-laravel-base-master
+
