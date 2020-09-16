@@ -25,29 +25,11 @@ class AddProjetos extends Seeder
 
         Projeto::create([
             "user_id" => 6,
-            "titulo" => "Show de música",
-            'descricao' => "teste",
-            "localizacao" => "teste",
-            'data_de_realizacao' => Carbon::create('2000', '01', '01'),
-            'url_foto' => "/img/projetos/projeto02.jpg"
-        ]);
-
-        Projeto::create([
-            "user_id" => 6,
             "titulo" => "Cinema Para crianças",
             'descricao' => "teste",
             "localizacao" => "teste",
             'data_de_realizacao' => Carbon::create('2000', '01', '01'),
             'url_foto' => "/img/projetos/projeto02.jpg"
-        ]);
-
-        Projeto::create([
-            "user_id" => 6,
-            "titulo" => "Roda cantada",
-            'descricao' => "teste",
-            "localizacao" => "teste",
-            'data_de_realizacao' => Carbon::create('2000', '01', '01'),
-            'url_foto' => "/img/projetos/projeto01.jpg"
         ]);
 
         Projeto::create([
