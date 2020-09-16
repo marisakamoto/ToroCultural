@@ -198,7 +198,7 @@
                                                         </div>
                                                         <a class="btn btn-sm btn-default btn-hover-primary btn-curtir" href="#">Comment</a>
                                                         @if($p->user_id == Auth::user()->id || $p->projeto->user_id == Auth::user()->id )
-                                                            <form action="/feed/post/delete/{{ $p->id }}" method="POST">
+                                                            <form action="/post/delete/{{ $p->projeto->id }}/{{ $p->id }}" method="POST">
                                                                 @method('delete')
                                                                 @csrf
                                                                 <button class="btn btn-sm btn-default btn-hover-primary" onclick="return confirm('Deseja mesmo apagar essa publicação?');">Delete</button>
