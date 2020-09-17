@@ -14,7 +14,7 @@
     overflow: hidden;
     position: relative;
 }
-    
+
 .perfil-foto-cadastro img {
     width: initial;
     height: inherit;
@@ -33,7 +33,7 @@
     font-size: 4em;
 }
 
-.cadastro-profissionais input, 
+.cadastro-profissionais input,
 .cadastro-profissionais textarea,
 .form-user input,
 .form-user textarea,
@@ -128,6 +128,10 @@
     text-align: right;
 }
 
+.margin-15 {
+    margin-right: 15px;
+}
+
 .modal-titulo{
     background-color: rgb(255, 224, 212) ;
 }
@@ -158,7 +162,7 @@
     .content-projeto {
         display: flex;
         flex-direction: column;
-    }    
+    }
 }
 
 @media screen and (max-width: 800px) {
@@ -187,7 +191,7 @@
 .tag-cont, .tag-cont-categoria{
     padding: 2px;
     display: flex;
-    
+
 }
 
 .tag-cont .tag, .tag-cont-categoria .tagCategoria {
@@ -231,7 +235,7 @@
 .tag-cont, .tag-cont-habilidade{
     padding: 2px;
     display: flex;
-    
+
 }
 
 .tag-cont .tag, .tag-cont-habilidade .tagHabilidade {

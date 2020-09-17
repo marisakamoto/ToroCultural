@@ -16,7 +16,7 @@ class AddCardsExperiencias extends Seeder
     {
         Experience_card::create([
             "user_id" => 6,
-            "titulo" => "Show Beneficente no sesc Pinheiros",
+            "titulo" => "Show Beneficente no Sesc Pinheiros",
             'descricao' => "Show voltado para crianças de todas as idades. Contará com a participação da banda Melhor Show Do Mundo",
             "localizacao" => "Sesc Pinheiros",
             'data_realizacao' => Carbon::create('2000', '01', '01'),
@@ -26,10 +26,10 @@ class AddCardsExperiencias extends Seeder
         Experience_card::create([
             "user_id" => 6,
             "titulo" => "Curso de Fotografia na Belas Artes",
-            'descricao' => "Concluido com sucesso, o curso de fotografia avançada em movimento",
+            'descricao' => "Concluído curso de fotografia avançada em movimento",
             "localizacao" => "Universidade Belas Artes",
             'data_realizacao' => Carbon::create('2020', '10', '01'),
-            'url_foto' => "/img/projetos/projeto02.jpg"
+            'url_foto' => "/img/projetos/18-frases-de-fotografia-que-servem-de-inspiracao-eMania-19-06.jpg"
         ]);
 
         Experience_card::create([

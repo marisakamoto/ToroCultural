@@ -73,7 +73,7 @@
                                 {{-- <img  src="/storage/{{ Auth::user()->url_foto }}"> --}}
                                 {{-- <img  src="{{asset('/storage/'.Auth::user()->url_foto)}}"> --}}
                                 <img  src="{{ url(Auth::user()->url_foto)}}">
-                                
+
                             </div>
                         </div>
                         <div class="row pt-2">
@@ -199,10 +199,10 @@
                     <span class="fa fa-star checked "></span>
                     <span class="fa fa-star checked "></span>
                     <span class="fa fa-star checked "></span>
-                    <span class="fa fa-star "></span>
-                    <span class="fa fa-star "></span> 3.0
+                    <span class="fa fa-star checked "></span>
+                    <span class="fa fa-star "></span> 4.6
                     <br>
-                    <p>15 avaliações</p>
+                    <p>3 avaliações</p>
                     <p>Torozero Iniciante</p>
                 </div>
                 <hr class="my-4 ">

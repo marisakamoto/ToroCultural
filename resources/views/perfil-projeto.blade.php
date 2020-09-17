@@ -48,7 +48,7 @@
                 </a>
 
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                
+
                     <a class="dropdown-item" href="{{ route('logout') }}"
                         onclick="event.preventDefault();
                                         document.getElementById('logout-form').submit();">
@@ -409,20 +409,21 @@
                         <span class="fa fa-star checked"></span>
                         <span class="fa fa-star checked "></span>
                         <span class="fa fa-star checked "></span>
+                        <span class="fa fa-star checked "></span>
                         <span class="fa fa-star "></span>
                     </div>
                 </div>
                 <br>
                 <div class="text-center">
-                    <p>30 avaliações</p>
+                    <p>18 avaliações</p>
                 </div>
             <hr class="my-4 ">
             <div id="user-statistics ">
                 <h6>Estatísticas</h6>
                 <ul>
-                    <li class="py-3 text-center"><strong>150</strong> Visualizações</li>
-                    <li class="py-3 text-center">Recomendam o trabalho <strong>94%</strong> </li>
-                    <li class="py-3 text-center"><strong>70%</strong>Taxa de resposta</li>
+                    <li class="py-3 text-center"><strong>44</strong> Visualizações</li>
+                    <li class="py-3 text-center">Recomendam o trabalho <strong>89%</strong> </li>
+                    <li class="py-3 text-center"><strong>82%</strong>Taxa de resposta</li>
                 </ul>
                 <p class="text-center">Publicado há 1 mês</p>
             </div>
