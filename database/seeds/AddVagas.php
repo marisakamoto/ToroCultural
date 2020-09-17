@@ -19,7 +19,6 @@ class AddVagas extends Seeder
             "status" => "Teste",
             "projeto_id" => 5
         ]);
-        
     }
 }
 

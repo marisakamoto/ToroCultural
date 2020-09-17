@@ -11,3 +11,10 @@ Homestead.yaml
 npm-debug.log
 yarn-error.log
 
+LICENSE
+app.docker
+db.docker
+docker-compose.yml
+docker-laravel-base-master/
+vhost.conf
+web.docker

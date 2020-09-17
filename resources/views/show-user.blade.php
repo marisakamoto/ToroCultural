@@ -79,11 +79,11 @@
                         </div>
                     </div>
                     <div class="col-md-8">
-                        <div class="col d-flex pb-3 justify-content-between">
-                            <div class="col-md-6">
-                                <h3 class="nomeUser text-center">{{  $user->name }}</h3>
+                        <div class="row d-flex pb-3">
+                            <div class="col-md-6 no-padding-left">
+                                <h3 class="nomeUser">{{  $user->name }}</h3>
                             </div>
-                            <div class="row-md-6 text-center">
+                            <div class="col-md-6 text-center d-flex justify-content-end no-padding-right">
 
                                 @if($seguidoPeloLogado)
                                     <form action="/user/unfollow/{{ $user->id }}" method="POST">
@@ -100,7 +100,7 @@
 
                             </div>
                         </div>
-                        <div class="row d-flex justify-content-center" id="habilidades">
+                        <div class="row d-flex justify-content" id="habilidades">
                             <ul>
                                 @foreach ($habilidades as $h)
                                 <li>
@@ -112,12 +112,12 @@
                             </ul>
 
                         </div>
-                    <div class="row d-flex justify-content-center">
-                        <p class=" ml-4" >    {{ $user->descricao }} </p>
+                    <div class="row d-flex justify-content">
+                        <b><p class=" ml-4 no-margin-left">    {{ $user->descricao }} </p></b>
                     </div>
                     </div>
                 </div>
-                <hr class="my-4 ">
+                <hr class="my-4">
                 <div class="col ml-0 mt-4 mr-3 pt-2" id="portfolio">
                     <div class="row px-5">
                         <h3 class="pl-5">Meus torós</h3>
@@ -210,10 +210,10 @@
                     <span class="fa fa-star checked "></span>
                     <span class="fa fa-star checked "></span>
                     <span class="fa fa-star checked "></span>
-                    <span class="fa fa-star "></span>
-                    <span class="fa fa-star "></span> 3.0
+                    <span class="fa fa-star checked  "></span>
+                    <span class="fa fa-star "></span> 4.0
                     <br>
-                    <p>30 avaliações</p>
+                    <p>1 avaliações</p>
                     <p>Torozero Iniciante</p>
                 </div>
                 <hr class="my-4 ">

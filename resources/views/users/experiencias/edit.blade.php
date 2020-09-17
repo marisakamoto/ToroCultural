@@ -84,13 +84,10 @@
                                         function previewImagem(){
                                             var imagem = document.querySelector('input[name=imagem]').files[0];
                                             var preview = document.querySelector('#preview-img');
-                                            
                                             var reader = new FileReader();
-                                            
                                             reader.onloadend = function () {
                                                 preview.src = reader.result;
                                             }
-                                            
                                             if(imagem){
                                                 reader.readAsDataURL(imagem);
                                             }else{
@@ -121,7 +118,7 @@
                                 <textarea class="form-control" name="descricao" id="descricao"  rows="2">{{ $experiencia->descricao }}</textarea></br>
                             </div>
                         </div>
-                        <div class="botao-final-user">
+                        <div class="botao-final-user margin-15">
                             <button class="btn-deep-orange btn " type="Submit">Atualizar</button>
                             <a class="btn-deep-orange btn align-self-center" href="{{ URL::previous() }}" >Voltar</a>
                         </div>

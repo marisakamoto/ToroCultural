@@ -317,8 +317,8 @@
                                     <div class="row d-flex align-content-center mar-top clearfix">
                                          <label id = "upload-button"  for="apply"><input type="file" name="imagePost" id="apply" accept="image/*,.pdf">Get file</label>
                                          <button class="btn btn-sm btn-compartilhar pull-right" type="submit"><i class="fa fa-pencil fa-fw"></i> Share</button>
-                                      
-                                        
+
+
                                          {{-- <a class="btn btn-trans btn-icon fa fa-video-camera add-tooltip" href="#"></a>
                                         <a class="btn btn-trans btn-icon fa fa-camera add-tooltip" href="#"></a>
                                         <a class="btn btn-trans btn-icon fa fa-file add-tooltip" href="#"></a> --}}
@@ -334,13 +334,13 @@
                                             <a class="media-left" href="#"><img class="img-circle img-publi"  alt="Post Image" src="{{ url($post->url_foto)}}"></a>
                                             @endif
                                             <div class="media-body">
-                                            
+
                                                 <div class="mar-btm">
                                                     <a href="#" class="btn-link text-semibold media-heading box-inline"> {{$post->user->username}}</a>
-                                                    <p class="text-muted text-sm"><i class="fa fa-mobile fa-lg"></i> - From Mobile - {{$post->created_at}} há 
-                                                    
+                                                    <p class="text-muted text-sm"><i class="fa fa-mobile fa-lg"></i> - From Mobile - {{$post->created_at}} há
+
                                                    {{ $myTime->diffInDays($post->updated_at) }}
-                                                    
+
                                                     dias
                                                     </p>
                                                 </div>
@@ -353,7 +353,7 @@
                                                         <a class="btn btn-sm btn-default btn-hover-danger" href="#"><i class="fa fa-thumbs-down"></i></a>
                                                         <a class="btn btn-sm btn-default btn-hover-primary" href="#">Comment</a>
                                                     </div>
-                                                    
+
                                                     @if($post->user_id == Auth::user()->id || $post->projeto->user_id == Auth::user()->id )
                                                         <form action="/post/delete/{{ $post->projeto->id }}/{{ $post->id }}" method="POST">
                                                             @method('delete')
@@ -361,7 +361,7 @@
                                                             <button class="btn btn-sm btn-default btn-hover-primary" onclick="return confirm('Deseja mesmo apagar essa publicação?');">Delete</button>
                                                         </form>
                                                     @endif
-                                                   
+
                                                 </div>
                                             </div>
                                     </div>
@@ -506,20 +506,21 @@
                         <span class="fa fa-star checked"></span>
                         <span class="fa fa-star checked "></span>
                         <span class="fa fa-star checked "></span>
+                        <span class="fa fa-star checked "></span>
                         <span class="fa fa-star "></span>
                     </div>
                 </div>
                 <br>
                 <div class="text-center">
-                    <p>30 avaliações</p>
+                    <p>10 avaliações</p>
                 </div>
             <hr class="my-4 ">
             <div id="user-statistics ">
                 <h6>Estatísticas</h6>
                 <ul>
-                    <li class="py-3 text-center"><strong>150</strong> Visualizações</li>
-                    <li class="py-3 text-center">Recomendam o trabalho <strong>94%</strong> </li>
-                    <li class="py-3 text-center"><strong>70%</strong>Taxa de resposta</li>
+                    <li class="py-3 text-center"><strong>35</strong> Visualizações</li>
+                    <li class="py-3 text-center">Recomendam o trabalho <strong>91%</strong> </li>
+                    <li class="py-3 text-center"><strong>86%</strong>Taxa de resposta</li>
                 </ul>
                 <p class="text-center">Publicado há 1 mês</p>
             </div>
