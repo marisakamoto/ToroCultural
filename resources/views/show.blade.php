@@ -310,20 +310,22 @@
                     <div class="container border p-4">
                         <div class="row justify-content-start">
                             <div class="pesquisa-feed-projeto mx-auto">
-
-                            <form method="POST" action="/projeto/{{$projeto->id}}/post" enctype="multipart/form-data">
+                            @if(Auth::user()->id == $projeto->user_id || in_array(Auth::user()->id, $colaboradores))
+                                <form method="POST" action="/projeto/{{$projeto->id}}/post" enctype="multipart/form-data">
                                 @csrf
                                     <textarea name = postagem class="form-control" rows="2" placeholder="O que seu toró está pensando?"></textarea>
                                     <div class="row d-flex align-content-center mar-top clearfix">
-                                         <label id = "upload-button"  for="apply"><input type="file" name="imagePost" id="apply" accept="image/*,.pdf">Get file</label>
-                                         <button class="btn btn-sm btn-compartilhar pull-right" type="submit"><i class="fa fa-pencil fa-fw"></i> Share</button>
+                                            <label id = "upload-button"  for="apply"><input type="file" name="imagePost" id="apply" accept="image/*,.pdf">Get file</label>
+                                            <button class="btn btn-sm btn-compartilhar pull-right" type="submit"><i class="fa fa-pencil fa-fw"></i> Share</button>
 
 
-                                         {{-- <a class="btn btn-trans btn-icon fa fa-video-camera add-tooltip" href="#"></a>
+                                            {{-- <a class="btn btn-trans btn-icon fa fa-video-camera add-tooltip" href="#"></a>
                                         <a class="btn btn-trans btn-icon fa fa-camera add-tooltip" href="#"></a>
                                         <a class="btn btn-trans btn-icon fa fa-file add-tooltip" href="#"></a> --}}
                                     </div>
                                 </form>
+                            @endif
+
                             </div>
                             <div class="feed-publicacoes mx-auto">
 
@@ -367,125 +369,7 @@
                                     </div>
                                 </div>
                                 @endforeach
-                                <div class="card mb-4">
-                                    <div class="card-body">
-                                            <a class="media-left" href="#"><img class="img-circle img-publi"  alt="Profile Picture" src="{{ url('img/clubeLeitura.jpeg') }}"></a>
-                                            <div class="media-body">
-                                                <div class="mar-btm">
-                                                    <a href="#" class="btn-link text-semibold media-heading box-inline">Clube da Leitura, Menina Flor</a>
-                                                    <p class="text-muted text-sm"><i class="fa fa-mobile fa-lg"></i> - From Mobile - 11 min ago</p>
-                                                </div>
-                                                <p>
-                                                    Olá pessoal,
-                                                    Vem aí um projeto de leitura voltado totalmente à mulheres, aguarde! :-)
-                                                </p>
-                                                <div class="pad-ver">
-                                                    <div class="btn-group">
-                                                        <a class="btn btn-sm btn-default btn-hover-success" href="#"><i class="fa fa-thumbs-up"></i></a>
-                                                        <a class="btn btn-sm btn-default btn-hover-danger" href="#"><i class="fa fa-thumbs-down"></i></a>
-                                                    </div>
-                                                    <a class="btn btn-sm btn-default btn-hover-primary" href="#">Comment</a>
-                                                </div>
-                                            </div>
-                                    </div>
-                                </div>
-                                <!-- Comments -->
-                                <div class="card mb-4">
-                                    <div class="card-body">
-                                        <a class="media-left" href="#"><img class="img-circle img-publi" alt="Profile Picture" src="{{ url('img/mpb.jpeg') }}"></a>
-                                        <div class="media-body">
-                                            <div class="mar-btm">
-                                                <a href="#" class="btn-link text-semibold media-heading box-inline">Grupo MPB Mais +</a>
-                                                <p class="text-muted text-sm"><i class="fa fa-mobile fa-lg"></i> - From Mobile - 7 min ago</p>
-                                            </div>
-                                            <p>
-                                                Nosso festival de música foi um sucesso!!!
-                                                Lotamos a casa e tivemos muito artistas revelados.
-                                                @Luiz, @Marisa @Marta, foram alguns dos artistas que estavam conosco e estão aqui no Toró.
-                                            </p>
-                                            <div class="pad-ver">
-                                                <div class="btn-group">
-                                                    <a class="btn btn-sm btn-default btn-hover-success active" href="#"><i class="fa fa-thumbs-up"></i> You Like it</a>
-                                                    <a class="btn btn-sm btn-default btn-hover-danger" href="#"><i class="fa fa-thumbs-down"></i></a>
-                                                </div>
-                                                <a class="btn btn-sm btn-default btn-hover-primary" href="#">Comment</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card mb-4">
-                                    <div class="card-body">
-                                        <!--  <div class="media-block">  -->
-                                            <a class="media-left" href="#"><img class="img-circle img-publi" alt="Profile Picture" src="{{ url('img/mulher.jpeg') }}">
-                                            </a>
-                                            <div class="media-body">
-                                                <div class="mar-btm">
-                                                    <a href="#" class="btn-link text-semibold media-heading box-inline">Teatro Mulherzinha Sim Senhô</a>
-                                                    <p class="text-muted text-sm"><i class="fa fa-globe fa-lg"></i> - From Web - 2 min ago</p>
-                                                </div>
-                                                <p>
-                                                    E pra comemorar o mês da mulher, teremos apresentações nos dias 11, 12 e 13 de março no Teatro Augusta, contando um pouco da história do dia 08 de Março!
-                                                    Logo vamos publicar novas vagas como atriz, fotógrafa, e editor de som.
-                                                </p>
-                                                <div class="pad-ver">
-                                                    <div class="btn-group">
-                                                        <a class="btn btn-sm btn-default btn-hover-success" href="#"><i class="fa fa-thumbs-up"></i></a>
-                                                        <a class="btn btn-sm btn-default btn-hover-danger" href="#"><i class="fa fa-thumbs-down"></i></a>
-                                                    </div>
-                                                    <a class="btn btn-sm btn-default btn-hover-primary" href="#">Comment</a>
-                                                </div>
-                                            </div>
-                                        <!--   </div>  -->
-                                    </div>
-                                </div>
-                                <div class="card mb-4">
-                                    <div class="panel-body">
-                                        <!--  <div class="media-block">  -->
-                                            <a class="media-left" href="#"><img class="img-circle img-publi" alt="Profile Picture" src="{{ url('img/mulher 2.jpeg') }}"></a>
-                                            <div class="media-body">
-                                                <div class="mar-btm">
-                                                    <a href="#" class="btn-link text-semibold media-heading box-inline">Grupo de Teatro Luiz Maia</a>
-                                                    <p class="text-muted text-sm"><i class="fa fa-mobile fa-lg"></i> - From Mobile - 11 min ago</p>
-                                                </div>
-                                                <p>
-                                                Dentro de instantes começa!!! Promessa de casa cheia! S2
-                                                </p>
-                                                <img class="img-responsive thumbnail img-publi-publi" src="{{ url('img/teatro2.jpeg') }}" alt="Image">
-                                                <div class="pad-ver">
-                                                    <span class="tag tag-sm"><i class="fa fa-heart text-danger"></i> 30 Likes</span>
-                                                    <div class="btn-group">
-                                                        <a class="btn btn-sm btn-default btn-hover-success" href="#"><i class="fa fa-thumbs-up"></i></a>
-                                                        <a class="btn btn-sm btn-default btn-hover-danger" href="#"><i class="fa fa-thumbs-down"></i></a>
-                                                    </div>
-                                                    <a class="btn btn-sm btn-default btn-hover-primary" href="#">Comment</a>
-                                                </div>
-                                            </div>
-                                        <!--   </div>  -->
-                                    </div>
-                                </div>
-                                <div class="card mb-4">
-                                    <div class="card-body">
-                                        <!--  <div class="media-block">  -->
-                                            <a class="media-left" href="#"><img class="img-circle img-publi" alt="Profile Picture" src="{{ url('img/teatro.jpeg') }}"></a>
-                                            <div class="media-body">
-                                                <div class="mar-btm">
-                                                    <a href="#" class="btn-link text-semibold media-heading box-inline">Grupo Luís de Camões</a>
-                                                    <p class="text-muted text-sm"><i class="fa fa-globe fa-lg"></i> - From Web - 20 min ago</p>
-                                                </div>
-                                                <p>Começou a seguir</p> <br>
-                                                <a href="#" class="btn-link text-semibold media-heading box-inline">Nicole Moraz</a><br>
-                                                <img class="img-responsive thumbnail img-publi-publi" src="{{ url('img/apresentacao.jpeg') }}" alt="Image">
-                                                <div class="pad-ver">
-                                                    <div class="btn-group">
-                                                        <a class="btn btn-sm btn-default btn-hover-success" href="#"><i class="fa fa-thumbs-up"></i></a>
-                                                        <a class="btn btn-sm btn-default btn-hover-danger" href="#"><i class="fa fa-thumbs-down"></i></a>
-                                                    </div>
-                                                    <a class="btn btn-sm btn-default btn-hover-primary" href="#">Comment</a>
-                                                </div>
-                                            </div>
-                                        <!--   </div>  -->
-                                    </div>
-                                </div>
+                               
                             </div>
                                 <!--===================================================-->
                                 <!-- End Newsfeed Content -->

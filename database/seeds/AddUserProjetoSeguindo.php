@@ -37,7 +37,7 @@ class AddUserProjetoSeguindo extends Seeder
             ],
             [
                   "userSeguindo_id" => 6,
-                  "projetoSeguido_id" => 2,
+                  "projetoSeguido_id" => 4,
                   "created_at" => $now,
                   "updated_at"=> $now
             ],

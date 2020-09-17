@@ -19,7 +19,7 @@ class AddCardsExperiencias extends Seeder
             "titulo" => "Show Beneficente no Sesc Pinheiros",
             'descricao' => "Show voltado para crianças de todas as idades. Contará com a participação da banda Melhor Show Do Mundo",
             "localizacao" => "Sesc Pinheiros",
-            'data_realizacao' => Carbon::create('2000', '01', '01'),
+            'data_realizacao' => Carbon::create('2018', '12', '10'),
             'url_foto' => "/img/projetos/projeto01.jpg"
         ]);
 

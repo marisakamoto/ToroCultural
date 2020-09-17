@@ -239,58 +239,9 @@
                                         </div>
                                         @endfor   --}}
 
+                                  
 
-
-                                        <div class="card mb-4">
-                                            <div class="card-body">
-                                                <a class="media-left" href="#"><img class="img-circle img-publi"  alt="Profile Picture" src="img/jardim.jpg"></a>
-                                                <div class="media-body">
-                                                    <div class="mar-btm">
-                                                        <img class="imagem-perfil-feed mt-1 mr-1" src="img/cinemateca.jpg" alt="">
-                                                        <a href="#" class="text-semibold media-heading box-inline">Nome do Projeto</a>
-                                                        <p class="text-muted text-sm"><i class="fa fa-mobile fa-lg"></i> - From Mobile - 11 min ago</p>
-                                                    </div>
-                                                    <p>
-                                                        Começamos a trabalhar no jardim!
-                                                    </p>
-                                                    <div class="pad-ver">
-                                                        <div class="btn-group">
-                                                            <a class="btn btn-sm btn-default btn-hover-success btn-curtir" href="#"><i class="fa fa-thumbs-up"></i></a>
-                                                            <a class="btn btn-sm btn-default btn-hover-danger btn-curtir" href="#"><i class="fa fa-thumbs-down"></i></a>
-                                                        </div>
-                                                        <a class="btn btn-sm btn-default btn-hover-primary btn-curtir" href="#">Comment</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
                                         <!-- Comments -->
-                                        <div class="card mb-4">
-                                            <div class="card-body">
-
-                                                <a class="media-left" href="#"><img class="img-circle img-publi add-profissional" alt="Profile Picture" src="img/mulher1.jpg"></a>
-                                                <div class="media-body">
-                                                    <div class="mar-btm">
-                                                        <img class="imagem-perfil-feed mt-1 mr-1" src="{{url('img/cinemateca.jpg')}}" alt="">
-                                                        <a href="#" class="text-semibold media-heading box-inline">Inauguração da Cinemacoteca</a>
-                                                        <p class="text-muted text-sm"><i class="fa fa-mobile fa-lg"></i> - From Mobile - 7 min ago</p>
-                                                    </div>
-                                                    <p>
-                                                        Adicionou como <a href="#">Atriz</a>: <a href="#">Nome de Usuário</a>
-
-                                                    </p>
-                                                    <div class="pad-ver">
-                                                        <div class="btn-group">
-                                                            <a class="btn btn-sm btn-default btn-hover-success btn-curtir-active" href="#"><i class="fa fa-thumbs-up"></i> You Like it</a>
-                                                            <a class="btn btn-sm btn-default btn-hover-danger btn-curtir" href="#"><i class="fa fa-thumbs-down"></i></a>
-                                                        </div>
-                                                        <a class="btn btn-sm btn-default btn-hover-primary btn-curtir" href="#">Comment</a>
-                                                    </div>
-
-                                                </div>
-
-                                            </div>
-                                        </div>
-                                        
 
                                     </div>
 
