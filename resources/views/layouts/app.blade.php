@@ -8,7 +8,7 @@
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <link rel="icon" href="img/toro cultural.png">
+    <link rel="icon" href="{{ url('img/toro cultural.png') }}">
 
     @yield("title")
 

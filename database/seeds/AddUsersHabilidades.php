@@ -17,7 +17,13 @@ class AddUsersHabilidades extends Seeder
         DB::table('user_habilidade')->insert([
             [
                 "user_id" => 1,
-                "habilidade_id" => 1,
+                "habilidade_id" => 11,
+                "created_at" => $now,
+                "updated_at"=> $now
+            ],
+            [
+                "user_id" => 1,
+                "habilidade_id" => 12,
                 "created_at" => $now,
                 "updated_at"=> $now
             ],
@@ -47,13 +53,13 @@ class AddUsersHabilidades extends Seeder
             ],
             [
                 "user_id" => 6,
-                "habilidade_id" => 5,
+                "habilidade_id" => 2,
                 "created_at" => $now,
                 "updated_at"=> $now
             ],
             [
                 "user_id" => 6,
-                "habilidade_id" => 6,
+                "habilidade_id" => 3,
                 "created_at" => $now,
                 "updated_at"=> $now
             ],
@@ -65,16 +71,10 @@ class AddUsersHabilidades extends Seeder
             ],
             [
                 "user_id" => 6,
-                "habilidade_id" => 4,
+                "habilidade_id" => 10,
                 "created_at" => $now,
                 "updated_at"=> $now
             ],
-            [
-                "user_id" => 3,
-                "habilidade_id" => 1,
-                "created_at" => $now,
-                "updated_at"=> $now
-                    ],
     ]);
     }
 }

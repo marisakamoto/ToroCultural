@@ -45,5 +45,8 @@ class AddHabilidades extends Seeder
         Habilidade::create([
             "habilidade" => "Música",
         ]);
+        Habilidade::create([
+            "habilidade" => "Produção",
+        ]);
     }
 }

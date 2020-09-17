@@ -30,8 +30,8 @@ class AddUsers extends Seeder
             'url_foto' => "/img/users/homem1.jpg"
         ]);
         User::create([
-            "name" => "Maria Carla",
-            'username' => "MariaCarla",
+            "name" => "Maria Clara",
+            'username' => "MariaClara",
             "email" => "mcarla@gmail.com",
             "password"=> Hash::make('123456'),
             'descricao' => "Fotógrafa há 5 anos.
@@ -68,7 +68,7 @@ class AddUsers extends Seeder
             'descricao' => "Contadora de histórias, formação em clown e cantora",
             "profissao" => "Atriz",
             "aniversario" => Carbon::create('1990', '06', '17'),
-            'url_foto' => "/img/users/mulher.jpeg"
+            'url_foto' => "/img/users/mulher3.jpg"
         ]);
 
         User::create([
