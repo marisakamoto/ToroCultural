@@ -146,7 +146,7 @@
                 <div class="tab-content" id="nav-tabContent">
                 {{-- CONTEUDOS - ABAS PESQUISA E FEED --}}
                     <!--área do feed do usuário-->
-                    
+
                         <div class="conteudo-feed tab-pane fade show px-2 py-2 {{ count($resultados) == 0 ? 'active' : '' }}" id="feed-user" role="tabpanel" aria-labelledby="nav-home-tab">
                             <div class="row justify-content-end">
                                 <div class="my-auto">
@@ -181,7 +181,7 @@
                                                                 <img class=""src="{{ url($p->user->url_foto)}}" alt="">
                                                             </div>
                                                             <a href="/projeto/{{ $p->projeto->id }}" class="text-semibold media-heading box-inline ml-2">{{ $p->user->username  }}</a>
-                                                        
+
                                                             <img src="{{ url('img/arrow.svg') }}" class="arrow">
                                                             <img class="imagem-perfil-feed mt-1 mr-1" src="{{ $p->projeto->url_foto }}" alt="">
                                                             <a href="/projeto/{{ $p->projeto->id }}" class="text-semibold media-heading box-inline">{{ $p->projeto->titulo  }}</a>
@@ -207,14 +207,14 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            
+
                                         </div>
-                                        
+
                                     @endforeach
 
-                                    
+
                                         {{-- @for ( $i = 0; $i < $num;$i++)
-                                                        
+
                                                 <div class="card mb-4">
                                             <div class="card-body">
                                                 <a class="media-left" href="#"><img class="img-circle img-publi"  alt="Profile Picture" src="{{ url("storage/{$posts[$i]->url_foto}") }}"></a>
@@ -239,7 +239,7 @@
                                         </div>
                                         @endfor   --}}
 
-                                  
+
 
                                         <!-- Comments -->
 
@@ -316,14 +316,14 @@
                                         </div>
                                     </div>
                                 @endif
-                                    
+
                                 </div>
                             </div>
 
 
 
                         </div>
-                    
+
                 </div>
             </div>
             <!--FIM Coluna FEED-->

@@ -27,19 +27,19 @@ class AddPublishes extends Seeder
         Publish::create([
             "user_id" => 2,
             "projeto_id" => 1,
-            "url_foto" => "/img/publishes/ensaiocigarra.jpg",
+            "url_foto" => "/img/publishes/cigarra.jpg",
             "legenda" => "Ensaio para a peça!",
         ]);
         Publish::create([
             "user_id" => 3,
             "projeto_id" => 2,
-            "url_foto" => "/img/publishes/clubeLeitura.jpeg",
+            "url_foto" => "/img/publishes/historia-do-cinema-03.jpg",
             "legenda" => "Olá pessoal, estamos acelerando todos os preparativos para o nosso cineminha!",
         ]);
         Publish::create([
             "user_id" => 3,
             "projeto_id" => 2,
-            "url_foto" => "/img/publishes/cinema.jpg",
+            "url_foto" => "/img/publishes/up_1531942877_gallery.jpg",
             "legenda" => "Nosso festival de música foi um sucesso!!! Lotamos a casa e tivemos muito artistas revelados. @Luiz, @Marisa @Marta, foram alguns dos artistas que estavam conosco e estão aqui no Toró.",
         ]);
     }

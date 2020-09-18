@@ -16,7 +16,7 @@ class AddProjetos extends Seeder
 
         Projeto::create([
             "user_id" => 6,
-            "titulo" => "O conto da Cigarra",
+            "titulo" => "O Conto da Cigarra",
             'descricao' => "Show voltado para crianças de todas as idades. Contará com a participação da banda Melhor Show Do Mundo",
             "localizacao" => "Cinemateca",
             'data_de_realizacao' => Carbon::create('2021', '03', '01'),
@@ -45,7 +45,7 @@ class AddProjetos extends Seeder
         Projeto::create([
             "user_id" => 2,
             "titulo" => "Teatro para a terceira idade",
-            'descricao' => "Vamos levar um pouco de alegria para as casas de repouso com espetáculos que remetem aos tempos de juventude de nossos senhores de idade. Durente a peça, ele interagirão no palco a gente! Esse tipo de iniciativa leva frescor e lembranças boas a eles.",
+            'descricao' => "Vamos levar um pouco de alegria para as casas de repouso com espetáculos que remetem aos tempos de juventude de nossos senhores de idade. Durante a peça, ele interagirão no palco a gente! Esse tipo de iniciativa leva frescor e lembranças boas a eles.",
             "localizacao" => "à combonar por apresentação",
             'data_de_realizacao' => Carbon::create('2019', '10', '10'),
             'url_foto' => "/img/projetos/teatro_idoso.jpg"
