@@ -137,7 +137,7 @@
             <div class="tab-content" id="nav-tabContent">
                 <div class="conteudo-sobre tab-pane fade show px-2 py-2 active" id="feed-user" role="tabpanel" aria-labelledby="nav-home-tab">
                     <div class="row " >
-                        <p class="text-justify p-3 accent-2" id="descricao-projeto "> {{ $projeto->descricao }}</p>
+                        <b><p class="text-justify p-3 accent-2" id="descricao-projeto "> {{ $projeto->descricao }}</p></b>
 
                         {{-- <img src="{{url("storage/{$projeto->url_foto}")}}" class="col d-flex justify-content-center"> --}}
 
@@ -147,7 +147,7 @@
                             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.340557539858!2d-46.646774699999995!3d-23.5921163!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5a20cbb8803f%3A0x881797bc7c83b42f!2sCinemateca%20Brasileira!5e0!3m2!1spt-BR!2sbr!4v1585923808392!5m2!1spt-BR!2sbr"
                                 width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
                         </div>
-                        <div class="col-md-6  justify-content-center ">
+                        <div class="col-md-6 d-flex justify-content-center ">
                             {{-- {{ strftime($projeto->data_de_realizacao) }} --}}
                             <div class="calendar">
                                 <div class="month">
@@ -211,15 +211,15 @@
                                 <img src="{{ url('img/rain.svg') }}" width="20" alt=""> Aberto
                             </div>
                             <div class="card-body">
-                                <h5 class="card-title">Editor de Vídeo</h5>
+                                <h5 class="card-title">Atriz</h5>
                                 <p class="card-text justify-content-center">
-                                    <img src="img/wallet.svg" width="15" alt=""> R$15 a R$20 por hora
+                                    <img src="img/wallet.svg" width="15" alt=""> R$80 a R$100 por hora
                                     <br>
                                     <img src="img/you-are-here.svg" width="15" alt=""> São Paulo, SP
                                     <br>
-                                    <img src="img/round-wall-clock.svg" width="15" alt=""> 02/Jul a 02/Ago
+                                    <img src="img/round-wall-clock.svg" width="15" alt=""> 01/Mar/2021 a 03/Maio/2021
                                     <br>
-                                    <br> Procuramos profissional que atue com edição de vídeos de forma prática e criativa, desenvolvendo uma boa narrativa para captar a atenção da audiência.
+                                    <br>Buscamos atriz para papel principal da peça. É fundamental que saiba cantar e que esteja disponível por 2 meses. De preferência que já tenha atuado com peça infantil.
                                     <br>
                                     <div class="habilidades d-flex flex-wrap font-smaller">
                                         <a class="bg-secondary m-1  text-white" href=""> Adobe Premiere </a>
@@ -237,15 +237,15 @@
                                 <img src="{{ url('img/rain.svg') }}" width="20" alt=""> Aberto
                             </div>
                             <div class="card-body">
-                                <h5 class="card-title">Editor de Vídeo</h5>
+                                <h5 class="card-title">Roteirista</h5>
                                 <p class="card-text justify-content-center">
-                                    <img src="{{ url('img/wallet.svg') }}" width="15" alt=""> R$15 a R$20 por hora
+                                    <img src="{{ url('img/wallet.svg') }}" width="15" alt=""> R$75 a R$90 por hora
                                     <br>
                                     <img src="{{ url('img/you-are-here.svg') }}" width="15" alt=""> São Paulo, SP
                                     <br>
-                                    <img src="{{ url('img/round-wall-clock.svg') }}" width="15" alt=""> 02/Jul a 02/Ago
+                                    <img src="{{ url('img/round-wall-clock.svg') }}" width="15" alt=""> 01/Mar/2021 a 03/Maio/2021
                                     <br>
-                                    <br> Procuramos profissional que atue com edição de vídeos de forma prática e criativa, desenvolvendo uma boa narrativa para captar a atenção da audiência.
+                                    <br> Roteirista, para executar a criação em diversos assuntos, filmes publicitários, corporativos e construção de webséries. Pré e pós-produção, para trabalhar com a equipe de montagem e produtora.
                                     <br>
                                     <div class="habilidades d-flex flex-wrap font-smaller">
                                         <a class="bg-secondary m-1  text-white" href=""> Adobe Premiere </a>
@@ -266,7 +266,7 @@
                                 <p class="card-text justify-content-center">
                                     <img src="{{ url('img/you-are-here.svg') }}" width="15" alt=""> São Paulo, SP
                                     <br>
-                                    <img src="{{ url('img/round-wall-clock.svg') }}" width="15" alt=""> 02/Jul a 02/Ago
+                                    <img src="{{ url('img/round-wall-clock.svg') }}" width="15" alt=""> 01/Mar/2021 a 03/Maio/2021
                                     <br>
                                     <br> Procuramos profissional que atue com edição de vídeos de forma prática e criativa, desenvolvendo uma boa narrativa para captar a atenção da audiência.
                                     <br>
@@ -369,7 +369,7 @@
                                     </div>
                                 </div>
                                 @endforeach
-                               
+
                             </div>
                                 <!--===================================================-->
                                 <!-- End Newsfeed Content -->

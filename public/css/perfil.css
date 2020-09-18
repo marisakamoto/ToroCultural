@@ -266,7 +266,7 @@ margin-left: 2em;
 }
 
 
-/* 
+/*
 .map-responsive {
 overflow: hidden;
 padding-bottom: 56.25%;
@@ -376,7 +376,10 @@ margin: 0; */
 /* Highlight the "current" day */
 
 .days li .active {
-    padding: 5px;
+    padding-top: 2px !important;
+    padding-left: 5px !important;
+    padding-bottom: 2px !important;
+    padding-right: 5px !important;
     background: #ec8c3d;
     border-radius: 50%;
     color: white !important
